@@ -49,11 +49,6 @@ public class ValoThemeUI extends UI {
 
     private boolean testMode = false;
 
-    private static LinkedHashMap<String, String> themeVariants = new LinkedHashMap<>();
-    static {
-        themeVariants.put("tests-valo", "Default");
-        themeVariants.put("tests-valo-dark", "Dark");
-    }
     private TestIcon testIcon = new TestIcon(100);
 
     ValoMenuLayout root = new ValoMenuLayout();
@@ -227,7 +222,6 @@ public class ValoThemeUI extends UI {
         top.setDefaultComponentAlignment(Alignment.MIDDLE_LEFT);
         top.addStyleName(ValoTheme.MENU_TITLE);
         menu.addComponent(top);
-        menu.addComponent(createThemeSelect());
 
         Button showMenu = new Button("Menu", new ClickListener() {
             @Override
@@ -320,39 +314,6 @@ public class ValoThemeUI extends UI {
                 + count + "</span>");
 
         return menu;
-    }
-
-    private Component createThemeSelect() {
-        // Keep theme select the same size as in the current screenshots
-        double width = 96;
-        WebBrowser browser = VaadinSession.getCurrent().getBrowser();
-        if (browser.isChrome()) {
-            width = 95;
-        } else if (browser.isIE()) {
-            width = 95.39;
-        } else if (browser.isFirefox()) {
-            width = 98;
-        }
-        getPage().getStyles()
-                .add("#themeSelect select {width: " + width + "px;}");
-        final NativeSelect ns = new NativeSelect();
-        ns.setNullSelectionAllowed(false);
-        ns.setId("themeSelect");
-        ns.addContainerProperty("caption", String.class, "");
-        ns.setItemCaptionPropertyId("caption");
-        for (String identifier : themeVariants.keySet()) {
-            ns.addItem(identifier).getItemProperty("caption")
-                    .setValue(themeVariants.get(identifier));
-        }
-
-        ns.setValue("tests-valo");
-        ns.addValueChangeListener(new ValueChangeListener() {
-            @Override
-            public void valueChange(ValueChangeEvent event) {
-                setTheme((String) ns.getValue());
-            }
-        });
-        return ns;
     }
 
     static Handler actionHandler = new Handler() {
