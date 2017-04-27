@@ -19,6 +19,7 @@
 		<vaadin.version>8.0.5</vaadin.version>
 		<vaadin.plugin.version>8.0.5</vaadin.plugin.version>
 		<jetty.plugin.version>9.3.9.v20160517</jetty.plugin.version>
+		<vaadin.widgetset.mode>fetch</vaadin.widgetset.mode>
 	</properties>
 
     <!--
@@ -70,14 +71,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-client</artifactId>
+			<artifactId>vaadin-compatibility-client</artifactId>
 			<scope>provided</scope>
-			<version>${vaadin.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-server</artifactId>
-			<scope>compile</scope>
 			<version>${vaadin.version}</version>
 		</dependency>
 		<dependency>
@@ -86,7 +81,6 @@
 			<scope>compile</scope>
 			<version>${vaadin.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>com.github.appreciated</groupId>
 			<artifactId>material-design</artifactId>
@@ -111,6 +105,12 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.vaadin.teemusa</groupId>
+			<artifactId>sidemenu</artifactId>
+			<version>1.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

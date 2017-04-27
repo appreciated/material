@@ -21,7 +21,7 @@ import com.vaadin.v7.data.fieldgroup.FieldGroup.CommitException;
 import com.vaadin.v7.data.util.BeanItem;
 import com.vaadin.v7.shared.ui.combobox.FilteringMode;
 import com.vaadin.v7.shared.ui.datefield.Resolution;
-import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.Calendar;
 import com.vaadin.v7.ui.Calendar.TimeFormat;
 import com.vaadin.v7.ui.ComboBox;
 import com.vaadin.v7.ui.DateField;

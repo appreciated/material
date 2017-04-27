@@ -42,7 +42,7 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 
-@Theme("tests-valo")
+@Theme("demo")
 @Title("Valo Theme Test")
 @PreserveOnRefresh
 public class ValoThemeUI extends UI {
