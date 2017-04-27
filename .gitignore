@@ -2,3 +2,4 @@
 /.idea/
 /material-design-addon/target/
 /material-design-demo/target/
+**.iml
