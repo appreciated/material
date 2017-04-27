@@ -1,9 +1,15 @@
 @mixin v-progressbar {
     .v-progressbar-wrapper {
         height: 5px;
+        border-radius: 0px;
     }
-
+    .v-progressbar-indicator {
+        border-radius: 0px;
+    }
     .v-progressbar-point .v-progressbar-indicator:before {
         width: 6px;
     }
+    .v-slider-base {
+        border-radius: 0px;
+        }
 }
