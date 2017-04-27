@@ -1,0 +1,10 @@
+ @mixin v-textfield {
+    .v-textfield {
+        border-bottom: 2px solid $v-selection-color;
+        border-radius: 0px;
+    }
+
+     .v-component-group .v-textfield {
+           border-bottom: none;
+     }
+ }
