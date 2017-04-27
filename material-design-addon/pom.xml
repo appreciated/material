@@ -28,24 +28,17 @@
 		<Vaadin-Addon>${project.artifactId}-${project.version}.jar</Vaadin-Addon>
 	</properties>
 
-    <!--
-	<organization>
-		<name>My Name</name>
-		<url>https://github.com/mygithubaccount/MyComponent/</url>
-	</organization>
-
 	<scm>
-		<url>git://github.com/mygithubaccount/MyComponent.git</url>
-		<connection>scm:git:git://github.com/mygithubaccount/MyComponent.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:/mygithubaccount/${componentClassName}.git</developerConnection>
+		<url>git://github.com/appreciated/material-design.git</url>
+		<connection>scm:git:git@github.com:appreciated/material-design.git</connection>
+		<developerConnection>scm:git:ssh:/git@github.com:appreciated/material-design.git</developerConnection>
 		<tag>MyComponent add-on for Vaadin</tag>
 	</scm>
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/mygithubaccount/MyComponent/issues</url>
+		<url>https://github.com/appreciated/material-design/issues</url>
 	</issueManagement>
-    -->
 
 	<licenses>
 		<license>
