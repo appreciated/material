@@ -1,0 +1,22 @@
+$v-border-radius: 1px;
+$v-luminance-threshold: 180 !default;
+$v-focus-style: none;
+$v-error-indicator-color: #eb2977;
+$v-friendly-color: rgb(0, 255, 0);
+
+$v-layout-margin-top: 10px;
+$v-layout-margin-left: 10px;
+$v-layout-margin-right: 10px;
+$v-layout-margin-bottom: 10px;
+
+$qs-primary-color: #607D8B;  // F.e (Blue Grey) Primary color for Background
+$qs-accent-color: #03A9F4; // F.e (Light Blue) Accent color for Components
+
+$mat-background-image: radial-gradient(circle, #bac8cf 0%, #34444b 100%);
+$mat-icon-image: url("img/web_hi_res_512.png");
+$mat-slide-background: linear-gradient(135deg,#64879a 0%, #315b6d 100%);
+
+@import "../valo/valo.scss";
+@mixin material {
+
+}

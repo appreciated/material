@@ -1,0 +1,24 @@
+@import "variables.scss";
+@import "../valo/valo.scss";
+@import "components/v-panel.scss";
+@import "components/v-button.scss";
+@import "components/v-textfield.scss";
+@import "components/v-filterselect.scss";
+@import "components/v-progressbar.scss";
+@import "components/v-accordion.scss";
+@import "components/v-menubar.scss";
+@import "components/v-datefield.scss";
+@import "components/v-label.scss";
+
+@mixin material {
+    @include valo;
+    @include v-panel;
+    @include v-button;
+    @include v-textfield;
+    @include v-filterselect;
+    @include v-progressbar;
+    @include v-accordion;
+    @include v-menubar;
+    @include v-datefield;
+    @include v-label;
+}

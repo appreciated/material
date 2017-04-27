@@ -1,0 +1,14 @@
+@mixin v-panel {
+    .v-panel {
+        padding-top: 56px !important;
+        padding-bottom: 24px !important;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .v-panel-caption {
+        line-height: 32px;
+        font-weight: 300;
+        font-size: 24px;
+    }
+}

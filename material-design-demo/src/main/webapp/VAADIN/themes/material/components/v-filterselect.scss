@@ -1,0 +1,13 @@
+@mixin v-filterselect {
+    .v-filterselect [class*="input"] {
+        border-bottom: 2px solid $v-selection-color;
+        border-radius: 0px;
+    }
+    .v-filterselect [class$="button"]:before {
+        font-size: 13px;
+    }
+    .v-csslayout-v-component-group .v-filterselect [class*="input"] {
+        border-radius: inital;
+        border: none;
+    }
+}

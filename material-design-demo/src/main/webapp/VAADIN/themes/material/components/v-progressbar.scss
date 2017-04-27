@@ -1,0 +1,9 @@
+@mixin v-progressbar {
+    .v-progressbar-wrapper {
+        height: 5px;
+    }
+
+    .v-progressbar-point .v-progressbar-indicator:before {
+        width: 6px;
+    }
+}

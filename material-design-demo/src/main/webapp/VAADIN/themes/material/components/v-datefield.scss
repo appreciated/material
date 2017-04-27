@@ -1,0 +1,9 @@
+@mixin v-datefield {
+    .v-datefield [class*="textfield"] {
+        border-bottom: 2px solid $v-selection-color;
+    }
+
+      .v-csslayout-v-component-group .v-datefield [class*="textfield"] {
+        border-bottom: none;
+    }
+}

@@ -1,8 +1,5 @@
-@import "../valo/valo.scss";
+@import "../material/material.scss";
 
-
-// Prefix all selectors in your theme with .demo
 .demo {
-	// Include valo theme styles in your theme
-	@include valo;
+	@include material;
 }
