@@ -69,6 +69,25 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-client</artifactId>
+			<scope>provided</scope>
+			<version>${vaadin.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-server</artifactId>
+			<scope>compile</scope>
+			<version>${vaadin.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-compatibility-server</artifactId>
+			<scope>compile</scope>
+			<version>${vaadin.version}</version>
+		</dependency>
+
+		<dependency>
 			<groupId>com.github.appreciated</groupId>
 			<artifactId>material-design</artifactId>
 			<version>${project.version}</version>

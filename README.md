@@ -1,6 +1,6 @@
 # MyComponent Add-on for Vaadin 8
 
-${ComponentClassName} is a UI component add-on for Vaadin 8.
+Material Design is a Theme add-on for Vaadin 8.
 
 ## Online demo
 
