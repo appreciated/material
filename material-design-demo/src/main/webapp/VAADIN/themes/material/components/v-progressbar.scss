@@ -25,7 +25,7 @@
     .v-slider-vertical .v-slider-base {
         width: 4px;
     }
-    .v-slider-vertical .v-slider-handle:after {
-        margin-left: -9px;
+   .v-slider-vertical .v-slider-handle:before, .v-slider-vertical .v-slider-handle:after {
+           margin-left: -9px;
     }
 }
