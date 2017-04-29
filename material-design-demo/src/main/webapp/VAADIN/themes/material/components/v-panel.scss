@@ -1,23 +1,37 @@
 @mixin v-panel {
-
-
     .v-panel {
         padding-top: 56px !important;
         padding-bottom: 24px !important;
         padding-left: 24px;
         padding-right: 24px;
     }
-
     .v-window-contents .v-panel {
         padding-top: 0px !important;
         padding-bottom: 0px !important;
         padding-left: 0px;
         padding-right: 0px;
     }
-
     .v-panel-caption {
         line-height: 32px;
         font-weight: 300;
         font-size: 24px;
+        padding: 0 0px;
+    }
+    .v-csslayout-card {
+        padding: 20px;
+        width: 100%;
+    }
+    .v-csslayout-well {
+         padding: 20px;
+    }
+    .v-caption-well {
+        padding-top: 12px;
+        font-size: 24px;
+        font-weight: 300;
+    }
+    .v-caption-card {
+        padding-top: 12px;
+        font-size: 24px;
+        font-weight: 300;
     }
 }
