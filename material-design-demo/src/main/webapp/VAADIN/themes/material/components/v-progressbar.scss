@@ -12,17 +12,20 @@
     .v-slider-base {
         border-radius: 0px;
     }
-
     .v-slider-handle:before {
         background: $v-selection-color;
         box-shadow: none;
     }
-
-     .v-slider-handle:before, .demo .v-slider-handle:after {
-            margin-top: 8px;
-     }
-
+    .v-slider-handle:before, .demo .v-slider-handle:after {
+        margin-top: 8px;
+    }
     .v-slider-base {
-            height: 4px;
+        height: 4px;
+    }
+    .v-slider-vertical .v-slider-base {
+        width: 4px;
+    }
+    .v-slider-vertical .v-slider-handle:after {
+        margin-left: -9px;
     }
 }

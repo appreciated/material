@@ -1,9 +1,15 @@
 @mixin v-filterselect {
 
     .v-filterselect:not(.v-filterselect-no-input) [class*="input"] {
-        border-bottom: 1px solid;
+        border-bottom: 1px solid $v-selection-color;
         border-radius: 0px;
         box-shadow: none;
+    }
+    .v-filterselect-focus:not(.v-filterselect-no-input) [class*="input"] {
+        box-shadow: 0 1px 0 0 $v-selection-color;
+    }
+    .v-filterselect-error.v-filterselect-focus:not(.v-filterselect-no-input) [class*="input"] {
+        box-shadow: 0 1px 0 0 $v-error-indicator-color;
     }
     .v-filterselect-suggestpopup [class$="suggestmenu"] {
         padding: 0px 0;

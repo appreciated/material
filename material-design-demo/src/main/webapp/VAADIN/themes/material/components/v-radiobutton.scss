@@ -3,22 +3,22 @@
          border: 2px solid valo-font-color($v-background-color, 0.65) !important;
     }
     .v-select-optiongroup .v-radiobutton > input:checked ~ label:after {
-        width: 8px;
-        height: 8px;
-        top: 6px;
-        left: 6px;
+        width: 10px;
+        height: 10px;
+        top: 5px;
+        left: 5px;
      }
-     .v-select-optiongroup-small .v-radiobutton > input:checked ~ label:after {
-         width: 7px !important;
-         height: 7px !important;
-         top: 5px !important;
-         left: 5px !important;
-      }
+    .v-select-optiongroup-small .v-radiobutton > input:checked ~ label:after {
+        width: 9px !important;
+        height: 9px !important;
+        top: 4px !important;
+        left: 4px !important;
+    }
     .v-select-optiongroup-large .v-radiobutton > input:checked ~ label:after {
-        width: 12px !important;
-        height: 12px !important;
-        top: 6px !important;
-        left: 6px !important;
+        width: 14px !important;
+        height: 14px !important;
+        top: 5px !important;
+        left: 5px !important;
     }
      .v-radiobutton > input:checked ~ label:after {
         background: $v-selection-color !important;

@@ -13,9 +13,6 @@
     .v-button.borderless:hover, .v-button.borderless-colored:hover {
         background: valo-font-color($v-background-color, 0.1);
     }
-    .v-component-group .v-button {
-        padding: 0 10px;
-    }
     .v-window-contents .v-button, .v-panel:not(.borderless):not(.v-panel-well) .v-button,  .v-csslayout-card .v-button {
         box-shadow: none;
     }
