@@ -11,5 +11,11 @@
     }
     .v-slider-base {
         border-radius: 0px;
-        }
+    }
+
+    .v-slider-handle:before {
+        background: $v-selection-color;
+        box-shadow: none;
+    }
+
 }

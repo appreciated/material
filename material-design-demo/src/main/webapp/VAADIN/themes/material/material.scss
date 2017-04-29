@@ -10,6 +10,11 @@
 @import "components/v-datefield.scss";
 @import "components/v-label.scss";
 @import "components/v-textarea.scss";
+@import "components/v-csslayout.scss";
+@import "components/v-table.scss";
+@import "components/v-select-twincol.scss";
+@import "components/v-checkbox.scss";
+@import "components/v-radiobutton.scss";
 
 @mixin material {
     @include valo;
@@ -23,4 +28,9 @@
     @include v-datefield;
     @include v-label;
     @include v-textarea;
+    @include v-csslayout;
+    @include v-table;
+    @include v-select-twincol;
+    @include v-checkbox;
+    @include v-radiobutton;
 }

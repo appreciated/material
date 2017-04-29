@@ -5,7 +5,7 @@
 	<groupId>com.github.appreciated</groupId>
 	<artifactId>material-design-demo</artifactId>
 	<packaging>war</packaging>
-	<version>0.1</version>
+	<version>0.5</version>
 	<name>Material Design Add-on Demo</name>
 
 	<prerequisites>

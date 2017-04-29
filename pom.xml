@@ -5,7 +5,7 @@
 	<groupId>com.github.appreciated</groupId>
 	<artifactId>material-design-root</artifactId>
 	<packaging>pom</packaging>
-	<version>0.1</version>
+	<version>0.5</version>
 	<name>Material Design Add-on Root Project</name>
 
 	<prerequisites>
