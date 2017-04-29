@@ -16,10 +16,10 @@
     .v-component-group .v-button {
         padding: 0 10px;
     }
-    .v-window-contents .v-button {
+    .v-window-contents .v-button, .v-panel:not(.borderless):not(.v-panel-well) .v-button,  .v-csslayout-card .v-button {
         box-shadow: none;
     }
-    .v-window-contents .v-button:hover {
+    .v-window-contents .v-button:hover, .v-panel:not(.borderless):not(.v-panel-well) .v-button:hover, .v-csslayout-card .v-button:hover{
         box-shadow: none !important;
     }
 }
