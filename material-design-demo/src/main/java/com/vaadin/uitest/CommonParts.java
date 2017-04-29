@@ -446,6 +446,7 @@ public class CommonParts extends VerticalLayout implements View {
 
             VerticalLayout windowContent() {
                 VerticalLayout root = new VerticalLayout();
+                root.setMargin(false);
 
                 if (toolbarVisible) {
                     MenuBar menuBar = MenuBars.getToolBar();

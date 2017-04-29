@@ -1,9 +1,17 @@
 @mixin v-datefield {
-    .v-datefield [class*="textfield"] {
-        border-bottom: 2px solid $v-selection-color;
+    .v-datefield {
+        border-radius: 0px;
     }
-
-      .v-csslayout-v-component-group .v-datefield [class*="textfield"] {
+    .v-datefield [class*="textfield"] {
+        border-bottom: 1px solid;
+    }
+     .v-datefield [class*="textfield-readonly"] {
+        border-bottom: 1px solid;
+    }
+    .v-csslayout-v-component-group .v-datefield [class*="textfield"] {
         border-bottom: none;
+    }
+    .v-inline-datefield{
+         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
     }
 }

@@ -18,4 +18,11 @@
         box-shadow: none;
     }
 
+     .v-slider-handle:before, .demo .v-slider-handle:after {
+            margin-top: 8px;
+     }
+
+    .v-slider-base {
+            height: 4px;
+    }
 }

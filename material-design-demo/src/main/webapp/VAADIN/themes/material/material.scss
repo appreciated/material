@@ -15,6 +15,9 @@
 @import "components/v-select-twincol.scss";
 @import "components/v-checkbox.scss";
 @import "components/v-radiobutton.scss";
+@import "components/v-splitpanel.scss";
+@import "components/v-tabsheet.scss";
+@import "components/v-window.scss";
 
 @mixin material {
     @include valo;
@@ -33,4 +36,7 @@
     @include v-select-twincol;
     @include v-checkbox;
     @include v-radiobutton;
+    @include v-splitpanel;
+    @include v-tabsheet;
+    @include v-window;
 }

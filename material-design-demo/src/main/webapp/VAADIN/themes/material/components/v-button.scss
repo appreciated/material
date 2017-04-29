@@ -1,5 +1,25 @@
 @mixin v-button {
+    .v-button {
+        transition: box-shadow .3s ease-out, background .3s;
+        text-transform: uppercase;
+    }
+    .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
+        box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+    }
+    .v-button-quiet {
+        visibility: visible;
+        box-shadow: 0 0px 0px 0 rgba(0,0,0,0), 0 0px 0px 0 rgba(0,0,0,0), 0 0px 0px 0px rgba(0,0,0,0);
+    }
+    .v-button.borderless:hover, .v-button.borderless-colored:hover {
+        background: valo-font-color($v-background-color, 0.1);
+    }
     .v-component-group .v-button {
-         padding: 0 10px;
+        padding: 0 10px;
+    }
+    .v-window-contents .v-button {
+        box-shadow: none;
+    }
+    .v-window-contents .v-button:hover {
+        box-shadow: none !important;
     }
 }
