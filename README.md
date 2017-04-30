@@ -18,25 +18,11 @@ mvn clean install
 cd demo
 mvn jetty:run
 ````
-
 To see the demo, navigate to http://localhost:8080/
-
- 
-## Release notes
-
-### Version 0.1
-- ...
-- ...
-
-## Roadmap
-
-This component is developed as a hobby with no public roadmap or any guarantees of upcoming releases. That said, the following features are planned for upcoming releases:
-- ...
-- ...
 
 ## Issue tracking
 
-The issues for this add-on are tracked on its github.com page. All bug reports and feature requests are appreciated. 
+The issues for this add-on are tracked on its github.com page. All bug reports and feature requests are welcome. 
 
 ## Contributions
 
