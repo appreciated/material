@@ -16,6 +16,11 @@
     .v-datefield [class*="textfield-readonly"] {
         border-bottom: 1px solid;
     }
+    .v-component-group .v-datefield [class*="textfield"] {
+          box-shadow: none;
+     }
+
+
     .v-inline-datefield {
         @extend .z-depth-1;
     }

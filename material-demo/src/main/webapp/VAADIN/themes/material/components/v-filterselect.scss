@@ -22,8 +22,11 @@
     .v-filterselect [class$="button"]:before {
         font-size: 10px;
     }
-    .v-csslayout-v-component-group .v-filterselect [class*="input"] {
-        border-bottom: none;
-        @extend .z-depth-1;
-    }
+     .v-component-group .v-filterselect [class*="textfield"] {
+       box-shadow: none;
+      }
+      .v-component-group .v-filterselect:not(.v-filterselect-no-input) [class*="input"] {
+        border: none;
+        box-shadow: none;
+      }
 }

@@ -1,10 +1,25 @@
 @mixin v-menubar {
+    .v-menubar {
+       color: valo-font-color($v-selection-color, 1.0);
+       background: $v-selection-color;
+    }
+    .v-menubar-borderless {
+        background: transparent;
+    }
     .v-menubar > .v-menubar-menuitem {
         margin-right: 0px;
+        transition: background-color .3s;
+    }
+     .v-menubar > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover {
+         background: darken($v-selection-color, 5%);
+        color: valo-font-color(darken($v-selection-color, 5%), 1.0);
     }
     .v-menubar > .v-menubar-menuitem-checked {
-        background: $v-selection-color;
-        color: valo-font-color($v-selection-color, 1.0);
+        background: darken($v-selection-color, 5%);
+        color: valo-font-color(darken($v-selection-color, 5%), 1.0);
+    }
+    .v-menubar > .v-menubar-menuitem:hover:before {
+        background-color: transparent;
     }
     .v-menubar-popup {
         padding: 0px 0;
@@ -17,12 +32,30 @@
     .v-menubar-popup .v-menubar-separator {
         margin: 0px 0;
     }
-    .v-menubar-submenu:first-child.v-menubar-menuitem-selected {
-        border-top-left-radius: 2px;
-        border-top-right-radius: 2px;
+    .v-menubar-submenu :first-child.v-menubar-menuitem-selected {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
     }
-    .v-menubar-submenu:last-child.v-menubar-menuitem-selected {
+    .v-menubar-submenu :last-child.v-menubar-menuitem-selected {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    .v-menubar.borderless .v-menubar-menuitem {
+        border-radius: 0px;
+    }
+    .v-menubar.borderless :first-child {
+        border-top-left-radius: 2px;
         border-bottom-left-radius: 2px;
+    }
+    .v-menubar.borderless :last-child {
+        border-top-right-radius: 2px;
         border-bottom-right-radius: 2px;
     }
+    .v-menubar.borderless .v-menubar-menuitem-disabled {
+        color: $v-selection-color !important;
+    }
+    .v-menubar-popup .v-menubar-submenu-indicator + .v-menubar-menuitem-caption:after {
+        line-height: 40px;
+            font-size: 11px;
+        }
 }

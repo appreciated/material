@@ -15,6 +15,7 @@
  */
 package com.vaadin.uitest;
 
+import com.vaadin.icons.VaadinIcons;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.server.ExternalResource;
@@ -182,6 +183,36 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         link.setIcon(testIcon.get());
         link.setEnabled(false);
         row.addComponent(link);
+
+        h1 = new Label("Custom");
+        h1.addStyleName(ValoTheme.LABEL_H1);
+        addComponent(h1);
+
+        row = new HorizontalLayout();
+        row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
+        addComponent(row);
+
+        button = new Button(VaadinIcons.PLUS);
+        button.addStyleName("floating");
+        HorizontalLayout layout = new HorizontalLayout(button);
+        layout.setCaption("floating");
+        row.addComponent(layout);
+
+        button = new Button("Round");
+        button.addStyleName("round");
+        row.addComponent(button);
+
+        button = new Button("Round Primary");
+        button.addStyleName("round primary");
+        row.addComponent(button);
+
+        button = new Button("Round Friendly");
+        button.addStyleName("round friendly");
+        row.addComponent(button);
+
+        button = new Button("Round Danger");
+        button.addStyleName("round danger");
+        row.addComponent(button);
     }
 
     @Override

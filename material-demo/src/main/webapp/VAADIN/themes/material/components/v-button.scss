@@ -3,6 +3,21 @@
         transition: box-shadow .3s ease-out, background .3s;
         text-transform: uppercase;
     }
+       .round {
+         border-radius: 30px;
+     }
+     .floating {
+         @extend .z-depth-3;
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        background-color: $v-selection-color;
+        color: valo-font-color($v-selection-color, 1.0);
+    }
+     .floating:hover {
+         box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3) !important;
+         background-color: lighten($v-selection-color, 5%)!important;
+     }
     .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
        @extend .z-depth-2;
        background-color: valo-font-color($v-background-color, 0.05);
@@ -42,4 +57,6 @@
     .v-csslayout-card .v-button:hover {
         box-shadow: none !important;
     }
+
+
 }
