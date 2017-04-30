@@ -37,6 +37,7 @@ import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.data.util.HierarchicalContainer;
 import com.vaadin.v7.data.util.IndexedContainer;
 import com.vaadin.v7.ui.NativeSelect;
+import sun.reflect.generics.tree.Tree;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -102,6 +103,7 @@ public class ValoThemeUI extends UI {
         navigator.addView("tables", Tables.class);
         navigator.addView("splitpanels", SplitPanels.class);
         navigator.addView("tabs", Tabsheets.class);
+        navigator.addView("trees", Trees.class);
         navigator.addView("accordions", Accordions.class);
         navigator.addView("colorpickers", ColorPickers.class);
         navigator.addView("selects", NativeSelects.class);
