@@ -4,8 +4,8 @@
         text-transform: uppercase;
     }
     .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
-        background-color: valo-font-color($v-background-color, 0.05);
+       @extend .z-depth-2;
+       background-color: valo-font-color($v-background-color, 0.05);
     }
     .v-button.v-disabled {
         background-color: valo-font-color($v-background-color, 0.2);
@@ -26,7 +26,7 @@
     }
     .v-button-quiet {
         visibility: visible;
-        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0);
+        @extend .z-depth-0;
     }
     .v-button.borderless:not(.v-disabled):hover,
     .v-button.borderless-colored:not(.v-disabled):hover {
