@@ -239,7 +239,7 @@ public class ValoThemeUI extends UI {
         showMenu.setIcon(FontAwesome.LIST);
         menu.addComponent(showMenu);
 
-        Label title = new Label("<h3>Vaadin <strong>Material Theme</strong></h3>",
+        Label title = new Label("<h3>Vaadin <strong>Material</strong> Theme</h3>",
                 ContentMode.HTML);
         title.setSizeUndefined();
         top.addComponent(title);

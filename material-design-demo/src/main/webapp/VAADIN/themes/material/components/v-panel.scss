@@ -5,8 +5,11 @@
         padding-left: 24px;
         padding-right: 24px;
     }
-
+    .v-panel-content {
+        padding-top: 4px;
+    }
     .v-panel-content > .v-layout {
+
          padding: 4px;
      }
     .v-window-contents .v-panel {
@@ -16,6 +19,8 @@
         padding-right: 0px;
     }
     .v-panel-caption {
+        margin-left: 4px;
+        margin-right: 4px;
         line-height: 32px;
         font-weight: 300;
         font-size: 24px;
