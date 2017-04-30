@@ -1,16 +1,33 @@
 @mixin v-csslayout {
-    .v-csslayout-v-component-group .v-widget ~ .v-widget {
-        margin-left: -6px;
+    .v-csslayout-v-component-group .v-widget:not(.v-label) {
+        margin-left: 0px;
+        box-shadow: none !important;
+        overflow: hidden;
+        height: 50px;
+        background: transparent !important;
     }
-    .v-csslayout-v-component-group .v-widget ~ .v-widget:not(:last-child) {
-        clip-path: inset(-5px 3px -5px 3px);
+    .v-csslayout-v-component-group .v-widget :first-child {
+        position: relative;
+        z-index: 1;
     }
-    .v-csslayout-v-component-group .v-widget:last-child, .v-csslayout-v-component-group .v-caption:last + .v-widget  {
-        border-radius: 0 2px 2px 0;
-        clip-path: inset(-5px -5px -5px 3px);
+    .v-csslayout-v-component-group .v-widget:after {
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+        margin-bottom: 4px;
+        margin-top: 4px;
+         margin-left: -2px;
+          margin-right: -2px;
     }
-    .v-csslayout-v-component-group .v-widget:first-child, .v-csslayout-v-component-group .v-caption:first-child + .v-widget {
-        clip-path: inset(-5px 3px -5px -5px);
+    .v-csslayout-v-component-group .v-widget:hover:after {
+        box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+        background-color: valo-font-color($v-background-color, 0.05);
+    }
+    .v-csslayout-v-component-group .v-widget.last:after {
+        margin-right: 4px;
+        margin-left: -2px;
+    }
+    .v-csslayout-v-component-group .v-widget:first-child:after {
+        margin-left: 4px;
+        margin-right: -2px;
     }
     .v-component-group .v-button {
         padding: 0 16px;
