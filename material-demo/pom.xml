@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.appreciated</groupId>
-	<artifactId>material-design-demo</artifactId>
+	<artifactId>material-demo</artifactId>
 	<packaging>war</packaging>
 	<version>0.5</version>
 	<name>Material Demo</name>

@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.appreciated</groupId>
-	<artifactId>material-design-root</artifactId>
+	<artifactId>material-root</artifactId>
 	<packaging>pom</packaging>
 	<version>0.5</version>
 	<name>Material Root Project</name>
@@ -13,8 +13,8 @@
 	</prerequisites>
 
 	<modules>
-		<module>material-design-addon</module>
-		<module>material-design-demo</module>
+		<module>material-addon</module>
+		<module>material-demo</module>
 	</modules>
 
 	<profiles>
