@@ -33,7 +33,6 @@
     @include v-datefield;
     @include v-label;
     @include v-textarea;
-    @include v-csslayout;
     @include v-table;
     @include v-select-twincol;
     @include v-checkbox;
@@ -41,4 +40,5 @@
     @include v-splitpanel;
     @include v-tabsheet;
     @include v-window;
+    @include v-csslayout;
 }

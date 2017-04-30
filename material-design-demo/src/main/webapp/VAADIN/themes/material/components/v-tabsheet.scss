@@ -7,4 +7,9 @@
         padding: 0 24px;
         text-transform: uppercase;
     }
+    .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-tabsheet-caption-close {
+        top: 0px;
+        right: 4px;
+        margin-top: 11px;
+     }
 }

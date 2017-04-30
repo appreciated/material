@@ -5,6 +5,10 @@
         padding-left: 24px;
         padding-right: 24px;
     }
+
+    .v-panel-content > .v-layout {
+         padding: 4px;
+     }
     .v-window-contents .v-panel {
         padding-top: 0px !important;
         padding-bottom: 0px !important;
