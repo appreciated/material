@@ -1,9 +1,8 @@
 @mixin v-filterselect {
 
     .v-filterselect:not(.v-filterselect-no-input) [class*="input"] {
+        @extend .focus-border-bottom;
         border-bottom: 1px solid $v-selection-color;
-        border-radius: 0px;
-        box-shadow: none;
     }
     .v-filterselect-focus:not(.v-filterselect-no-input) [class*="input"] {
         box-shadow: 0 1px 0 0 $v-selection-color;

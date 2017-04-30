@@ -6,7 +6,7 @@
 	<artifactId>material-design-demo</artifactId>
 	<packaging>war</packaging>
 	<version>0.5</version>
-	<name>Material Design Add-on Demo</name>
+	<name>Material Demo</name>
 
 	<prerequisites>
 		<maven>3</maven>

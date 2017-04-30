@@ -1,9 +1,6 @@
  @mixin v-textfield {
     .v-textfield {
-        border-bottom: 1px solid;
-        border-radius: 0px;
-        transition: box-shadow .2s ease-out;
-        box-shadow: 0 1px 0 0 transparent;
+        @extend .focus-border-bottom;
     }
     .v-textfield:focus {
         border-bottom: 1px solid $v-selection-color;

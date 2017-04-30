@@ -1,0 +1,8 @@
+@mixin functions {
+    .focus-border-bottom {
+        border-bottom: 1px solid;
+        border-radius: 0px;
+        transition: box-shadow .2s ease-out;
+        box-shadow: 0 0px 0 0 transparent;
+    }
+}

@@ -5,18 +5,36 @@
     }
     .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
         box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+        background-color: valo-font-color($v-background-color, 0.05);
+    }
+    .v-button.v-disabled {
+            background-color: valo-font-color($v-background-color, 0.2);
+            color: valo-font-color(valo-font-color($v-background-color, 0.2), 0.7);
+            box-shadow: none;
+    }
+    .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
+            background-color: valo-font-color($v-friendly-color, 0.1);
+    }
+    .danger.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
+        background-color: valo-font-color($v-error-indicator-color, 0.1);
+    }
+    .primary.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
+            background: valo-font-color($v-selection-color, 0.1);
+    }
+    .v-button:hover:after {
+        background-color: transparent;
     }
     .v-button-quiet {
         visibility: visible;
         box-shadow: 0 0px 0px 0 rgba(0,0,0,0), 0 0px 0px 0 rgba(0,0,0,0), 0 0px 0px 0px rgba(0,0,0,0);
     }
-    .v-button.borderless:hover, .v-button.borderless-colored:hover {
+    .v-button.borderless:not(.v-disabled):hover, .v-button.borderless-colored:not(.v-disabled):hover {
         background: valo-font-color($v-background-color, 0.1);
     }
-    .v-window-contents .v-button, .v-panel:not(.borderless):not(.v-panel-well) .v-button,  .v-csslayout-card .v-button {
+    .v-window-contents .v-button, .v-panel:not(.borderless):not(.v-panel-well) :not(.v-component-group) > .v-button,  .v-csslayout-card .v-button {
         box-shadow: none;
     }
-    .v-window-contents .v-button:hover, .v-panel:not(.borderless):not(.v-panel-well) .v-button:hover, .v-csslayout-card .v-button:hover{
+    .v-window-contents .v-button:hover, .v-panel:not(.borderless):not(.v-panel-well) :not(.v-component-group) > .v-button:hover, .v-csslayout-card .v-button:hover{
         box-shadow: none !important;
     }
 }

@@ -6,7 +6,7 @@
 	<artifactId>material-design-root</artifactId>
 	<packaging>pom</packaging>
 	<version>0.5</version>
-	<name>Material Design Add-on Root Project</name>
+	<name>Material Root Project</name>
 
 	<prerequisites>
 		<maven>3</maven>

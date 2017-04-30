@@ -6,7 +6,7 @@
 	<artifactId>material-design</artifactId>
 	<packaging>jar</packaging>
 	<version>0.5</version>
-	<name>Material Design Add-on</name>
+	<name>Material</name>
 
 	<prerequisites>
 		<maven>3</maven>

@@ -1,5 +1,6 @@
 @import "variables.scss";
 @import "../valo/valo.scss";
+@import "functions.scss";
 @import "components/v-panel.scss";
 @import "components/v-button.scss";
 @import "components/v-textfield.scss";
@@ -21,6 +22,7 @@
 
 @mixin material {
     @include valo;
+    @include functions;
     @include v-panel;
     @include v-button;
     @include v-textfield;

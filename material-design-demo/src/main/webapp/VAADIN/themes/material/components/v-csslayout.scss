@@ -5,7 +5,7 @@
     .v-csslayout-v-component-group .v-widget ~ .v-widget:not(:last-child) {
         clip-path: inset(-5px 3px -5px 3px);
     }
-    .v-csslayout-v-component-group .v-widget:last-child, .v-csslayout-v-component-group .v-caption:last-child + .v-widget  {
+    .v-csslayout-v-component-group .v-widget:last-child, .v-csslayout-v-component-group .v-caption:last + .v-widget  {
         border-radius: 0 2px 2px 0;
         clip-path: inset(-5px -5px -5px 3px);
     }
