@@ -1,10 +1,10 @@
 # MyComponent Add-on for Vaadin 8
 
-Material Design is a Theme add-on for Vaadin 8.
+Material is a Theme for Vaadin 8.
 
 ## Online demo
 
-Try the add-on demo at <url of the online demo>
+//TODO
 
 ## Download release
 
