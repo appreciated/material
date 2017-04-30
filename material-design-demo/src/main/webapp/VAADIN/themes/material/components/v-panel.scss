@@ -22,7 +22,7 @@
         width: 100%;
     }
     .v-csslayout-well {
-         padding: 20px;
+        padding: 20px;
     }
     .v-caption-well {
         padding-top: 12px;
@@ -34,7 +34,8 @@
         font-size: 24px;
         font-weight: 300;
     }
-    .v-panel-well > .v-panel-content > .v-verticallayout, .v-panel-borderless > .v-panel-content > .v-verticallayout {
+    .v-panel-well > .v-panel-content > .v-verticallayout,
+    .v-panel-borderless > .v-panel-content > .v-verticallayout {
         padding: 4px;
     }
 }

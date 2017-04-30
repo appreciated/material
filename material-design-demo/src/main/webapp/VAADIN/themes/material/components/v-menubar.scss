@@ -1,10 +1,10 @@
 @mixin v-menubar {
     .v-menubar > .v-menubar-menuitem {
-            margin-right: 0px;
+        margin-right: 0px;
     }
     .v-menubar > .v-menubar-menuitem-checked {
         background: $v-selection-color;
-        color: valo-font-color($v-selection-color,1.0);
+        color: valo-font-color($v-selection-color, 1.0);
     }
     .v-menubar-popup {
         padding: 0px 0;
@@ -17,11 +17,11 @@
     .v-menubar-popup .v-menubar-separator {
         margin: 0px 0;
     }
-   .v-menubar-submenu :first-child.v-menubar-menuitem-selected {
+    .v-menubar-submenu:first-child.v-menubar-menuitem-selected {
         border-top-left-radius: 2px;
         border-top-right-radius: 2px;
     }
-    .v-menubar-submenu :last-child.v-menubar-menuitem-selected {
+    .v-menubar-submenu:last-child.v-menubar-menuitem-selected {
         border-bottom-left-radius: 2px;
         border-bottom-right-radius: 2px;
     }

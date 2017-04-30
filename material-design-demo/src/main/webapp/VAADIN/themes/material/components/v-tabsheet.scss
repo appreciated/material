@@ -1,13 +1,10 @@
 @mixin v-tabsheet {
-
     .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-caption {
         border: 1px solid transparent;
     }
-
     .v-tabsheet-tabitemcell .v-caption {
-         margin-left: 0px;
+        margin-left: 0px;
         padding: 0 24px;
         text-transform: uppercase;
     }
-
 }

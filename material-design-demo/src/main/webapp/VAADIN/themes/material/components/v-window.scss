@@ -1,6 +1,6 @@
 @mixin v-window {
     .v-window {
-        box-shadow: 0 7px 8px -4px rgba(0,0,0,.2), 0 13px 19px 2px rgba(0,0,0,.14), 0 5px 24px 4px rgba(0,0,0,.12);
+        box-shadow: 0 7px 8px -4px rgba(0, 0, 0, .2), 0 13px 19px 2px rgba(0, 0, 0, .14), 0 5px 24px 4px rgba(0, 0, 0, .12);
     }
     .v-window-header {
         font-size: 20px;
@@ -8,13 +8,16 @@
         line-height: 64px;
         height: 65px;
     }
-    .v-window-closebox, .v-window-maximizebox,  .v-window-restorebox {
+    .v-window-closebox,
+    .v-window-maximizebox,
+    .v-window-restorebox {
         width: 64px;
         height: 64px;
         line-height: 62px;
         font-size: 31px;
     }
-    .v-window-maximizebox, .demo .v-window-restorebox {
+    .v-window-maximizebox,
+    .demo .v-window-restorebox {
         right: 45px;
     }
 }

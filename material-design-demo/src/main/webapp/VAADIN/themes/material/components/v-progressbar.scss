@@ -16,7 +16,8 @@
         background: $v-selection-color;
         box-shadow: none;
     }
-    .v-slider-handle:before, .demo .v-slider-handle:after {
+    .v-slider-handle:before,
+    .demo .v-slider-handle:after {
         margin-top: 8px;
     }
     .v-slider-base {
@@ -25,7 +26,8 @@
     .v-slider-vertical .v-slider-base {
         width: 4px;
     }
-   .v-slider-vertical .v-slider-handle:before, .v-slider-vertical .v-slider-handle:after {
-           margin-left: -9px;
+    .v-slider-vertical .v-slider-handle:before,
+    .v-slider-vertical .v-slider-handle:after {
+        margin-left: -9px;
     }
 }

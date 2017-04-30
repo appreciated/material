@@ -1,13 +1,13 @@
 @mixin v-radiobutton {
     .v-radiobutton > input ~ label:before {
-         border: 2px solid valo-font-color($v-background-color, 0.65) !important;
+        border: 2px solid valo-font-color($v-background-color, 0.65) !important;
     }
     .v-select-optiongroup .v-radiobutton > input:checked ~ label:after {
         width: 10px;
         height: 10px;
         top: 5px;
         left: 5px;
-     }
+    }
     .v-select-optiongroup-small .v-radiobutton > input:checked ~ label:after {
         width: 9px !important;
         height: 9px !important;
@@ -20,13 +20,13 @@
         top: 5px !important;
         left: 5px !important;
     }
-     .v-radiobutton > input:checked ~ label:after {
+    .v-radiobutton > input:checked ~ label:after {
         background: $v-selection-color !important;
-     }
-    .v-radiobutton > input:checked ~ label:before {
-         border: 2px solid  $v-selection-color  !important;
     }
-     .v-radiobutton > input ~ label:before {
-         box-shadow: none !important;
+    .v-radiobutton > input:checked ~ label:before {
+        border: 2px solid $v-selection-color !important;
+    }
+    .v-radiobutton > input ~ label:before {
+        box-shadow: none !important;
     }
 }

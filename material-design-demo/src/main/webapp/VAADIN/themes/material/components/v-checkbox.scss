@@ -3,10 +3,10 @@
         border: 2px solid valo-font-color($v-background-color, 0.65);
     }
     .v-checkbox > input:checked ~ label:after {
-         border: none;
-         background:  $v-selection-color;
-         color: white !important;
-         border: 0px solid $v-selection-color;
+        border: none;
+        background: $v-selection-color;
+        color: white !important;
+        border: 0px solid $v-selection-color;
     }
     .v-checkbox > input ~ label:before {
         box-shadow: none !important;
