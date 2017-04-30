@@ -1,22 +1,47 @@
-$v-border-radius: 1px;
-$v-luminance-threshold: 180 !default;
-$v-focus-style: none;
-$v-error-indicator-color: #eb2977;
-$v-friendly-color: rgb(0, 255, 0);
-
-$v-layout-margin-top: 10px;
-$v-layout-margin-left: 10px;
-$v-layout-margin-right: 10px;
-$v-layout-margin-bottom: 10px;
-
-$qs-primary-color: #607D8B;  // F.e (Blue Grey) Primary color for Background
-$qs-accent-color: #03A9F4; // F.e (Light Blue) Accent color for Components
-
-$mat-background-image: radial-gradient(circle, #bac8cf 0%, #34444b 100%);
-$mat-icon-image: url("img/web_hi_res_512.png");
-$mat-slide-background: linear-gradient(135deg,#64879a 0%, #315b6d 100%);
-
+@import "variables.scss";
 @import "../valo/valo.scss";
-@mixin material {
+@import "functions.scss";
+@import "materialize/globals.scss";
+@import "components/v-window.scss";
+@import "components/v-panel.scss";
+@import "components/v-button.scss";
+@import "components/v-textfield.scss";
+@import "components/v-filterselect.scss";
+@import "components/v-progressbar.scss";
+@import "components/v-accordion.scss";
+@import "components/v-menubar.scss";
+@import "components/v-datefield.scss";
+@import "components/v-label.scss";
+@import "components/v-textarea.scss";
+@import "components/v-csslayout.scss";
+@import "components/v-table.scss";
+@import "components/v-select-twincol.scss";
+@import "components/v-checkbox.scss";
+@import "components/v-radiobutton.scss";
+@import "components/v-splitpanel.scss";
+@import "components/v-tabsheet.scss";
+@import "components/v-window.scss";
 
+@mixin material {
+    @include valo;
+    @include functions;
+    @include globals;
+    @include v-panel;
+    @include v-button;
+    @include v-textfield;
+    @include v-filterselect;
+    @include v-progressbar;
+    @include v-accordion;
+    @include v-menubar;
+    @include v-datefield;
+    @include v-label;
+    @include v-textarea;
+    @include v-table;
+    @include v-select-twincol;
+    @include v-checkbox;
+    @include v-radiobutton;
+    @include v-splitpanel;
+    @include v-tabsheet;
+    @include v-window;
+    @include v-csslayout;
 }
