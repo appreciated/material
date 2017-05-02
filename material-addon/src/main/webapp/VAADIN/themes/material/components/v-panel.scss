@@ -1,49 +1,28 @@
 @mixin v-panel {
-    .v-panel {
-        padding-top: 56px !important;
-        padding-bottom: 24px !important;
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-    .v-panel-content {
-        padding-top: 4px;
-    }
-    .v-panel-content > .v-layout {
-         padding: 4px;
-     }
-    .v-window-contents .v-panel {
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
-        padding-left: 0px;
-        padding-right: 0px;
-    }
     .v-panel-caption {
-        margin-left: 4px;
-        margin-right: 4px;
+        margin-top: 24px;
+        font-size: 24px;
+        font-weight: 400;
         line-height: 32px;
-        font-weight: 300;
-        font-size: 24px;
-        padding: 0 0px;
+        padding: 0 16px;
+        margin-bottom: -10px;
     }
-    .v-csslayout-card {
-        padding: 20px;
-        width: 100%;
+    .v-caption-card, .v-caption-well {
+         font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        padding-left: 16px;
     }
-    .v-csslayout-well {
-        padding: 20px;
+    .v-panel-content > .v-margin-left {
+        padding-left: 16px;
     }
-    .v-caption-well {
-        padding-top: 12px;
-        font-size: 24px;
-        font-weight: 300;
+    .v-panel-content > .v-margin-bottom {
+        padding-bottom: 16px;
     }
-    .v-caption-card {
-        padding-top: 12px;
-        font-size: 24px;
-        font-weight: 300;
+    .v-panel-content > .v-margin-right {
+        padding-right: 16px;
     }
-    .v-panel-well > .v-panel-content > .v-verticallayout,
-    .v-panel-borderless > .v-panel-content > .v-verticallayout {
-        padding: 4px;
+    .v-panel-content > .v-margin-top {
+        padding-top: 16px;
     }
 }

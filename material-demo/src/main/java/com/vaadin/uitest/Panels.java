@@ -49,7 +49,7 @@ public class Panels extends VerticalLayout implements View {
 
         panel = new Panel("Sized");
         panel.setIcon(testIcon.get());
-        panel.setWidth("10em");
+        panel.setWidth("22em");
         panel.setHeight("250px");
         panel.setContent(panelContent());
         row.addComponent(panel);
@@ -143,10 +143,10 @@ public class Panels extends VerticalLayout implements View {
     Component panelContent() {
         VerticalLayout layout = new VerticalLayout();
         layout.setSizeFull();
-        layout.setMargin(false);
+        layout.setMargin(true);
         Label content = new Label(
                 "Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.");
-        content.setWidth("10em");
+        content.setWidth(20, Unit.EM);
         layout.addComponent(content);
         Button button = new Button("Button");
         button.setSizeFull();
@@ -156,8 +156,7 @@ public class Panels extends VerticalLayout implements View {
 
     Component panelContentScroll() {
         VerticalLayout layout = new VerticalLayout();
-
-        layout.setMargin(false);
+        layout.setMargin(true);
         Label content = new Label(
                 "Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.");
         content.setWidth("10em");
