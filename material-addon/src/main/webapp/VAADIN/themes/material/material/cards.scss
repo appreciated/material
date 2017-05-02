@@ -29,10 +29,9 @@
         @extend .material-card;
     }
     .card-hoverable {
-        @extend .hoverable;
-        @extend .material-card;
+        @extend card-1;
     }
     .card-hoverable:hover {
-        @extend .z-depth-2;
+        @extend .z-depth-3;
     }
 }
