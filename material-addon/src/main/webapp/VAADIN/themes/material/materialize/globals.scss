@@ -23,10 +23,9 @@
     }
     .hoverable {
         transition: box-shadow .25s;
-        @extend .z-depth-0;
+        @extend .z-depth-1;
     }
     .hoverable:hover {
-        transition: box-shadow .25s;
-        @extend .z-depth-1;
+        @extend .z-depth-2;
     }
 }
