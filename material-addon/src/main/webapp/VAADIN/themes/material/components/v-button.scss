@@ -52,11 +52,4 @@
     .v-csslayout-card .v-button {
         box-shadow: none;
     }
-    .v-window-contents .v-button:hover,
-    .v-panel:not(.borderless):not(.v-panel-well):not(.v-component-group) .v-button:hover,
-    .v-csslayout-card .v-button:hover {
-        box-shadow: none !important;
-    }
-
-
 }
