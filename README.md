@@ -37,7 +37,7 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 ## Roadmap to 1.0
 
 - improve scss abstraction
-- introduce theme variables to improve customizablity
+- introduce theme variables to allow customizablity
 - implement community feedback 
 
 ## License & Author
