@@ -29,7 +29,7 @@
         @extend .material-card;
     }
     .card-hoverable {
-        @extend card-1;
+        @extend .hoverable;
     }
     .card-hoverable:hover {
         @extend .z-depth-3;
