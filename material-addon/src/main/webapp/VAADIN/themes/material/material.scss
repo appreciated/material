@@ -21,11 +21,13 @@
 @import "components/v-splitpanel.scss";
 @import "components/v-tabsheet.scss";
 @import "components/v-window.scss";
+@import "material/cards.scss";
 
 @mixin material {
     @include valo;
     @include functions;
     @include globals;
+    @include cards;
     @include v-panel;
     @include v-button;
     @include v-textfield;

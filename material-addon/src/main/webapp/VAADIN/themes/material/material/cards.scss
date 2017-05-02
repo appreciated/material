@@ -1,0 +1,35 @@
+@mixin cards {
+    .material-card {
+        padding: 20px;
+        border-radius: 3px;
+        background: $mat-card-color;
+    }
+    .card-0 {
+        @extend .depth-0;
+        @extend .material-card;
+    }
+    .card-hoverable {
+        @extend .hoverable;
+        @extend .material-card;
+    }
+    .card-1 {
+        @extend .depth-1;
+        @extend .material-card;
+    }
+    .card-2 {
+        @extend .depth-2;
+        @extend .material-card;
+    }
+    .card-3 {
+        @extend .depth-3;
+        @extend .material-card;
+    }
+    .card-4 {
+        @extend .depth-4;
+        @extend .material-card;
+    }
+    .card-5 {
+        @extend .depth-5;
+        @extend .material-card;
+    }
+}
