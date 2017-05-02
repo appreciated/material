@@ -99,6 +99,7 @@ public class ValoThemeUI extends UI {
         navigator.addView("checkboxes", CheckBoxes.class);
         navigator.addView("sliders", Sliders.class);
         navigator.addView("menubars", MenuBars.class);
+        navigator.addView("panels-no-caption", PanelsNoCaptionTest.class);
         navigator.addView("panels", Panels.class);
         navigator.addView("tables", Tables.class);
         navigator.addView("splitpanels", SplitPanels.class);
@@ -213,6 +214,7 @@ public class ValoThemeUI extends UI {
         menuItems.put("tables", "Tables");
         menuItems.put("dragging", "Drag and Drop");
         menuItems.put("panels", "Panels");
+        menuItems.put("panels-no-caption", "Panels No Caption");
         menuItems.put("splitpanels", "Split Panels");
         menuItems.put("tabs", "Tabs");
         menuItems.put("accordions", "Accordions");
