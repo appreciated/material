@@ -38,7 +38,7 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 
 - improve scss abstraction
 - introduce theme variables to allow customizablity
-- implement community feedback 
+- include community feedback 
 
 ## License & Author
 
