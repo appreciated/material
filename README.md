@@ -34,6 +34,12 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 - Send a pull request for the original project
 - Comment on the original issue that you have implemented a fix for it
 
+## Roadmap
+
+- improve scss abstraction
+- introduce theme variables to improve customizablity
+- including community feedback 
+
 ## License & Author
 
 Add-on is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
