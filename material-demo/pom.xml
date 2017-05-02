@@ -76,7 +76,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.github.appreciated</groupId>
-			<artifactId>material-design</artifactId>
+			<artifactId>material</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
