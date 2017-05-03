@@ -39,16 +39,41 @@ public class ColorPickers extends VerticalLayout implements View {
 
         TestIcon testIcon = new TestIcon(40);
 
+
+        HorizontalLayout layout = new HorizontalLayout();
+
+        layout.setCaption("default");
         ColorPicker cp = new ColorPicker();
         cp.setDefaultCaptionEnabled(true);
         cp.setIcon(testIcon.get());
         cp.setValue(new Color(138, 73, 115));
-        row.addComponent(cp);
+        layout.addComponent(cp);
 
         cp = new ColorPicker();
         cp.setPopupStyle(PopupStyle.POPUP_SIMPLE);
         cp.setTextfieldVisibility(true);
-        row.addComponent(cp);
+        layout.addComponent(cp);
+
+        row.addComponent(layout);
+
+
+        layout = new HorizontalLayout();
+
+        layout.setCaption("borderless");
+        cp = new ColorPicker();
+        cp.setDefaultCaptionEnabled(true);
+        cp.addStyleName("borderless");
+        cp.setIcon(testIcon.get());
+        cp.setValue(new Color(138, 73, 115));
+        layout.addComponent(cp);
+
+        cp = new ColorPicker();
+        cp.addStyleName("borderless");
+        cp.setPopupStyle(PopupStyle.POPUP_SIMPLE);
+        cp.setTextfieldVisibility(true);
+        layout.addComponent(cp);
+
+        row.addComponent(layout);
     }
 
     @Override

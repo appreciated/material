@@ -1,19 +1,23 @@
  @mixin v-textfield {
-     .v-textfield {
+     .v-textfield:not(.borderless):not(.floating) {
          @extend .focus-border-bottom;
      }
-     .v-textfield:focus {
+      .v-textfield.floating {
+          @extend .floating-border;
+      }
+     .v-textfield:not(.borderless):not(.floating):focus {
          border-bottom: 1px solid $v-selection-color;
          box-shadow: 0 1px 0 0 $v-selection-color;
      }
-     .v-textfield-error:focus {
+     .v-textfield-error:not(.borderless):not(.floating):focus {
          border-bottom: 1px solid $v-error-indicator-color;
          box-shadow: 0 1px 0 0 $v-error-indicator-color;
      }
      .v-component-group .v-textfield {
          border-bottom: none;
      }
-       .v-component-group .v-textfield:focus {
-              border-bottom: none !important;
-          }
+     .v-component-group .v-textfield:focus {
+          border-bottom: none !important;
+          box-shadow: none !important;
+      }
  }

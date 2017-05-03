@@ -1,0 +1,8 @@
+@mixin v-loading {
+    .gwt-PopupPanel{
+        background: white;
+        color: $v-selection-color;
+        border-radius: 2px;
+        font-weight: 400;
+    }
+}

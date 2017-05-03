@@ -178,6 +178,15 @@ public class ComboBoxes extends VerticalLayout implements View {
         combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
         combo.addStyleName(ValoTheme.COMBOBOX_HUGE);
         row.addComponent(combo);
+
+        combo = new ComboBox("Floating");
+        combo.setInputPrompt("You can type here");
+        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
+        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
+        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
+        combo.addStyleName("floating");
+        row.addComponent(combo);
+
     }
 
     @Override

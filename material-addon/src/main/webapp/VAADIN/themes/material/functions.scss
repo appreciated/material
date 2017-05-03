@@ -5,4 +5,10 @@
         transition: box-shadow .2s ease-out;
         box-shadow: 0 0px 0 0 transparent;
     }
+    .floating-border {
+          border-radius: 2px;
+          border: none;
+          background-color: white;
+          @extend .z-depth-1;
+      }
 }

@@ -1,12 +1,12 @@
 @mixin v-filterselect {
-    .v-filterselect:not(.v-filterselect-no-input) [class*="input"] {
+    .v-filterselect:not(.borderless):not(.floating) [class*="input"] {
         @extend .focus-border-bottom;
         border-bottom: 1px solid $v-selection-color;
     }
-    .v-filterselect-focus:not(.v-filterselect-no-input) [class*="input"] {
+    .v-filterselect:not(.borderless):not(.floating):not(.v-filterselect-error) [class*="input"] {
         box-shadow: 0 1px 0 0 $v-selection-color;
     }
-    .v-filterselect-error.v-filterselect-focus:not(.v-filterselect-no-input) [class*="input"] {
+    .v-filterselect-error.v-filterselect-focus:not(.borderless):not(.floating) [class*="input"] {
         box-shadow: 0 1px 0 0 $v-error-indicator-color;
     }
     .v-filterselect-suggestpopup [class$="suggestmenu"] {
@@ -16,17 +16,20 @@
         line-height: 40px;
         height: 40px;
     }
+    .v-filterselect.floating {
+          @extend .floating-border;
+    }
     .v-select-select {
         border-bottom: 1px solid;
     }
     .v-filterselect [class$="button"]:before {
         font-size: 10px;
     }
-     .v-component-group .v-filterselect [class*="textfield"] {
-       box-shadow: none;
-      }
-      .v-component-group .v-filterselect:not(.v-filterselect-no-input) [class*="input"] {
-        border: none;
+    .v-component-group .v-filterselect [class*="textfield"] {
         box-shadow: none;
-      }
+    }
+    .v-component-group .v-filterselect:not(.v-filterselect-no-input) [class*="input"] {
+        border: none;
+        box-shadow: none !important;
+    }
 }

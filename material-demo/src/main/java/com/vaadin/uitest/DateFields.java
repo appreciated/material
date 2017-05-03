@@ -162,6 +162,12 @@ public class DateFields extends VerticalLayout implements View {
         date.addStyleName(ValoTheme.DATEFIELD_HUGE);
         row.addComponent(date);
 
+        date = new TestDateField("Floating");
+        setDate(date);
+        date.setResolution(DateResolution.DAY);
+        date.addStyleName("floating");
+        row.addComponent(date);
+
         date = new InlineDateField("Date picker");
         setDate(date);
         setDateRange(date);

@@ -21,6 +21,7 @@
 @import "components/v-splitpanel.scss";
 @import "components/v-tabsheet.scss";
 @import "components/v-window.scss";
+@import "components/v-loading.scss";
 @import "material/cards.scss";
 
 @mixin material {
@@ -46,4 +47,5 @@
     @include v-tabsheet;
     @include v-window;
     @include v-csslayout;
+    @include v-loading;
 }

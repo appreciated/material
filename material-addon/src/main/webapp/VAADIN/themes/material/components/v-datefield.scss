@@ -1,27 +1,34 @@
 @mixin v-datefield {
-    .v-datefield {
-        border-radius: 0px;
-    }
-    .v-datefield [class*="textfield"] {
+
+    .v-datefield:not(.borderless):not(.floating) [class*="textfield"] {
         @extend .focus-border-bottom;
     }
-    .v-datefield [class*="textfield"]:focus {
+    .v-datefield:not(.borderless):not(.floating) [class*="textfield"]:focus {
         border-bottom: 1px solid $v-selection-color;
         box-shadow: 0 1px 0 0 $v-selection-color;
     }
-    .v-datefield-error [class*="textfield"]:focus {
+
+    .v-datefield-error:not(.borderless):not(.floating) [class*="textfield"]:focus {
         border-bottom: 1px solid $v-error-indicator-color;
         box-shadow: 0 1px 0 0 $v-error-indicator-color;
     }
-    .v-datefield [class*="textfield-readonly"] {
+    .v-datefield:not(.borderless):not(.floating) [class*="textfield-readonly"] {
         border-bottom: 1px solid;
     }
+    .v-datefield.floating {
+        @extend .floating-border;
+    }
+    .v-datefield-borderless .v-datefield-textfield, .v-datefield.floating .v-datefield-textfield {
+        border: none !important;
+        box-shadow: none !important;
+    }
     .v-component-group .v-datefield [class*="textfield"] {
-          box-shadow: none;
+          box-shadow: none !important;
      }
-
-
-    .v-inline-datefield {
+     .v-component-group .v-datefield .v-textfield {
+         border-bottom: none !important;
+     }
+    .v-inline-datefield:not(.borderless) {
         @extend .z-depth-1;
     }
 }

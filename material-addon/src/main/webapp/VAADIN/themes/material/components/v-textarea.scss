@@ -1,11 +1,11 @@
 @mixin v-textarea {
-    .v-textarea {
-        @extend .z-depth-1;
+    .v-textarea:not(.borderless) {
+        @extend .floating-border;
     }
     .v-textarea-borderless {
         @extend .z-depth-0;
     }
-    .v-richtextarea {
-        @extend .z-depth-1;
+    .v-richtextarea:not(.borderless) {
+        @extend .floating-border;
     }
 }
