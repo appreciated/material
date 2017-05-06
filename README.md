@@ -44,5 +44,4 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 
 Add-on is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
 
-material-design is written by Appreciated
-
+The Theme (material-addon) is written by Appreciated while most of the code in the Demo (material-demo) it written by the Vaadin Team
