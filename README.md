@@ -46,4 +46,4 @@ Add-on is distributed under Apache License 2.0. For license terms, see LICENSE.t
 
 The Theme (material-addon) is written by Appreciated 
 
-Most of the code in the Demo (material-demo) it written by the Vaadin Team
+Most of the code in the Demo (material-demo) has been written by the Vaadin Team and has been taken from [here](https://github.com/vaadin/framework/tree/master/uitest/src/main/java/com/vaadin/tests/themes/valo)
