@@ -40,7 +40,7 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 - introduce theme variables to allow customizablity
 - include community feedback 
 
-## License & Author
+## Licenses & Authors
 
 The Theme (material-addon) is mostly written by Appreciated and is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
 
