@@ -42,8 +42,6 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 
 ## License & Author
 
-Add-on 
-
 The Theme (material-addon) is written by Appreciated and is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
 
 Most of the code in the Demo (material-demo) has been written by the Vaadin Team and has been taken from [here](https://github.com/vaadin/framework/tree/master/uitest/src/main/java/com/vaadin/tests/themes/valo) and is also distributed under Apache License 2.0.
