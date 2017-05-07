@@ -8,7 +8,7 @@ Material is a Theme for Vaadin 8.
 
 ## Download release
 
-Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to http://vaadin.com/addon/material-design
+Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to https://vaadin.com/directory#!addon/material
 
 ## Building and running demo
 
@@ -40,9 +40,10 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 - introduce theme variables to allow customizablity
 - include community feedback 
 
-## License & Author
+## Licenses & Authors
 
-Add-on is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
+The Theme (material-addon) is mostly written by Appreciated and is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
 
-material-design is written by Appreciated
+A [small part](https://github.com/appreciated/material/blob/master/material-addon/src/main/webapp/VAADIN/themes/material/materialize/globals.scss) in the material-addon has been taken from the [Materialize Project](https://github.com/Dogfalo/materialize) which has been Licensed under the MIT License see MIT-LICENSE.txt. 
 
+Most of the code in the Demo (material-demo) has been written by the Vaadin Team and has been taken from [here](https://github.com/vaadin/framework/tree/master/uitest/src/main/java/com/vaadin/tests/themes/valo) for the developement of the theme but is not included in the addon itself and is distributed under Apache License 2.0.
