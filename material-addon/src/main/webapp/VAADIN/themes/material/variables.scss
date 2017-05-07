@@ -6,7 +6,7 @@ $v-unit-size: 40px;
 $v-focus-color: #0072C6 !default;
 $mat-card-color: #fff !default;
 $v-focus-style: none;
-$valo-menu-background-color: darken($v-focus-color, 20%);
+$valo-menu-background-color: $v-selection-color;
 $v-border: 0 solid v-shade;
 $v-border-radius: 2px;
 $v-bevel: false;
