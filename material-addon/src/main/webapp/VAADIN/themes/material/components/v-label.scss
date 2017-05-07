@@ -1,6 +1,6 @@
 @mixin v-label {
-    .v-label-success,
-    .v-label-failure {
+    .v-label-success:not(.borderless),
+    .v-label-failure:not(.borderless) {
         @extend .z-depth-1;
     }
     .v-label-success {
