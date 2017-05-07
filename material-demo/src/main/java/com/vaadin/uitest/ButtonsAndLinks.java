@@ -193,9 +193,9 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         addComponent(row);
 
         button = new Button(VaadinIcons.PLUS);
-        button.addStyleName("action");
+        button.addStyleName("floating-action");
         HorizontalLayout layout = new HorizontalLayout(button);
-        layout.setCaption("action");
+        layout.setCaption("floating-action");
         row.addComponent(layout);
 
         button = new Button("Round");
