@@ -1,11 +1,6 @@
-body:not(.v-touch) .v-button.action:hover, body.v-touch .v-button.action:hover,
-body.v-touch .v-button.action:hover, body.v-touch .v-button.action:active {
-    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
-    background-color: lighten($v-selection-color, 5%)!important;
-}
 body:not(.v-touch) .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover,
 body.v-touch .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):active{
-    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
     background-color: valo-font-color($v-background-color, 0.05);
 }
 body:not(.v-touch) .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover,
@@ -25,6 +20,12 @@ body:not(.v-touch) .v-button.borderless-colored:not(.v-disabled):hover,
 body.v-touch .v-button.borderless:not(.v-disabled):active,
 body.v-touch .v-button.borderless-colored:not(.v-disabled):active {
     background: valo-font-color($v-background-color, 0.1);
+}
+
+body:not(.v-touch) .v-button.action:active,
+body.v-touch .v-button.action:hover {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3) !important;
+    background-color: lighten($v-selection-color, 5%)!important;
 }
 
 @mixin v-button {
