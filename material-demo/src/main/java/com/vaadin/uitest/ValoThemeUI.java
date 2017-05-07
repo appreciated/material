@@ -32,12 +32,8 @@ import com.vaadin.ui.themes.ValoTheme;
 import com.vaadin.v7.data.Container;
 import com.vaadin.v7.data.Container.Hierarchical;
 import com.vaadin.v7.data.Item;
-import com.vaadin.v7.data.Property.ValueChangeEvent;
-import com.vaadin.v7.data.Property.ValueChangeListener;
 import com.vaadin.v7.data.util.HierarchicalContainer;
 import com.vaadin.v7.data.util.IndexedContainer;
-import com.vaadin.v7.ui.NativeSelect;
-import sun.reflect.generics.tree.Tree;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;

@@ -1,10 +1,39 @@
+body:not(.v-touch) .v-button.action:hover, body.v-touch .v-button.action:hover,
+body.v-touch .v-button.action:hover, body.v-touch .v-button.action:active {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3) !important;
+    background-color: lighten($v-selection-color, 5%)!important;
+}
+body:not(.v-touch) .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover,
+body.v-touch .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):active{
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+    background-color: valo-font-color($v-background-color, 0.05);
+}
+body:not(.v-touch) .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover,
+body.v-touch .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):active {
+    background-color: valo-font-color($v-friendly-color, 0.1);
+}
+body:not(.v-touch) .danger.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover,
+body.v-touch .danger.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):active {
+    background-color: valo-font-color($v-error-indicator-color, 0.1);
+}
+body:not(.v-touch) .primary.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover,
+body.v-touch .primary.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):active {
+    background: valo-font-color($v-selection-color, 0.1);
+}
+body:not(.v-touch) .v-button.borderless:not(.v-disabled):hover,
+body:not(.v-touch) .v-button.borderless-colored:not(.v-disabled):hover,
+body.v-touch .v-button.borderless:not(.v-disabled):active,
+body.v-touch .v-button.borderless-colored:not(.v-disabled):active {
+    background: valo-font-color($v-background-color, 0.1);
+}
+
 @mixin v-button {
     .v-button {
         transition: box-shadow .3s ease-out, background .3s;
         text-transform: uppercase;
     }
     .v-button.round {
-         border-radius: 30px;
+        border-radius: 30px;
     }
     .v-button.action {
         @extend .z-depth-3;
@@ -14,42 +43,26 @@
         background-color: $v-selection-color;
         color: valo-font-color($v-selection-color, 1.0);
     }
-     .v-button.action:hover {
-         box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3) !important;
-         background-color: lighten($v-selection-color, 5%)!important;
-     }
-    .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-       @extend .z-depth-2;
-       background-color: valo-font-color($v-background-color, 0.05);
-    }
-    .v-button.v-disabled {
-        background-color: valo-font-color($v-background-color, 0.2);
-        color: valo-font-color(valo-font-color($v-background-color, 0.2), 0.7);
-        box-shadow: none;
-    }
-    .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-        background-color: valo-font-color($v-friendly-color, 0.1);
-    }
-    .danger.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-        background-color: valo-font-color($v-error-indicator-color, 0.1);
-    }
-    .primary.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-        background: valo-font-color($v-selection-color, 0.1);
-    }
-    .v-button:hover:after {
-        background-color: transparent;
+     .v-button.v-disabled {
+            background-color: valo-font-color($v-background-color, 0.2);
+            color: valo-font-color(valo-font-color($v-background-color, 0.2), 0.7);
+            box-shadow: none;
     }
     .v-button-quiet {
         visibility: visible;
         @extend .z-depth-0;
     }
-    .v-button.borderless:not(.v-disabled):hover,
-    .v-button.borderless-colored:not(.v-disabled):hover {
-        background: valo-font-color($v-background-color, 0.1);
+    .v-button:hover:after {
+        background-color: transparent;
     }
     .v-window-contents .v-button,
     .v-panel:not(.borderless):not(.v-panel-well):not(.v-component-group) .v-button,
-    .v-csslayout-card .v-button {
-        box-shadow: none;
+    .v-csslayout-card .v-button,
+    .card-1 .v-button,
+    .card-2 .v-button,
+    .card-3 .v-button,
+    .card-4 .v-button,
+    .card-5 .v-button {
+        box-shadow: none !important;
     }
 }

@@ -1,7 +1,4 @@
 @mixin v-window {
-    .v-window {
-        @extend .z-depth-4;
-    }
     .v-window-outerheader:after {
         border-top: none;
     }
@@ -11,7 +8,8 @@
     .v-window-maximizebox, .v-window-restorebox {
         right: 45px;
     }
-    .v-window-closebox-disabled + .v-window-closebox, .v-window-resizebox-disabled + .v-window-closebox, .v-window-restorebox-disabled + .v-window-closebox, .v-window-maximizebox-disabled + .v-window-closebox {
+    .v-window-closebox-disabled + .v-window-closebox, .v-window-resizebox-disabled + .v-window-closebox,
+    .v-window-restorebox-disabled + .v-window-closebox, .v-window-maximizebox-disabled + .v-window-closebox {
         width: 64px;
         padding-right: 0;
         border-bottom-left-radius: 2px;

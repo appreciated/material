@@ -22,7 +22,7 @@
 @import "components/v-tabsheet.scss";
 @import "components/v-window.scss";
 @import "components/v-loading.scss";
-@import "material/cards.scss";
+@import "cards.scss";
 
 @mixin material {
     @include valo;
@@ -30,6 +30,7 @@
     @include globals;
     @include cards;
     @include v-panel;
+
     @include v-button;
     @include v-textfield;
     @include v-filterselect;
