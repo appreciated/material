@@ -127,6 +127,15 @@ public class Labels extends VerticalLayout implements View {
         label.addStyleName(ValoTheme.LABEL_FAILURE);
         right.addComponent(label);
 
+        label = new Label("A borderless label for success");
+        label.setWidth("100%");
+        label.addStyleName(ValoTheme.LABEL_SUCCESS + " borderless");
+        right.addComponent(label);
+
+        label = new Label("A borderless label for failure");
+        label.setWidth("100%");
+        label.addStyleName(ValoTheme.LABEL_FAILURE  + " borderless");
+        right.addComponent(label);
     }
 
     @Override
