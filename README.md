@@ -6,33 +6,7 @@ Material is a Theme for Vaadin 8.
 
 //TODO
 
-## Working with the Vaadin Designer 1/2
 
-The Designer won't be able to successfully compile the SCSS because as long as it doesn't have access to the the theme files. 
-To fix this you will either need to copy the files manually to `src/main/webapp/VAADIN/themes` or you could use a maven plugin that does the job for you.  
-If you plan to have a copy of the theme in your `./webapp/VAADIN/themes` directory you might want to add `src/main/webapp/VAADIN/themes/material/` to your .gitignore 
-````
-  <plugin>
-    <artifactId>maven-dependency-plugin</artifactId>
-    <executions>
-        <execution>
-            <id>unpack-one</id>
-            <phase>generate-resources</phase>
-            <goals>
-                <goal>unpack-dependencies</goal>
-            </goals>
-            <configuration>
-                <includeGroupIds>com.github.appreciated</includeGroupIds>
-                <includeArtifactIds>material</includeArtifactIds>
-                <type>zip</type>
-                <excludes>*</excludes>
-                <includes>VAADIN/themes/**</includes>
-                <outputDirectory>src/main/webapp/</outputDirectory>
-            </configuration>
-        </execution>
-    </executions>
-  </plugin>
-````
 
 ## Download release
 
@@ -67,6 +41,34 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 - improve scss abstraction
 - introduce theme variables to allow customizablity
 - include community feedback 
+
+## Working with the Vaadin Designer 1/2
+
+The Designer won't be able to successfully compile the SCSS because as long as it doesn't have access to the the theme files. 
+To fix this you will either need to copy the files manually to `src/main/webapp/VAADIN/themes` or you could use a maven plugin that does the job for you.  
+If you plan to have a copy of the theme in your `./webapp/VAADIN/themes` directory you might want to add `src/main/webapp/VAADIN/themes/material/` to your .gitignore 
+````
+  <plugin>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <executions>
+        <execution>
+            <id>unpack-one</id>
+            <phase>generate-resources</phase>
+            <goals>
+                <goal>unpack-dependencies</goal>
+            </goals>
+            <configuration>
+                <includeGroupIds>com.github.appreciated</includeGroupIds>
+                <includeArtifactIds>material</includeArtifactIds>
+                <type>zip</type>
+                <excludes>*</excludes>
+                <includes>VAADIN/themes/**</includes>
+                <outputDirectory>src/main/webapp/</outputDirectory>
+            </configuration>
+        </execution>
+    </executions>
+  </plugin>
+````
 
 ## Licenses & Authors
 
