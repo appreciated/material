@@ -42,6 +42,9 @@ body.v-touch .v-button.floating-action:active {
         background-color: $v-selection-color;
         color: valo-font-color($v-selection-color, 1.0);
     }
+    .v-button.floating-action .v-icon {
+        line-height: 56px;
+    }
      .v-button.v-disabled {
             background-color: valo-font-color($v-background-color, 0.2);
             color: valo-font-color(valo-font-color($v-background-color, 0.2), 0.7);
