@@ -45,7 +45,7 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 ## Working with the Vaadin Designer 1/2
 
 The Designer won't be able to successfully compile the SCSS because as long as it doesn't have access to the the theme files. 
-To fix this you will either need to copy the files manually to `src/main/webapp/VAADIN/themes` or you could use a maven plugin that does the job for you.  
+To fix this you will either need to unzip the jar and copy the files to `src/main/webapp/VAADIN/themes` or you could use a maven plugin that does the job for you.  
 If you plan to have a copy of the theme in your `./webapp/VAADIN/themes` directory you might want to add `src/main/webapp/VAADIN/themes/material/` to your .gitignore 
 ````
   <plugin>
