@@ -1,12 +1,13 @@
 @mixin v-filterselect {
     .v-filterselect:not(.borderless):not(.floating) [class*="input"] {
         @extend .focus-border-bottom;
-        border-bottom: 1px solid $v-selection-color;
     }
-    .v-filterselect:not(.borderless):not(.floating):not(.v-filterselect-error) [class*="input"] {
+    .v-filterselect-focus:not(.borderless):not(.floating) [class*="input"] {
+        border-bottom: 1px solid $v-selection-color;
         box-shadow: 0 1px 0 0 $v-selection-color;
     }
     .v-filterselect-error.v-filterselect-focus:not(.borderless):not(.floating) [class*="input"] {
+        border-bottom: 1px solid $v-error-indicator-color;
         box-shadow: 0 1px 0 0 $v-error-indicator-color;
     }
     .v-filterselect-suggestpopup [class$="suggestmenu"] {

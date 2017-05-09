@@ -1,3 +1,8 @@
+body:not(.v-touch) .card-hoverable:hover,
+body.v-touch .card-hoverable:active {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+
 @mixin cards {
     .material-card {
         padding: 20px;
@@ -31,8 +36,5 @@
     .card-hoverable {
         @extend .hoverable;
         @extend .material-card;
-    }
-    .card-hoverable:hover {
-        @extend .z-depth-3;
     }
 }
