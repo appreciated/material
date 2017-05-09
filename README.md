@@ -6,6 +6,34 @@ Material is a Theme for Vaadin 8.
 
 //TODO
 
+## Working with the Vaadin Designer 1/2
+
+The Designer won't be able to successfully compile the SCSS because it does not have access to the the theme files. 
+To fix this you will either need to copy the theme manually to `src/main/webapp/VAADIN/themes` or you could use a maven plugin that does the job for you. 
+If you want to have a copy of the theme in your `./webapp/VAADIN/themes` directory you might want to add `src/main/webapp/VAADIN/themes/material/` to your .gitignore 
+````
+  <plugin>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <executions>
+        <execution>
+            <id>unpack-one</id>
+            <phase>generate-resources</phase>
+            <goals>
+                <goal>unpack-dependencies</goal>
+            </goals>
+            <configuration>
+                <includeGroupIds>com.github.appreciated</includeGroupIds>
+                <includeArtifactIds>quick-start-material</includeArtifactIds>
+                <type>zip</type>
+                <excludes>*</excludes>
+                <includes>VAADIN/themes/**</includes>
+                <outputDirectory>src/main/webapp/</outputDirectory>
+            </configuration>
+        </execution>
+    </executions>
+  </plugin>
+````
+
 ## Download release
 
 Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to https://vaadin.com/directory#!addon/material
