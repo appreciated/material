@@ -42,7 +42,7 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 - introduce theme variables to allow customizablity
 - include community feedback 
 
-## Working with the Vaadin Designer 1/2
+## Working with the Vaadin Designer 1 or 2
 
 The Designer won't be able to successfully compile the SCSS because as long as it doesn't have access to the the theme files. 
 To fix this you will either need to unzip the jar and copy the files to `src/main/webapp/VAADIN/themes` or you could use a maven plugin that does the job for you.  
