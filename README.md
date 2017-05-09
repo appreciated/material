@@ -23,7 +23,7 @@ If you plan to have a copy of the theme in your `./webapp/VAADIN/themes` directo
             </goals>
             <configuration>
                 <includeGroupIds>com.github.appreciated</includeGroupIds>
-                <includeArtifactIds>quick-start-material</includeArtifactIds>
+                <includeArtifactIds>material</includeArtifactIds>
                 <type>zip</type>
                 <excludes>*</excludes>
                 <includes>VAADIN/themes/**</includes>
