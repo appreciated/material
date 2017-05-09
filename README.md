@@ -1,12 +1,10 @@
-# MyComponent Add-on for Vaadin 8
+# MyComponent Add-on for Vaadin 7.3+
 
-Material is a Theme for Vaadin 8.
+Material is a Theme for Vaadin 7.3+.
 
 ## Online demo
 
 //TODO
-
-
 
 ## Download release
 
