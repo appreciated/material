@@ -15,11 +15,6 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  *
- *
- * This File has been changed in the following Lines by Appreciated: 
- * - 117
- * - 204
- * - 250
  */
 package com.vaadin.uitest;
 

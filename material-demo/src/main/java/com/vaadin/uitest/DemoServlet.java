@@ -21,7 +21,7 @@ import com.vaadin.server.VaadinServlet;
 import javax.servlet.annotation.WebServlet;
 
 /**
- * Created by Johannes on 27.04.2017.
+ * Created by Appreciated on 27.04.2017.
  */
 
 @WebServlet(urlPatterns = "/*", name = "MaterialDemo", asyncSupported = true)

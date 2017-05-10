@@ -25,7 +25,7 @@ import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
 /**
- * Created by Johannes on 02.05.2017.
+ * Created by Appreciated on 02.05.2017.
  */
 public class Material extends VerticalLayout implements View {
 
