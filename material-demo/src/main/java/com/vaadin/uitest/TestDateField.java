@@ -1,10 +1,9 @@
 package com.vaadin.uitest;
 
-/**
- * Created by Johannes on 27.04.2017.
- */
 /*
  * Copyright 2000-2016 Vaadin Ltd.
+ *
+ * Modifications Copyright 2017 appreciated
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -18,7 +17,6 @@ package com.vaadin.uitest;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
 
 import com.vaadin.ui.AbstractLocalDateField;
 
