@@ -22,7 +22,7 @@ To see the demo, navigate to http://localhost:8080/
 
 ## Issue tracking
 
-The issues for this add-on are tracked on its github.com page. All bug reports and feature requests are welcome. 
+Issues for this add-on are tracked [here](https://github.com/appreciated/material/issues). All bug reports and feature requests are welcome. 
 
 ## Contributions
 
