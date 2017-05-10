@@ -1,4 +1,4 @@
-# MyComponent Add-on for Vaadin 7.3+
+# Material Theme for Vaadin 7.3+
 
 Material is a Theme for Vaadin 7.3+.
 
