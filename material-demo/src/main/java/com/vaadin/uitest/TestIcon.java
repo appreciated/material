@@ -17,16 +17,14 @@
  */
 package com.vaadin.uitest;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.vaadin.server.FontAwesome;
 import com.vaadin.server.Resource;
 import com.vaadin.server.ThemeResource;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- *
- * @since
  * @author Vaadin Ltd
  */
 public class TestIcon {
@@ -57,6 +55,7 @@ public class TestIcon {
     }
 
     static List<FontAwesome> ICONS = new ArrayList<>();
+
     static {
         ICONS.add(FontAwesome.ADJUST);
         ICONS.add(FontAwesome.ADN);

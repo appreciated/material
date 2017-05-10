@@ -28,8 +28,6 @@ import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
 /**
- *
- * @since
  * @author Vaadin Ltd
  */
 public class Labels extends VerticalLayout implements View {
@@ -136,7 +134,7 @@ public class Labels extends VerticalLayout implements View {
 
         label = new Label("A borderless label for failure");
         label.setWidth("100%");
-        label.addStyleName(ValoTheme.LABEL_FAILURE  + " borderless");
+        label.addStyleName(ValoTheme.LABEL_FAILURE + " borderless");
         right.addComponent(label);
     }
 

@@ -24,8 +24,6 @@ import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
 /**
- *
- * @since
  * @author Vaadin Ltd
  */
 public class ValoMenuLayout extends HorizontalLayout {

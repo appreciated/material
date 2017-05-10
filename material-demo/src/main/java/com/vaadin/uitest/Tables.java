@@ -130,10 +130,10 @@ public class Tables extends VerticalLayout implements View {
     }
 
     static void configure(Table table, boolean footer, boolean sized,
-            boolean expandRatios, boolean stripes, boolean verticalLines,
-            boolean horizontalLines, boolean borderless, boolean headers,
-            boolean compact, boolean small, boolean rowIndex,
-            boolean rowCaption, boolean rowIcon, boolean componentsInRows) {
+                          boolean expandRatios, boolean stripes, boolean verticalLines,
+                          boolean horizontalLines, boolean borderless, boolean headers,
+                          boolean compact, boolean small, boolean rowIndex,
+                          boolean rowCaption, boolean rowIcon, boolean componentsInRows) {
         table.setSelectable(true);
         table.setMultiSelect(true);
         table.setSortEnabled(true);
@@ -180,7 +180,7 @@ public class Tables extends VerticalLayout implements View {
             table.addGeneratedColumn("textfield", new ColumnGenerator() {
                 @Override
                 public Object generateCell(Table source, Object itemId,
-                        Object columnId) {
+                                           Object columnId) {
                     TextField tf = new TextField();
                     tf.setInputPrompt("Type here…");
                     // tf.addStyleName(ValoTheme.TABLE_COMPACT);
@@ -195,7 +195,7 @@ public class Tables extends VerticalLayout implements View {
             table.addGeneratedColumn("datefield", new ColumnGenerator() {
                 @Override
                 public Object generateCell(Table source, Object itemId,
-                        Object columnId) {
+                                           Object columnId) {
                     AbstractDateField<?, ?> tf = new TestDateField();
                     tf.addStyleName(ValoTheme.TABLE_COMPACT);
                     if ((Integer) itemId % 2 == 0) {
@@ -209,7 +209,7 @@ public class Tables extends VerticalLayout implements View {
             table.addGeneratedColumn("combobox", new ColumnGenerator() {
                 @Override
                 public Object generateCell(Table source, Object itemId,
-                        Object columnId) {
+                                           Object columnId) {
                     ComboBox tf = new ComboBox();
                     tf.setInputPrompt("Select");
                     tf.addStyleName(ValoTheme.TABLE_COMPACT);
@@ -224,7 +224,7 @@ public class Tables extends VerticalLayout implements View {
             table.addGeneratedColumn("button", new ColumnGenerator() {
                 @Override
                 public Object generateCell(Table source, Object itemId,
-                        Object columnId) {
+                                           Object columnId) {
                     Button b = new Button("Button");
                     b.addStyleName(ValoTheme.BUTTON_SMALL);
                     return b;
@@ -235,7 +235,7 @@ public class Tables extends VerticalLayout implements View {
             table.addGeneratedColumn("label", new ColumnGenerator() {
                 @Override
                 public Object generateCell(Table source, Object itemId,
-                        Object columnId) {
+                                           Object columnId) {
                     Label label = new Label("Label component");
                     label.setSizeUndefined();
                     label.addStyleName(ValoTheme.LABEL_BOLD);
@@ -247,7 +247,7 @@ public class Tables extends VerticalLayout implements View {
             table.addGeneratedColumn("checkbox", new ColumnGenerator() {
                 @Override
                 public Object generateCell(Table source, Object itemId,
-                        Object columnId) {
+                                           Object columnId) {
                     CheckBox cb = new CheckBox(null, true);
                     return cb;
                 }
@@ -257,7 +257,7 @@ public class Tables extends VerticalLayout implements View {
             table.addGeneratedColumn("optiongroup", new ColumnGenerator() {
                 @Override
                 public Object generateCell(Table source, Object itemId,
-                        Object columnId) {
+                                           Object columnId) {
                     OptionGroup op = new OptionGroup();
                     op.addItem("Male");
                     op.addItem("Female");
@@ -270,7 +270,7 @@ public class Tables extends VerticalLayout implements View {
             table.addGeneratedColumn("slider", new ColumnGenerator() {
                 @Override
                 public Object generateCell(Table source, Object itemId,
-                        Object columnId) {
+                                           Object columnId) {
                     Slider s = new Slider();
                     s.setValue(30.0);
                     return s;
@@ -281,7 +281,7 @@ public class Tables extends VerticalLayout implements View {
             table.addGeneratedColumn("progress", new ColumnGenerator() {
                 @Override
                 public Object generateCell(Table source, Object itemId,
-                        Object columnId) {
+                                           Object columnId) {
                     ProgressBar bar = new ProgressBar();
                     bar.setValue(0.7f);
                     return bar;

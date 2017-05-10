@@ -60,9 +60,11 @@ public class ValoThemeUI extends UI {
     ComponentContainer viewDisplay = root.getContentContainer();
     CssLayout menu = new CssLayout();
     CssLayout menuItemsLayout = new CssLayout();
+
     {
         menu.setId("testMenu");
     }
+
     private Navigator navigator;
     private LinkedHashMap<String, String> menuItems = new LinkedHashMap<>();
 
@@ -133,13 +135,13 @@ public class ValoThemeUI extends UI {
             @Override
             public void afterViewChange(ViewChangeEvent event) {
                 for (Iterator<Component> it = menuItemsLayout.iterator(); it
-                        .hasNext();) {
+                        .hasNext(); ) {
                     it.next().removeStyleName("selected");
                 }
                 for (Entry<String, String> item : menuItems.entrySet()) {
                     if (event.getViewName().equals(item.getKey())) {
                         for (Iterator<Component> it = menuItemsLayout
-                                .iterator(); it.hasNext();) {
+                                .iterator(); it.hasNext(); ) {
                             Component c = it.next();
                             if (c.getCaption() != null && c.getCaption()
                                     .startsWith(item.getValue())) {
@@ -330,8 +332,8 @@ public class ValoThemeUI extends UI {
         private final Action ACTION_ONE = new Action("Action One");
         private final Action ACTION_TWO = new Action("Action Two");
         private final Action ACTION_THREE = new Action("Action Three");
-        private final Action[] ACTIONS = new Action[] { ACTION_ONE, ACTION_TWO,
-                ACTION_THREE };
+        private final Action[] ACTIONS = new Action[]{ACTION_ONE, ACTION_TWO,
+                ACTION_THREE};
 
         @Override
         public void handleAction(Action action, Object sender, Object target) {
@@ -355,7 +357,7 @@ public class ValoThemeUI extends UI {
 
     @SuppressWarnings("unchecked")
     static Container generateContainer(final int size,
-            final boolean hierarchical) {
+                                       final boolean hierarchical) {
         TestIcon testIcon = new TestIcon(90);
         IndexedContainer container = hierarchical ? new HierarchicalContainer()
                 : new IndexedContainer();

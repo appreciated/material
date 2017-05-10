@@ -20,11 +20,7 @@ package com.vaadin.uitest;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.shared.ui.slider.SliderOrientation;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.ProgressBar;
-import com.vaadin.ui.Slider;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
 
 public class Sliders extends VerticalLayout implements View {
@@ -191,7 +187,9 @@ public class Sliders extends VerticalLayout implements View {
                     break;
                 }
             }
-        };
+        }
+
+        ;
     };
     private ProgressBar pb;
     private ProgressBar pb2;

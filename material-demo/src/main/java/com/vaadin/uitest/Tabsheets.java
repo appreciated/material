@@ -21,14 +21,10 @@ import com.vaadin.data.HasValue;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.shared.ui.MarginInfo;
-import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.TabSheet;
+import com.vaadin.ui.*;
 import com.vaadin.ui.TabSheet.SelectedTabChangeEvent;
 import com.vaadin.ui.TabSheet.SelectedTabChangeListener;
 import com.vaadin.ui.TabSheet.Tab;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
 public class Tabsheets extends VerticalLayout implements View {
@@ -131,7 +127,7 @@ public class Tabsheets extends VerticalLayout implements View {
     }
 
     static TabSheet getTabSheet(boolean caption, String style, boolean closable,
-            boolean scrolling, boolean icon, boolean disable) {
+                                boolean scrolling, boolean icon, boolean disable) {
         TestIcon testIcon = new TestIcon(60);
 
         TabSheet ts = new TabSheet();

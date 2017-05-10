@@ -20,9 +20,9 @@ package com.vaadin.uitest;
 import com.vaadin.shared.util.SharedUtil;
 
 public class StringGenerator {
-    static String[] strings = new String[] { "lorem", "ipsum", "dolor", "sit",
+    static String[] strings = new String[]{"lorem", "ipsum", "dolor", "sit",
             "amet", "consectetur", "quid", "securi", "etiam", "tamquam", "eu",
-            "fugiat", "nulla", "pariatur" };
+            "fugiat", "nulla", "pariatur"};
     int stringCount = -1;
 
     String nextString(boolean capitalize) {

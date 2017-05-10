@@ -39,7 +39,7 @@ import com.vaadin.v7.data.fieldgroup.FieldGroup.CommitException;
 import com.vaadin.v7.data.util.BeanItem;
 import com.vaadin.v7.shared.ui.combobox.FilteringMode;
 import com.vaadin.v7.shared.ui.datefield.Resolution;
-import com.vaadin.v7.ui.Calendar;
+import com.vaadin.v7.ui.*;
 import com.vaadin.v7.ui.Calendar.TimeFormat;
 import com.vaadin.v7.ui.ComboBox;
 import com.vaadin.v7.ui.DateField;
@@ -58,7 +58,9 @@ import java.util.GregorianCalendar;
 import java.util.Locale;
 import java.util.TimeZone;
 
-/** Calendar component test application */
+/**
+ * Calendar component test application
+ */
 @Theme("valo-test")
 public class CalendarTest extends GridLayout implements View {
 
@@ -76,7 +78,9 @@ public class CalendarTest extends GridLayout implements View {
      */
     private GregorianCalendar calendar;
 
-    /** Target calendar component that this test application is made for. */
+    /**
+     * Target calendar component that this test application is made for.
+     */
     private Calendar calendarComponent;
 
     private Date currentMonthsFirstDate;
@@ -184,7 +188,7 @@ public class CalendarTest extends GridLayout implements View {
     }
 
     private Date resolveFirstDateOfWeek(Date today,
-            java.util.Calendar currentCalendar) {
+                                        java.util.Calendar currentCalendar) {
         int firstDayOfWeek = currentCalendar.getFirstDayOfWeek();
         currentCalendar.setTime(today);
         while (firstDayOfWeek != currentCalendar
@@ -195,7 +199,7 @@ public class CalendarTest extends GridLayout implements View {
     }
 
     private Date resolveLastDateOfWeek(Date today,
-            java.util.Calendar currentCalendar) {
+                                       java.util.Calendar currentCalendar) {
         currentCalendar.setTime(today);
         currentCalendar.add(java.util.Calendar.DATE, 1);
         int firstDayOfWeek = currentCalendar.getFirstDayOfWeek();
@@ -452,7 +456,7 @@ public class CalendarTest extends GridLayout implements View {
     }
 
     private void initFormFields(Layout formLayout,
-            Class<? extends CalendarEvent> eventClass) {
+                                Class<? extends CalendarEvent> eventClass) {
 
         startDateField = createDateField("Start date");
         endDateField = createDateField("End date");
@@ -825,29 +829,29 @@ public class CalendarTest extends GridLayout implements View {
 
     private void handleNextButtonClick() {
         switch (viewMode) {
-        case MONTH:
-            nextMonth();
-            break;
-        case WEEK:
-            nextWeek();
-            break;
-        case DAY:
-            nextDay();
-            break;
+            case MONTH:
+                nextMonth();
+                break;
+            case WEEK:
+                nextWeek();
+                break;
+            case DAY:
+                nextDay();
+                break;
         }
     }
 
     private void handlePreviousButtonClick() {
         switch (viewMode) {
-        case MONTH:
-            previousMonth();
-            break;
-        case WEEK:
-            previousWeek();
-            break;
-        case DAY:
-            previousDay();
-            break;
+            case MONTH:
+                previousMonth();
+                break;
+            case WEEK:
+                previousWeek();
+                break;
+            case DAY:
+                previousDay();
+                break;
         }
     }
 
@@ -1097,7 +1101,7 @@ public class CalendarTest extends GridLayout implements View {
     }
 
     private CalendarTestEvent getNewEvent(String caption, Date start,
-            Date end) {
+                                          Date end) {
         CalendarTestEvent event = new CalendarTestEvent();
         event.setCaption(caption);
         event.setStart(start);

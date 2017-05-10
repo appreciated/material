@@ -17,10 +17,6 @@
  */
 package com.vaadin.uitest;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import com.vaadin.event.Transferable;
 import com.vaadin.event.dd.DragAndDropEvent;
 import com.vaadin.event.dd.DropHandler;
@@ -33,26 +29,16 @@ import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.server.ThemeResource;
 import com.vaadin.shared.ui.dd.HorizontalDropLocation;
-import com.vaadin.ui.AbstractOrderedLayout;
-import com.vaadin.ui.Alignment;
-import com.vaadin.ui.Button;
+import com.vaadin.ui.*;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.Component;
-import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.CustomComponent;
-import com.vaadin.ui.DragAndDropWrapper;
-import com.vaadin.ui.Embedded;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.MenuBar;
 import com.vaadin.ui.MenuBar.MenuItem;
-import com.vaadin.ui.Notification;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 /**
- *
- * @since
  * @author Vaadin Ltd
  */
 public class Dragging extends VerticalLayout implements View {
@@ -262,7 +248,7 @@ public class Dragging extends VerticalLayout implements View {
         private final DropHandler dropHandler;
 
         public WrappedComponent(final Component content,
-                final DropHandler dropHandler) {
+                                final DropHandler dropHandler) {
             super(content);
             this.dropHandler = dropHandler;
             setDragStartMode(DragStartMode.WRAPPER);
