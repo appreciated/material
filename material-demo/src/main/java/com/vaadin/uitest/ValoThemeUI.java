@@ -14,6 +14,12 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
  * License for the specific language governing permissions and limitations under
  * the License.
+ *
+ *
+ * This File has been changed in the following Lines by Appreciated: 
+ * - 117
+ * - 204
+ * - 250
  */
 package com.vaadin.uitest;
 
@@ -110,7 +116,7 @@ public class ValoThemeUI extends UI {
         navigator.addView("forms", Forms.class);
         navigator.addView("popupviews", PopupViews.class);
         navigator.addView("dragging", Dragging.class);
-        navigator.addView("material", Material.class);
+        navigator.addView("material", Material.class); // Added own section key
 
         String f = Page.getCurrent().getUriFragment();
         if (f == null || f.equals("")) {
@@ -197,7 +203,7 @@ public class ValoThemeUI extends UI {
     CssLayout buildMenu() {
         // Add items
         menuItems.put("common", "Common UI Elements");
-        menuItems.put("material", "Material Elements");
+        menuItems.put("material", "Material Elements"); // Added own section view
         menuItems.put("labels", "Labels");
         menuItems.put("buttons-and-links", "Buttons & Links");
         menuItems.put("textfields", "Text Fields");
@@ -243,7 +249,7 @@ public class ValoThemeUI extends UI {
         showMenu.setIcon(FontAwesome.LIST);
         menu.addComponent(showMenu);
 
-        Label title = new Label("<h3>Vaadin <strong>Material</strong> Theme</h3>",
+        Label title = new Label("<h3>Vaadin <strong>Material</strong> Theme</h3>", // Added custom Title
                 ContentMode.HTML);
         title.setSizeUndefined();
         top.addComponent(title);

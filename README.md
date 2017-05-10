@@ -1,12 +1,10 @@
-# MyComponent Add-on for Vaadin 8
+# Material
 
-Material is a Theme for Vaadin 8.
+This is a Theme for Vaadin 7.3+
 
 ## Online demo
 
 //TODO
-
-
 
 ## Download release
 
@@ -24,7 +22,7 @@ To see the demo, navigate to http://localhost:8080/
 
 ## Issue tracking
 
-The issues for this add-on are tracked on its github.com page. All bug reports and feature requests are welcome. 
+Issues for this add-on are tracked [here](https://github.com/appreciated/material/issues). All bug reports and feature requests are welcome. 
 
 ## Contributions
 
@@ -42,10 +40,10 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 - introduce theme variables to allow customizablity
 - include community feedback 
 
-## Working with the Vaadin Designer 1/2
+## Working with the Vaadin Designer 1 or 2
 
-The Designer won't be able to successfully compile the SCSS because as long as it doesn't have access to the the theme files. 
-To fix this you will either need to copy the files manually to `src/main/webapp/VAADIN/themes` or you could use a maven plugin that does the job for you.  
+The Designer won't be able to successfully compile the SCSS as long as it doesn't have access to the the theme files. 
+To fix this you will either need to unzip the jar and copy the files to `src/main/webapp/VAADIN/themes` or you could use a maven plugin that does the job for you.  
 If you plan to have a copy of the theme in your `./webapp/VAADIN/themes` directory you might want to add `src/main/webapp/VAADIN/themes/material/` to your .gitignore 
 ````
   <plugin>
@@ -76,4 +74,4 @@ The Theme (material-addon) is mostly written by Appreciated and is distributed u
 
 A [small part](https://github.com/appreciated/material/blob/master/material-addon/src/main/webapp/VAADIN/themes/material/materialize/globals.scss) in the material-addon has been taken from the [Materialize Project](https://github.com/Dogfalo/materialize) which has been Licensed under the MIT License see MIT-LICENSE.txt. 
 
-Most of the code in the Demo (material-demo) has been written by the Vaadin Team and has been taken from [here](https://github.com/vaadin/framework/tree/master/uitest/src/main/java/com/vaadin/tests/themes/valo) for the developement of the theme but is not included in the addon itself and is distributed under Apache License 2.0.
+Most of the code in the Demo (material-demo) has been written by the Vaadin Team and has been taken from [here](https://github.com/vaadin/framework/tree/master/uitest/src/main/java/com/vaadin/tests/themes/valo) for the developement of the theme but is not included in the addon itself and is distributed under Apache License 2.0. For license terms, see also LICENSE.txt.
