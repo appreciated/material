@@ -1,4 +1,4 @@
-# Material Theme for Vaadin 7.3+
+# Material Theme
 
 Material is a Theme for Vaadin 7.3+.
 
