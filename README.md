@@ -1,6 +1,6 @@
 # Material
 
-This is a Theme for Vaadin 7.3+.
+This is a Theme for Vaadin 7.3+
 
 ## Online demo
 
