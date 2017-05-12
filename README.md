@@ -40,7 +40,7 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 - introduce theme variables to allow customizablity
 - include community feedback 
 
-## Working with the Vaadin Designer 1 or 2
+## Working with Vaadin Designer 1 or 2
 
 The Designer won't be able to successfully compile the SCSS as long as it doesn't have access to the the theme files. 
 To fix this you will either need to unzip the jar and copy the files to `src/main/webapp/VAADIN/themes` or you could use a maven plugin that does the job for you.  
@@ -74,4 +74,5 @@ The Theme (material-addon) is mostly written by Appreciated and is distributed u
 
 A [small part](https://github.com/appreciated/material/blob/master/material-addon/src/main/webapp/VAADIN/themes/material/materialize/globals.scss) in the material-addon has been taken from the [Materialize Project](https://github.com/Dogfalo/materialize) which has been Licensed under the MIT License see MIT-LICENSE.txt. 
 
-Most of the code in the Demo (material-demo) has been written by the Vaadin Team and has been taken from [here](https://github.com/vaadin/framework/tree/master/uitest/src/main/java/com/vaadin/tests/themes/valo) for the developement of the theme but is not included in the addon itself and is distributed under Apache License 2.0. For license terms, see also LICENSE.txt.
+Most of the code in the Demo (material-demo) has been written by the Vaadin Team and has been taken from [here](https://github.com/vaadin/framework/tree/master/uitest/src/main/java/com/vaadin/tests/themes/valo) for the developement of the theme but is not included in the addon itself and is distributed under Apache License 2.0. For license terms, see also LICENSE.txt. 
+The modified parts are also licensed under Apache License 2.0.
