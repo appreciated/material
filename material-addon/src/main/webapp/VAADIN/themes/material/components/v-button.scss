@@ -62,8 +62,7 @@ body.v-touch .v-button.border:active {
         border: 1px solid $v-focus-color;
         background: transparent;
         color: $v-focus-color;
-        transition: background-color 0.3s ease;
-         box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0.0), 0 0px 0px 0px rgba(0, 0, 0, 0);
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0.0), 0 0px 0px 0px rgba(0, 0, 0, 0);
     }
     .v-button.border:after {
         border: 0px solid $v-focus-color;
@@ -83,10 +82,10 @@ body.v-touch .v-button.border:active {
     .v-button.floating-action .v-icon {
         line-height: 56px;
     }
-     .v-button.v-disabled {
-            background-color: valo-font-color($v-background-color, 0.2);
-            color: valo-font-color(valo-font-color($v-background-color, 0.2), 0.7);
-            box-shadow: none;
+    .v-button.v-disabled {
+        background-color: valo-font-color($v-background-color, 0.2);
+        color: valo-font-color(valo-font-color($v-background-color, 0.2), 0.7);
+        box-shadow: none;
     }
     .v-button-quiet {
         visibility: visible;
