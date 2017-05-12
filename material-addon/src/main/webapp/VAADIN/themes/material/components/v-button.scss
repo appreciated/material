@@ -70,14 +70,10 @@ body.v-touch .v-button.border:active {
    .v-button.border.friendly {
         border: 1px solid $v-friendly-color;
         color: $v-friendly-color;
-        transition: background-color 0.3s ease;
-        box-shadow: none;
     }
    .v-button.border.danger {
         border: 1px solid $v-error-indicator-color;
         color: $v-error-indicator-color;
-        transition: background-color 0.3s ease;
-        box-shadow: none;
     }
     .v-button.floating-action .v-icon {
         line-height: 56px;
