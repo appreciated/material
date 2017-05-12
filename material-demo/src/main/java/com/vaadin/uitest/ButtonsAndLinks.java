@@ -207,6 +207,19 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         button = new Button("Round Danger");
         button.addStyleName("round danger");
         row.addComponent(button);
+
+        button = new Button("Border");
+        button.addStyleName("border");
+        row.addComponent(button);
+
+        button = new Button("Border Friendly");
+        button.addStyleName("border friendly");
+        row.addComponent(button);
+
+        button = new Button("Border Danger");
+        button.addStyleName("border danger");
+        row.addComponent(button);
+
     }
 
     @Override

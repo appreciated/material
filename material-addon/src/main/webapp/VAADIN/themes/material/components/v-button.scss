@@ -26,6 +26,22 @@ body.v-touch .v-button.floating-action:active {
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3) !important;
     background-color: lighten($v-selection-color, 5%)!important;
 }
+body:not(.v-touch) .v-button.border:hover,
+body.v-touch .v-button.border:active {
+    background: $v-focus-color !important;
+    color:  valo-font-color($v-focus-color,1);
+}
+body:not(.v-touch) .v-button.border.friendly:hover,
+body.v-touch .v-button.border.friendly:active {
+    background: $v-friendly-color !important;
+    color:  valo-font-color($v-friendly-color,1);
+}
+body:not(.v-touch) .v-button.border.danger:hover,
+body.v-touch .v-button.border:active {
+    background: $v-error-indicator-color !important;
+    color:  valo-font-color($v-error-indicator-color,1);
+}
+
 @mixin v-button {
     .v-button {
         transition: box-shadow .3s ease-out, background .3s;
@@ -41,6 +57,28 @@ body.v-touch .v-button.floating-action:active {
         border-radius: 100%;
         background-color: $v-selection-color;
         color: valo-font-color($v-selection-color, 1.0);
+    }
+    .v-button.border {
+        border: 1px solid $v-focus-color;
+        background: transparent;
+        color: $v-focus-color;
+        transition: background-color 0.3s ease;
+         box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0.0), 0 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+    .v-button.border:after {
+        border: 0px solid $v-focus-color;
+    }
+   .v-button.border.friendly {
+        border: 1px solid $v-friendly-color;
+        color: $v-friendly-color;
+        transition: background-color 0.3s ease;
+        box-shadow: none;
+    }
+   .v-button.border.danger {
+        border: 1px solid $v-error-indicator-color;
+        color: $v-error-indicator-color;
+        transition: background-color 0.3s ease;
+        box-shadow: none;
     }
     .v-button.floating-action .v-icon {
         line-height: 56px;
@@ -66,5 +104,8 @@ body.v-touch .v-button.floating-action:active {
     .card-4 .v-button,
     .card-5 .v-button {
         box-shadow: none !important;
+    }
+    .demo .v-button-primary {
+        font-weight: 500;
     }
 }
