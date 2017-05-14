@@ -37,7 +37,7 @@ body.v-touch .v-button.border.friendly:active {
     color:  valo-font-color($v-friendly-color,1);
 }
 body:not(.v-touch) .v-button.border.danger:hover,
-body.v-touch .v-button.border:active {
+body.v-touch .v-button.border.danger:active {
     background: $v-error-indicator-color !important;
     color:  valo-font-color($v-error-indicator-color,1);
 }
