@@ -2,12 +2,15 @@
     .v-component-group .v-widget:not(.v-label) {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35) !important;
         border: none;
+        overflow: hidden;
     }
     .v-component-group .v-widget:not(.v-label):hover {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.40) !important;
         border: none;
+        overflow: hidden;
     }
     .v-component-group .v-button {
         padding: 0 10px;
+        overflow: hidden;
     }
 }

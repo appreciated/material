@@ -16,6 +16,9 @@
     .v-filterselect.floating {
         @extend .floating-border;
     }
+    .v-filterselect.floating .v-filterselect-input {
+        background: $mat-card-color;
+    }
     .v-select-select {
         min-height: $v-unit-size;
     }
@@ -28,8 +31,15 @@
     .v-component-group .v-filterselect:not(.v-filterselect-no-input) [class*="input"] {
         border: none;
         box-shadow: none !important;
+        background: $mat-card-color;
     }
     .v-filterselect-error .v-filterselect-input {
         color: $v-error-indicator-color;
+    }
+    .v-filterselect-suggestpopup .gwt-MenuItem {
+        background: $mat-card-color;
+    }
+    .v-filterselect-suggestpopup .gwt-MenuItem-selected {
+        background: $v-focus-color;
     }
 }
