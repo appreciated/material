@@ -28,6 +28,6 @@
     }
     .v-slider-vertical .v-slider-handle:before,
     .v-slider-vertical .v-slider-handle:after {
-        margin-left: -floor($v-unit-size * 0.244);
+        margin-left: floor(-($v-unit-size * 0.244));
     }
 }
