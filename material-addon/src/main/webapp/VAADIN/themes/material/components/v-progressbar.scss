@@ -1,4 +1,5 @@
 @mixin v-progressbar {
+    $mat-track-color: valo-font-color($v-background-color, 0.12);
     .v-progressbar-wrapper {
         height: 5px;
         border-radius: 0px;
@@ -29,5 +30,14 @@
     .v-slider-vertical .v-slider-handle:before,
     .v-slider-vertical .v-slider-handle:after {
         margin-left: floor(-($v-unit-size * 0.244));
+    }
+    .v-slider-base {
+        background: $mat-track-color;
+    }
+    .v-slider-vertical .v-slider-base {
+        background: $mat-track-color;
+    }
+    .v-progressbar-wrapper {
+        background: $mat-track-color;
     }
 }
