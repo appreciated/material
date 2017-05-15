@@ -2,9 +2,9 @@
      .v-textfield:not(.borderless):not(.floating) {
          @extend .focus-border-bottom;
      }
-      .v-textfield.floating {
-          @extend .floating-border;
-      }
+     .v-textfield.floating {
+         @extend .floating-border;
+     }
      .v-textfield:not(.borderless):not(.floating):focus {
          border-bottom: 1px solid $v-selection-color;
          box-shadow: 0 1px 0 0 $v-selection-color;
@@ -15,9 +15,13 @@
      }
      .v-component-group .v-textfield {
          border-bottom: none;
+         background: $mat-card-color !important;
      }
      .v-component-group .v-textfield:focus {
-          border-bottom: none !important;
-          box-shadow: none !important;
-      }
+         border-bottom: none !important;
+         box-shadow: none !important;
+     }
+     .v-textfield-error {
+         color: $v-error-indicator-color;
+     }
  }

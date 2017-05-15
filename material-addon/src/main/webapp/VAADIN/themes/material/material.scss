@@ -23,14 +23,12 @@
 @import "components/v-window.scss";
 @import "components/v-loading.scss";
 @import "cards.scss";
-
 @mixin material {
     @include valo;
     @include functions;
     @include globals;
     @include cards;
     @include v-panel;
-
     @include v-button;
     @include v-textfield;
     @include v-filterselect;

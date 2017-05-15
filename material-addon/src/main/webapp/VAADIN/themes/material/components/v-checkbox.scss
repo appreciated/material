@@ -10,5 +10,6 @@
     }
     .v-checkbox > input ~ label:before {
         box-shadow: none !important;
+        background: transparent !important;
     }
 }

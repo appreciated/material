@@ -13,15 +13,11 @@
     .v-filterselect-suggestpopup [class$="suggestmenu"] {
         padding: 0px 0;
     }
-    .v-filterselect-suggestpopup .gwt-MenuItem {
-        line-height: 40px;
-        height: 40px;
-    }
     .v-filterselect.floating {
-          @extend .floating-border;
+        @extend .floating-border;
     }
     .v-select-select {
-        border-bottom: 1px solid;
+        min-height: $v-unit-size;
     }
     .v-filterselect [class$="button"]:before {
         font-size: 10px;
@@ -32,5 +28,8 @@
     .v-component-group .v-filterselect:not(.v-filterselect-no-input) [class*="input"] {
         border: none;
         box-shadow: none !important;
+    }
+    .v-filterselect-error .v-filterselect-input {
+        color: $v-error-indicator-color;
     }
 }

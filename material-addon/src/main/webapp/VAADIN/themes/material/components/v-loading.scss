@@ -1,6 +1,6 @@
 @mixin v-loading {
-    .gwt-PopupPanel{
-        background: white;
+    .gwt-PopupPanel {
+        background: $mat-card-color;
         color: $v-selection-color;
         border-radius: 2px;
         font-weight: 400;

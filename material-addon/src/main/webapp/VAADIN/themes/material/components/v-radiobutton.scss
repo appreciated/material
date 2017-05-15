@@ -2,23 +2,26 @@
     .v-radiobutton > input ~ label:before {
         border: 2px solid valo-font-color($v-background-color, 0.65) !important;
     }
+    // $v-unit-size * 0.5
     .v-select-optiongroup .v-radiobutton > input:checked ~ label:after {
-        width: 10px;
-        height: 10px;
-        top: 5px;
-        left: 5px;
+        width: floor($v-unit-size * 0.3);
+        height: floor($v-unit-size * 0.3);
+        top: ($v-unit-size * 0.5 - floor($v-unit-size * 0.3)) / 2 !important;
+        left: ($v-unit-size * 0.5 - floor($v-unit-size * 0.3)) / 2 !important;
     }
+    // $v-unit-size
     .v-select-optiongroup-small .v-radiobutton > input:checked ~ label:after {
-        width: 9px !important;
-        height: 9px !important;
-        top: 4px !important;
-        left: 4px !important;
+        width: floor($v-unit-size * 0.225) !important;
+        height: floor($v-unit-size * 0.225) !important;
+        top: ($v-unit-size * 0.44 - floor($v-unit-size * 0.225)) / 2 !important;
+        left: ($v-unit-size * 0.44 - floor($v-unit-size * 0.225)) / 2 !important;
     }
+    // $v-unit-size * 0.6
     .v-select-optiongroup-large .v-radiobutton > input:checked ~ label:after {
-        width: 14px !important;
-        height: 14px !important;
-        top: 5px !important;
-        left: 5px !important;
+        width: floor($v-unit-size * 0.35) !important;
+        height: floor($v-unit-size * 0.35) !important;
+        top: ($v-unit-size * 0.6 - floor($v-unit-size * 0.35)) / 2 !important;
+        left: ($v-unit-size * 0.6 - floor($v-unit-size * 0.35)) / 2 !important;
     }
     .v-radiobutton > input:checked ~ label:after {
         background: $v-selection-color !important;
@@ -28,5 +31,6 @@
     }
     .v-radiobutton > input ~ label:before {
         box-shadow: none !important;
+        background: transparent !important;
     }
 }

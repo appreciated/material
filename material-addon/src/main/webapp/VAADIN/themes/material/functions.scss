@@ -4,11 +4,12 @@
         border-radius: 0px;
         transition: box-shadow .2s ease-out;
         box-shadow: 0 0px 0 0 transparent;
+        background: transparent;
     }
     .floating-border {
-          border-radius: 2px;
-          border: none;
-          background-color: white;
-          @extend .z-depth-1;
-      }
+        border-radius: 2px;
+        border: none;
+        background: $mat-card-color;
+        @extend .z-depth-1;
+    }
 }

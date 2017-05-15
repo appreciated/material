@@ -1,30 +1,37 @@
-$v-font-family: "Source Sans Pro", sans-serif;
+$mat-background-color: #ffffff !default;
+$mat-card-color: lighten( $mat-background-color, 15%) !default;
+$mat-card-font-color: valo-font-color($mat-card-color, 1.0);
+$v-font-family: "Source Sans Pro",
+sans-serif;
 $v-font-weight: 400 !default;
-$v-app-background-color: #fff;
-$v-background-color: #fff;
-$v-unit-size: 40px;
+$v-app-background-color: $mat-background-color !default;
+$v-background-color: $mat-card-color !default;
+$v-unit-size: 45px ! default;
 $v-focus-color: #0072C6 !default;
-$mat-card-color: #fff !default;
 $v-focus-style: none;
 $valo-menu-background-color: $v-selection-color;
 $v-border: 0 solid v-shade;
 $v-border-radius: 2px;
 $v-bevel: false;
 $v-gradient: false;
-$v-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+$v-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+0 1px 5px 0 rgba(0, 0, 0, 0.12),
+0 3px 1px -2px rgba(0, 0, 0, 0.2);
 $v-textfield-bevel: false;
 $v-textfield-shadow: false;
 $v-textfield-border: 0 solid v-shade;
 $v-link-text-decoration: none;
-$v-overlay-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+$v-overlay-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+0 3px 14px 2px rgba(0, 0, 0, 0.12),
+0 5px 5px -3px rgba(0, 0, 0, 0.3);
 $v-overlay-border-width: 0px; // For IE8
 $v-window-shadow: $v-overlay-shadow;
 $v-selection-overlay-background-color: #fff;
-$v-selection-overlay-padding-horizontal: 0;
 $v-selection-overlay-padding-vertical: 6px;
-
+$v-selection-overlay-padding-horizontal: 0;
+$v-selection-item-height: $v-unit-size;
+$v-selection-item-border-radius: 0px;
 $v-panel-border: 0px;
-
 $v-layout-margin-top: 10px;
 $v-layout-margin-left: 10px;
 $v-layout-margin-right: 10px;

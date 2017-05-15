@@ -21,6 +21,7 @@ package com.vaadin.uitest;
 import com.vaadin.annotations.PreserveOnRefresh;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;
+import com.vaadin.annotations.Viewport;
 import com.vaadin.event.Action;
 import com.vaadin.event.Action.Handler;
 import com.vaadin.navigator.Navigator;
@@ -45,6 +46,7 @@ import java.util.Map.Entry;
 @Theme("demo")
 @Title("Valo Theme Test")
 @PreserveOnRefresh
+@Viewport("user-scalable=no,initial-scale=1.0")
 public class ValoThemeUI extends UI {
 
     private boolean testMode = false;

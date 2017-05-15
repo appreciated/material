@@ -1,5 +1,11 @@
  @mixin v-table {
      .v-table-row-odd {
-         background-color: rgba($v-selection-color, 0.1);
+         background-color: mix($v-selection-color, $mat-card-color);
+     }
+     .v-table {
+         border-radius: 3px;
+     }
+     .v-table:not(.borderless) {
+         @extend .floating-border;
      }
  }
