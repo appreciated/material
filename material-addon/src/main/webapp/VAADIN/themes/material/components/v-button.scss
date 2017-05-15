@@ -93,6 +93,7 @@ body.v-touch .v-button.border.danger:active {
     }
     .v-button-quiet {
         visibility: visible;
+        background: transparent;
         @extend .z-depth-0;
     }
     .v-button:hover:after {
