@@ -1,5 +1,5 @@
 @mixin v-progressbar {
-    $mat-track-color: valo-font-color($v-background-color, 0.12);
+    $mat-track-color: valo-font-color( $mat-background-color, 0.2) !default;
     .v-progressbar-wrapper {
         height: 5px;
         border-radius: 0px;

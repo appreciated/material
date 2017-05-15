@@ -58,4 +58,12 @@
         line-height: 40px;
         font-size: 11px;
     }
+    .v-menubar-popup .v-menubar-menuitem {
+        background: $mat-card-color;
+        color: valo-font-color( $mat-background-color, 1);
+    }
+    .v-menubar-popup .v-menubar-menuitem-caption:before {
+        color: valo-font-color( $mat-background-color, 1);
+    }
+
 }
