@@ -99,16 +99,6 @@ body.v-touch .v-button.border.danger:active {
     .v-button:hover:after {
         background-color: transparent;
     }
-    .v-window-contents .v-button,
-    .v-panel:not(.borderless):not(.v-panel-well):not(.v-component-group) .v-button,
-    .v-csslayout-card .v-button,
-    .card-1 .v-button,
-    .card-2 .v-button,
-    .card-3 .v-button,
-    .card-4 .v-button,
-    .card-5 .v-button {
-        box-shadow: none !important;
-    }
     .demo .v-button-primary {
         font-weight: 500;
     }

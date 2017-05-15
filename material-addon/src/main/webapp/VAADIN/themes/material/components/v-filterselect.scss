@@ -38,6 +38,7 @@
     }
     .v-filterselect-suggestpopup .gwt-MenuItem {
         background: $mat-card-color;
+        color: valo-font-color( $mat-card-color, 1);
     }
     .v-filterselect-suggestpopup .gwt-MenuItem-selected {
         background: $v-focus-color;

@@ -27,10 +27,6 @@
     .v-slider-vertical .v-slider-base {
         width: 4px;
     }
-    .v-slider-vertical .v-slider-handle:before,
-    .v-slider-vertical .v-slider-handle:after {
-        margin-left: floor(-($v-unit-size * 0.244));
-    }
     .v-slider-base {
         background: $mat-track-color;
     }
@@ -39,5 +35,17 @@
     }
     .v-progressbar-wrapper {
         background: $mat-track-color;
+    }
+    .v-slider-vertical .v-slider-handle:before, .v-slider-vertical .v-slider-handle:after {
+        width: 18px;
+        height: 18px;
+        margin-left: -7px;
+    }
+   .v-slider-handle:before, .v-slider-handle:after {
+        margin-top: 10px;
+    }
+    .v-slider-handle:before, .v-slider-handle:after {
+        width: 18px;
+        height: 18px;
     }
 }

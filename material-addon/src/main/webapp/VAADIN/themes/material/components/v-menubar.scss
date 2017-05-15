@@ -58,12 +58,20 @@
         line-height: 40px;
         font-size: 11px;
     }
-    .v-menubar-popup .v-menubar-menuitem {
+    .v-menubar-popup .v-menubar-submenu {
         background: $mat-card-color;
+    }
+    .v-menubar-popup .v-menubar-menuitem {
         color: valo-font-color( $mat-background-color, 1);
     }
     .v-menubar-popup .v-menubar-menuitem-caption:before {
         color: valo-font-color( $mat-background-color, 1);
     }
-
+    .v-menubar-popup {
+        background: $mat-card-color;
+    }
+    .v-menubar-popup .popupContent {
+        border-radius: 3px;
+        overflow: hidden;
+    }
 }

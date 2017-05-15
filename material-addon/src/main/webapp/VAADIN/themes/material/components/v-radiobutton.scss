@@ -3,25 +3,36 @@
         border: 2px solid valo-font-color($v-background-color, 0.65) !important;
     }
     // $v-unit-size * 0.5
+        .v-select-optiongroup .v-radiobutton > input ~ label:before {
+             width: round($v-unit-size * 0.5) !important;
+             height: round($v-unit-size * 0.5) !important;
+        }
+
     .v-select-optiongroup .v-radiobutton > input:checked ~ label:after {
-        width: floor($v-unit-size * 0.3);
-        height: floor($v-unit-size * 0.3);
-        top: ($v-unit-size * 0.5 - floor($v-unit-size * 0.3)) / 2 !important;
-        left: ($v-unit-size * 0.5 - floor($v-unit-size * 0.3)) / 2 !important;
+        width: round($v-unit-size * 0.5 - 8px);
+        height: round($v-unit-size * 0.5 - 8px);
+        top: 4px !important;
+        left: 4px !important;
     }
-    // $v-unit-size
+    // $v-unit-size * 0.4222
+    .v-select-optiongroup-small .v-radiobutton > input ~ label:before {
+         width: round($v-unit-size * 0.4222) !important;
+         height: round($v-unit-size * 0.4222) !important;
+    }
+
     .v-select-optiongroup-small .v-radiobutton > input:checked ~ label:after {
-        width: floor($v-unit-size * 0.225) !important;
-        height: floor($v-unit-size * 0.225) !important;
-        top: ($v-unit-size * 0.44 - floor($v-unit-size * 0.225)) / 2 !important;
-        left: ($v-unit-size * 0.44 - floor($v-unit-size * 0.225)) / 2 !important;
+        width: round($v-unit-size * 0.4222 - 8px) !important;
+        height: round($v-unit-size * 0.4222 - 8px) !important;
     }
     // $v-unit-size * 0.6
+    .v-select-optiongroup-large .v-radiobutton > input ~ label:before {
+        width: round($v-unit-size * 0.6) !important;
+        height: round($v-unit-size * 0.6) !important;
+    }
+
     .v-select-optiongroup-large .v-radiobutton > input:checked ~ label:after {
-        width: floor($v-unit-size * 0.35) !important;
-        height: floor($v-unit-size * 0.35) !important;
-        top: ($v-unit-size * 0.6 - floor($v-unit-size * 0.35)) / 2 !important;
-        left: ($v-unit-size * 0.6 - floor($v-unit-size * 0.35)) / 2 !important;
+        width: round($v-unit-size * 0.6 - 8px) !important;
+        height: round($v-unit-size * 0.6 - 8px) !important;
     }
     .v-radiobutton > input:checked ~ label:after {
         background: $v-selection-color !important;
