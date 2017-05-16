@@ -187,15 +187,25 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         addComponent(getButtonsWithStyle("floating-action"));
         addComponent(getButtonsWithStyle("round"));
         addComponent(getButtonsWithStyle("border"));
+        addComponent(getButtonsWithStyle("borderless"));
+
+        h1 = new Label("Custom Elevated");
+        h1.addStyleName(ValoTheme.LABEL_H1);
+        addComponent(h1);
+        addComponent(getButtonsWithStyle("elevated"));
+        addComponent(getButtonsWithStyle("floating-action elevated"));
+        addComponent(getButtonsWithStyle("round elevated"));
+        addComponent(getButtonsWithStyle("border elevated"));
+        addComponent(getButtonsWithStyle("borderless elevated"));
         setSpacing(true);
     }
 
     public HorizontalLayout getButtonsWithStyle(String style) {
         HorizontalLayout layout = new HorizontalLayout();
-        Arrays.asList("", "primary", "friendly", "danger", "elevated")
+        Arrays.asList("", "primary", "friendly", "danger")
                 .stream()
                 .forEach(s -> {
-                    Button button = style.equals("floating-action") ? new Button(VaadinIcons.PLUS) : new Button(style + " " + s);
+                    Button button = style.contains("floating-action") ? new Button(VaadinIcons.PLUS) : new Button(style + " " + s);
                     if (s.length() == 0 && style.length() == 0) {
                         button.setCaption("none");
                     }
