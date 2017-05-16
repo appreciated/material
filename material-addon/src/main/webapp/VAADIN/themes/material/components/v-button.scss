@@ -1,7 +1,10 @@
 body:not(.v-touch) .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.floating-action):hover,
 body.v-touch .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.floating-action):active {
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
     background: valo-font-color($v-background-color, 0.05);
+}
+body:not(.v-touch) .v-button.elevated:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.floating-action):hover,
+body.v-touch .v-button.elevated:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.floating-action):active {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 body:not(.v-touch) .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover,
 body.v-touch .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):active {
@@ -52,6 +55,12 @@ body.v-touch .v-button.border.danger:active {
 
 @mixin v-button {
     .v-button {
+        @extend .z-depth-0;
+        transition: box-shadow .3s ease-out, background .3s;
+        text-transform: uppercase;
+    }
+    .v-button.elevated {
+        @extend .z-depth-1;
         transition: box-shadow .3s ease-out, background .3s;
         text-transform: uppercase;
     }
@@ -62,8 +71,9 @@ body.v-touch .v-button.border.danger:active {
         @extend .z-depth-3;
         width: 56px;
         height: 56px;
+        padding: 0px;
         border-radius: 100%;
-        background-color: $v-selection-color;
+        background: $v-selection-color;
         color: valo-font-color($v-selection-color, 1.0);
     }
     .v-button.border {
@@ -93,7 +103,7 @@ body.v-touch .v-button.border.danger:active {
         background: $v-error-indicator-color;
     }
     .v-button.v-disabled {
-        background-color: valo-font-color($v-background-color, 0.2);
+        background: valo-font-color($v-background-color, 0.2);
         color: valo-font-color(valo-font-color($v-background-color, 0.2), 0.7);
         box-shadow: none;
     }
