@@ -1,49 +1,49 @@
 body:not(.v-touch) .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.floating-action):hover,
 body.v-touch .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.floating-action):active {
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
-    background-color: valo-font-color($v-background-color, 0.05);
+    background: valo-font-color($v-background-color, 0.05);
 }
-
 body:not(.v-touch) .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover,
 body.v-touch .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):active {
-    background-color: valo-font-color($v-friendly-color, 0.1);
+    background: valo-font-color($v-friendly-color, 0.1);
 }
-
 body:not(.v-touch) .danger.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover,
 body.v-touch .danger.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):active {
-    background-color: valo-font-color($v-error-indicator-color, 0.1);
+    background: valo-font-color($v-error-indicator-color, 0.1);
 }
-
 body:not(.v-touch) .primary.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover,
 body.v-touch .primary.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):active {
     background: valo-font-color($v-selection-color, 0.1);
 }
-
 body:not(.v-touch) .v-button.borderless:not(.v-disabled):hover,
 body:not(.v-touch) .v-button.borderless-colored:not(.v-disabled):hover,
 body.v-touch .v-button.borderless:not(.v-disabled):active,
 body.v-touch .v-button.borderless-colored:not(.v-disabled):active {
     background: valo-font-color($v-background-color, 0.1);
 }
-
 body:not(.v-touch) .v-button.floating-action:hover,
 body.v-touch .v-button.floating-action:active {
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3) !important;
-    background-color: lighten($v-selection-color, 5%)!important;
+    background: valo-font-color($v-selection-color, 0.1);
 }
-
+body:not(.v-touch) .v-button.floating-action.friendly:hover,
+body.v-touch .v-button.floating-action.friendly:active {
+    background: valo-font-color($v-friendly-color, 0.1);
+}
+body:not(.v-touch) .v-button.floating-action.danger:hover,
+body.v-touch .v-button.floating-action.danger:active {
+    background: valo-font-color($v-error-indicator-color, 0.1);
+}
 body:not(.v-touch) .v-button.border:hover,
 body.v-touch .v-button.border:active {
     background: $v-focus-color !important;
     color: valo-font-color($v-focus-color, 1);
 }
-
 body:not(.v-touch) .v-button.border.friendly:hover,
 body.v-touch .v-button.border.friendly:active {
     background: $v-friendly-color !important;
     color: valo-font-color($v-friendly-color, 1);
 }
-
 body:not(.v-touch) .v-button.border.danger:hover,
 body.v-touch .v-button.border.danger:active {
     background: $v-error-indicator-color !important;
@@ -85,6 +85,12 @@ body.v-touch .v-button.border.danger:active {
     }
     .v-button.floating-action .v-icon {
         line-height: 56px;
+    }
+    .v-button.floating-action.friendly {
+        background: $v-friendly-color;
+    }
+    .v-button.floating-action.danger {
+        background: $v-error-indicator-color;
     }
     .v-button.v-disabled {
         background-color: valo-font-color($v-background-color, 0.2);
