@@ -99,7 +99,10 @@ body.v-touch .v-button.border.danger:active {
     .v-button:hover:after {
         background-color: transparent;
     }
-    .demo .v-button-primary {
+    .v-button-primary {
         font-weight: 500;
+    }
+    .v-button-primary.floating-action{
+        min-width: 56px;
     }
 }
