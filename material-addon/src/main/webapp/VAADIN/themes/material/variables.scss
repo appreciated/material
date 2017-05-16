@@ -1,11 +1,11 @@
 $mat-background-color: #fafafa !default;
 $mat-card-color: lighten( $mat-background-color, 9%) !default;
 $mat-card-font-color: valo-font-color($mat-card-color, 1.0);
-$v-font-family: "Source Sans Pro", sans-serif;
+$v-font-family: "Source Sans Pro", sans-serif !default;
 $v-font-weight: 400 !default;
 $v-app-background-color: $mat-background-color !default;
 $v-background-color: $mat-card-color !default;
-$v-unit-size: 45px ! default;
+$v-unit-size: 45px !default;
 $v-focus-color: #0072C6 !default;
 $v-focus-style: none;
 $valo-menu-background-color: $v-selection-color;
