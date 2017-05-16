@@ -120,7 +120,7 @@ body.v-touch .v-button.borderless.danger:active {
     .v-button.borderless {
         color: valo-font-color($mat-background-color);
     }
-    .v-button.primary {
+    .v-button.borderless.primary {
         color: $v-focus-color;
     }
     .v-button.borderless.friendly {
