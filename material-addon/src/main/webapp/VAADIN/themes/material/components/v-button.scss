@@ -39,6 +39,11 @@ body.v-touch .v-button.floating-action.danger:active {
 }
 body:not(.v-touch) .v-button.border:hover,
 body.v-touch .v-button.border:active {
+    color: valo-font-color(valo-font-color($mat-background-color, 1),1);
+    background: valo-font-color($mat-background-color, 1) !important;
+}
+body:not(.v-touch) .v-button.border.primary:hover,
+body.v-touch .v-button.border:active {
     color: valo-font-color($v-focus-color, 1);
     background: $v-focus-color !important;
 }
@@ -54,15 +59,19 @@ body.v-touch .v-button.border.danger:active {
 }
 body:not(.v-touch) .v-button.borderless:hover,
 body.v-touch .v-button.borderless:active {
-    background: mix($mat-background-color, $v-focus-color, 75%) !important;
+    background: mix($mat-background-color, valo-font-color($mat-background-color), 80%) !important;
+}
+body:not(.v-touch) .v-button.borderless.primary:hover,
+body.v-touch .v-button.borderless:active {
+    background: mix($mat-background-color, $v-focus-color, 80%) !important;
 }
 body:not(.v-touch) .v-button.borderless.friendly:hover,
 body.v-touch .v-button.borderless.friendly:active {
-    background: mix($mat-background-color, $v-friendly-color, 75%) !important;
+    background: mix($mat-background-color, $v-friendly-color, 80%) !important;
 }
 body:not(.v-touch) .v-button.borderless.danger:hover,
 body.v-touch .v-button.borderless.danger:active {
-    background: mix($mat-background-color, $v-error-indicator-color, 75%) !important;
+    background: mix($mat-background-color, $v-error-indicator-color, 80%) !important;
 }
 @mixin v-button {
     .v-button {
@@ -89,8 +98,12 @@ body.v-touch .v-button.borderless.danger:active {
     }
     .v-button.border {
         @extend .z-depth-0;
-        border: 1px solid $v-focus-color;
+        border: 1px solid valo-font-color($mat-background-color);
         background: transparent;
+        color: valo-font-color($mat-background-color);
+    }
+    .v-button.border.primary {
+        border: 1px solid $v-focus-color;
         color: $v-focus-color;
     }
     .v-button.border:after {
@@ -105,6 +118,9 @@ body.v-touch .v-button.borderless.danger:active {
         color: $v-error-indicator-color;
     }
     .v-button.borderless {
+        color: valo-font-color($mat-background-color);
+    }
+    .v-button.primary {
         color: $v-focus-color;
     }
     .v-button.borderless.friendly {
