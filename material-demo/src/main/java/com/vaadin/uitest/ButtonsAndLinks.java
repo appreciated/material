@@ -24,6 +24,8 @@ import com.vaadin.server.ExternalResource;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
 
+import java.util.Arrays;
+
 /**
  * @author Vaadin Ltd
  */
@@ -181,59 +183,28 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         h1 = new Label("Custom");
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
-
-        row = new HorizontalLayout();
-        row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
-        addComponent(row);
-
-        button = new Button(VaadinIcons.PLUS);
-        button.addStyleName("floating-action");
-        HorizontalLayout layout = new HorizontalLayout(button);
-
-        button = new Button(VaadinIcons.PLUS);
-        button.addStyleName("floating-action primary");
-        layout.addComponent(button);
-
-        button = new Button(VaadinIcons.PLUS);
-        button.addStyleName("floating-action friendly");
-        layout.addComponent(button);
-
-        button = new Button(VaadinIcons.PLUS);
-        button.addStyleName("floating-action danger");
-        layout.addComponent(button);
-
-        layout.setCaption("floating-action");
-        row.addComponent(layout);
-
-        button = new Button("Round");
-        button.addStyleName("round");
-        row.addComponent(button);
-
-        button = new Button("Round Primary");
-        button.addStyleName("round primary");
-        row.addComponent(button);
-
-        button = new Button("Round Friendly");
-        button.addStyleName("round friendly");
-        row.addComponent(button);
-
-        button = new Button("Round Danger");
-        button.addStyleName("round danger");
-        row.addComponent(button);
-
-        button = new Button("Border");
-        button.addStyleName("border");
-        row.addComponent(button);
-
-        button = new Button("Border Friendly");
-        button.addStyleName("border friendly");
-        row.addComponent(button);
-
-        button = new Button("Border Danger");
-        button.addStyleName("border danger");
-        row.addComponent(button);
-
+        addComponent(getButtonsWithStyle(""));
+        addComponent(getButtonsWithStyle("floating-action"));
+        addComponent(getButtonsWithStyle("round"));
+        addComponent(getButtonsWithStyle("border"));
+        setSpacing(true);
     }
+
+    public HorizontalLayout getButtonsWithStyle(String style) {
+        HorizontalLayout layout = new HorizontalLayout();
+        Arrays.asList("", "primary", "friendly", "danger", "elevated")
+                .stream()
+                .forEach(s -> {
+                    Button button = style.equals("floating-action") ? new Button(VaadinIcons.PLUS) : new Button(style + " " + s);
+                    if (s.length() == 0 && style.length() == 0) {
+                        button.setCaption("none");
+                    }
+                    button.addStyleName(style + " " + s);
+                    layout.addComponent(button);
+                });
+        return layout;
+    }
+
 
     @Override
     public void enter(ViewChangeEvent event) {
