@@ -197,7 +197,7 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_FLOATING_ACTION + " " + MaterialTheme.BUTTON_FLOATING));
         addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_ROUND + " " + MaterialTheme.BUTTON_FLOATING));
         addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_BORDER + " " + MaterialTheme.BUTTON_FLOATING));
-        addComponent(getButtonsWithStyle(ValoTheme.BUTTON_BORDERLESS + MaterialTheme.BUTTON_FLOATING));
+        addComponent(getButtonsWithStyle(ValoTheme.BUTTON_BORDERLESS + " " + MaterialTheme.BUTTON_FLOATING));
         setSpacing(true);
     }
 
