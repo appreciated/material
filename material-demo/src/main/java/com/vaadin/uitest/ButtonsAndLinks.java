@@ -206,7 +206,7 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         Arrays.asList("", ValoTheme.BUTTON_PRIMARY, ValoTheme.BUTTON_FRIENDLY, ValoTheme.BUTTON_DANGER)
                 .stream()
                 .forEach(s -> {
-                    Button button = style.contains("floating-action") ? new Button(VaadinIcons.PLUS) : new Button(style + " " + s);
+                    Button button = style.contains(MaterialTheme.BUTTON_FLOATING_ACTION) ? new Button(VaadinIcons.PLUS) : new Button(style + " " + s);
                     if (s.length() == 0 && style.length() == 0) {
                         button.setCaption("none");
                     }

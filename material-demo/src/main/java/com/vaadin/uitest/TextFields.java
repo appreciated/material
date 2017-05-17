@@ -17,6 +17,7 @@
  */
 package com.vaadin.uitest;
 
+import com.github.appreciated.material.MaterialTheme;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.server.FontAwesome;
@@ -188,7 +189,7 @@ public class TextFields extends VerticalLayout implements View {
 
         tf = new TextField("Floating");
         tf.setValue("Field value");
-        tf.addStyleName("floating");
+        tf.addStyleName(MaterialTheme.TEXTFIELD_FLOATING);
         row.addComponent(tf);
 
         h1 = new Label("Text Areas");

@@ -16,6 +16,7 @@
 
 package com.vaadin.uitest;
 
+import com.github.appreciated.material.MaterialTheme;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.ui.CssLayout;
@@ -34,12 +35,12 @@ public class MaterialExample extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
         CssLayout layout = new CssLayout();
-        layout.addComponent(getLayoutWithStyle("card-0"));
-        layout.addComponent(getLayoutWithStyle("card-1"));
-        layout.addComponent(getLayoutWithStyle("card-2"));
-        layout.addComponent(getLayoutWithStyle("card-3"));
-        layout.addComponent(getLayoutWithStyle("card-4"));
-        layout.addComponent(getLayoutWithStyle("card-5"));
+        layout.addComponent(getLayoutWithStyle(MaterialTheme.CARD_0));
+        layout.addComponent(getLayoutWithStyle(MaterialTheme.CARD_1));
+        layout.addComponent(getLayoutWithStyle(MaterialTheme.CARD_2));
+        layout.addComponent(getLayoutWithStyle(MaterialTheme.CARD_3));
+        layout.addComponent(getLayoutWithStyle(MaterialTheme.CARD_4));
+        layout.addComponent(getLayoutWithStyle(MaterialTheme.CARD_5));
 
         addComponent(layout);
 
@@ -47,7 +48,7 @@ public class MaterialExample extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
 
-        addComponent(getLayoutWithStyle("card-hoverable"));
+        addComponent(getLayoutWithStyle(MaterialTheme.CARD_HOVERABLE));
     }
 
     private VerticalLayout getLayoutWithStyle(String name) {

@@ -18,6 +18,7 @@
  */
 package com.vaadin.uitest;
 
+import com.github.appreciated.material.MaterialTheme;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.server.ThemeResource;
@@ -183,9 +184,8 @@ public class ComboBoxes extends VerticalLayout implements View {
         combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
         combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
         combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
-        combo.addStyleName("floating");
+        combo.addStyleName(MaterialTheme.COMBOBOX_FLOATING);
         row.addComponent(combo);
-
     }
 
     @Override

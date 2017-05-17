@@ -17,6 +17,7 @@
  */
 package com.vaadin.uitest;
 
+import com.github.appreciated.material.MaterialTheme;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.server.UserError;
@@ -160,7 +161,7 @@ public class DateFields extends VerticalLayout implements View {
         date = new TestDateField("Floating");
         setDate(date);
         date.setResolution(DateResolution.DAY);
-        date.addStyleName("floating");
+        date.addStyleName(MaterialTheme.TEXTFIELD_FLOATING);
         row.addComponent(date);
 
         date = new InlineDateField("Date picker");
