@@ -203,7 +203,7 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
 
     public HorizontalLayout getButtonsWithStyle(String style) {
         HorizontalLayout layout = new HorizontalLayout();
-        Arrays.asList("", "primary", "friendly", "danger")
+        Arrays.asList("", ValoTheme.BUTTON_PRIMARY, ValoTheme.BUTTON_FRIENDLY, ValoTheme.BUTTON_DANGER)
                 .stream()
                 .forEach(s -> {
                     Button button = style.contains("floating-action") ? new Button(VaadinIcons.PLUS) : new Button(style + " " + s);
