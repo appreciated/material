@@ -190,7 +190,7 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_BORDER));
         addComponent(getButtonsWithStyle(ValoTheme.BUTTON_BORDERLESS));
 
-        h1 = new Label("Custom floating");
+        h1 = new Label("Custom Floating");
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
         addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_FLOATING));
