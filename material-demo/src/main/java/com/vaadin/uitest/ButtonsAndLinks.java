@@ -17,6 +17,7 @@
  */
 package com.vaadin.uitest;
 
+import com.github.appreciated.material.MaterialTheme;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
@@ -184,19 +185,19 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
         addComponent(getButtonsWithStyle(""));
-        addComponent(getButtonsWithStyle("floating-action"));
-        addComponent(getButtonsWithStyle("round"));
-        addComponent(getButtonsWithStyle("border"));
-        addComponent(getButtonsWithStyle("borderless"));
+        addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_FLOATING_ACTION));
+        addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_ROUND));
+        addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_BORDER));
+        addComponent(getButtonsWithStyle(ValoTheme.BUTTON_BORDERLESS));
 
         h1 = new Label("Custom Elevated");
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
-        addComponent(getButtonsWithStyle("elevated"));
-        addComponent(getButtonsWithStyle("floating-action elevated"));
-        addComponent(getButtonsWithStyle("round elevated"));
-        addComponent(getButtonsWithStyle("border elevated"));
-        addComponent(getButtonsWithStyle("borderless elevated"));
+        addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_ELEVATED));
+        addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_FLOATING_ACTION + " " + MaterialTheme.BUTTON_ELEVATED));
+        addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_ROUND + " " + MaterialTheme.BUTTON_ELEVATED));
+        addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_BORDER + " " + MaterialTheme.BUTTON_ELEVATED));
+        addComponent(getButtonsWithStyle(ValoTheme.BUTTON_BORDERLESS + MaterialTheme.BUTTON_ELEVATED));
         setSpacing(true);
     }
 

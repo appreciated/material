@@ -27,9 +27,9 @@ import com.vaadin.ui.themes.ValoTheme;
 /**
  * Created by Appreciated on 02.05.2017.
  */
-public class Material extends VerticalLayout implements View {
+public class MaterialExample extends VerticalLayout implements View {
 
-    public Material() {
+    public MaterialExample() {
         Label h1 = new Label("Elevation");
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
