@@ -1,4 +1,20 @@
 @mixin v-label {
+    .h1 {
+        font-size: $h1-fontsize;
+    }
+    .h2 {
+        font-size: $h2-fontsize;
+    }
+    .h3 {
+        font-size: $h3-fontsize;
+    }
+    .h4 {
+        font-size: $h4-fontsize;
+    }
+    .h5 {
+        font-size: $h5-fontsize;
+    }
+
     .v-label-success:not(.borderless),
     .v-label-failure:not(.borderless) {
         @extend .z-depth-1;
