@@ -30,11 +30,12 @@
         @extend .z-depth-2;
     }
 
-    // Header Styles
-    $h1-fontsize: 4.2rem !default;
-    $h2-fontsize: 3.56rem !default;
-    $h3-fontsize: 2.92rem !default;
-    $h4-fontsize: 2.28rem !default;
-    $h5-fontsize: 1.64rem !default;
-    $h6-fontsize: 1rem !default;
+    h1 { font-size: $h1-fontsize; line-height: 110%; margin: ($h1-fontsize / 2) 0 ($h1-fontsize / 2.5) 0;}
+    h2 { font-size: $h2-fontsize; line-height: 110%; margin: ($h2-fontsize / 2) 0 ($h2-fontsize / 2.5) 0;}
+    h3 { font-size: $h3-fontsize; line-height: 110%; margin: ($h3-fontsize / 2) 0 ($h3-fontsize / 2.5) 0;}
+    h4 { font-size: $h4-fontsize; line-height: 110%; margin: ($h4-fontsize / 2) 0 ($h4-fontsize / 2.5) 0;}
+    h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 2) 0 ($h5-fontsize / 2.5) 0;}
+    h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($h6-fontsize / 2.5) 0;}
+
+
 }
