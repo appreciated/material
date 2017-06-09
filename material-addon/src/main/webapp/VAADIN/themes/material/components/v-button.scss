@@ -76,7 +76,6 @@ body.v-touch .v-button.borderless.danger:active {
 @mixin v-button {
     .v-button {
         @extend .z-depth-0;
-        transition: box-shadow .3s ease-out, background .3s;
         text-transform: uppercase;
     }
     .v-button.floating:not(.borderless):not(.floating-action):not(.border) {

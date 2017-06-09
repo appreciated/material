@@ -5,7 +5,7 @@
 	<groupId>com.github.appreciated</groupId>
 	<artifactId>material-demo</artifactId>
 	<packaging>war</packaging>
-	<version>0.6.2</version>
+	<version>0.6.3</version>
 	<name>Material Demo</name>
 
 	<prerequisites>
@@ -16,8 +16,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<vaadin.version>8.0.5</vaadin.version>
-		<vaadin.plugin.version>8.0.5</vaadin.plugin.version>
+		<vaadin.version>8.0.6</vaadin.version>
+		<vaadin.plugin.version>8.0.6</vaadin.plugin.version>
 		<jetty.plugin.version>9.3.9.v20160517</jetty.plugin.version>
 		<vaadin.widgetset.mode>fetch</vaadin.widgetset.mode>
 	</properties>
