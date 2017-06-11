@@ -23,7 +23,7 @@
     }
     .v-menubar-popup {
         padding: 0px 0;
-        border-radius: 3px;
+        border-radius: $v-border-radius;
     }
     .v-menubar-popup .v-menubar-menuitem {
         line-height: 40px;
@@ -33,23 +33,23 @@
         margin: 0px 0;
     }
     .v-menubar-submenu:first-child.v-menubar-menuitem-selected {
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
+        border-top-left-radius: $v-border-radius;
+        border-top-right-radius: $v-border-radius;
     }
     .v-menubar-submenu:last-child.v-menubar-menuitem-selected {
-        border-bottom-left-radius: 3px;
-        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: $v-border-radius;
+        border-bottom-right-radius: $v-border-radius;
     }
     .v-menubar.borderless .v-menubar-menuitem {
         border-radius: 0px;
     }
     .v-menubar.borderless:first-child {
-        border-top-left-radius: 2px;
-        border-bottom-left-radius: 2px;
+        border-top-left-radius: $v-border-radius;
+        border-bottom-left-radius: $v-border-radius;
     }
     .v-menubar.borderless:last-child {
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px;
+        border-top-right-radius: $v-border-radius;
+        border-bottom-right-radius: $v-border-radius;
     }
     .v-menubar.borderless .v-menubar-menuitem-disabled {
         color: $v-selection-color !important;

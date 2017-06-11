@@ -2,7 +2,7 @@
     .v-reconnect-dialog {
         background: $mat-card-color;
         color: $v-selection-color;
-        border-radius: 2px;
+        border-radius: $v-border-radius;
         font-weight: 400;
     }
 }

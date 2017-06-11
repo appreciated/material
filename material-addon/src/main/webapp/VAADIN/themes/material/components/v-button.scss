@@ -77,10 +77,10 @@ body.v-touch .v-button.borderless.danger:active {
     .v-button {
         @extend .z-depth-0;
         text-transform: uppercase;
+        transition: box-shadow .3s ease-out, background .3s;
     }
     .v-button.floating:not(.borderless):not(.floating-action):not(.border) {
         @extend .z-depth-1;
-        transition: box-shadow .3s ease-out, background .3s;
         text-transform: uppercase;
     }
     .v-button.round {

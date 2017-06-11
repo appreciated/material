@@ -15,7 +15,7 @@
     .v-window-maximizebox-disabled + .v-window-closebox {
         width: 64px;
         padding-right: 0;
-        border-bottom-left-radius: 2px;
+        border-bottom-left-radius: $v-border-radius;
     }
     .v-window-header {
         font-size: 20px;

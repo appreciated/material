@@ -5,10 +5,14 @@ body.v-touch .card-hoverable:active {
 
 @mixin cards {
     .material-card {
-        padding: 20px;
-        border-radius: 2px;
+        padding: $mat-card-padding;
+        border-radius: $v-border-radius;
         background: $mat-card-color;
     }
+    .no-padding {
+        padding: 0px;
+    }
+
     .card-0 {
         @extend .z-depth-0;
         @extend .material-card;

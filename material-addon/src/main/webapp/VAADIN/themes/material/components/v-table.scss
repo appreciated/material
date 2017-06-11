@@ -3,7 +3,7 @@
          background-color: mix($v-selection-color, $mat-card-color);
      }
      .v-table {
-         border-radius: 3px;
+         border-radius: $v-border-radius;
      }
      .v-table:not(.borderless) {
          @extend .floating-border;
