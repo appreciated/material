@@ -28,7 +28,7 @@
         border-bottom: none !important;
     }
     .v-inline-datefield:not(.borderless) {
-        @extend .z-depth-1;
+        @extend .floating-border;
     }
     .v-datefield-error .v-datefield-textfield {
         color: $v-error-indicator-color;

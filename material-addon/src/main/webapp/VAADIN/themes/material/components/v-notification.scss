@@ -1,0 +1,17 @@
+@mixin v-notification {
+    .v-Notification .v-Notification-caption {
+        color: $v-font-color;
+    }
+    .v-Notification {
+        @extend .floating-border;
+        @extend .z-depth-4;
+    }
+    .v-Notification.success, .v-Notification.success .v-Notification-caption {
+        background: $v-friendly-color;
+        color: valo-font-color($v-friendly-color, 1.0);
+    }
+    .v-Notification.failure, .v-Notification.failure .v-Notification-caption {
+        background: $v-error-indicator-color;
+        color: valo-font-color($v-error-indicator-color, 1.0);
+    }
+}

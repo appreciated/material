@@ -22,6 +22,8 @@
 @import "components/v-tabsheet.scss";
 @import "components/v-window.scss";
 @import "components/v-loading.scss";
+@import "components/v-notification.scss";
+
 @import "cards.scss";
 @mixin material {
     @include valo;
@@ -47,4 +49,5 @@
     @include v-window;
     @include v-csslayout;
     @include v-loading;
+    @include v-notification;
 }

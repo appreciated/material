@@ -1,8 +1,8 @@
 @mixin v-select-twincol {
-    .v-select-twincol select {
-        @extend .z-depth-1;
+    .v-select-twincol select:not(.borderless) {
+        @extend .floating-border;
     }
-    select.v-select-select {
-        @extend .z-depth-1;
+    select.v-select-select:not(.borderless) {
+        @extend .floating-border;
     }
 }

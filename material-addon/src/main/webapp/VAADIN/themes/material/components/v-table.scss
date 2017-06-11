@@ -2,9 +2,6 @@
      .v-table-row-odd {
          background-color: mix($v-selection-color, $mat-card-color);
      }
-     .v-table {
-         border-radius: $v-border-radius;
-     }
      .v-table:not(.borderless) {
          @extend .floating-border;
      }

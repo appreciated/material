@@ -1,7 +1,7 @@
  @mixin v-splitpanel {
-     .v-splitpanel-horizontal,
-     .v-splitpanel-vertical {
-         @extend .z-depth-1;
+     .v-splitpanel-horizontal:not(.borderless),
+     .v-splitpanel-vertical:not(.borderless) {
+         @extend .floating-border;
      }
      .v-splitpanel-hsplitter div:before {
          border: 1px solid #b2b2b2 !important;

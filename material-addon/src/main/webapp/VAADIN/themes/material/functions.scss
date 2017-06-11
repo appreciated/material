@@ -3,13 +3,14 @@
         border-bottom: 1px solid;
         border-radius: 0px;
         transition: box-shadow .2s ease-out;
-        box-shadow: 0 0px 0 0 transparent;
+        box-shadow: $z-depth-0;
         background: transparent;
     }
     .floating-border {
         border-radius: $v-border-radius;
         border: none;
         background: $mat-card-color;
+        overflow: hidden;
         @extend .z-depth-1;
     }
 }
