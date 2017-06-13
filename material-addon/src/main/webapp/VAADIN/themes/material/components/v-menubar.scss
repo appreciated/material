@@ -1,23 +1,36 @@
 @mixin v-menubar {
-    .v-menubar {
-        color: valo-font-color($v-selection-color, 1.0);
-        background: $v-selection-color;
+    .v-menubar:not(.primary):not(.borderless) {
+        background: $mat-card-color;
+        color: valo-font-color($mat-card-color, 1.0);
     }
-    .v-menubar-borderless {
-        background: transparent;
+    .v-menubar.primary {
+        background: $v-selection-color;
+        color: valo-font-color($v-selection-color, 1.0);
+    }
+    .v-menubar-borderless .v-menubar-menuitem {
+        color: valo-font-color($mat-background-color, 1.0) !important;
     }
     .v-menubar > .v-menubar-menuitem {
         margin-right: 0px;
         transition: background-color .3s;
     }
-    .v-menubar > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover {
+    .v-menubar.primary > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover {
         background: darken($v-selection-color, 5%);
         color: valo-font-color(darken($v-selection-color, 5%), 1.0);
     }
-    .v-menubar > .v-menubar-menuitem-checked {
+    .v-menubar:not(.primary) > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover {
+        background: darken($mat-card-color, 5%);
+        color: valo-font-color(darken($mat-card-color, 5%), 1.0);
+    }
+    .v-menubar.primary > .v-menubar-menuitem-checked {
         background: darken($v-selection-color, 5%);
         color: valo-font-color(darken($v-selection-color, 5%), 1.0);
     }
+    .v-menubar:not(.primary) > .v-menubar-menuitem-checked {
+        background: darken($mat-card-color, 5%);
+        color: valo-font-color(darken($mat-card-color, 5%), 1.0);
+    }
+
     .v-menubar > .v-menubar-menuitem:hover:before {
         background-color: transparent;
     }
@@ -42,9 +55,6 @@
      .v-menubar-popup .v-menubar-menuitem.v-menubar-menuitem-selected {
          background: valo-font-color( $mat-card-color, 0.2);
      }
-    .v-menubar.borderless .v-menubar-menuitem-disabled {
-        color: $v-selection-color !important;
-    }
     .v-menubar-popup .v-menubar-submenu-indicator + .v-menubar-menuitem-caption:after {
         line-height: 40px;
         font-size: 11px;

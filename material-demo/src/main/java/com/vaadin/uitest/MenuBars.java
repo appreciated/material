@@ -14,9 +14,12 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
  * License for the specific language governing permissions and limitations under
  * the License.
+ *
+
  */
 package com.vaadin.uitest;
 
+import com.github.appreciated.material.MaterialTheme;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
@@ -30,25 +33,30 @@ public class MenuBars extends VerticalLayout implements View {
         setMargin(true);
         setSpacing(true);
 
+        addBarswithStyle("");
+        addBarswithStyle(MaterialTheme.MENUBAR_PRIMARY);
+    }
+
+    public void addBarswithStyle(String style) {
         Label h1 = new Label("Menu Bars");
-        h1.addStyleName(ValoTheme.LABEL_H1);
+        h1.addStyleName(ValoTheme.LABEL_H2);
         addComponent(h1);
 
-        MenuBar menuBar = getMenuBar();
+        MenuBar menuBar = getMenuBar(style);
         menuBar.setCaption("Normal style");
         addComponent(menuBar);
 
-        menuBar = getMenuBar();
+        menuBar = getMenuBar(style);
         menuBar.setCaption("Small style");
         menuBar.addStyleName(ValoTheme.MENUBAR_SMALL);
         addComponent(menuBar);
 
-        menuBar = getMenuBar();
+        menuBar = getMenuBar(style);
         menuBar.setCaption("Borderless style");
         menuBar.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
         addComponent(menuBar);
 
-        menuBar = getMenuBar();
+        menuBar = getMenuBar(style);
         menuBar.setCaption("Small borderless style");
         menuBar.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
         menuBar.addStyleName(ValoTheme.MENUBAR_SMALL);
@@ -63,21 +71,21 @@ public class MenuBars extends VerticalLayout implements View {
         wrap.setSpacing(true);
         addComponent(wrap);
 
-        wrap.addComponent(getMenuButton("Normal", false));
+        wrap.addComponent(getMenuButton("Normal", style, false));
 
-        MenuBar split = getMenuButton("Small", false);
+        MenuBar split = getMenuButton("Small", style, false);
         split.addStyleName(ValoTheme.MENUBAR_SMALL);
         wrap.addComponent(split);
 
-        split = getMenuButton("Borderless", false);
+        split = getMenuButton("Borderless", style, false);
         split.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
         wrap.addComponent(split);
 
-        split = getMenuButton("Themed", false);
+        split = getMenuButton("Themed", style, false);
         split.addStyleName("color1");
         wrap.addComponent(split);
 
-        split = getMenuButton("Small", false);
+        split = getMenuButton("Small", style, false);
         split.addStyleName("color1");
         split.addStyleName(ValoTheme.MENUBAR_SMALL);
         wrap.addComponent(split);
@@ -91,35 +99,33 @@ public class MenuBars extends VerticalLayout implements View {
         wrap.setSpacing(true);
         addComponent(wrap);
 
-        wrap.addComponent(getMenuButton("Normal", true));
+        wrap.addComponent(getMenuButton("Normal", style, true));
 
-        split = getMenuButton("Small", true);
+        split = getMenuButton("Small", style, true);
         split.addStyleName(ValoTheme.MENUBAR_SMALL);
         wrap.addComponent(split);
 
-        split = getMenuButton("Borderless", true);
+        split = getMenuButton("Borderless", style, true);
         split.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
         wrap.addComponent(split);
 
-        split = getMenuButton("Themed", true);
+        split = getMenuButton("Themed", style, true);
         split.addStyleName("color1");
         wrap.addComponent(split);
 
-        split = getMenuButton("Small", true);
+        split = getMenuButton("Small", style, true);
         split.addStyleName("color1");
         split.addStyleName(ValoTheme.MENUBAR_SMALL);
         wrap.addComponent(split);
+
     }
 
-    static MenuBar getMenuBar() {
-        Command click = new Command() {
-            @Override
-            public void menuSelected(MenuItem selectedItem) {
-                Notification.show("Clicked " + selectedItem.getText());
-            }
-        };
+
+    static MenuBar getMenuBar(String style) {
+        Command click = (Command) selectedItem -> Notification.show("Clicked " + selectedItem.getText());
 
         MenuBar menubar = new MenuBar();
+        menubar.addStyleName(style);
         menubar.setWidth("100%");
         final MenuBar.MenuItem file = menubar.addItem("File", null);
         final MenuBar.MenuItem newItem = file.addItem("New", null);
@@ -156,13 +162,8 @@ public class MenuBars extends VerticalLayout implements View {
         find.addItem("Find Next", click);
         find.addItem("Find Previous", click);
 
-        Command check = new Command() {
-            @Override
-            public void menuSelected(MenuItem selectedItem) {
-                Notification.show(
-                        selectedItem.isChecked() ? "Checked" : "Unchecked");
-            }
-        };
+        Command check = (Command) selectedItem -> Notification.show(
+                selectedItem.isChecked() ? "Checked" : "Unchecked");
 
         final MenuBar.MenuItem view = menubar.addItem("View", null);
         view.addItem("Show Status Bar", check).setCheckable(true);
@@ -208,7 +209,6 @@ public class MenuBars extends VerticalLayout implements View {
         fav.setIcon(VaadinIcons.ALIGN_LEFT);
         fav.setStyleName("icon-only");
         fav.setCheckable(true);
-        // fav.setChecked(true);
 
         fav = menubar.addItem("", null);
         fav.setIcon(VaadinIcons.ALIGN_CENTER);
@@ -236,8 +236,9 @@ public class MenuBars extends VerticalLayout implements View {
         return menubar;
     }
 
-    static MenuBar getMenuButton(String caption, boolean splitButton) {
+    static MenuBar getMenuButton(String caption, String style, boolean splitButton) {
         MenuBar split = new MenuBar();
+        split.addStyleName(style);
         MenuBar.MenuItem dropdown = split.addItem(caption, null);
         if (splitButton) {
             dropdown = split.addItem("", null);
@@ -252,7 +253,6 @@ public class MenuBars extends VerticalLayout implements View {
 
     @Override
     public void enter(ViewChangeEvent event) {
-        // TODO Auto-generated method stub
 
     }
 
