@@ -58,6 +58,22 @@ public class ColorPickers extends VerticalLayout implements View {
 
         row.addComponent(layout);
 
+        layout = new HorizontalLayout();
+        layout.setCaption("flat");
+        cp = new ColorPicker();
+        cp.addStyleName("flat");
+        cp.setDefaultCaptionEnabled(true);
+        cp.setIcon(testIcon.get());
+        cp.setValue(new Color(138, 73, 115));
+        layout.addComponent(cp);
+
+        cp = new ColorPicker();
+        cp.addStyleName("flat");
+        cp.setPopupStyle(PopupStyle.POPUP_SIMPLE);
+        cp.setTextfieldVisibility(true);
+        layout.addComponent(cp);
+
+        row.addComponent(layout);
 
         layout = new HorizontalLayout();
 

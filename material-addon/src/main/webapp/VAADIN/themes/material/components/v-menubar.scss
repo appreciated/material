@@ -21,36 +21,27 @@
     .v-menubar > .v-menubar-menuitem:hover:before {
         background-color: transparent;
     }
-    .v-menubar-popup {
-        padding: 0px 0;
+     .v-menubar-popup {
+        background: transparent;
+        overflow: hidden !important;
+        padding: 0px;
         border-radius: $v-border-radius;
     }
     .v-menubar-popup .v-menubar-menuitem {
         line-height: 40px;
-        border-radius: 0px;
     }
     .v-menubar-popup .v-menubar-separator {
         margin: 0px 0;
     }
-    .v-menubar-submenu:first-child.v-menubar-menuitem-selected {
-        border-top-left-radius: $v-border-radius;
-        border-top-right-radius: $v-border-radius;
+     .v-menubar-popup .v-menubar-submenu {
+        background: transparent;
     }
-    .v-menubar-submenu:last-child.v-menubar-menuitem-selected {
-        border-bottom-left-radius: $v-border-radius;
-        border-bottom-right-radius: $v-border-radius;
+     .v-menubar-popup .v-menubar-menuitem {
+        background: $mat-card-color;
     }
-    .v-menubar.borderless .v-menubar-menuitem {
-        border-radius: 0px;
-    }
-    .v-menubar.borderless:first-child {
-        border-top-left-radius: $v-border-radius;
-        border-bottom-left-radius: $v-border-radius;
-    }
-    .v-menubar.borderless:last-child {
-        border-top-right-radius: $v-border-radius;
-        border-bottom-right-radius: $v-border-radius;
-    }
+     .v-menubar-popup .v-menubar-menuitem.v-menubar-menuitem-selected {
+         background: valo-font-color( $mat-card-color, 0.2);
+     }
     .v-menubar.borderless .v-menubar-menuitem-disabled {
         color: $v-selection-color !important;
     }
@@ -58,20 +49,11 @@
         line-height: 40px;
         font-size: 11px;
     }
-    .v-menubar-popup .v-menubar-submenu {
-        background: $mat-card-color;
-    }
     .v-menubar-popup .v-menubar-menuitem {
         color: valo-font-color( $mat-background-color, 1);
     }
     .v-menubar-popup .v-menubar-menuitem-caption:before {
         color: valo-font-color( $mat-background-color, 1);
     }
-    .v-menubar-popup {
-        background: $mat-card-color;
-    }
-    .v-menubar-popup .popupContent {
-        border-radius: 3px;
-        overflow: hidden;
-    }
+
 }

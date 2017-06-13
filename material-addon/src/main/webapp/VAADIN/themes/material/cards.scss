@@ -6,13 +6,9 @@ body.v-touch .card-hoverable:active {
 @mixin cards {
 
     .material-card {
-        @extend .floating-border;
+        @extend .material-border;
         padding: $mat-card-padding;
     }
-    .no-padding {
-        padding: 0px;
-    }
-
     .card-0 {
         @extend .material-card;
         @extend .z-depth-0;
@@ -20,6 +16,10 @@ body.v-touch .card-hoverable:active {
     .card-1 {
         @extend .material-card;
         @extend .z-depth-1;
+    }
+    .card-1-5 {
+        @extend .material-card;
+        @extend .z-depth-1-half;
     }
     .card-2 {
         @extend .material-card;

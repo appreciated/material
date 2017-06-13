@@ -5,4 +5,7 @@
     select.v-select-select:not(.borderless) {
         @extend .floating-border;
     }
+    .v-select-twincol-buttons:not(.borderless) .v-button {
+          @extend .z-depth-1;
+    }
 }

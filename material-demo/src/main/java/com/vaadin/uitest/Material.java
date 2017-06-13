@@ -37,11 +37,11 @@ public class Material extends VerticalLayout implements View {
         CssLayout layout = new CssLayout();
         layout.addComponent(getLayoutWithStyle(MaterialTheme.CARD_0));
         layout.addComponent(getLayoutWithStyle(MaterialTheme.CARD_1));
+        layout.addComponent(getLayoutWithStyle(MaterialTheme.CARD_1_5));
         layout.addComponent(getLayoutWithStyle(MaterialTheme.CARD_2));
         layout.addComponent(getLayoutWithStyle(MaterialTheme.CARD_3));
         layout.addComponent(getLayoutWithStyle(MaterialTheme.CARD_4));
         layout.addComponent(getLayoutWithStyle(MaterialTheme.CARD_5));
-
         addComponent(layout);
 
         h1 = new Label("Hoverable");

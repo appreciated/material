@@ -14,4 +14,7 @@
         background: $v-error-indicator-color;
         color: valo-font-color($v-error-indicator-color, 1.0);
     }
+    .v-Notification.dark {
+        background-color: rgba(68, 68, 68, 1);
+    }
 }
