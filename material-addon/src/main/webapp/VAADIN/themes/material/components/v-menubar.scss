@@ -3,7 +3,7 @@
         background: $mat-card-color;
         color: valo-font-color($mat-card-color, 1.0);
     }
-    .v-menubar.primary {
+    .v-menubar.primary:not(.borderless) {
         background: $v-selection-color;
         color: valo-font-color($v-selection-color, 1.0);
     }
