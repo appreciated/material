@@ -32,8 +32,8 @@ public class Material extends VerticalLayout implements View {
     private Component label;
 
     public Material() {
-        Label h1 = new Label("Elevation");
-        h1.addStyleName(ValoTheme.LABEL_H1);
+        Label h1 = new Label("Cards");
+        h1.addStyleName(ValoTheme.LABEL_H2);
         addComponent(h1);
         CssLayout layout = new CssLayout();
         layout.addComponent(getLayoutWithStyle(CARD_0));
@@ -45,13 +45,13 @@ public class Material extends VerticalLayout implements View {
         layout.addComponent(getLayoutWithStyle(CARD_5));
         addComponent(layout);
 
-        h1 = new Label("Hoverable");
-        h1.addStyleName(ValoTheme.LABEL_H1);
+        h1 = new Label("Hoverable Card");
+        h1.addStyleName(ValoTheme.LABEL_H2);
         addComponent(h1);
         addComponent(getLayoutWithStyle(MaterialTheme.CARD_HOVERABLE));
 
-        h1 = new Label("Hoverable");
-        h1.addStyleName(ValoTheme.LABEL_H1);
+        h1 = new Label("Cards without Padding");
+        h1.addStyleName(ValoTheme.LABEL_H2);
         addComponent(h1);
         layout = new CssLayout();
         layout.addComponent(getLayoutWithStyle(CARD_1 + " " + CARD_NO_PADDING, getLabel(), false));
