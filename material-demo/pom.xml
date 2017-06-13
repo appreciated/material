@@ -5,7 +5,7 @@
 	<groupId>com.github.appreciated</groupId>
 	<artifactId>material-demo</artifactId>
 	<packaging>war</packaging>
-	<version>0.6.4</version>
+	<version>0.7.0</version>
 	<name>Material Demo</name>
 
 	<prerequisites>

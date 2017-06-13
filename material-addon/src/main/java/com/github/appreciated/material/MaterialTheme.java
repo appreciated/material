@@ -20,5 +20,7 @@ public class MaterialTheme extends ValoTheme {
     public static final String CARD_3 = "card-3";
     public static final String CARD_4 = "card-4";
     public static final String CARD_5 = "card-5";
+    public static final String CARD_NO_PADDING = "card-no-padding";
     public static final String CARD_HOVERABLE = "card-hoverable";
+
 }
