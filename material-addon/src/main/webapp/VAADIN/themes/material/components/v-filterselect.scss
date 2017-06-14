@@ -10,6 +10,13 @@
         border-bottom: 1px solid $v-error-indicator-color;
         box-shadow: 0 1px 0 0 $v-error-indicator-color;
     }
+    .v-filterselect span.v-icon {
+        width: $v-unit-size;
+        line-height: $v-unit-size;
+        text-align: center;
+        margin-top: 0;
+        padding-top: 0;
+    }
     .v-filterselect-suggestpopup [class$="suggestmenu"] {
         padding: 0px 0;
     }
@@ -41,6 +48,6 @@
         color: valo-font-color( $mat-card-color, 1);
     }
     .v-filterselect-suggestpopup .gwt-MenuItem-selected {
-        background: $v-focus-color;
+        background: valo-font-color( $mat-card-color, 0.1);
     }
 }
