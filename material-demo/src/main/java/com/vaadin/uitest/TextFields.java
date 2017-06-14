@@ -18,9 +18,9 @@
 package com.vaadin.uitest;
 
 import com.github.appreciated.material.MaterialTheme;
+import com.vaadin.icons.VaadinIcons;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
-import com.vaadin.server.FontAwesome;
 import com.vaadin.server.UserError;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
@@ -160,21 +160,21 @@ public class TextFields extends VerticalLayout implements View {
         PasswordField pwf = new PasswordField("Password");
         pwf.setPlaceholder("Secret words");
         pwf.addStyleName(ValoTheme.TEXTFIELD_INLINE_ICON);
-        pwf.setIcon(FontAwesome.LOCK);
+        pwf.setIcon(VaadinIcons.LOCK);
         row.addComponent(pwf);
 
         pwf = new PasswordField("Password, right-aligned");
         pwf.setPlaceholder("Secret words");
         pwf.addStyleName(ValoTheme.TEXTFIELD_INLINE_ICON);
         pwf.addStyleName(ValoTheme.TEXTFIELD_ALIGN_RIGHT);
-        pwf.setIcon(FontAwesome.LOCK);
+        pwf.setIcon(VaadinIcons.LOCK);
         row.addComponent(pwf);
 
         pwf = new PasswordField("Password, centered");
         pwf.setPlaceholder("Secret words");
         pwf.addStyleName(ValoTheme.TEXTFIELD_INLINE_ICON);
         pwf.addStyleName(ValoTheme.TEXTFIELD_ALIGN_CENTER);
-        pwf.setIcon(FontAwesome.LOCK);
+        pwf.setIcon(VaadinIcons.LOCK);
         row.addComponent(pwf);
 
         tf = new TextField("Tiny");

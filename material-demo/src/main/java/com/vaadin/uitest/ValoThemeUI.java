@@ -24,6 +24,7 @@ import com.vaadin.annotations.Title;
 import com.vaadin.annotations.Viewport;
 import com.vaadin.event.Action;
 import com.vaadin.event.Action.Handler;
+import com.vaadin.icons.VaadinIcons;
 import com.vaadin.navigator.Navigator;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.*;
@@ -179,19 +180,19 @@ public class ValoThemeUI extends UI {
 
         Button b = new Button(
                 "Reference <span class=\"valo-menu-badge\">3</span>");
-        b.setIcon(FontAwesome.TH_LIST);
+        b.setIcon(VaadinIcons.LIST);
         b.setPrimaryStyleName(ValoTheme.MENU_ITEM);
         b.addStyleName("selected");
         b.setCaptionAsHtml(true);
         menu.addComponent(b);
 
         b = new Button("API");
-        b.setIcon(FontAwesome.BOOK);
+        b.setIcon(VaadinIcons.BOOK);
         b.setPrimaryStyleName(ValoTheme.MENU_ITEM);
         menu.addComponent(b);
 
         b = new Button("Examples <span class=\"valo-menu-badge\">12</span>");
-        b.setIcon(FontAwesome.TABLE);
+        b.setIcon(VaadinIcons.TABLE);
         b.setPrimaryStyleName(ValoTheme.MENU_ITEM);
         b.setHtmlContentAllowed(true);
         menu.addComponent(b);
@@ -245,7 +246,7 @@ public class ValoThemeUI extends UI {
         showMenu.addStyleName(ValoTheme.BUTTON_PRIMARY);
         showMenu.addStyleName(ValoTheme.BUTTON_SMALL);
         showMenu.addStyleName("valo-menu-toggle");
-        showMenu.setIcon(FontAwesome.LIST);
+        showMenu.setIcon(VaadinIcons.LIST);
         menu.addComponent(showMenu);
 
         Label title = new Label("<h3>Vaadin <strong>Material</strong> Theme</h3>", // Added custom Title
