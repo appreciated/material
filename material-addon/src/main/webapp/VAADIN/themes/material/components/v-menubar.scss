@@ -8,20 +8,22 @@
         color: valo-font-color($v-selection-color, 1.0);
     }
     .v-menubar-borderless.primary .v-menubar-menuitem {
-        color: $v-focus-color; !important;
+        color: $v-focus-color;
     }
     .v-menubar-borderless:not(.primary) .v-menubar-menuitem {
-        color: valo-font-color($mat-background-color, 1.0) !important;
+        color: valo-font-color($mat-background-color, 1.0);
     }
     .v-menubar > .v-menubar-menuitem {
         margin-right: 0px;
         transition: background-color .3s;
     }
-    .v-menubar.primary > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover {
+    .v-menubar.primary > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
+    .v-menubar.primary > .v-menubar-menuitem-selected {
         background: darken($v-selection-color, 5%);
         color: valo-font-color(darken($v-selection-color, 5%), 1.0);
     }
-    .v-menubar:not(.primary) > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover {
+    .v-menubar:not(.primary) > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
+    .v-menubar:not(.primary) > .v-menubar-menuitem-selected {
         background: darken($mat-card-color, 5%);
         color: valo-font-color(darken($mat-card-color, 5%), 1.0);
     }
@@ -33,7 +35,15 @@
         background: darken($mat-card-color, 5%);
         color: valo-font-color(darken($mat-card-color, 5%), 1.0);
     }
-
+    .v-menubar-borderless :not(:first-child):not(:last-child) {
+        border-radius: 0px;
+    }
+    .v-menubar-borderless :first-child {
+        border-radius: 2px 0 0 2px !important;
+    }
+    .v-menubar-borderless :last-child {
+        border-radius: 0 2px 2px 0 !important;
+    }
     .v-menubar > .v-menubar-menuitem:hover:before {
         background-color: transparent;
     }
@@ -68,5 +78,8 @@
     .v-menubar-popup .v-menubar-menuitem-caption:before {
         color: valo-font-color( $mat-background-color, 1);
     }
-
+    .v-menubar-popup .v-menubar-menuitem-disabled {
+        opacity: 1.0;
+        color: valo-font-color(valo-font-color( $mat-background-color, 1),0.5);
+    }
 }

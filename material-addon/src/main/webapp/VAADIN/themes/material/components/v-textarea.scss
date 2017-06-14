@@ -8,4 +8,8 @@
     .v-richtextarea:not(.borderless) {
         @extend .floating-border;
     }
+    .v-richtextarea .gwt-RichTextToolbar {
+        padding: 5px;
+    }
+
 }

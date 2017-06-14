@@ -5,6 +5,7 @@
     .v-Notification {
         @extend .floating-border;
         @extend .z-depth-4;
+        background: $mat-window-color;
     }
     .v-Notification.success, .v-Notification.success .v-Notification-caption {
         background: $v-friendly-color;

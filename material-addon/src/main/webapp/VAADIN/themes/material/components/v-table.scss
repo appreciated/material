@@ -1,8 +1,11 @@
  @mixin v-table {
-     .v-table-row-odd {
-         background-color: mix($v-selection-color, $mat-card-color);
-     }
+     //.v-table-row-odd {
+     //    background-color: mix($v-selection-color, $mat-card-color);
+     //}
      .v-table:not(.borderless) {
          @extend .floating-border;
+     }
+     .v-table-cell-content {
+         height: $v-unit-size;
      }
  }

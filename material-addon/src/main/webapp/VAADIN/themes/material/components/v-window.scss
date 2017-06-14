@@ -1,4 +1,8 @@
 @mixin v-window {
+    .v-window {
+        background-color:  $mat-window-color;
+        color: valo-font-color($mat-window-color);
+    }
     .v-window-outerheader:after {
         border-top: none;
     }
@@ -17,10 +21,14 @@
         padding-right: 0;
         border-bottom-left-radius: $v-border-radius;
     }
+    .v-window-closebox, .v-window-maximizebox, .v-window-restorebox {
+        background-color: transparent;
+    }
     .v-window-header {
         font-size: 20px;
         font-weight: 500;
         line-height: 64px;
+        color: valo-font-color($mat-window-color);
     }
     .v-window-closebox,
     .v-window-maximizebox,
