@@ -5,4 +5,10 @@ $v-unit-size: 40px ! default;
 
 .demo {
 	@include material;
+	.v-menubar-no-indicator .v-menubar-submenu-indicator + .v-menubar-menuitem-caption:after {
+          content: none;
+    }
+    .v-menubar-no-indicator > .v-menubar-menuitem .v-icon {
+         margin: 0 0 0 0;
+    }
 }

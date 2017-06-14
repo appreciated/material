@@ -37,40 +37,19 @@ public class Panels extends VerticalLayout implements View {
         addComponent(row);
         TestIcon testIcon = new TestIcon(60);
 
-        Panel panel = new Panel("Normal");
+        Panel panel = new Panel("default");
         panel.setIcon(testIcon.get());
         panel.setContent(panelContent(true));
+        panel.setWidth(250, Unit.PIXELS);
+        panel.setHeight(250, Unit.PIXELS);
         row.addComponent(panel);
 
-        panel = new Panel("Sized");
-        panel.setIcon(testIcon.get());
-        panel.setWidth("22em");
-        panel.setHeight("250px");
-        panel.setContent(panelContent(true));
-        row.addComponent(panel);
-
-        panel = new Panel("Custom Caption");
-        panel.setIcon(testIcon.get());
-        panel.addStyleName("color1");
-        panel.setContent(panelContent(true));
-        row.addComponent(panel);
-
-        panel = new Panel("Custom Caption");
-        panel.setIcon(testIcon.get());
-        panel.addStyleName("color2");
-        panel.setContent(panelContent(true));
-        row.addComponent(panel);
-
-        panel = new Panel("Custom Caption");
-        panel.setIcon(testIcon.get());
-        panel.addStyleName("color3");
-        panel.setContent(panelContent(true));
-        row.addComponent(panel);
-
-        panel = new Panel("Borderless style");
+        panel = new Panel(ValoTheme.PANEL_BORDERLESS);
         panel.setIcon(testIcon.get());
         panel.addStyleName(ValoTheme.PANEL_BORDERLESS);
         panel.setContent(panelContent(false));
+        panel.setWidth(250, Unit.PIXELS);
+        panel.setHeight(250, Unit.PIXELS);
         row.addComponent(panel);
 
         panel = new Panel("Borderless + scroll divider");
@@ -78,45 +57,48 @@ public class Panels extends VerticalLayout implements View {
         panel.addStyleName(ValoTheme.PANEL_BORDERLESS);
         panel.addStyleName(ValoTheme.PANEL_SCROLL_INDICATOR);
         panel.setContent(panelContentScroll());
-        panel.setHeight("17em");
+        panel.setWidth(250, Unit.PIXELS);
+        panel.setHeight(250, Unit.PIXELS);
         row.addComponent(panel);
 
-        panel = new Panel("Well style");
+        panel = new Panel(ValoTheme.PANEL_WELL);
         panel.setIcon(testIcon.get());
         panel.addStyleName(ValoTheme.PANEL_WELL);
         panel.setContent(panelContent(false));
+        panel.setWidth(250, Unit.PIXELS);
+        panel.setHeight(250, Unit.PIXELS);
         row.addComponent(panel);
 
         CssLayout layout = new CssLayout();
         layout.setIcon(testIcon.get());
-        layout.setCaption("Panel style layout");
+        layout.setCaption(ValoTheme.LAYOUT_CARD);
         layout.addStyleName(ValoTheme.LAYOUT_CARD);
         layout.addComponent(panelContent(true));
+        layout.setWidth(250, Unit.PIXELS);
+        layout.setHeight(250, Unit.PIXELS);
         row.addComponent(layout);
 
         layout = new CssLayout();
+        layout.setCaption(ValoTheme.LAYOUT_CARD);
         layout.addStyleName(ValoTheme.LAYOUT_CARD);
+        layout.setWidth(250, Unit.PIXELS);
+        layout.setHeight(250, Unit.PIXELS);
         row.addComponent(layout);
+
         HorizontalLayout panelCaption = new HorizontalLayout();
         panelCaption.setSpacing(false);
         panelCaption.addStyleName("v-panel-caption");
         panelCaption.setWidth("100%");
         // panelCaption.setDefaultComponentAlignment(Alignment.MIDDLE_LEFT);
-        Label label = new Label("Panel style layout");
+        Label label = new Label("Some Text");
         panelCaption.addComponent(label);
-        panelCaption.setExpandRatio(label, 1);
+        panelCaption.setExpandRatio(label, 1.0f);
 
-        Button action = new Button();
-        action.setIcon(VaadinIcons.PENCIL);
-        action.addStyleName(ValoTheme.BUTTON_BORDERLESS_COLORED);
-        action.addStyleName(ValoTheme.BUTTON_SMALL);
-        action.addStyleName(ValoTheme.BUTTON_ICON_ONLY);
-        panelCaption.addComponent(action);
         MenuBar dropdown = new MenuBar();
         dropdown.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
         dropdown.addStyleName(ValoTheme.MENUBAR_SMALL);
-        MenuItem addItem = dropdown.addItem("", VaadinIcons.CHEVRON_DOWN, null);
-        addItem.setStyleName("icon-only");
+        dropdown.addStyleName("no-indicator");
+        MenuItem addItem = dropdown.addItem("", VaadinIcons.ELLIPSIS_DOTS_V, null);
         addItem.addItem("Settings", null);
         addItem.addItem("Preferences", null);
         addItem.addSeparator();
@@ -124,12 +106,15 @@ public class Panels extends VerticalLayout implements View {
         panelCaption.addComponent(dropdown);
 
         layout.addComponent(panelCaption);
-        layout.addComponent(panelContent(true));
-        layout.setWidth("14em");
+        Component content = panelContent(true);
+        content.setHeightUndefined();
+        layout.addComponent(content);
 
         layout = new CssLayout();
+        layout.setWidth(250, Unit.PIXELS);
+        layout.setHeight(250, Unit.PIXELS);
         layout.setIcon(testIcon.get());
-        layout.setCaption("Well style layout");
+        layout.setCaption(ValoTheme.LAYOUT_WELL);
         layout.addStyleName(ValoTheme.LAYOUT_WELL);
         layout.addComponent(panelContent(false));
         row.addComponent(layout);
@@ -141,11 +126,12 @@ public class Panels extends VerticalLayout implements View {
         layout.setMargin(true);
         Label content = new Label(
                 "Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.");
-        content.setWidth(20, Unit.EM);
+        content.setWidth(100, Unit.PERCENTAGE);
         layout.addComponent(content);
+        layout.setExpandRatio(content, 1.0f);
         Button button = new Button("Button");
         button.addStyleName(borderless ? "borderless" : "");
-        button.setSizeFull();
+        button.setWidth(100, Unit.PERCENTAGE);
         layout.addComponent(button);
         return layout;
     }
@@ -155,9 +141,11 @@ public class Panels extends VerticalLayout implements View {
         layout.setMargin(true);
         Label content = new Label(
                 "Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.");
-        content.setWidth("10em");
+        content.setWidth(100, Unit.PERCENTAGE);
         layout.addComponent(content);
+        layout.setExpandRatio(content, 1.0f);
         Button button = new Button("Button");
+        button.setWidth(100, Unit.PERCENTAGE);
         layout.addComponent(button);
         return layout;
     }
