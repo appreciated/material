@@ -1,7 +1,7 @@
 @mixin v-loading {
     .v-reconnect-dialog {
         @extend .card-5;
-        color: $v-font-color;
+        color: valo-font-color($mat-window-color, 1.0);
         font-weight: 400;
     }
     .v-reconnect-dialog .text {
