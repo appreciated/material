@@ -22,18 +22,20 @@ import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.ui.*;
 import com.vaadin.ui.MenuBar.MenuItem;
-import com.vaadin.ui.themes.ValoTheme;
+
+import static com.vaadin.ui.themes.ValoTheme.*;
+
 
 public class Panels extends VerticalLayout implements View {
     public Panels() {
         setSpacing(false);
 
         Label h1 = new Label("Panels & Layout panels");
-        h1.addStyleName(ValoTheme.LABEL_H1);
+        h1.addStyleName(LABEL_H1);
         addComponent(h1);
 
         HorizontalLayout row = new HorizontalLayout();
-        row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
+        row.addStyleName(LAYOUT_HORIZONTAL_WRAPPING);
         addComponent(row);
         TestIcon testIcon = new TestIcon(60);
 
@@ -44,26 +46,26 @@ public class Panels extends VerticalLayout implements View {
         panel.setHeight(250, Unit.PIXELS);
         row.addComponent(panel);
 
-        panel = new Panel(ValoTheme.PANEL_BORDERLESS);
+        panel = new Panel(PANEL_BORDERLESS);
         panel.setIcon(testIcon.get());
-        panel.addStyleName(ValoTheme.PANEL_BORDERLESS);
+        panel.addStyleName(PANEL_BORDERLESS);
         panel.setContent(panelContent(false));
         panel.setWidth(250, Unit.PIXELS);
         panel.setHeight(250, Unit.PIXELS);
         row.addComponent(panel);
 
-        panel = new Panel("Borderless + scroll divider");
+        panel = new Panel(PANEL_BORDERLESS + " + " + PANEL_SCROLL_INDICATOR);
         panel.setIcon(testIcon.get());
-        panel.addStyleName(ValoTheme.PANEL_BORDERLESS);
-        panel.addStyleName(ValoTheme.PANEL_SCROLL_INDICATOR);
+        panel.addStyleName(PANEL_BORDERLESS);
+        panel.addStyleName(PANEL_SCROLL_INDICATOR);
         panel.setContent(panelContentScroll());
         panel.setWidth(250, Unit.PIXELS);
         panel.setHeight(250, Unit.PIXELS);
         row.addComponent(panel);
 
-        panel = new Panel(ValoTheme.PANEL_WELL);
+        panel = new Panel(PANEL_WELL);
         panel.setIcon(testIcon.get());
-        panel.addStyleName(ValoTheme.PANEL_WELL);
+        panel.addStyleName(PANEL_WELL);
         panel.setContent(panelContent(false));
         panel.setWidth(250, Unit.PIXELS);
         panel.setHeight(250, Unit.PIXELS);
@@ -71,16 +73,16 @@ public class Panels extends VerticalLayout implements View {
 
         CssLayout layout = new CssLayout();
         layout.setIcon(testIcon.get());
-        layout.setCaption(ValoTheme.LAYOUT_CARD);
-        layout.addStyleName(ValoTheme.LAYOUT_CARD);
+        layout.setCaption(LAYOUT_CARD);
+        layout.addStyleName(LAYOUT_CARD);
         layout.addComponent(panelContent(true));
         layout.setWidth(250, Unit.PIXELS);
         layout.setHeight(250, Unit.PIXELS);
         row.addComponent(layout);
 
         layout = new CssLayout();
-        layout.setCaption(ValoTheme.LAYOUT_CARD);
-        layout.addStyleName(ValoTheme.LAYOUT_CARD);
+        layout.setCaption(LAYOUT_CARD);
+        layout.addStyleName(LAYOUT_CARD);
         layout.setWidth(250, Unit.PIXELS);
         layout.setHeight(250, Unit.PIXELS);
         row.addComponent(layout);
@@ -95,8 +97,8 @@ public class Panels extends VerticalLayout implements View {
         panelCaption.setExpandRatio(label, 1.0f);
 
         MenuBar dropdown = new MenuBar();
-        dropdown.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
-        dropdown.addStyleName(ValoTheme.MENUBAR_SMALL);
+        dropdown.addStyleName(MENUBAR_BORDERLESS);
+        dropdown.addStyleName(MENUBAR_SMALL);
         dropdown.addStyleName("no-indicator");
         MenuItem addItem = dropdown.addItem("", VaadinIcons.ELLIPSIS_DOTS_V, null);
         addItem.addItem("Settings", null);
@@ -114,8 +116,8 @@ public class Panels extends VerticalLayout implements View {
         layout.setWidth(250, Unit.PIXELS);
         layout.setHeight(250, Unit.PIXELS);
         layout.setIcon(testIcon.get());
-        layout.setCaption(ValoTheme.LAYOUT_WELL);
-        layout.addStyleName(ValoTheme.LAYOUT_WELL);
+        layout.setCaption(LAYOUT_WELL);
+        layout.addStyleName(LAYOUT_WELL);
         layout.addComponent(panelContent(false));
         row.addComponent(layout);
     }
