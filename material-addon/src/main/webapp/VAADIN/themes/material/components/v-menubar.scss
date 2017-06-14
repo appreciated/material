@@ -1,5 +1,5 @@
 @mixin v-menubar {
-    .v-menubar:not(.primary):not(.borderless) {
+    .v-menubar:not(.primary):not(.borderless):not(.v-menubar-user-menu) {
         background: $mat-card-color;
         color: valo-font-color($mat-card-color, 1.0);
     }
@@ -24,9 +24,9 @@
         background: valo-font-color($v-selection-color, 0.1);
         color: valo-font-color(valo-font-color($v-selection-color, 0.1), 1.0);
     }
-    .v-menubar:not(.primary) > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
-    .v-menubar:not(.primary) > .v-menubar-menuitem-selected,
-    .v-menubar:not(.primary) > .v-menubar-menuitem-checked
+    .v-menubar:not(.primary):not(.v-menubar-user-menu) > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
+    .v-menubar:not(.primary):not(.v-menubar-user-menu) > .v-menubar-menuitem-selected,
+    .v-menubar:not(.primary):not(.v-menubar-user-menu) > .v-menubar-menuitem-checked
      {
         background: valo-font-color($mat-card-color, 0.1);
         color: valo-font-color( valo-font-color($mat-card-color, 0.1), 1.0);
