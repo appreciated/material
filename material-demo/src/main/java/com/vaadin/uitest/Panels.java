@@ -39,38 +39,38 @@ public class Panels extends VerticalLayout implements View {
 
         Panel panel = new Panel("Normal");
         panel.setIcon(testIcon.get());
-        panel.setContent(panelContent());
+        panel.setContent(panelContent(true));
         row.addComponent(panel);
 
         panel = new Panel("Sized");
         panel.setIcon(testIcon.get());
         panel.setWidth("22em");
         panel.setHeight("250px");
-        panel.setContent(panelContent());
+        panel.setContent(panelContent(true));
         row.addComponent(panel);
 
         panel = new Panel("Custom Caption");
         panel.setIcon(testIcon.get());
         panel.addStyleName("color1");
-        panel.setContent(panelContent());
+        panel.setContent(panelContent(true));
         row.addComponent(panel);
 
         panel = new Panel("Custom Caption");
         panel.setIcon(testIcon.get());
         panel.addStyleName("color2");
-        panel.setContent(panelContent());
+        panel.setContent(panelContent(true));
         row.addComponent(panel);
 
         panel = new Panel("Custom Caption");
         panel.setIcon(testIcon.get());
         panel.addStyleName("color3");
-        panel.setContent(panelContent());
+        panel.setContent(panelContent(true));
         row.addComponent(panel);
 
         panel = new Panel("Borderless style");
         panel.setIcon(testIcon.get());
         panel.addStyleName(ValoTheme.PANEL_BORDERLESS);
-        panel.setContent(panelContent());
+        panel.setContent(panelContent(false));
         row.addComponent(panel);
 
         panel = new Panel("Borderless + scroll divider");
@@ -84,14 +84,14 @@ public class Panels extends VerticalLayout implements View {
         panel = new Panel("Well style");
         panel.setIcon(testIcon.get());
         panel.addStyleName(ValoTheme.PANEL_WELL);
-        panel.setContent(panelContent());
+        panel.setContent(panelContent(false));
         row.addComponent(panel);
 
         CssLayout layout = new CssLayout();
         layout.setIcon(testIcon.get());
         layout.setCaption("Panel style layout");
         layout.addStyleName(ValoTheme.LAYOUT_CARD);
-        layout.addComponent(panelContent());
+        layout.addComponent(panelContent(true));
         row.addComponent(layout);
 
         layout = new CssLayout();
@@ -124,18 +124,18 @@ public class Panels extends VerticalLayout implements View {
         panelCaption.addComponent(dropdown);
 
         layout.addComponent(panelCaption);
-        layout.addComponent(panelContent());
+        layout.addComponent(panelContent(true));
         layout.setWidth("14em");
 
         layout = new CssLayout();
         layout.setIcon(testIcon.get());
         layout.setCaption("Well style layout");
         layout.addStyleName(ValoTheme.LAYOUT_WELL);
-        layout.addComponent(panelContent());
+        layout.addComponent(panelContent(false));
         row.addComponent(layout);
     }
 
-    Component panelContent() {
+    Component panelContent(boolean borderless) {
         VerticalLayout layout = new VerticalLayout();
         layout.setSizeFull();
         layout.setMargin(true);
@@ -144,6 +144,7 @@ public class Panels extends VerticalLayout implements View {
         content.setWidth(20, Unit.EM);
         layout.addComponent(content);
         Button button = new Button("Button");
+        button.addStyleName(borderless ? "borderless" : "");
         button.setSizeFull();
         layout.addComponent(button);
         return layout;

@@ -27,4 +27,7 @@
     .v-panel-content > .v-margin-top {
         padding-top: 16px;
     }
+    .v-panel-well, .v-csslayout-well {
+        background:  darken( $mat-background-color, 1%);
+    }
 }

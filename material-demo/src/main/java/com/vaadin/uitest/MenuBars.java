@@ -39,7 +39,7 @@ public class MenuBars extends VerticalLayout implements View {
 
     public void addBarswithStyle(String style) {
         Label h1 = new Label("Menu Bars");
-        h1.addStyleName(ValoTheme.LABEL_H2);
+        h1.addStyleName(ValoTheme.LABEL_H3);
         addComponent(h1);
 
         MenuBar menuBar = getMenuBar(style);
@@ -63,7 +63,7 @@ public class MenuBars extends VerticalLayout implements View {
         addComponent(menuBar);
 
         Label h2 = new Label("Drop Down Button");
-        h2.addStyleName(ValoTheme.LABEL_H2);
+        h2.addStyleName(ValoTheme.LABEL_H3);
         addComponent(h2);
 
         HorizontalLayout wrap = new HorizontalLayout();
@@ -91,7 +91,7 @@ public class MenuBars extends VerticalLayout implements View {
         wrap.addComponent(split);
 
         h2 = new Label("Split Button");
-        h2.addStyleName(ValoTheme.LABEL_H2);
+        h2.addStyleName(ValoTheme.LABEL_H3);
         addComponent(h2);
 
         wrap = new HorizontalLayout();

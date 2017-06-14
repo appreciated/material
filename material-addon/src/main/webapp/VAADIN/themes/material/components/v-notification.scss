@@ -1,6 +1,6 @@
 @mixin v-notification {
     .v-Notification .v-Notification-caption {
-        color: $v-font-color;
+        color: valo-font-color($mat-window-color, 1.0);
     }
     .v-Notification {
         @extend .floating-border;
