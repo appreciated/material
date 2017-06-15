@@ -2,6 +2,9 @@
     .v-Notification .v-Notification-caption {
         color: valo-font-color($mat-window-color, 1.0);
     }
+    .v-Notification .v-Notification-description {
+        color: valo-font-color($mat-window-color, 1.0);
+    }
     .v-Notification {
         @extend .floating-border;
         @extend .z-depth-4;
