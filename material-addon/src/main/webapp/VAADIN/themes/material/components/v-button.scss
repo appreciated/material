@@ -81,6 +81,7 @@ body.v-touch .v-button.borderless.danger:active {
         @extend .z-depth-0;
         text-transform: uppercase;
         transition: box-shadow .3s ease-out, background .3s;
+        padding: 0 20px;
     }
     .v-button:not(.flat):not(.floating):not(.borderless):not(.border):not(.borderless-colored):not(.quiet):not(.link) {
         @extend .z-depth-1;
