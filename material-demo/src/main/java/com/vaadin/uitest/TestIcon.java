@@ -51,7 +51,7 @@ public class TestIcon {
             return ICONS.get(iconCount);
         }
         return new ThemeResource(
-                "../runo/icons/" + imageSize + "/document.png");
+                "../../icons/" + imageSize + "/document.png");
     }
 
     static List<VaadinIcons> ICONS = new ArrayList<>();

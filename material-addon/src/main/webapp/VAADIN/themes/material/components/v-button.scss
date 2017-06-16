@@ -67,9 +67,15 @@ body:not(.v-touch) .v-button.borderless.danger:hover {
         transition: box-shadow .3s ease-out, background .3s;
         padding: 0 20px;
         height: $v-unit-size;
-        line-height: $v-unit-size;
         border-radius: $v-border-radius;
         outline: none;
+    }
+    .v-button:before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 110%;
+        vertical-align: middle;
     }
     .v-button:not(.borderless):not(.borderless-colored):not(.link):not(.quiet):not(.border):not(.primary):not(.friendly):not(.danger) {
         background: $mat-card-color;
@@ -89,12 +95,7 @@ body:not(.v-touch) .v-button.borderless.danger:hover {
     .v-button.borderless-colored, .v-button.link {
         color: $v-focus-color;
     }
-    .v-button img.v-icon {
-       vertical-align: middle;
-    }
-    .v-button-icon-align-right .v-icon {
-        float: right;
-    }
+
     .v-button:not(.flat):not(.floating):not(.borderless):not(.border):not(.borderless-colored):not(.quiet):not(.link) {
         @extend .z-depth-1;
     }
@@ -180,5 +181,22 @@ body:not(.v-touch) .v-button.borderless.danger:hover {
     }
     .v-button-primary.floating-action{
         min-width: 56px;
+    }
+    .v-button-icon-align-top {
+        height: auto;
+    }
+    .v-button-icon-align-top .v-icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .v-button-icon-align-right .v-icon {
+        float: right;
+        padding-left: 8px;
+    }
+    .v-button-icon-align-right [class*="wrap"] {
+        display: inline-block;
+        padding-left:5px;
     }
 }
