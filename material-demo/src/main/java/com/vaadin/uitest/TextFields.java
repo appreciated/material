@@ -193,7 +193,7 @@ public class TextFields extends VerticalLayout implements View {
         row.addComponent(tf);
 
         tf = new TextField("Custom");
-        tf.setValue("Field value");
+        tf.setPlaceholder("Type ...");
         tf.addStyleName(MaterialTheme.TEXTFIELD_CUSTOM);
         row.addComponent(tf);
 
