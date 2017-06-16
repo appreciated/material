@@ -1,10 +1,17 @@
 @mixin v-datefield {
-    .v-datefield:not(.borderless):not(.floating) [class*="textfield"] {
+    .v-datefield:not(.borderless):not(.floating):not(.custom) [class*="textfield"] {
         @extend .focus-border-bottom;
     }
-    .v-datefield:not(.borderless):not(.floating) [class*="textfield"]:focus {
+    .v-datefield:not(.borderless):not(.floating):not(.custom) [class*="textfield"]:focus {
         border-bottom: 1px solid $v-selection-color;
         box-shadow: 0 1px 0 0 $v-selection-color;
+    }
+    .v-datefield.custom [class*="textfield"] {
+        @extend .focus-border-bottom;
+    }
+    .v-datefield.custom [class*="textfield"]:focus {
+        border-bottom: 1px solid $mat-custom-color !important;
+        box-shadow: 0 1px 0 0 $mat-custom-color !important;
     }
     .v-datefield-error:not(.borderless):not(.floating) [class*="textfield"]:focus {
         border-bottom: 1px solid $v-error-indicator-color;

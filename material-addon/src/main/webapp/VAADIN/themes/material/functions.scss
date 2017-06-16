@@ -16,8 +16,5 @@
         @extend .material-border;
         @extend .z-depth-1;
     }
-    .contrast {
-       color: valo-font-color($mat-contrast-color, 1.0);
-    }
 
 }

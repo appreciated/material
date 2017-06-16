@@ -1,10 +1,17 @@
 @mixin v-filterselect {
-    .v-filterselect:not(.borderless):not(.floating) [class*="input"] {
+    .v-filterselect:not(.borderless):not(.floating):not(.custom) [class*="input"] {
         @extend .focus-border-bottom;
     }
-    .v-filterselect-focus:not(.borderless):not(.floating) [class*="input"] {
+    .v-filterselect-focus:not(.borderless):not(.floating):not(.custom) [class*="input"] {
         border-bottom: 1px solid $v-selection-color;
         box-shadow: 0 1px 0 0 $v-selection-color;
+    }
+    .v-filterselect.custom [class*="input"] {
+        @extend .focus-border-bottom;
+    }
+    .v-filterselect-focus.custom [class*="input"] {
+        border-bottom: 1px solid $mat-custom-color;
+        box-shadow: 0 1px 0 0 $mat-custom-color;
     }
     .v-filterselect-error.v-filterselect-focus:not(.borderless):not(.floating) [class*="input"] {
         border-bottom: 1px solid $v-error-indicator-color;
@@ -19,7 +26,12 @@
     }
     .v-filterselect-suggestpopup [class$="suggestmenu"] {
         padding: 0px 0;
+        background-color: $mat-card-color;
     }
+    .v-filterselect-suggestpopup .gwt-MenuItem:active:before {
+        background: transparent;
+    }
+
     .v-filterselect.floating {
         @extend .floating-border;
     }
@@ -36,9 +48,9 @@
         box-shadow: none;
     }
     .v-component-group .v-filterselect:not(.v-filterselect-no-input) [class*="input"] {
-        border: none;
+        border: none !important;
         box-shadow: none !important;
-        background: $mat-card-color;
+        background: $mat-card-color !important;
     }
     .v-filterselect-error .v-filterselect-input {
         color: $v-error-indicator-color;
@@ -50,4 +62,8 @@
     .v-filterselect-suggestpopup .gwt-MenuItem-selected {
         background: valo-font-color( $mat-card-color, 0.1);
     }
+    .v-filterselect[class*="prompt"] > [class*="input"] {
+        color: $v-font-color;
+    }
+
 }
