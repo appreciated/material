@@ -8,14 +8,15 @@
     }
     .v-datefield.custom [class*="textfield"] {
         @extend .focus-border-bottom;
+        color: $mat-custom-color;
     }
     .v-datefield.custom [class*="textfield"]:focus {
         border-bottom: 1px solid $mat-custom-color !important;
         box-shadow: 0 1px 0 0 $mat-custom-color !important;
     }
     .v-datefield-error:not(.borderless):not(.floating) [class*="textfield"]:focus {
-        border-bottom: 1px solid $v-error-indicator-color;
-        box-shadow: 0 1px 0 0 $v-error-indicator-color;
+        border-bottom: 1px solid $v-error-indicator-color !important;
+        box-shadow: 0 1px 0 0 $v-error-indicator-color !important;
     }
     .v-datefield:not(.borderless):not(.floating) [class*="textfield-readonly"] {
         border-bottom: 1px solid;

@@ -192,6 +192,11 @@ public class TextFields extends VerticalLayout implements View {
         tf.addStyleName(MaterialTheme.TEXTFIELD_FLOATING);
         row.addComponent(tf);
 
+        tf = new TextField("Custom");
+        tf.setValue("Field value");
+        tf.addStyleName(MaterialTheme.TEXTFIELD_CUSTOM);
+        row.addComponent(tf);
+
         h1 = new Label("Text Areas");
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);

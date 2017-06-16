@@ -8,6 +8,7 @@
     }
     .v-filterselect.custom [class*="input"] {
         @extend .focus-border-bottom;
+        color: $mat-custom-color;
     }
     .v-filterselect-focus.custom [class*="input"] {
         border-bottom: 1px solid $mat-custom-color;

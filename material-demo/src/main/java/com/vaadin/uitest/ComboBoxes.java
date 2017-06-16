@@ -186,12 +186,16 @@ public class ComboBoxes extends VerticalLayout implements View {
         combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
         combo.addStyleName(MaterialTheme.COMBOBOX_FLOATING);
         row.addComponent(combo);
+
+        combo = new ComboBox("Custom");
+        combo.setInputPrompt("You can type here");
+        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
+        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
+        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
+        combo.addStyleName(MaterialTheme.COMBOBOX_CUSTOM);
+        row.addComponent(combo);
     }
 
     @Override
-    public void enter(ViewChangeEvent event) {
-        // TODO Auto-generated method stub
-
-    }
-
+    public void enter(ViewChangeEvent event) {}
 }

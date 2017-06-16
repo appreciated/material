@@ -15,6 +15,7 @@
      }
      .v-textfield.custom {
          @extend .focus-border-bottom;
+         color: $mat-custom-color;
      }
      .v-textfield.custom:focus {
          border-bottom: 1px solid $mat-custom-color;
