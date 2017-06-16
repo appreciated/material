@@ -1,9 +1,13 @@
 @import "variables.scss";
+
 @import "../valo/valo.scss";
+$v-included-components: remove($v-included-components, button);
+
 @import "functions.scss";
 @import "materialize/globals.scss";
 @import "components/v-window.scss";
 @import "components/v-panel.scss";
+@import "ripple/ripple.scss";
 @import "components/v-button.scss";
 @import "components/v-textfield.scss";
 @import "components/v-filterselect.scss";
@@ -25,12 +29,15 @@
 @import "components/v-notification.scss";
 
 @import "cards.scss";
+
 @mixin material {
     @include valo;
     @include functions;
     @include globals;
     @include cards;
     @include v-panel;
+
+    @include ripple;
     @include v-button;
     @include v-textfield;
     @include v-filterselect;
