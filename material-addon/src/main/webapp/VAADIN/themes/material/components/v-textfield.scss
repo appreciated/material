@@ -18,8 +18,8 @@
          color: $mat-custom-color;
      }
      .v-textfield.custom::-webkit-input-placeholder {
-          color: rgba($mat-custom-color,0.3) !default;
-      }
+        color: rgba($mat-custom-color,0.4);
+     }
      .v-textfield.custom:focus {
          border-bottom: 1px solid $mat-custom-color;
          box-shadow: 0 1px 0 0 $mat-custom-color;
