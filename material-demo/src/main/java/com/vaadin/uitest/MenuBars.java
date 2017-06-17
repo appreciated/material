@@ -35,6 +35,7 @@ public class MenuBars extends VerticalLayout implements View {
 
         addBarswithStyle("");
         addBarswithStyle(MaterialTheme.MENUBAR_PRIMARY);
+        addBarswithStyle(MaterialTheme.MENUBAR_CUSTOM);
     }
 
     public void addBarswithStyle(String style) {
@@ -59,6 +60,7 @@ public class MenuBars extends VerticalLayout implements View {
         menuBar = new MenuBar();
         menuBar.addItem("test", VaadinIcons.ABACUS, null);
         menuBar.setCaption(style + " Borderless style");
+        menuBar.addStyleName(style);
         menuBar.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
         addComponent(menuBar);
 
