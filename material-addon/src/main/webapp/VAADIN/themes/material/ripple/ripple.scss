@@ -55,9 +55,6 @@
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after {
         @include ripple-background($mat-card-color);
     }
-    .v-button.custom:after {
-         @include ripple-background-function($mat-custom-color,60%);
-    }
     .v-button.borderless:after, .v-button.borderless-colored:after {
         @include ripple-background($mat-background-color);
     }
@@ -72,6 +69,9 @@
     }
     .v-button.danger:after {
         @include ripple-background-function($v-error-indicator-color,60%);
+    }
+    .v-button.custom:after {
+         @include ripple-background-function($mat-custom-color,60%);
     }
     .v-button:not(.v-disabled):active:after, .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):active:after {
       opacity: .2;
