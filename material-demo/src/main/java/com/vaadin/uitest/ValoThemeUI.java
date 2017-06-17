@@ -117,6 +117,7 @@ public class ValoThemeUI extends UI {
         navigator.addView("popupviews", PopupViews.class);
         navigator.addView("dragging", Dragging.class);
         navigator.addView("material", Material.class); // Added own section key
+        navigator.addView("uploads", Custom.class); // Added own section key
 
         String f = Page.getCurrent().getUriFragment();
         if (f == null || f.equals("")) {
@@ -225,6 +226,7 @@ public class ValoThemeUI extends UI {
         menuItems.put("popupviews", "Popup Views");
         menuItems.put("calendar", "Calendar");
         menuItems.put("forms", "Forms");
+        menuItems.put("uploads", "Uploads");
 
         HorizontalLayout top = new HorizontalLayout();
         top.setWidth("100%");

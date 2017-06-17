@@ -10,12 +10,13 @@ public class MaterialTheme extends ValoTheme {
     public static final String BUTTON_FLAT = "flat";
     public static final String BUTTON_FLOATING_ACTION = "floating-action";
     public static final String BUTTON_BORDER = "border";
-    public static final String TEXTFIELD_FLOATING = "floating";
-    public static final String COMBOBOX_FLOATING = "floating";
-    public static final String DATEFIELD_FLOATING = "floating";
+    public static final String BUTTON_CUSTOM = "custom";
     public static final String TEXTFIELD_CUSTOM = "custom";
+    public static final String TEXTFIELD_FLOATING = "floating";
     public static final String COMBOBOX_CUSTOM = "custom";
+    public static final String COMBOBOX_FLOATING = "floating";
     public static final String DATEFIELD_CUSTOM = "custom";
+    public static final String DATEFIELD_FLOATING = "floating";
     public static final String CARD_0 = "card-0";
     public static final String CARD_1 = "card-1";
     public static final String CARD_1_5 = "card-1-5";
@@ -26,6 +27,11 @@ public class MaterialTheme extends ValoTheme {
     public static final String CARD_NO_PADDING = "card-no-padding";
     public static final String CARD_HOVERABLE = "card-hoverable";
     public static final String MENUBAR_PRIMARY = "primary";
-    public static final String BUTTON_CUSTOM = "custom";
     public static final String MENUBAR_CUSTOM = "custom";
+    public static final String UPLOAD_ROUND = "round";
+    public static final String UPLOAD_FLAT = "flat";
+    public static final String UPLOAD_FLOATING_ACTION = "floating-action-upload";
+    public static final String UPLOAD_BORDER = "border";
+    public static final String UPLOAD_BORDERLESS = "borderless";
+    public static final String UPLOAD_CUSTOM = "custom";
 }

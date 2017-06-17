@@ -30,12 +30,13 @@
 }
 
 @mixin ripple {
-    .v-button:not(.v-disabled), .v-menubar-menuitem:not(.v-menubar-menuitem-disabled) {
+     :not(.v-upload) > * > .v-button:not(.v-disabled), .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
+     .v-upload:not(.v-disabled), .v-menubar-menuitem:not(.v-menubar-menuitem-disabled) {
       position: relative;
       overflow: hidden;
       transform: translate3d(0, 0, 0);
     }
-    .v-button:not(.v-disabled):after, .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after {
+     :not(.v-upload) > * > .v-button:not(.v-disabled):after, .v-upload:not(.v-disabled):after, .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after {
       content: "";
       display: block;
       position: absolute;
@@ -44,36 +45,37 @@
       top: 0;
       left: 0;
       pointer-events: none;
-
       background-repeat: no-repeat;
       background-position: 50%;
       background-size: 1200% 1200%; // Use background-size instead of scale
       opacity: 0;
       transition: background .5s, opacity 1s; // use background-size instead of scale
     }
-    .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):after,
+    :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):after,
+    .v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):after,
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after {
         @include ripple-background($mat-card-color);
     }
-    .v-button.borderless:after, .v-button.borderless-colored:after {
+    .v-button.borderless:after, .v-upload.borderless:after {
         @include ripple-background($mat-background-color);
     }
-    .v-button.border:not(.primary):not(.friendly):not(.danger):not(.custom):after {
+    .v-button.border:not(.primary):not(.friendly):not(.danger):not(.custom):after, .v-upload.border:not(.primary):not(.friendly):not(.danger):not(.custom):after {
         @include ripple-background-function(valo-font-color($mat-background-color, 1),60%);
     }
-    .v-button.primary:after {
+    .v-button.primary:after,
+    .v-button.borderless-colored:after, .v-upload.primary:after {
         @include ripple-background-function($v-focus-color,60%);
     }
-    .v-button.friendly:after {
+    .v-button.friendly:after, .v-upload.friendly:after {
         @include ripple-background-function($v-friendly-color,60%);
     }
-    .v-button.danger:after {
+    .v-button.danger:after, .v-upload.danger:after {
         @include ripple-background-function($v-error-indicator-color,60%);
     }
-    .v-button.custom:after {
+    .v-button.custom:after, .v-upload.custom:after {
          @include ripple-background-function($mat-custom-color,60%);
     }
-    .v-button:not(.v-disabled):active:after, .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):active:after {
+    .v-button:not(.v-disabled):active:after, .v-upload:not(.v-disabled):active:after, .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):active:after {
       opacity: .2;
       background-size: 0% 0%; // Use background-size instead of scale
       transition: 0s;
