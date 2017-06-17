@@ -84,7 +84,7 @@ body:not(.v-touch) .v-button.borderless.danger:hover {
         height: 110%;
         vertical-align: middle;
     }
-    .v-button:not(.borderless):not(.borderless-colored):not(.link):not(.quiet):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom) {
+    .v-button:not(.borderless):not(.borderless-colored):not(.link):not(.quiet):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action) {
         background: $mat-card-color;
     }
     .v-button:not(.borderless):not(.border).primary {
@@ -161,7 +161,7 @@ body:not(.v-touch) .v-button.borderless.danger:hover {
         padding: 0px;
         border-radius: 100%;
         background: $v-selection-color;
-        color: valo-font-color($v-selection-color, 1.0);
+        color: valo-font-color($mat-card-color, 1.0);
     }
     .v-button.floating-action:not(.flat) {
         @extend .z-depth-3;
