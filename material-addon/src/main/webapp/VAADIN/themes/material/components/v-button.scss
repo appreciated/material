@@ -56,19 +56,19 @@ body:not(.v-touch) .v-button.border.danger:hover {
     background: $v-error-indicator-color !important;
 }
 body:not(.v-touch) .v-button.borderless:hover {
-    background: mix($mat-background-color, valo-font-color($mat-background-color), 80%) !important;
+    background: rgba($mat-background-color,0.2) !important;
 }
 body:not(.v-touch) .v-button.borderless.primary:hover {
-    background: mix($mat-background-color, $v-focus-color, 80%) !important;
+    background: rgba($v-focus-color,0.2) !important;
 }
 body:not(.v-touch) .v-button.borderless.friendly:hover {
-    background: mix($mat-background-color, $v-friendly-color, 80%) !important;
+    background: rgba($v-friendly-color,0.2) !important;
 }
 body:not(.v-touch) .v-button.borderless.danger:hover {
-    background: mix($mat-background-color, $v-error-indicator-color, 80%) !important;
+    background: rgba($v-error-indicator-color,0.2) !important;
 }
 body:not(.v-touch) .v-button.borderless.custom:hover {
-    background: mix($mat-background-color, $mat-custom-color, 80%) !important;
+    background: rgba($mat-custom-color,0.2) !important;
 }
 @mixin v-button {
     .v-button {
