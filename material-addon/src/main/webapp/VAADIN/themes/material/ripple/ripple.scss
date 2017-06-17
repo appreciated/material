@@ -18,10 +18,14 @@
 // ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 @mixin ripple-background($color) {
+   @include ripple-background-function($color,40%);
+}
+
+@mixin ripple-background-function($color,$percent) {
   @if is-dark-color($color) {
-    @include radial-gradient(circle, lighten($color, 40%) 20%, transparent 10%);
+    @include radial-gradient(circle, lighten($color, $percent) 20%, transparent 10%);
   } @else {
-    @include radial-gradient(circle, darken($color, 40%) 20%, transparent 10%);
+    @include radial-gradient(circle, darken($color, $percent) 20%, transparent 10%);
   }
 }
 
@@ -50,14 +54,14 @@
     .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):after {
         @include ripple-background($mat-card-color);
     }
-    .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border).custom:after {
+    .v-button.custom:after {
          @include ripple-background($mat-custom-color);
     }
-    .v-button.borderless:after,  .v-button.borderless-colored:after {
+    .v-button.borderless:after, .v-button.borderless-colored:after {
         @include ripple-background($mat-background-color);
     }
-    .v-button.border:after {
-        @include ripple-background(valo-font-color($mat-background-color, 1));
+    .v-button.border:not(.primary):not(.friendly):not(.danger):not(.custom):after {
+        @include ripple-background-function(valo-font-color($mat-background-color, 1),60%);
     }
     .v-button.primary:after {
         @include ripple-background($v-focus-color);

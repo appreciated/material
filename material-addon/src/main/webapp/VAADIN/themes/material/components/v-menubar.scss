@@ -31,14 +31,16 @@
         background: valo-font-color($mat-card-color, 0.1);
         color: valo-font-color( valo-font-color($mat-card-color, 0.1), 1.0);
     }
-    .v-menubar-borderless :not(:first-child):not(:last-child) {
-        border-radius: 0px;
+    .v-menubar-borderless .v-menubar-menuitem {
+        border-radius: 0px !important;
     }
     .v-menubar-borderless :first-child {
-        border-radius: 2px 0 0 2px !important;
+        border-top-left-radius: 2px !important;
+        border-bottom-left-radius: 2px !important;
     }
     .v-menubar-borderless :last-child {
-        border-radius: 0 2px 2px 0 !important;
+        border-top-right-radius: 2px !important;
+        border-bottom-right-radius: 2px !important;
     }
     .v-menubar > .v-menubar-menuitem:hover:before {
         background-color: transparent;
