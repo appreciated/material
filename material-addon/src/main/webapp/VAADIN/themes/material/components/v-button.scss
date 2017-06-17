@@ -161,7 +161,7 @@ body:not(.v-touch) .v-button.borderless.danger:hover {
         padding: 0px;
         border-radius: 100%;
         background: $v-selection-color;
-        color: valo-font-color($mat-card-color, 1.0);
+        color: valo-font-color($v-focus-color, 1.0);
     }
     .v-button.floating-action:not(.flat) {
         @extend .z-depth-3;
@@ -176,9 +176,11 @@ body:not(.v-touch) .v-button.borderless.danger:hover {
     }
     .v-button.floating-action.friendly {
         background: $v-friendly-color;
+        color: valo-font-color( $v-friendly-color, 1.0);
     }
     .v-button.floating-action.danger {
         background: $v-error-indicator-color;
+        color: valo-font-color( $v-error-indicator-color, 1.0);
     }
     .v-button.floating-action.custom {
         color: valo-font-color( $mat-custom-color, 1.0);
