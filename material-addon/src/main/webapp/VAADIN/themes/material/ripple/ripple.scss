@@ -65,13 +65,16 @@
         @include ripple-background-function(valo-font-color($mat-background-color, 1),60%);
     }
     .v-button.primary:after {
-        @include ripple-background($v-focus-color);
+        @include ripple-background-function($v-focus-color,60%);
     }
     .v-button.friendly:after {
-        @include ripple-background($v-friendly-color);
+        @include ripple-background-function($v-friendly-color,60%);
     }
     .v-button.danger:after {
-        @include ripple-background($v-error-indicator-color);
+        @include ripple-background-function($v-error-indicator-color,60%);
+    }
+    .v-button.custom:after {
+        @include ripple-background-function($v-error-indicator-color,60%);
     }
     .v-button:not(.v-disabled):active:after, .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):active:after {
       opacity: .2;
