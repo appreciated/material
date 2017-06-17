@@ -30,12 +30,12 @@
 }
 
 @mixin ripple {
-    .v-button:not(.v-disabled) {
+    .v-button:not(.v-disabled), .v-menubar-menuitem:not(.v-menubar-menuitem-disabled) {
       position: relative;
       overflow: hidden;
       transform: translate3d(0, 0, 0);
     }
-    .v-button:not(.v-disabled):after {
+    .v-button:not(.v-disabled):after, .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after {
       content: "";
       display: block;
       position: absolute;
@@ -51,7 +51,8 @@
       opacity: 0;
       transition: background .5s, opacity 1s; // use background-size instead of scale
     }
-    .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):after {
+    .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):after,
+    .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after {
         @include ripple-background($mat-card-color);
     }
     .v-button.custom:after {
@@ -72,7 +73,7 @@
     .v-button.danger:after {
         @include ripple-background($v-error-indicator-color);
     }
-    .v-button:not(.v-disabled):active:after {
+    .v-button:not(.v-disabled):active:after, .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):active:after {
       opacity: .2;
       background-size: 0% 0%; // Use background-size instead of scale
       transition: 0s;

@@ -63,8 +63,11 @@
      .v-menubar-popup .v-menubar-menuitem {
         background: $mat-card-color;
     }
-     .v-menubar-popup .v-menubar-menuitem.v-menubar-menuitem-selected {
+     .v-menubar-popup .v-menubar-menuitem-selected {
          background: valo-font-color( $mat-card-color, 0.1);
+     }
+     .v-menubar-popup .v-menubar-menuitem:active:before {
+         background: transparent;
      }
     .v-menubar-popup .v-menubar-submenu-indicator + .v-menubar-menuitem-caption:after {
         line-height: 40px;
