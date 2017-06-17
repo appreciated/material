@@ -11,14 +11,14 @@
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu):not(.borderless) > .v-menubar-menuitem-selected,
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu):not(.borderless) > .v-menubar-menuitem-checked
     {
-        background: rgba(valo-font-color($mat-card-color, 1.0),0.25);
+        background: rgba(valo-font-color($mat-card-color, 1.0),0.2);
         color: inherit;
     }
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu).borderless > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu).borderless > .v-menubar-menuitem-selected,
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu).borderless > .v-menubar-menuitem-checked
     {
-        background: rgba(valo-font-color($mat-background-color, 1.0),0.2);
+        background: rgba(valo-font-color($mat-background-color, 1.0),0.15);
     }
     // Primary Menubar
     .v-menubar.primary:not(.borderless) {
