@@ -1,7 +1,17 @@
 @mixin v-menubar {
-    .v-menubar:not(.primary):not(.borderless):not(.v-menubar-user-menu) {
+    .v-menubar:not(.primary):not(.borderless):not(.custom):not(.v-menubar-user-menu) {
         background: $mat-card-color;
         color: valo-font-color($mat-card-color, 1.0);
+    }
+    .v-menubar-borderless:not(.primary):not(.custom) .v-menubar-menuitem {
+        color: valo-font-color($mat-background-color, 1.0);
+    }
+     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu) > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
+     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu) > .v-menubar-menuitem-selected,
+     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu) > .v-menubar-menuitem-checked
+     {
+        background: valo-font-color($mat-card-color, 0.1);
+        color: valo-font-color( valo-font-color($mat-card-color, 0.1), 1.0);
     }
     .v-menubar.primary:not(.borderless) {
         background: $v-selection-color;
@@ -10,13 +20,6 @@
     .v-menubar-borderless.primary .v-menubar-menuitem {
         color: $v-focus-color;
     }
-    .v-menubar-borderless:not(.primary) .v-menubar-menuitem {
-        color: valo-font-color($mat-background-color, 1.0);
-    }
-    .v-menubar > .v-menubar-menuitem {
-        margin-right: 0px;
-        transition: background-color .3s;
-    }
     .v-menubar.primary > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
     .v-menubar.primary > .v-menubar-menuitem-selected,
     .v-menubar.primary > .v-menubar-menuitem-checked
@@ -24,12 +27,23 @@
         background: valo-font-color($v-selection-color, 0.1);
         color: valo-font-color(valo-font-color($v-selection-color, 0.1), 1.0);
     }
-    .v-menubar:not(.primary):not(.v-menubar-user-menu) > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
-    .v-menubar:not(.primary):not(.v-menubar-user-menu) > .v-menubar-menuitem-selected,
-    .v-menubar:not(.primary):not(.v-menubar-user-menu) > .v-menubar-menuitem-checked
+    .v-menubar.custom:not(.borderless) {
+        background: $mat-custom-color;
+        color: valo-font-color($mat-custom-color, 1.0);
+    }
+    .v-menubar-borderless.custom .v-menubar-menuitem {
+        color: $mat-custom-color;
+    }
+    .v-menubar.custom > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
+    .v-menubar.custom > .v-menubar-menuitem-selected,
+    .v-menubar.custom > .v-menubar-menuitem-checked
      {
-        background: valo-font-color($mat-card-color, 0.1);
-        color: valo-font-color( valo-font-color($mat-card-color, 0.1), 1.0);
+        background: valo-font-color($mat-custom-color, 0.1);
+        color: valo-font-color(valo-font-color($mat-custom-color, 0.1), 1.0);
+    }
+    .v-menubar > .v-menubar-menuitem {
+        margin-right: 0px;
+        transition: background-color .3s;
     }
     .v-menubar-borderless .v-menubar-menuitem {
         border-radius: 0px !important;

@@ -27,4 +27,5 @@ public class MaterialTheme extends ValoTheme {
     public static final String CARD_HOVERABLE = "card-hoverable";
     public static final String MENUBAR_PRIMARY = "primary";
     public static final String BUTTON_CUSTOM = "custom";
+    public static final String MENUBAR_CUSTOM = "custom";
 }
