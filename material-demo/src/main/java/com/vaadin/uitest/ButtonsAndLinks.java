@@ -181,7 +181,7 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         link.setEnabled(false);
         row.addComponent(link);
 
-        h1 = new Label("Custom");
+        h1 = new Label("Material");
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
         addComponent(getButtonsWithStyle(""));
@@ -190,7 +190,7 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_BORDER));
         addComponent(getButtonsWithStyle(ValoTheme.BUTTON_BORDERLESS));
 
-        h1 = new Label("Custom Flat");
+        h1 = new Label("Flat");
         h1.addStyleName(ValoTheme.LABEL_H1);
         addComponent(h1);
         addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_FLAT));
@@ -203,7 +203,7 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
 
     public HorizontalLayout getButtonsWithStyle(String style) {
         HorizontalLayout layout = new HorizontalLayout();
-        Arrays.asList("", ValoTheme.BUTTON_PRIMARY, ValoTheme.BUTTON_FRIENDLY, ValoTheme.BUTTON_DANGER)
+        Arrays.asList("", ValoTheme.BUTTON_PRIMARY, ValoTheme.BUTTON_FRIENDLY, ValoTheme.BUTTON_DANGER, MaterialTheme.BUTTON_CUSTOM)
                 .stream()
                 .forEach(s -> {
                     Button button = style.contains(MaterialTheme.BUTTON_FLOATING_ACTION) ? new Button(VaadinIcons.PLUS) : new Button(style + " " + s);

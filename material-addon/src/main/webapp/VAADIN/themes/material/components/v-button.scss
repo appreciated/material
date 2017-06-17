@@ -9,6 +9,9 @@ body.v-touch :not(.v-component-group) > .v-button:not(.v-disabled):not(.borderle
 body:not(.v-touch) .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover{
     background: valo-font-color($v-friendly-color, 0.1);
 }
+body:not(.v-touch) .custom.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover{
+    background: valo-font-color($mat-custom-color, 0.1);
+}
 body:not(.v-touch) .danger.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover{
     background: valo-font-color($v-error-indicator-color, 0.1);
 }
@@ -35,6 +38,10 @@ body:not(.v-touch) .v-button.floating-action:not(.flat).danger:hover {
 body:not(.v-touch) .v-button.border:hover {
     color: valo-font-color(valo-font-color($mat-background-color, 1),1);
     background: valo-font-color($mat-background-color, 1) !important;
+}
+body:not(.v-touch) .v-button.border.custom:hover {
+    color: valo-font-color($mat-custom-color, 1);
+    background: $mat-custom-color !important;
 }
 body:not(.v-touch) .v-button.border.primary:hover {
     color: valo-font-color($v-focus-color, 1);
@@ -92,36 +99,21 @@ body:not(.v-touch) .v-button.borderless.danger:hover {
          background: $v-error-indicator-color;
          color: valo-font-color($v-error-indicator-color, 1.0);
     }
-    .v-button.borderless-colored, .v-button.link {
-        color: $v-focus-color;
+    .v-button:not(.borderless):not(.border).custom {
+         background: $mat-custom-color !important;
+         color: valo-font-color($mat-custom-color, 1.0);
     }
-
-    .v-button:not(.flat):not(.floating):not(.borderless):not(.border):not(.borderless-colored):not(.quiet):not(.link) {
+    .v-button:not(.flat):not(.borderless):not(.border):not(.borderless-colored):not(.quiet):not(.link) {
         @extend .z-depth-1;
     }
     .v-button:not(.borderless).flat {
         @extend .z-depth-0;
     }
-    .v-button.floating:not(.borderless):not(.floating-action):not(.border) {
-        @extend .z-depth-1;
-        text-transform: uppercase;
+    .v-button.borderless-colored, .v-button.link {
+        color: $v-focus-color;
     }
     .v-button.round {
         border-radius: 30px;
-    }
-    .v-button.floating-action {
-        width: 56px;
-        height: 56px;
-        padding: 0px;
-        border-radius: 100%;
-        background: $v-selection-color;
-        color: valo-font-color($v-selection-color, 1.0);
-    }
-    .v-button.floating-action:not(.flat) {
-        @extend .z-depth-3;
-    }
-    .v-button.floating-action.flat {
-        @extend .z-depth-0;
     }
     .v-button.border {
         @extend .z-depth-0;
@@ -144,6 +136,10 @@ body:not(.v-touch) .v-button.borderless.danger:hover {
         border: 1px solid $v-error-indicator-color;
         color: $v-error-indicator-color;
     }
+    .v-button.border.custom {
+        border: 1px solid $mat-custom-color;
+        color: $mat-custom-color;
+    }
     .v-button.borderless {
         color: valo-font-color($mat-background-color);
     }
@@ -156,6 +152,23 @@ body:not(.v-touch) .v-button.borderless.danger:hover {
     .v-button.borderless.danger {
         color: $v-error-indicator-color;
     }
+    .v-button.borderless.custom {
+        color: $mat-custom-color;
+    }
+    .v-button.floating-action {
+        width: 56px;
+        height: 56px;
+        padding: 0px;
+        border-radius: 100%;
+        background: $v-selection-color;
+        color: valo-font-color($v-selection-color, 1.0);
+    }
+    .v-button.floating-action:not(.flat) {
+        @extend .z-depth-3;
+    }
+    .v-button.floating-action.flat {
+        @extend .z-depth-0;
+    }
     .v-button.floating-action .v-icon {
         line-height: 56px;
         width: 56px;
@@ -166,6 +179,10 @@ body:not(.v-touch) .v-button.borderless.danger:hover {
     }
     .v-button.floating-action.danger {
         background: $v-error-indicator-color;
+    }
+    .v-button.floating-action.custom {
+        color: valo-font-color( $mat-custom-color, 1.0);
+        background: $mat-custom-color;
     }
     .v-button.v-disabled {
         background: valo-font-color($v-background-color, 0.2);

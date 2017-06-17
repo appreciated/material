@@ -47,10 +47,13 @@
       opacity: 0;
       transition: background .5s, opacity 1s; // use background-size instead of scale
     }
-     .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):after {
-         @include ripple-background($mat-card-color);
-     }
-     .v-button.borderless:after,  .v-button.borderless-colored:after {
+    .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):after {
+        @include ripple-background($mat-card-color);
+    }
+    .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border).custom:after {
+         @include ripple-background($mat-custom-color);
+    }
+    .v-button.borderless:after,  .v-button.borderless-colored:after {
         @include ripple-background($mat-background-color);
     }
     .v-button.border:after {
