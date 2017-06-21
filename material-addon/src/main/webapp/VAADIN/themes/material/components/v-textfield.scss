@@ -18,10 +18,10 @@
          color: $mat-custom-color;
      }
      .v-textfield.custom::-webkit-input-placeholder {
-        color: rgba($mat-custom-color,0.4);
+         color: rgba($mat-custom-color, 0.4);
      }
      .v-caption-custom.v-caption-inline-icon {
-        color: $mat-custom-color;
+         color: $mat-custom-color;
      }
      .v-textfield.custom:focus {
          border-bottom: 1px solid $mat-custom-color;

@@ -32,7 +32,6 @@
     .v-filterselect-suggestpopup .gwt-MenuItem:active:before {
         background: transparent;
     }
-
     .v-filterselect.floating {
         @extend .floating-border;
     }
@@ -66,5 +65,4 @@
     .v-filterselect[class*="prompt"] > [class*="input"] {
         color: $v-font-color;
     }
-
 }

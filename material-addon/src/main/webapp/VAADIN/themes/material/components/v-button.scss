@@ -1,82 +1,111 @@
-
-body:not(.v-touch) :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.floating-action):hover{
-    background: valo-font-color($v-background-color, 0.05);
+body:not(.v-touch):not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.primary):not(.border):not(.friendly):not(.danger):not(.custom):not(.floating-action):not(.danger):hover {
+    background: valo-font-color($v-background-color, 0.05) !important;
 }
 
-body:not(.v-touch) :not(.v-upload):not(.v-component-group) > * > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action):hover,
-body.v-touch :not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action):active {
+body:not(.v-touch):not(.v-upload) >:not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action):hover,
+body.v-touch:not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action):active {
     box-shadow: $z-depth-1-5 !important;
 }
-body:not(.v-touch) .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover{
+
+body:not(.v-touch) .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
     background: valo-font-color($v-friendly-color, 0.1);
 }
-body:not(.v-touch) .custom.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover{
+
+body:not(.v-touch) .custom.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
     background: valo-font-color($mat-custom-color, 0.1);
 }
-body:not(.v-touch) .danger.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover{
+
+body:not(.v-touch) .danger.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
     background: valo-font-color($v-error-indicator-color, 0.1);
 }
-body:not(.v-touch) .primary.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover{
+
+body:not(.v-touch) .primary.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
     background: valo-font-color($v-selection-color, 0.1);
 }
-body:not(.v-touch) :not(.v-upload) > * > .v-button.borderless:not(.v-disabled):not(.borderless-colored):not(.primary):not(.friendly):not(.danger):not(.custom):hover {
-    background: rgba(valo-font-color($mat-background-color, 1),0.1) !important;
+
+body:not(.v-touch):not(.v-upload) > * > .v-button.borderless:not(.v-disabled):not(.borderless-colored):not(.primary):not(.friendly):not(.danger):not(.custom):hover {
+    background: rgba(valo-font-color($mat-background-color, 1), 0.1) !important;
 }
+
 body:not(.v-touch) .v-button.floating-action:hover {
     background: valo-font-color($v-selection-color, 0.1);
 }
+
 body:not(.v-touch) .v-button.floating-action:not(.flat):hover,
 body.v-touch .v-button.floating-action:not(.flat):active {
     box-shadow: $z-depth-4 !important;
 }
+
 body:not(.v-touch) .v-button.floating-action:not(.flat).friendly:hover {
     background: valo-font-color($v-friendly-color, 0.1);
 }
+
 body:not(.v-touch) .v-button.floating-action:not(.flat).danger:hover {
     background: valo-font-color($v-error-indicator-color, 0.1);
 }
+
 body:not(.v-touch) .v-button.border:hover {
-    color: valo-font-color(valo-font-color($mat-background-color, 1),1);
+    color: valo-font-color(valo-font-color($mat-background-color, 1), 1);
     background: valo-font-color($mat-background-color, 1) !important;
 }
+
 body:not(.v-touch) .v-button.border.custom:hover {
     color: valo-font-color($mat-custom-color, 1);
     background: $mat-custom-color !important;
 }
+
 body:not(.v-touch) .v-button.border.primary:hover {
     color: valo-font-color($v-focus-color, 1);
     background: $v-focus-color !important;
 }
+
 body:not(.v-touch) .v-button.border.friendly:hover {
     color: valo-font-color($v-friendly-color, 1);
     background: $v-friendly-color !important;
 }
+
 body:not(.v-touch) .v-button.border.danger:hover {
     color: valo-font-color($v-error-indicator-color, 1);
     background: $v-error-indicator-color !important;
 }
+
 body:not(.v-touch) .v-button.borderless.primary:hover,
 body:not(.v-touch) .v-button.borderless-colored:hover {
-    background: rgba($v-focus-color,0.2) !important;
+    background: rgba($v-focus-color, 0.2) !important;
 }
+
 body:not(.v-touch) .v-button.borderless.friendly:hover {
-    background: rgba($v-friendly-color,0.2) !important;
+    background: rgba($v-friendly-color, 0.2) !important;
 }
+
 body:not(.v-touch) .v-button.borderless.danger:hover {
-    background: rgba($v-error-indicator-color,0.2) !important;
+    background: rgba($v-error-indicator-color, 0.2) !important;
 }
+
 body:not(.v-touch) .v-button.borderless.custom:hover {
-    background: rgba($mat-custom-color,0.2) !important;
+    background: rgba($mat-custom-color, 0.2) !important;
 }
+
 @mixin v-button {
     :not(.v-upload) > * > .v-button {
         @extend .z-depth-0;
         text-transform: uppercase;
         transition: box-shadow .3s ease-out, background .3s;
         padding: 0 20px;
-        height: $v-unit-size;
         border-radius: $v-border-radius;
         outline: none;
+    }
+    :not(.v-upload) > * > .v-button {
+        height: $v-unit-size;
+    }
+    :not(.v-upload) > * > .v-button.tiny {
+        height: $v-unit-size--tiny;
+    }
+    :not(.v-upload) > * > .v-button.small {
+        height: $v-unit-size--small;
+    }
+    :not(.v-upload) > * > .v-button.large {
+        height: $v-unit-size--large;
     }
     :not(.v-upload) > * > .v-button:before {
         content: "";
@@ -89,20 +118,20 @@ body:not(.v-touch) .v-button.borderless.custom:hover {
         background: $mat-card-color;
     }
     :not(.v-upload) > * > .v-button:not(.borderless):not(.border).primary {
-         background: $v-focus-color;
-         color: valo-font-color($v-focus-color, 1.0);
+        background: $v-focus-color;
+        color: valo-font-color($v-focus-color, 1.0);
     }
     :not(.v-upload) > * > .v-button:not(.borderless):not(.border).friendly {
-         background: $v-friendly-color;
-         color: valo-font-color($v-friendly-color, 1.0);
+        background: $v-friendly-color;
+        color: valo-font-color($v-friendly-color, 1.0);
     }
     :not(.v-upload) > * > .v-button:not(.borderless):not(.border).danger {
-         background: $v-error-indicator-color;
-         color: valo-font-color($v-error-indicator-color, 1.0);
+        background: $v-error-indicator-color;
+        color: valo-font-color($v-error-indicator-color, 1.0);
     }
     :not(.v-upload) > * > .v-button:not(.borderless):not(.border).custom {
-         background: $mat-custom-color;
-         color: valo-font-color($mat-custom-color, 1.0);
+        background: $mat-custom-color;
+        color: valo-font-color($mat-custom-color, 1.0);
     }
     :not(.v-upload) > * > .v-button:not(.flat):not(.borderless):not(.border):not(.borderless-colored):not(.quiet):not(.link) {
         @extend .z-depth-1;
@@ -110,7 +139,8 @@ body:not(.v-touch) .v-button.borderless.custom:hover {
     .v-button:not(.borderless).flat {
         @extend .z-depth-0;
     }
-    .v-button.borderless-colored, .v-button.link {
+    .v-button.borderless-colored,
+    .v-button.link {
         color: $v-focus-color;
     }
     .v-button.round {
@@ -199,7 +229,7 @@ body:not(.v-touch) .v-button.borderless.custom:hover {
     .v-button-primary {
         font-weight: 500;
     }
-    .v-button-primary.floating-action{
+    .v-button-primary.floating-action {
         min-width: 56px;
     }
     .v-button-icon-align-top {
@@ -217,6 +247,6 @@ body:not(.v-touch) .v-button.borderless.custom:hover {
     }
     .v-button-icon-align-right [class*="wrap"] {
         display: inline-block;
-        padding-left:5px;
+        padding-left: 5px;
     }
 }

@@ -9,16 +9,14 @@
     }
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu):not(.borderless) > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu):not(.borderless) > .v-menubar-menuitem-selected,
-    .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu):not(.borderless) > .v-menubar-menuitem-checked
-    {
-        background: rgba(valo-font-color($mat-card-color, 1.0),0.2);
+    .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu):not(.borderless) > .v-menubar-menuitem-checked {
+        background: rgba(valo-font-color($mat-card-color, 1.0), 0.2);
         color: inherit;
     }
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu).borderless > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu).borderless > .v-menubar-menuitem-selected,
-    .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu).borderless > .v-menubar-menuitem-checked
-    {
-        background: rgba(valo-font-color($mat-background-color, 1.0),0.15);
+    .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu).borderless > .v-menubar-menuitem-checked {
+        background: rgba(valo-font-color($mat-background-color, 1.0), 0.15);
     }
     // Primary Menubar
     .v-menubar.primary:not(.borderless) {
@@ -30,18 +28,16 @@
     }
     .v-menubar.primary > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
     .v-menubar.primary > .v-menubar-menuitem-selected,
-    .v-menubar.primary > .v-menubar-menuitem-checked
-     {
-        background: rgba(valo-font-color($v-selection-color, 1),0.25);
+    .v-menubar.primary > .v-menubar-menuitem-checked {
+        background: rgba(valo-font-color($v-selection-color, 1), 0.25);
         color: inherit;
     }
     .v-menubar.primary.borderless > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
     .v-menubar.primary.borderless > .v-menubar-menuitem-selected,
-    .v-menubar.primary.borderless > .v-menubar-menuitem-checked
-     {
-        background: rgba($v-selection-color,0.2);
-     }
-     // Custom Menubar
+    .v-menubar.primary.borderless > .v-menubar-menuitem-checked {
+        background: rgba($v-selection-color, 0.2);
+    }
+    // Custom Menubar
     .v-menubar.custom:not(.borderless) {
         background: $mat-custom-color;
         color: valo-font-color($mat-custom-color, 1.0) !important;
@@ -51,17 +47,15 @@
     }
     .v-menubar.custom > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
     .v-menubar.custom > .v-menubar-menuitem-selected,
-    .v-menubar.custom > .v-menubar-menuitem-checked
-     {
-        background: rgba(valo-font-color($mat-custom-color, 1),0.25);
+    .v-menubar.custom > .v-menubar-menuitem-checked {
+        background: rgba(valo-font-color($mat-custom-color, 1), 0.25);
         color: inherit;
     }
     .v-menubar.custom.borderless > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
     .v-menubar.custom.borderless > .v-menubar-menuitem-selected,
-    .v-menubar.custom.borderless > .v-menubar-menuitem-checked
-     {
-        background: rgba($mat-custom-color,0.2);
-     }
+    .v-menubar.custom.borderless > .v-menubar-menuitem-checked {
+        background: rgba($mat-custom-color, 0.2);
+    }
     // Menubar Modifications
     .v-menubar > .v-menubar-menuitem {
         margin-right: 0px;
@@ -70,19 +64,19 @@
     .v-menubar-borderless .v-menubar-menuitem {
         border-radius: 0px !important;
     }
-    .v-menubar-borderless :first-child {
+    .v-menubar-borderless:first-child {
         border-top-left-radius: 2px !important;
         border-bottom-left-radius: 2px !important;
     }
-    .v-menubar-borderless :last-child {
+    .v-menubar-borderless:last-child {
         border-top-right-radius: 2px !important;
         border-bottom-right-radius: 2px !important;
     }
     .v-menubar > .v-menubar-menuitem:hover:before {
         background-color: transparent;
     }
-     // Menubar Popup Modifications
-     .v-menubar-popup {
+    // Menubar Popup Modifications
+    .v-menubar-popup {
         background: transparent;
         overflow: hidden !important;
         padding: 0px;
@@ -94,18 +88,18 @@
     .v-menubar-popup .v-menubar-separator {
         margin: 0px 0;
     }
-     .v-menubar-popup .v-menubar-submenu {
+    .v-menubar-popup .v-menubar-submenu {
         background: transparent;
     }
-     .v-menubar-popup .v-menubar-menuitem {
+    .v-menubar-popup .v-menubar-menuitem {
         background: $mat-card-color;
     }
-     .v-menubar-popup .v-menubar-menuitem-selected {
-         background: valo-font-color( $mat-card-color, 0.1);
-     }
-     .v-menubar-popup .v-menubar-menuitem:active:before {
-         background: transparent;
-     }
+    .v-menubar-popup .v-menubar-menuitem-selected {
+        background: valo-font-color( $mat-card-color, 0.1);
+    }
+    .v-menubar-popup .v-menubar-menuitem:active:before {
+        background: transparent;
+    }
     .v-menubar-popup .v-menubar-submenu-indicator + .v-menubar-menuitem-caption:after {
         line-height: 40px;
         font-size: 11px;
@@ -118,6 +112,6 @@
     }
     .v-menubar-popup .v-menubar-menuitem-disabled {
         opacity: 1.0;
-        color: valo-font-color(valo-font-color( $mat-background-color, 1),0.5);
+        color: valo-font-color(valo-font-color( $mat-background-color, 1), 0.5);
     }
 }
