@@ -51,8 +51,8 @@
       opacity: 0;
       transition: background .5s, opacity 1s; // use background-size instead of scale
     }
-    :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):after,
-    .v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):after,
+    :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action):after,
+    .v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action-upload):after,
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after {
         @include ripple-background($mat-card-color);
     }
@@ -63,7 +63,10 @@
         @include ripple-background-function(valo-font-color($mat-background-color, 1),60%);
     }
     .v-button.primary:after,
-    .v-button.borderless-colored:after, .v-upload.primary:after {
+    .v-button.floating-action:after,
+    .v-button.borderless-colored:after,
+    .v-upload.floating-action-upload:after,
+    .v-upload.primary:after {
         @include ripple-background-function($v-focus-color,60%);
     }
     .v-button.friendly:after, .v-upload.friendly:after {
