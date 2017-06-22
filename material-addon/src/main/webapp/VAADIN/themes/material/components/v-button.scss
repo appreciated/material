@@ -22,7 +22,7 @@ body:not(.v-touch) .primary.v-button:not(.v-disabled):not(.borderless):not(.bord
     background: valo-font-color($v-selection-color, 0.1);
 }
 
-body:not(.v-touch):not(.v-upload) > * > .v-button.borderless:not(.v-disabled):not(.borderless-colored):not(.primary):not(.friendly):not(.danger):not(.custom):hover {
+body:not(.v-touch) :not(.v-upload) > * > .v-button.borderless:not(.v-disabled):not(.borderless-colored):not(.primary):not(.friendly):not(.danger):not(.custom):hover {
     background: rgba(valo-font-color($mat-background-color, 1), 0.1) !important;
 }
 
