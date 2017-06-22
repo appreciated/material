@@ -28,6 +28,7 @@ $v-included-components: remove($v-included-components, button);
 @import "components/v-loading.scss";
 @import "components/v-notification.scss";
 @import "components/v-upload.scss";
+@import "components/v-tooltip.scss";
 
 @import "cards.scss";
 
@@ -59,4 +60,5 @@ $v-included-components: remove($v-included-components, button);
     @include v-loading;
     @include v-notification;
     @include v-upload;
+    @include v-tooltip;
 }

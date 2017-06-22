@@ -41,4 +41,24 @@
     .v-datefield-error .v-datefield-textfield {
         color: $v-error-indicator-color;
     }
+    .v-datefield-popup td.v-datefield-calendarpanel-month, .v-inline-datefield-calendarpanel-month {
+        color: valo-font-color($mat-card-color, 1.0);
+    }
+    .v-inline-datefield-calendarpanel-day, .v-datefield-popup .v-datefield-calendarpanel-day {
+        box-sizing: border-box;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 100% !important;
+        border: 0 solid transparent;
+        background:transparent;
+    }
+    .v-inline-datefield-calendarpanel-weeknumbers .v-first:before {
+        box-shadow: inset -10px 10px 10px -10px rgba(0, 0, 0, 0.3);
+    }
+    .v-inline-datefield-calendarpanel-weeknumber, .v-inline-datefield-calendarpanel-weekdays.v-inline-datefield-calendarpanel-weeknumbers td:first-child {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+    }
 }

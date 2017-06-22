@@ -1,0 +1,10 @@
+@mixin v-tooltip {
+    .v-tooltip {
+        @extend .floating-border;
+        @extend .z-depth-4;
+    }
+    .v-tooltip .v-errormessage {
+          background: $v-error-indicator-color;
+         color: valo-font-color($v-error-indicator-color, 1.0);
+    }
+}
