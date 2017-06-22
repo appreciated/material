@@ -93,6 +93,7 @@ body:not(.v-touch) .v-button.borderless.custom:hover {
         padding: 0 20px;
         border-radius: $v-border-radius;
         outline: none;
+        text-align: center;
     }
     :not(.v-upload) > * > .v-button {
         height: $v-unit-size;
