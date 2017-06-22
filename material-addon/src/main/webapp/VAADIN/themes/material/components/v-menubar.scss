@@ -10,13 +10,13 @@
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu):not(.borderless) > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu):not(.borderless) > .v-menubar-menuitem-selected,
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu):not(.borderless) > .v-menubar-menuitem-checked {
-        background: rgba(valo-font-color($mat-card-color, 1.0), 0.2);
+        background: rgba(valo-font-color($mat-card-color, 1.0), 0.1);
         color: inherit;
     }
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu).borderless > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu).borderless > .v-menubar-menuitem-selected,
     .v-menubar:not(.custom):not(.primary):not(.v-menubar-user-menu).borderless > .v-menubar-menuitem-checked {
-        background: rgba(valo-font-color($mat-background-color, 1.0), 0.15);
+        background: rgba(valo-font-color($mat-background-color, 1.0), 0.1);
     }
     // Primary Menubar
     .v-menubar.primary:not(.borderless) {
@@ -82,9 +82,6 @@
         padding: 0px;
         border-radius: $v-border-radius;
     }
-    .v-menubar-popup .v-menubar-menuitem {
-        line-height: 40px;
-    }
     .v-menubar-popup .v-menubar-separator {
         margin: 0px 0;
     }
@@ -93,6 +90,8 @@
     }
     .v-menubar-popup .v-menubar-menuitem {
         background: $mat-card-color;
+        line-height: $v-unit-size;
+        transition: background 0.3s;
     }
     .v-menubar-popup .v-menubar-menuitem-selected {
         background: valo-font-color( $mat-card-color, 0.1);
