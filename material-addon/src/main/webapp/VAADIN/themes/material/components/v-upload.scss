@@ -165,7 +165,7 @@
      .v-upload:not(.flat):not(.borderless):not(.border):not(.borderless-colored):not(.quiet):not(.link) {
          @extend .z-depth-1;
      }
-     .v-upload:not(v-disabled):not(.borderless):not(.borderless-colored):not(.link):not(.quiet):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action-upload) {
+     .v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.link):not(.quiet):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action-upload) {
          background: $mat-card-color;
      }
      .v-upload:not(.borderless):not(.border).primary {
