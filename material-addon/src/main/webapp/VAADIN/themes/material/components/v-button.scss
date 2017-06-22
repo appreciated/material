@@ -2,7 +2,7 @@ body:not(.v-touch) :not(.v-upload) > * > .v-button:not(.borderless):not(.borderl
     background: valo-font-color($v-background-color, 0.05) !important;
 }
 body:not(.v-touch) :not(.v-upload) > :not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action):hover,
-body.v-touch:not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action):active {
+body.v-touch :not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action):active {
     box-shadow: $z-depth-1-5 !important;
 }
 
