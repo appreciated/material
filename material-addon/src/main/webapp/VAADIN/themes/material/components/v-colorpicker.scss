@@ -2,4 +2,10 @@
     .v-colorpicker-popup * .v-button {
         box-shadow: none !important;
     }
+    .v-colorpicker-popup * .v-button:active {
+        box-shadow: none !important;
+    }
+    .v-colorpicker-popup .v-slider-green .v-slider-base:after {
+        background: rgb(0,212,0);
+    }
 }
