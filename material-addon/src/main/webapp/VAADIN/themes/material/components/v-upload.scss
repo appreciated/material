@@ -3,7 +3,7 @@
  }
  
  body:not(.v-touch) .v-upload:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action-upload):hover,
- body.v-touch:not(.v-component-group) > .v-upload:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action-upload):active {
+ body.v-touch :not(.v-component-group) > .v-upload:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action-upload):active {
      box-shadow: $z-depth-1-5 !important;
  }
  
