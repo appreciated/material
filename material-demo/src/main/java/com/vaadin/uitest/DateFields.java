@@ -177,7 +177,6 @@ public class DateFields extends VerticalLayout implements View {
 
         date = new InlineDateField("Date picker with week numbers");
         setDate(date);
-        date.setLocale(new Locale("fi", "fi"));
         date.setShowISOWeekNumbers(true);
         row.addComponent(date);
 
