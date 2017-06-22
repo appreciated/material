@@ -8,4 +8,13 @@
     .v-select-twincol-buttons:not(.borderless) .v-button {
         @extend .z-depth-1;
     }
+    .v-select-twincol-buttons {
+        min-width: 4.5em;
+    }
+    .v-select-twincol-buttons .v-button {
+        top: 0px;
+    }
+    .v-select-twincol {
+        width: 25em !important;
+    }
 }

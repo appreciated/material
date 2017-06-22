@@ -57,7 +57,6 @@ public class NativeSelects extends VerticalLayout implements View {
         tcs2.setRightColumnCaption("Right Column");
         tcs2.setNewItemsAllowed(true);
         tcs2.setWidth("280px");
-        tcs2.setHeight("200px");
         row.addComponent(tcs2);
 
         for (int i = 1; i <= 10; i++) {

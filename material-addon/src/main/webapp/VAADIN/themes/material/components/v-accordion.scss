@@ -1,5 +1,5 @@
 @mixin v-accordion {
     .v-accordion-item-caption {
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid valo-font-color($mat-card-color, 0.2);
     }
 }
