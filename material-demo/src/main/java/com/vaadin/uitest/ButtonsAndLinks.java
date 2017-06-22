@@ -213,6 +213,10 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
                     button.addStyleName(style + " " + s);
                     layout.addComponent(button);
                 });
+        Button button = style.contains(MaterialTheme.BUTTON_FLOATING_ACTION) ? new Button(VaadinIcons.PLUS) : new Button(style + " " + "disabled");
+        button.addStyleName(style);
+        button.setEnabled(false);
+        layout.addComponent(button);
         return layout;
     }
 
