@@ -140,7 +140,7 @@
          z-index: 1;
          pointer-events: none;
      }
-     .v-upload:not(.flat):not(.borderless):not(.border):not(.borderless-colored):not(.quiet):not(.link) {
+     .v-upload:not(.v-disabled):not(.floating-action-upload):not(.flat):not(.borderless):not(.border):not(.borderless-colored):not(.quiet):not(.link) {
          @extend .z-depth-1;
      }
      .v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.link):not(.quiet):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action-upload) {
@@ -162,7 +162,7 @@
          background: $mat-custom-color;
          color: valo-font-color($mat-custom-color, 1.0);
      }
-     .v-upload:not(.flat):not(.borderless):not(.border):not(.borderless-colored):not(.quiet):not(.link) {
+     .v-upload:not(.floating-action-upload):not(.flat):not(.borderless):not(.border):not(.borderless-colored):not(.quiet):not(.link) {
          @extend .z-depth-1;
      }
      .v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.link):not(.quiet):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action-upload) {
