@@ -107,12 +107,17 @@ body:not(.v-touch) .v-button.borderless.custom:hover {
     :not(.v-upload) > * > .v-button.large {
         height: $v-unit-size--large;
     }
-    :not(.v-upload) > * > .v-button:before {
+    :not(.v-upload) > * > .v-button:not(.icon-align-top):before {
         content: "";
         display: inline-block;
         width: 0;
         height: 110%;
         vertical-align: middle;
+    }
+    .v-button.icon-align-top {
+        height: auto;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
     :not(.v-upload) > * > .v-button:not(.borderless):not(.borderless-colored):not(.link):not(.quiet):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action) {
         background: $mat-card-color;
@@ -231,9 +236,6 @@ body:not(.v-touch) .v-button.borderless.custom:hover {
     }
     .v-button-primary.floating-action {
         min-width: 56px;
-    }
-    .v-button-icon-align-top {
-        height: auto;
     }
     .v-button-icon-align-top .v-icon {
         display: block;
