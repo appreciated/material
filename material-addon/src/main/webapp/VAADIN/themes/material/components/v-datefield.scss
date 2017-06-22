@@ -1,18 +1,24 @@
 @mixin v-datefield {
-    .v-datefield:not(.borderless):not(.floating):not(.custom) [class*="textfield"] {
+    :not(.v-component-group) > .v-datefield:not(.borderless):not(.floating):not(.custom) [class*="textfield"] {
         @extend .focus-border-bottom;
     }
-    .v-datefield:not(.borderless):not(.floating):not(.custom) [class*="textfield"]:focus {
+    :not(.v-component-group) > .v-datefield:not(.borderless):not(.floating):not(.custom) [class*="textfield"]:not(.v-textfield-readonly):focus {
         border-bottom: 1px solid $v-selection-color;
         box-shadow: 0 1px 0 0 $v-selection-color;
     }
-    .v-datefield.custom [class*="textfield"] {
+    :not(.v-component-group) > .v-datefield.custom [class*="textfield"] {
         @extend .focus-border-bottom;
         color: $mat-custom-color;
     }
-    .v-datefield.custom [class*="textfield"]:focus {
+    :not(.v-component-group) > .v-datefield.custom [class*="textfield"]:focus {
         border-bottom: 1px solid $mat-custom-color !important;
         box-shadow: 0 1px 0 0 $mat-custom-color !important;
+    }
+    .v-datefield.custom .v-datefield-button {
+        color: $mat-custom-color;
+    }
+    .v-datefield.custom .v-datefield-button:hover {
+        color: valo-font-color($mat-custom-color, 0.1);
     }
     .v-datefield-error:not(.borderless):not(.floating) [class*="textfield"]:focus {
         border-bottom: 1px solid $v-error-indicator-color !important;
@@ -24,16 +30,10 @@
     .v-datefield.floating {
         @extend .floating-border;
     }
-    .v-datefield-borderless .v-datefield-textfield,
-    .v-datefield.floating .v-datefield-textfield {
-        border: none !important;
-        box-shadow: none !important;
-    }
     .v-component-group .v-datefield [class*="textfield"] {
-        box-shadow: none !important;
-    }
-    .v-component-group .v-datefield .v-textfield {
-        border-bottom: none !important;
+        box-shadow: none;
+        border-bottom: none;
+        background: $mat-card-color;
     }
     .v-inline-datefield:not(.borderless) {
         @extend .floating-border;
@@ -54,11 +54,15 @@
         background:transparent;
     }
     .v-inline-datefield-calendarpanel-weeknumbers .v-first:before {
-        box-shadow: inset -10px 10px 15px -15px rgba(0, 0, 0, 0.4);
+        box-shadow: inset -1px 1px 20px -10px rgba(0, 0, 0, 0.6);
         background: mix($mat-background-color,$mat-card-color);
     }
     .v-inline-datefield-calendarpanel-weeknumber, .v-inline-datefield-calendarpanel-weekdays.v-inline-datefield-calendarpanel-weeknumbers td:first-child {
         width: 32px;
+        height: 32px;
+        line-height: 32px;
+    }
+    .v-inline-datefield-calendarpanel-weekdays {
         height: 32px;
         line-height: 32px;
     }
