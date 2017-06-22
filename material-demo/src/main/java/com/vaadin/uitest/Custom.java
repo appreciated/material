@@ -49,6 +49,11 @@ public class Custom extends VerticalLayout implements View {
                     upload.addStyleName(style + " " + s);
                     layout.addComponent(upload);
                 });
+        Upload upload = new Upload(style.contains(MaterialTheme.BUTTON_FLOATING_ACTION) ? "" : "Click Me!", (Upload.Receiver) (s12, s1) -> null);
+        upload.setIcon(style.contains(MaterialTheme.BUTTON_FLOATING_ACTION) ? VaadinIcons.PLUS : null);
+        upload.addStyleName(style);
+        upload.setEnabled(false);
+        layout.addComponent(upload);
         return layout;
     }
 
