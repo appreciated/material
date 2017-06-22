@@ -10,8 +10,8 @@
          box-shadow: 0 1px 0 0 $v-selection-color;
      }
      :not(.v-component-group) > .v-textfield-error:not(.borderless):not(.floating):not(.custom):focus {
-         border-bottom: 1px solid $v-error-indicator-color;
-         box-shadow: 0 1px 0 0 $v-error-indicator-color;
+         border-bottom: 1px solid $v-error-indicator-color !important;
+         box-shadow: 0 1px 0 0 $v-error-indicator-color !important;
      }
      :not(.v-component-group) > .v-textfield.custom {
          @extend .focus-border-bottom;
