@@ -1,0 +1,5 @@
+@mixin v-colorpicker {
+    .v-colorpicker-popup * .v-button {
+        box-shadow: none !important;
+    }
+}
