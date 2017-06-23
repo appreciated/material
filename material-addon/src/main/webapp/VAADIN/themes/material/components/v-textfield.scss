@@ -1,6 +1,7 @@
  @mixin v-textfield {
      :not(.v-component-group) > .v-textfield:not(.v-datefield-textfield):not(.v-colorpicker-preview-textfield):not(.borderless):not(.floating):not(.custom) {
          @extend .focus-border-bottom;
+         border-bottom-color: $v-font-color;
      }
      :not(.v-component-group) > .v-textfield.floating {
          @extend .floating-border;
@@ -38,4 +39,15 @@
      .v-textfield-error {
          color: $v-error-indicator-color;
      }
+     .v-table-compact * .v-textfield {
+         height: $v-unit-size--small;
+     }
+    .v-table [class*="-row"].v-selected * .v-textfield:not(.borderless):not(.floating):not(.custom) {
+        border-bottom-color:  $v-table-focus-font-color !important;
+        color: $v-table-focus-font-color !important;
+    }
+    .v-table [class*="-row"].v-selected * .v-textfield:not(.borderless):not(.floating):not(.custom):focus {
+        border-bottom: 1px solid  $v-table-focus-font-color !important;
+        box-shadow: 0 1px 0 0   $v-table-focus-font-color !important;
+    }
  }

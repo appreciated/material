@@ -26,6 +26,7 @@ import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.ui.*;
 import com.vaadin.ui.CheckBox;
+import com.vaadin.ui.Grid;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.ProgressBar;
@@ -40,6 +41,9 @@ import com.vaadin.v7.ui.Table.ColumnGenerator;
 import com.vaadin.v7.ui.Table.RowHeaderMode;
 import com.vaadin.v7.ui.Table.TableDragMode;
 import com.vaadin.v7.ui.TextField;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Tables extends VerticalLayout implements View {
 
@@ -127,6 +131,18 @@ public class Tables extends VerticalLayout implements View {
 
         footer.setValue(false);
 
+
+        List<Person> people = Arrays.asList(
+                new Person("Nicolaus Copernicus", 1543),
+                new Person("Galileo Galilei", 1564),
+                new Person("Johannes Kepler", 1571));
+
+// Create a grid bound to the list
+        Grid<Person> grid = new Grid<>();
+        grid.setItems(people);
+        grid.addColumn(Person::getName).setCaption("Name");
+        grid.addColumn(Person::getBirthYear).setCaption("Year of birth");
+        addComponent(grid);
     }
 
     static void configure(Table table, boolean footer, boolean sized,
@@ -383,6 +399,27 @@ public class Tables extends VerticalLayout implements View {
     public void enter(ViewChangeEvent event) {
         // TODO Auto-generated method stub
 
+    }
+
+    class Person{
+
+
+        private final String s;
+        private final int i;
+
+        public Person(String s, int i) {
+
+            this.s = s;
+            this.i = i;
+        }
+
+        public String getName() {
+            return s;
+        }
+
+        public int getBirthYear() {
+            return i;
+        }
     }
 
 }

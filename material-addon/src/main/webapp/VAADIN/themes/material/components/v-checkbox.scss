@@ -12,4 +12,11 @@
         box-shadow: none !important;
         background: transparent !important;
     }
+    .v-table [class*="-row"].v-selected * .v-checkbox > input:checked ~ label:after {
+             background: $v-table-focus-font-color;
+             color: $v-selection-color !important;
+    }
+    .v-table [class*="-row"].v-selected * .v-checkbox > input ~ label:after {
+        border: 2px solid $v-table-focus-font-color;
+    }
 }

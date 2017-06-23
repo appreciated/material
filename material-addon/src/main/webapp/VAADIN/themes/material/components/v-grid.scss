@@ -1,0 +1,15 @@
+@mixin v-grid {
+     .v-grid:not(.borderless) {
+         @extend .floating-border;
+     }
+    .v-grid-row-stripe > td {
+        background-color: $mat-card-color;
+    }
+    .v-grid-cell {
+        height: $v-unit-size--large;
+        line-height: $v-unit-size--large;
+    }
+    .v-grid-column-header-content, .v-grid-column-footer-content {
+        line-height: $v-unit-size--large;
+    }
+}

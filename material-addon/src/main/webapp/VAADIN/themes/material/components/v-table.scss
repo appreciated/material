@@ -1,11 +1,25 @@
+ $v-table-focus-font-color: valo-font-color($v-selection-color,1.0);
+
  @mixin v-table {
-     //.v-table-row-odd {
-     //    background-color: mix($v-selection-color, $mat-card-color);
-     //}
+     .v-table-header {
+          color: valo-font-color($mat-card-color, 0.6);
+     }
+     .v-table-row-odd {
+         background-color: $mat-card-color;
+     }
      .v-table:not(.borderless) {
          @extend .floating-border;
      }
      .v-table-cell-content {
-         height: $v-unit-size;
+         height: $v-unit-size--large;
+         text-align: right;
+     }
+     .v-table [class*="-row"].v-selected {
+         color:  $v-table-focus-font-color;
+     }
+      .v-table-focus:not(.v-selected) {
+         outline: unset;
+         background-color: rgba($v-selection-color,0.2) !important;
+         outline-offset: 0;
      }
  }

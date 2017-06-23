@@ -51,4 +51,23 @@
         width: 18px;
         height: 18px;
     }
+    .v-table [class*="-row"].v-selected * .v-slider-handle:before {
+        background: $v-table-focus-font-color;
+    }
+    .v-table [class*="-row"].v-selected * .v-slider-vertical .v-slider-base {
+        background: $v-table-focus-font-color;
+    }
+    .v-table [class*="-row"].v-selected * .v-slider-base:after {
+        border-radius: 2px;
+        height: inherit;
+        background: $v-table-focus-font-color;
+    }
+     .v-table [class*="-row"].v-selected * .v-progressbar-indicator {
+        background: $v-table-focus-font-color;
+    }
+     .v-slider-feedback {
+        @extend .floating-border;
+        @extend .z-depth-4;
+        color: valo-font-color($mat-card-color, 1.0);
+     }
 }
