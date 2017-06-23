@@ -66,7 +66,4 @@
         height: 32px;
         line-height: 32px;
     }
-    .v-table [class*="-row"].v-selected * .v-datefield [class*="button"] {
-        color: $v-table-focus-font-color;
-    }
 }

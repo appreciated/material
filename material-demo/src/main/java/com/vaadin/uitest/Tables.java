@@ -142,6 +142,8 @@ public class Tables extends VerticalLayout implements View {
         grid.setItems(people);
         grid.addColumn(Person::getName).setCaption("Name");
         grid.addColumn(Person::getBirthYear).setCaption("Year of birth");
+        grid.setSelectionMode(Grid.SelectionMode.MULTI);
+        grid.getEditor().setEnabled(true);
         addComponent(grid);
     }
 

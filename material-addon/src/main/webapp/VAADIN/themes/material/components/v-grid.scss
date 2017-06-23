@@ -1,9 +1,28 @@
+body:not(.v-touch) .v-grid-editor-save:hover,
+body:not(.v-touch) .v-grid-editor-cancel:hover {
+    background: rgba($v-focus-color, 0.2) !important;
+}
+
 @mixin v-grid {
      .v-grid:not(.borderless) {
          @extend .floating-border;
      }
+     .v-grid-row-selected > .v-grid-cell {
+         background: valo-font-color($mat-card-color, 0.1);
+         color: inherit;
+         border-top: 1px solid $v-table-border-color;
+     }
     .v-grid-row-stripe > td {
         background-color: $mat-card-color;
+    }
+    .v-grid-column-header-content {
+      color: valo-font-color($mat-card-color, 0.6);
+    }
+    .v-grid-row:not(:first-child) {
+        border-top: 1px solid $v-table-border-color;
+    }
+    .v-grid-row-selected > .v-grid-cell {
+         border-top: none;
     }
     .v-grid-cell {
         height: $v-unit-size--large;
@@ -12,4 +31,38 @@
     .v-grid-column-header-content, .v-grid-column-footer-content {
         line-height: $v-unit-size--large;
     }
+    .v-grid-cell.frozen {
+        box-shadow: none;
+    }
+    .v-grid-editor {
+            @extend .floating-border;
+            @extend .z-depth-2;
+    }
+    .v-grid-editor * .gwt-CheckBox:after {
+        position: absolute;
+        content: "...";
+        text-align: center;
+        top: 0px;
+        left: 0px;
+        line-height: $v-unit-size--large;
+        width: 60px;
+    }
+    .v-grid-editor * .gwt-CheckBox > input {
+        display: none;
+    }
+    .v-grid-editor-save, .v-grid-editor-cancel {
+        height: $v-unit-size--small;
+        color: $v-focus-color;
+        transition: box-shadow .3s ease-out, background .3s;
+        padding: 0 20px;
+        border-radius: $v-border-radius;
+    }
+    .v-grid-row-selected > .v-grid-cell-focused:before {
+        border-color: transparent;
+        background-color: $v-table-row-focus-color;
+    }
+    .v-grid-cell-focused:before {
+        border: 1px solid $v-table-border-color;
+    }
+
 }

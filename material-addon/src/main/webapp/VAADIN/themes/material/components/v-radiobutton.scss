@@ -41,13 +41,4 @@
         box-shadow: none !important;
         background: transparent !important;
     }
-    .v-table [class*="-row"].v-selected * .v-radiobutton > input ~ label:before {
-        border: 2px solid $v-table-focus-font-color !important;
-    }
-    .v-table [class*="-row"].v-selected * .v-radiobutton > input:focus ~ label:before {
-        border-color: $v-table-focus-font-color;
-    }
-    .v-table [class*="-row"].v-selected * .v-radiobutton > input:checked ~ label:after {
-        background: $v-table-focus-font-color !important;
-    }
 }

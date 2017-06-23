@@ -65,15 +65,4 @@
     .v-filterselect[class*="prompt"] > [class*="input"] {
         color: $v-font-color;
     }
-    .v-table [class*="-row"].v-selected * .v-filterselect:not(.borderless):not(.floating):not(.custom) [class*="input"] {
-        border-bottom-color:  $v-table-focus-font-color !important;
-        color:  $v-table-focus-font-color !important;
-    }
-    .v-table [class*="-row"].v-selected * .v-filterselect-focus:not(.borderless):not(.floating):not(.custom) [class*="input"] {
-        border-bottom: 1px solid  $v-table-focus-font-color !important;
-        box-shadow: 0 1px 0 0   $v-table-focus-font-color !important;
-    }
-    .v-table [class*="-row"].v-selected * .v-filterselect [class$="button"] {
-        color: $v-table-focus-font-color;
-    }
 }
