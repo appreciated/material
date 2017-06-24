@@ -1,8 +1,9 @@
 //$mat-background-color:  #303030;
 $mat-custom-color: #00bcd4;
 $mat-upload: false;
-$v-unit-size: 40px ! default;
-
+$v-unit-size: 40px;
+//$mat-card-hover-begin: $z-depth-0;
+//$mat-card-hover-end: $z-depth-5;
 @import "../material/material.scss";
 
 .demo {

@@ -10,6 +10,8 @@ $mat-card-color: lighten( $mat-background-color, 9%) !default;
 $mat-window-color: lighten( $mat-card-color, 3%) !default;
 $mat-card-font-color: valo-font-color($mat-card-color, 1.0) !default;
 $mat-card-padding: 20px !default;
+$mat-card-hover-begin: $z-depth-1 !default;
+$mat-card-hover-end: $z-depth-3 !default;
 $mat-custom-color: $v-focus-color !default;
 $mat-upload: true;
 $v-app-background-color: $mat-background-color !default;
