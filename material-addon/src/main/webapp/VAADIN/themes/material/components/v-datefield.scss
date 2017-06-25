@@ -54,8 +54,10 @@
         background:transparent;
     }
     .v-inline-datefield-calendarpanel-weeknumbers .v-first:before {
-        box-shadow: inset -1px 1px 20px -10px rgba(0, 0, 0, 0.6);
-        background: mix($mat-background-color,$mat-card-color);
+        box-shadow: inset -8px 9px 15px -15px rgba(0, 0, 0, 0.4);
+        background: mix($mat-background-color,$mat-card-color,90%);
+        top: 42px;
+        border-top-right-radius: 0px;
     }
     .v-inline-datefield-calendarpanel-weeknumber, .v-inline-datefield-calendarpanel-weekdays.v-inline-datefield-calendarpanel-weeknumbers td:first-child {
         width: 32px;
