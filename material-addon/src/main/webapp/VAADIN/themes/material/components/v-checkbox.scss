@@ -3,13 +3,24 @@
         border: 2px solid valo-font-color($v-background-color, 0.65);
     }
     .v-checkbox > input:checked ~ label:after {
-        border: none;
         background: $v-selection-color;
         color: white !important;
-        border: 0px solid $v-selection-color;
+        border: 2px solid $v-selection-color;
+    }
+    .v-checkbox:not(.large):not(.small) > input:checked ~ label:after {
+        line-height:$v-unit-size/2 - 2px;
+    }
+    .v-checkbox.large > input:checked ~ label:after {
+        line-height: $v-unit-size--large/2 - 2px;
+    }
+    .v-checkbox.small > input:checked ~ label:after {
+        line-height: $v-unit-size--small/2 - 2px;
     }
     .v-checkbox > input ~ label:before {
         box-shadow: none !important;
         background: transparent !important;
+    }
+    .v-checkbox > input ~ label:after {
+        transition: all 0.2s ease !important;
     }
 }
