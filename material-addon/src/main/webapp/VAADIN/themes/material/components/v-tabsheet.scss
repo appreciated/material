@@ -44,9 +44,6 @@
     .v-tabsheet-framed .v-tabsheet-tabcontainer.v-tabsheet-tabcontainer-framed {
         overflow: visible !important;
     }
-    .v-tabsheet-framed .v-tabsheet-tabitemcell:not(:last-child) {
-        margin-right: 2px;
-    }
     .v-tabsheet-framed .v-tabsheet-tabitemcell .v-tabsheet-tabitem {
         overflow: visible !important;
         box-shadow: $z-depth-1;
@@ -59,6 +56,6 @@
         overflow: visible;
     }
     .v-tabsheet-tabs-framed > tbody > tr > :not(:first-child) {
-        margin-left: 2px;
+        margin-left: 5px;
     }
 }
