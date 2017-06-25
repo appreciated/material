@@ -30,13 +30,20 @@
 }
 
 @mixin ripple {
-     :not(.v-upload) > * > .v-button:not(.v-disabled), .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
-     .v-upload:not(.v-disabled), .v-menubar-menuitem:not(.v-menubar-menuitem-disabled) {
+     :not(.v-upload) > * > .v-button:not(.v-disabled),
+     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
+     .v-upload:not(.v-disabled),
+     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
+     .v-accordion-item-caption:not(.v-disabled)
+      {
       position: relative;
       overflow: hidden;
       transform: translate3d(0, 0, 0);
     }
-     :not(.v-upload) > * > .v-button:not(.v-disabled):after, .v-upload:not(.v-disabled):after, .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after {
+     :not(.v-upload) > * > .v-button:not(.v-disabled):after,
+     .v-upload:not(.v-disabled):after,
+     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after,
+     .v-accordion-item-caption:not(.v-disabled):after {
       content: "";
       display: block;
       position: absolute;
@@ -53,7 +60,9 @@
     }
     :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action):after,
     .v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action-upload):after,
-    .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after {
+    .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after,
+    .v-accordion-item-caption:not(.v-disabled):after
+     {
         @include ripple-background($mat-card-color);
     }
     .v-button.borderless:after, .v-upload.borderless:after {
@@ -78,7 +87,10 @@
     .v-button.custom:after, .v-upload.custom:after {
          @include ripple-background-function($mat-custom-color,60%);
     }
-    .v-button:not(.v-disabled):active:after, .v-upload:not(.v-disabled):active:after, .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):active:after {
+    .v-button:not(.v-disabled):active:after,
+    .v-upload:not(.v-disabled):active:after,
+    .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):active:after,
+    .v-accordion-item-caption:not(.v-disabled):active:after {
       opacity: .2;
       background-size: 0% 0%; // Use background-size instead of scale
       transition: 0s;
