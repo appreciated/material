@@ -61,7 +61,7 @@ public class PanelsNoCaptionTest extends VerticalLayout implements View {
 
         panel = new Panel();
         panel.addStyleName(ValoTheme.PANEL_WELL);
-        panel.setContent(panelContent(true));
+        panel.setContent(panelContent(false));
         row.addComponent(panel);
 
         CssLayout layout = new CssLayout();
@@ -104,7 +104,7 @@ public class PanelsNoCaptionTest extends VerticalLayout implements View {
 
         layout = new CssLayout();
         layout.addStyleName(ValoTheme.LAYOUT_WELL);
-        layout.addComponent(panelContent(true));
+        layout.addComponent(panelContent(false));
         row.addComponent(layout);
     }
 
