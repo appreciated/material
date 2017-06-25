@@ -57,7 +57,7 @@
         box-shadow: inset -2px 3px 4px -2px rgba(0, 0, 0, 0.1);
         background: mix($mat-background-color,$mat-card-color,90%);
         top: 42px;
-        border-top-right-radius: 0px;
+        border-top-right-radius: $v-border-radius;
     }
     .v-inline-datefield-calendarpanel-weeknumber, .v-inline-datefield-calendarpanel-weekdays.v-inline-datefield-calendarpanel-weeknumbers td:first-child {
         width: 32px;
@@ -67,5 +67,8 @@
     .v-inline-datefield-calendarpanel-weekdays {
         height: 32px;
         line-height: 32px;
+    }
+    .v-inline-datefield-calendarpanel-day-selected {
+        color: valo-font-color($v-focus-color, 1.0) !important;
     }
 }
