@@ -64,5 +64,9 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
     .v-grid-cell-focused:before {
         border: 1px solid $v-table-border-color;
     }
-
+    .v-grid-editor-footer {
+        height: 47px;
+        font-size: 15px;
+        margin-left: 10px;
+    }
 }
