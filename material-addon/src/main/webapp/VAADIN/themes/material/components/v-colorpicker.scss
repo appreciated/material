@@ -1,11 +1,38 @@
+.v-colorpicker-popup .v-horizontallayout .v-button:hover {
+    box-shadow: none !important;
+}
 @mixin v-colorpicker {
-    .v-colorpicker-popup * .v-button {
+     .v-colorpicker-popup .v-tabsheet-tabs {
+        padding: 0 0;
+    }
+    .v-colorpicker-popup .v-horizontallayout .v-button {
         box-shadow: none !important;
     }
-    .v-colorpicker-popup * .v-button:active {
+    .v-colorpicker-popup .v-horizontallayout .v-button:hover {
         box-shadow: none !important;
     }
     .v-colorpicker-popup .v-slider-green .v-slider-base:after {
         background: rgb(0,212,0);
+    }
+    .v-colorpicker-popup .v-horizontallayout .v-button {
+       padding: 0px;
+    }
+    .v-colorpicker-gradient {
+        width: 100%;
+    }
+    .v-colorpicker-gradient-container {
+        margin: auto;
+    }
+    .hsv-sliders, .rgb-sliders {
+        padding: 0;
+    }
+    .v-colorpicker-popup [class$="sliders"] .v-caption {
+        display: inline-block;
+        margin-left: -65px;
+        width: 65px;
+    }
+    .v-colorpicker-popup [class$="sliders"] .v-has-caption {
+        white-space: nowrap;
+        padding-left: 65px;
     }
 }
