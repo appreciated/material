@@ -17,6 +17,7 @@
  */
 package com.vaadin.uitest;
 
+import com.github.appreciated.material.MaterialTheme;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
@@ -37,50 +38,35 @@ public class PanelsNoCaptionTest extends VerticalLayout implements View {
         addComponent(row);
 
         Panel panel = new Panel();
-        panel.setContent(panelContent());
+        panel.setContent(panelContent(true));
         row.addComponent(panel);
 
         panel = new Panel();
         panel.setWidth("10em");
         panel.setHeight("250px");
-        panel.setContent(panelContent());
-        row.addComponent(panel);
-
-        panel = new Panel();
-        panel.addStyleName("color1");
-        panel.setContent(panelContent());
-        row.addComponent(panel);
-
-        panel = new Panel();
-        panel.addStyleName("color2");
-        panel.setContent(panelContent());
-        row.addComponent(panel);
-
-        panel = new Panel();
-        panel.addStyleName("color3");
-        panel.setContent(panelContent());
+        panel.setContent(panelContent(true));
         row.addComponent(panel);
 
         panel = new Panel();
         panel.addStyleName(ValoTheme.PANEL_BORDERLESS);
-        panel.setContent(panelContent());
+        panel.setContent(panelContent(false));
         row.addComponent(panel);
 
         panel = new Panel();
         panel.addStyleName(ValoTheme.PANEL_BORDERLESS);
         panel.addStyleName(ValoTheme.PANEL_SCROLL_INDICATOR);
-        panel.setContent(panelContentScroll());
+        panel.setContent(panelContentScroll(false));
         panel.setHeight("17em");
         row.addComponent(panel);
 
         panel = new Panel();
         panel.addStyleName(ValoTheme.PANEL_WELL);
-        panel.setContent(panelContent());
+        panel.setContent(panelContent(true));
         row.addComponent(panel);
 
         CssLayout layout = new CssLayout();
         layout.addStyleName(ValoTheme.LAYOUT_CARD);
-        layout.addComponent(panelContent());
+        layout.addComponent(panelContent(true));
         row.addComponent(layout);
 
         layout = new CssLayout();
@@ -113,38 +99,37 @@ public class PanelsNoCaptionTest extends VerticalLayout implements View {
         panelCaption.addComponent(dropdown);
 
         layout.addComponent(panelCaption);
-        layout.addComponent(panelContent());
+        layout.addComponent(panelContent(true));
         layout.setWidth("14em");
 
         layout = new CssLayout();
         layout.addStyleName(ValoTheme.LAYOUT_WELL);
-        layout.addComponent(panelContent());
+        layout.addComponent(panelContent(true));
         row.addComponent(layout);
     }
 
-    Component panelContent() {
+    Component panelContent(boolean borderless) {
         VerticalLayout layout = new VerticalLayout();
         layout.setSizeFull();
-        layout.setMargin(false);
         Label content = new Label(
                 "Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.");
         content.setWidth("10em");
         layout.addComponent(content);
         Button button = new Button("Button");
+        button.addStyleName(borderless ? MaterialTheme.BUTTON_BORDERLESS : "");
         button.setSizeFull();
         layout.addComponent(button);
         return layout;
     }
 
-    Component panelContentScroll() {
+    Component panelContentScroll(boolean borderless) {
         VerticalLayout layout = new VerticalLayout();
-
-        layout.setMargin(false);
         Label content = new Label(
                 "Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.");
         content.setWidth("10em");
         layout.addComponent(content);
         Button button = new Button("Button");
+        button.addStyleName(borderless ? MaterialTheme.BUTTON_BORDERLESS : "");
         layout.addComponent(button);
         return layout;
     }

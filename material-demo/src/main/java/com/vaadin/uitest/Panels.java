@@ -17,6 +17,7 @@
  */
 package com.vaadin.uitest;
 
+import com.github.appreciated.material.MaterialTheme;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
@@ -124,7 +125,6 @@ public class Panels extends VerticalLayout implements View {
 
     Component panelContent(boolean borderless) {
         VerticalLayout layout = new VerticalLayout();
-        layout.setSizeFull();
         layout.setMargin(true);
         Label content = new Label(
                 "Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.");
@@ -132,7 +132,7 @@ public class Panels extends VerticalLayout implements View {
         layout.addComponent(content);
         layout.setExpandRatio(content, 1.0f);
         Button button = new Button("Button");
-        button.addStyleName(borderless ? "borderless" : "");
+        button.addStyleName(borderless ? MaterialTheme.BUTTON_BORDERLESS : "");
         button.setWidth(100, Unit.PERCENTAGE);
         layout.addComponent(button);
         return layout;
