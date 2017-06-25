@@ -2,4 +2,7 @@
     .v-accordion-item-caption {
         border-bottom: 1px solid valo-font-color($mat-card-color, 0.2);
     }
+    .v-accordion-item:not(.v-accordion-item-open):last-child > .v-accordion-item-caption {
+        border: none;
+    }
 }
