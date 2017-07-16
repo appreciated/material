@@ -1,5 +1,5 @@
 $v-table-border-color: valo-font-color($mat-card-color, 0.15);
-$v-table-row-focus-color: valo-font-color($mat-card-color, 0.05);
+$v-table-row-focus-color: valo-font-color($mat-card-color, 0.15);
 $v-table-row-selected-color: valo-font-color($mat-card-color, 0.075);
  @mixin v-table {
      .v-table-header {
