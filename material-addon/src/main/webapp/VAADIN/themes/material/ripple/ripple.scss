@@ -3,7 +3,7 @@
 
 // Copyright (c) Mladen Plavsic
 
-// Motifications 2017 (c) appreciated
+// Modifications 2017 (c) appreciated
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files
 // (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge,
@@ -30,42 +30,39 @@
 }
 
 @mixin ripple {
-     :not(.v-upload) > * > .v-button:not(.v-disabled):not(.valo-menu-toggle),
-     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
-     .v-upload:not(.v-disabled),
-     .valo-menu-item:not(.v-disabled),
-     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
-     .v-accordion-item-caption:not(.v-disabled)
-      {
-      position: relative;
-      overflow: hidden;
-      transform: translate3d(0, 0, 0);
+    :not(.v-upload) > * > .v-button:not(.v-disabled):not(.valo-menu-toggle),
+    .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
+    .v-upload:not(.v-disabled),
+    .valo-menu-item:not(.v-disabled),
+    .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
+    .v-accordion-item-caption:not(.v-disabled) {
+        position: relative;
+        transform: translate3d(0, 0, 0);
     }
-     :not(.v-upload) > * > .v-button:not(.v-disabled):after,
-     .v-upload:not(.v-disabled):after,
-     .valo-menu-item:after,
-     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after,
-     .v-accordion-item-caption:not(.v-disabled):after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      background-repeat: no-repeat;
-      background-position: 50%;
-      background-size: 1200% 1200%; // Use background-size instead of scale
-      opacity: 0;
-      transition: background .5s, opacity 1s; // use background-size instead of scale
+    :not(.v-upload) > * > .v-button:not(.v-disabled):after,
+    .v-upload:not(.v-disabled):after,
+    .valo-menu-item:after,
+    .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after,
+    .v-accordion-item-caption:not(.v-disabled):after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 1200% 1200%; // Use background-size instead of scale
+        opacity: 0;
+        transition: background .5s, opacity 1s; // use background-size instead of scale
     }
     :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action):after,
     .v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action-upload):after,
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after,
     .valo-menu-item:not(.v-disabled):after,
-    .v-accordion-item-caption:not(.v-disabled):after
-     {
+    .v-accordion-item-caption:not(.v-disabled):after {
         @include ripple-background($mat-card-color);
     }
     .v-button.borderless:after, .v-upload.borderless:after {
@@ -88,15 +85,15 @@
         @include ripple-background-function($v-error-indicator-color,60%);
     }
     .v-button.custom:after, .v-upload.custom:after {
-         @include ripple-background-function($mat-custom-color,60%);
+        @include ripple-background-function($mat-custom-color,60%);
     }
     .v-button:not(.v-disabled):active:after,
     .v-upload:not(.v-disabled):active:after,
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):active:after,
     .valo-menu-item:not(.v-disabled):active:after,
     .v-accordion-item-caption:not(.v-disabled):active:after {
-      opacity: .2;
-      background-size: 0% 0%; // Use background-size instead of scale
-      transition: 0s;
+        opacity: .2;
+        background-size: 0% 0%; // Use background-size instead of scale
+        transition: 0s;
     }
 }
