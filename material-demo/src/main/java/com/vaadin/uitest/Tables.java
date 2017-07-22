@@ -133,16 +133,19 @@ public class Tables extends VerticalLayout implements View {
 
 
         List<Person> people = Arrays.asList(
-                new Person("Nicolaus Copernicus", 1543),
-                new Person("Galileo Galilei", 1564),
-                new Person("Johannes Kepler", 1571));
+                new Person("Nicolaus Copernicus", 1543, 1),
+                new Person("Galileo Galilei", 1564, 2),
+                new Person("Johannes Kepler", 1571, 3));
 
 // Create a grid bound to the list
         Grid<Person> grid = new Grid<>();
         grid.setItems(people);
         grid.addColumn(Person::getName).setCaption("Name");
         grid.addColumn(Person::getBirthYear).setCaption("Year of birth");
+        grid.addColumn(Person::getID).setCaption("ID");
+        grid.setFrozenColumnCount(1);
         grid.setSelectionMode(Grid.SelectionMode.MULTI);
+
         grid.getEditor().setEnabled(true);
         addComponent(grid);
     }
@@ -403,24 +406,29 @@ public class Tables extends VerticalLayout implements View {
 
     }
 
-    class Person{
+    class Person {
 
 
-        private final String s;
-        private final int i;
+        private final String name;
+        private final int id;
+        private final int year;
 
-        public Person(String s, int i) {
-
-            this.s = s;
-            this.i = i;
+        public Person(String name, int year, int id) {
+            this.name = name;
+            this.year = year;
+            this.id = id;
         }
 
         public String getName() {
-            return s;
+            return name;
         }
 
         public int getBirthYear() {
-            return i;
+            return year;
+        }
+
+        public int getID() {
+            return id;
         }
     }
 

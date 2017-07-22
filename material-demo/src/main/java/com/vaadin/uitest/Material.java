@@ -37,6 +37,7 @@ public class Material extends VerticalLayout implements View {
         addComponent(h1);
         CssLayout layout = new CssLayout();
         layout.addComponent(getLayoutWithStyle(CARD_0));
+        layout.addComponent(getLayoutWithStyle(CARD_0_5));
         layout.addComponent(getLayoutWithStyle(CARD_1));
         layout.addComponent(getLayoutWithStyle(CARD_1_5));
         layout.addComponent(getLayoutWithStyle(CARD_2));

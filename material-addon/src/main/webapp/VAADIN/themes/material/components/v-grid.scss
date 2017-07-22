@@ -34,9 +34,15 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
     .v-grid-cell.frozen {
         box-shadow: none;
     }
+    .v-grid-header {
+        @extend .z-depth-0-5;
+    }
+    .last-frozen {
+        border-right: 1px solid $v-table-border-color !important;
+    }
     .v-grid-editor {
-            @extend .floating-border;
-            @extend .z-depth-2;
+        @extend .floating-border;
+        @extend .z-depth-2;
     }
     .v-grid-editor * .gwt-CheckBox:after {
         position: absolute;

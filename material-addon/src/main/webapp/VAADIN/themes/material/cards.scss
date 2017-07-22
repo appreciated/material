@@ -11,6 +11,13 @@ body.v-touch .card-hoverable:active {
     .card-0:not(.card-no-padding) {
         padding: $mat-card-padding;
     }
+    .card-0-5 {
+        @extend .material-border;
+        @extend .z-depth-0-5;
+    }
+    .card-0-5:not(.card-no-padding) {
+        padding: $mat-card-padding;
+    }
     .card-1 {
         @extend .material-border;
         @extend .z-depth-1;
