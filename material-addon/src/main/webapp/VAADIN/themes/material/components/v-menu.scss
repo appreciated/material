@@ -1,0 +1,7 @@
+@mixin v-menu {
+    .sidebar.valo-menu-part {
+        position: relative;
+        z-index: 1;
+        @extend .z-depth-5;
+    }
+}

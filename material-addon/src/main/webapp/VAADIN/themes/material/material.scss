@@ -31,6 +31,7 @@ $v-included-components: remove($v-included-components, button);
 @import "components/v-upload.scss";
 @import "components/v-tooltip.scss";
 @import "components/v-colorpicker.scss";
+@import "components/v-menu.scss";
 
 @import "cards.scss";
 
@@ -65,4 +66,5 @@ $v-included-components: remove($v-included-components, button);
     @include v-upload;
     @include v-tooltip;
     @include v-colorpicker;
+    @include v-menu;
 }

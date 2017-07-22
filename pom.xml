@@ -15,6 +15,7 @@
 	<modules>
 		<module>material-addon</module>
 		<module>material-demo</module>
+		<module>quicktickets-dashboard</module>
 	</modules>
 
 	<profiles>

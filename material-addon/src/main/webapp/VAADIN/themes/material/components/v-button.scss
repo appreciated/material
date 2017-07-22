@@ -181,6 +181,9 @@ body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
     .v-button.borderless {
         color: valo-font-color($mat-background-color);
     }
+    .v-button.valo-menu-toggle {
+         color: inherit;
+    }
     .v-button.borderless.primary {
         color: $v-focus-color;
     }

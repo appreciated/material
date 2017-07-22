@@ -30,9 +30,10 @@
 }
 
 @mixin ripple {
-     :not(.v-upload) > * > .v-button:not(.v-disabled),
+     :not(.v-upload) > * > .v-button:not(.v-disabled):not(.valo-menu-toggle),
      .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
      .v-upload:not(.v-disabled),
+     .valo-menu-item:not(.v-disabled),
      .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
      .v-accordion-item-caption:not(.v-disabled)
       {
@@ -42,6 +43,7 @@
     }
      :not(.v-upload) > * > .v-button:not(.v-disabled):after,
      .v-upload:not(.v-disabled):after,
+     .valo-menu-item:after,
      .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after,
      .v-accordion-item-caption:not(.v-disabled):after {
       content: "";
@@ -61,6 +63,7 @@
     :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action):after,
     .v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action-upload):after,
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after,
+    .valo-menu-item:not(.v-disabled):after,
     .v-accordion-item-caption:not(.v-disabled):after
      {
         @include ripple-background($mat-card-color);
@@ -90,6 +93,7 @@
     .v-button:not(.v-disabled):active:after,
     .v-upload:not(.v-disabled):active:after,
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):active:after,
+    .valo-menu-item:not(.v-disabled):active:after,
     .v-accordion-item-caption:not(.v-disabled):active:after {
       opacity: .2;
       background-size: 0% 0%; // Use background-size instead of scale
