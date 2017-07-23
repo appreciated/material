@@ -65,8 +65,9 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
     }
     .v-grid-cell-focused {
         border-color: transparent;
+        z-index: 0;
     }
-    .v-grid-row-selected > .v-grid-cell-focused:before, .v-overlay-container .v-grid-row-selected > .v-grid-cell-focused:before {
+    .v-grid-cell-focused:before {
         border: 1px solid transparent !important;
         background-color: $v-table-row-focus-color !important;
         z-index: -1;
@@ -88,7 +89,6 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
         top: 0;
         left: 0;
         border-radius: $v-border-radius;
-        background: white;
         border: 2px solid valo-font-color($v-background-color, 0.65);
         transition: background 0.2s ease, border 0.2s ease;
         &:after {
