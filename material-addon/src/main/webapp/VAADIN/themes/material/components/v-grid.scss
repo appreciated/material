@@ -65,14 +65,56 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
     }
     .v-grid-cell-focused {
         border-color: transparent;
-        background-color: $v-table-row-focus-color !important;
     }
-    .v-grid-cell-focused:before {
+    .v-grid-row-selected > .v-grid-cell-focused:before, .v-overlay-container .v-grid-row-selected > .v-grid-cell-focused:before {
         border: 1px solid transparent !important;
+        background-color: $v-table-row-focus-color !important;
+        z-index: -1;
     }
     .v-grid-editor-footer {
         height: 47px;
         font-size: 15px;
         margin-left: 10px;
+    }
+    .v-grid-select-all-checkbox, .v-grid-selection-checkbox {
+      width: $v-unit-size/2 - 4px;
+      position: relative;
+      margin: $v-unit-size/2 - 4px auto;
+      label {
+        width: $v-unit-size/2 - 4px;
+        height: $v-unit-size/2 - 4px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: $v-border-radius;
+        background: white;
+        border: 2px solid valo-font-color($v-background-color, 0.65);
+        transition: background 0.2s ease, border 0.2s ease;
+        &:after {
+          content: '';
+          width: 7px;
+          height: 3px;
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          border: 3px solid white;
+          border-top: none;
+          border-right: none;
+          background: transparent;
+          opacity: 0;
+          transform: rotate(-45deg);
+        }
+      }
+      input[type=checkbox] {
+        visibility: hidden;
+        &:checked + label:after {
+          opacity: 1;
+        }
+        &:checked + label {
+          background: $v-selection-color;
+          border-color:  $v-selection-color;
+        }
+      }
     }
 }
