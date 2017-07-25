@@ -1,4 +1,7 @@
 @mixin v-textarea {
+    .v-textarea {
+        overflow: auto !important;
+    }
     .v-textarea:not(.borderless) {
         @extend .floating-border;
     }
