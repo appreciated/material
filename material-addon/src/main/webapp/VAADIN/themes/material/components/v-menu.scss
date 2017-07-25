@@ -8,7 +8,6 @@
         @include width-range($max: 800px) {
             .valo-menuitems {
                 box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.0), 0px 0px 0px 0px rgba(0, 0, 0, 0.0), 0 0px 0px 0px rgba(0, 0, 0, 0.0);
-                transition: box-shadow 0.3s;
             }
             .valo-menu-visible .valo-menuitems {
                 box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 19px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
