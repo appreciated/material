@@ -1,4 +1,9 @@
 @mixin v-select-twincol {
+    .v-select .v-select-select,
+    .v-select-twincol .v-select-twincol-options,
+    .v-select-twincol .v-select-twincol-selections {
+        overflow: auto !important;
+    }
     .v-select-twincol select:not(.borderless) {
         @extend .floating-border;
     }
