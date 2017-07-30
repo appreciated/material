@@ -32,6 +32,7 @@
 @mixin ripple {
     :not(.v-upload) > * > .v-button:not(.v-disabled):not(.valo-menu-toggle),
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
+    .ripple
     .v-upload:not(.v-disabled),
     .valo-menu-item:not(.v-disabled),
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
@@ -42,6 +43,8 @@
     :not(.v-upload) > * > .v-button:not(.v-disabled):after,
     .v-upload:not(.v-disabled):after,
     .valo-menu-item:after,
+    .ripple:after,
+    .v-filterselect .v-filterselect-button:after,
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after,
     .v-accordion-item-caption:not(.v-disabled):after {
         content: "";
@@ -62,10 +65,11 @@
     .v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action-upload):after,
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after,
     .valo-menu-item:not(.v-disabled):after,
+    .ripple:after,
     .v-accordion-item-caption:not(.v-disabled):after {
         @include ripple-background($mat-card-color);
     }
-    .v-button.borderless:after, .v-upload.borderless:after {
+    .v-button.borderless:after, .v-upload.borderless:after, .v-filterselect .v-filterselect-button:after {
         @include ripple-background($mat-background-color);
     }
     .v-button.border:not(.primary):not(.friendly):not(.danger):not(.custom):after, .v-upload.border:not(.primary):not(.friendly):not(.danger):not(.custom):after {
@@ -96,7 +100,9 @@
        border-radius: $v-button-round-border-radius;
     }
     .v-button:not(.v-disabled):active:after,
+    .ripple:active:after,
     .v-upload:not(.v-disabled):active:after,
+    .v-filterselect .v-filterselect-button:active:after,
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):active:after,
     .valo-menu-item:not(.v-disabled):active:after,
     .v-accordion-item-caption:not(.v-disabled):active:after {

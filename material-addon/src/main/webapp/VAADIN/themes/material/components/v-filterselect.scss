@@ -1,3 +1,7 @@
+body:not(.v-touch) > * > .v-filterselect:not(.v-disabled) .v-filterselect-button:hover {
+    background: rgba(valo-font-color($mat-background-color, 1), 0.1);
+}
+
 @mixin v-filterselect {
     .v-filterselect:not(.borderless):not(.floating):not(.custom) [class*="input"] {
         @extend .focus-border-bottom;
@@ -23,6 +27,7 @@
         line-height: $v-unit-size;
         text-align: center;
         margin-top: 0;
+        margin-left: 0;
         padding-top: 0;
     }
     .v-filterselect-suggestpopup [class$="suggestmenu"] {
