@@ -125,20 +125,10 @@ public class TextFields extends VerticalLayout implements View {
         tf.setIcon(testIcon.get(true, 16));
         row.addComponent(tf);
 
-        CssLayout group = new CssLayout();
-        group.addStyleName(ValoTheme.LAYOUT_COMPONENT_GROUP);
-        row.addComponent(group);
+        row.addComponent(getComponentGroupWithStyle(ValoTheme.LAYOUT_COMPONENT_GROUP));
+        row.addComponent(getComponentGroupWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_BORDERLESS));
+        row.addComponent(getComponentGroupWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_MATERIAL));
 
-        tf = new TextField();
-        tf.setPlaceholder("Grouped with a button");
-        tf.addStyleName(ValoTheme.TEXTFIELD_INLINE_ICON);
-        tf.setIcon(testIcon.get());
-        tf.setWidth("260px");
-        group.addComponent(tf);
-
-        Button button = new Button("Do It");
-        // button.addStyleName(ValoTheme.BUTTON_PRIMARY);
-        group.addComponent(button);
 
         tf = new TextField("Borderless");
         tf.setPlaceholder("Write here…");
@@ -274,6 +264,24 @@ public class TextFields extends VerticalLayout implements View {
         rta.setValue("<b>Some</b> <i>rich</i> content");
         rta.setReadOnly(true);
         row.addComponent(rta);
+    }
+
+    private CssLayout getComponentGroupWithStyle(String style) {
+        CssLayout group = new CssLayout();
+        group.setCaption(style);
+        group.addStyleName(style);
+
+        TextField tf = new TextField();
+        tf.addStyleName(ValoTheme.TEXTFIELD_INLINE_ICON);
+        tf.setIcon(testIcon.get());
+        tf.setWidth("260px");
+        group.addComponent(tf);
+
+        Button button = new Button("Do It");
+        // button.addStyleName(ValoTheme.BUTTON_PRIMARY);
+        group.addComponent(button);
+
+        return group;
     }
 
     @Override

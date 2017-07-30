@@ -50,22 +50,9 @@ public class ComboBoxes extends VerticalLayout implements View {
                 new ThemeResource("../runo/icons/16/document.png"));
         row.addComponent(combo);
 
-        CssLayout group = new CssLayout();
-        group.setCaption("Grouped with a Button");
-        group.addStyleName(ValoTheme.LAYOUT_COMPONENT_GROUP);
-        row.addComponent(group);
-
-        combo = new ComboBox();
-        combo.setInputPrompt("You can type here");
-        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
-        combo.setNullSelectionAllowed(false);
-        combo.select(combo.getItemIds().iterator().next());
-        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
-        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
-        combo.setWidth("240px");
-        group.addComponent(combo);
-        Button today = new Button("Do It");
-        group.addComponent(today);
+        row.addComponent(getComboBoxWithStyle(ValoTheme.LAYOUT_COMPONENT_GROUP));
+        row.addComponent(getComboBoxWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_BORDERLESS));
+        row.addComponent(getComboBoxWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_MATERIAL));
 
         combo = new ComboBox("Explicit size");
         combo.setInputPrompt("You can type here");
@@ -196,6 +183,26 @@ public class ComboBoxes extends VerticalLayout implements View {
         row.addComponent(combo);
     }
 
+    private Component getComboBoxWithStyle(String style) {
+        CssLayout group = new CssLayout();
+        group.setCaption(style);
+        group.addStyleName(style);
+
+        ComboBox combo = new ComboBox();
+        combo.setInputPrompt("You can type here");
+        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
+        combo.setNullSelectionAllowed(false);
+        combo.select(combo.getItemIds().iterator().next());
+        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
+        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
+        combo.setWidth("240px");
+        group.addComponent(combo);
+        Button today = new Button("Do It");
+        group.addComponent(today);
+        return group;
+    }
+
     @Override
-    public void enter(ViewChangeEvent event) {}
+    public void enter(ViewChangeEvent event) {
+    }
 }

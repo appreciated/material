@@ -184,7 +184,7 @@ public class DateFields extends VerticalLayout implements View {
 
     private CssLayout getCompoentGroupWithStyle(String style) {
         CssLayout group = new CssLayout();
-        group.setCaption("Grouped with a Button");
+        group.setCaption("Stylename: " + style);
         group.addStyleName(style);
 
         final TestDateField date2 = new TestDateField();
