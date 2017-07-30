@@ -123,16 +123,6 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         button.addStyleName(ValoTheme.BUTTON_ICON_ALIGN_RIGHT);
         row.addComponent(button);
 
-        CssLayout group = new CssLayout();
-        group.addStyleName(ValoTheme.LAYOUT_COMPONENT_GROUP);
-        row.addComponent(group);
-
-        button = new Button("One");
-        group.addComponent(button);
-        button = new Button("Two");
-        group.addComponent(button);
-        button = new Button("Three");
-        group.addComponent(button);
 
         button = new Button("Tiny");
         button.addStyleName(ValoTheme.BUTTON_TINY);
@@ -199,6 +189,25 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         addComponent(getButtonsWithStyle(MaterialTheme.BUTTON_BORDER + " " + MaterialTheme.BUTTON_FLAT));
         addComponent(getButtonsWithStyle(ValoTheme.BUTTON_BORDERLESS + " " + MaterialTheme.BUTTON_FLAT));
         setSpacing(true);
+
+        h1 = new Label("Component Groups");
+        h1.addStyleName(ValoTheme.LABEL_H1);
+        addComponent(h1);
+        row.addComponent(getGroupWithStyleName(ValoTheme.LAYOUT_COMPONENT_GROUP));
+        row.addComponent(getGroupWithStyleName(MaterialTheme.LAYOUT_COMPONENT_GROUP_BORDERLESS));
+        row.addComponent(getGroupWithStyleName(MaterialTheme.LAYOUT_COMPONENT_GROUP_MATERIAL));
+    }
+
+    private CssLayout getGroupWithStyleName(String style) {
+        CssLayout group = new CssLayout();
+        group.addStyleName(style);
+        Button button = new Button("One");
+        group.addComponent(button);
+        button = new Button("Two");
+        group.addComponent(button);
+        button = new Button("Three");
+        group.addComponent(button);
+        return group;
     }
 
     public HorizontalLayout getButtonsWithStyle(String style) {

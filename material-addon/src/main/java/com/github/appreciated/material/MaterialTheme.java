@@ -35,4 +35,6 @@ public class MaterialTheme extends ValoTheme {
     public static final String UPLOAD_BORDER = "border";
     public static final String UPLOAD_BORDERLESS = "borderless";
     public static final String UPLOAD_CUSTOM = "custom";
+    public static final String LAYOUT_COMPONENT_GROUP_BORDERLESS = "v-component-group borderless";
+    public static final String LAYOUT_COMPONENT_GROUP_MATERIAL = "v-component-group material";
 }
