@@ -103,6 +103,9 @@
          height: $v-unit-size;
          padding: 0 20px;
      }
+      .v-upload-immediate:not(.v-disabled) .gwt-FileUpload {
+        width: 100%
+      }
      .v-upload .v-button.v-disabled {
          background: transparent;
          color: inital;
