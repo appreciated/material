@@ -19,6 +19,9 @@
     .v-component-group.borderless .v-widget:not(.v-label):hover, .v-component-group.material .v-widget:not(.v-label):hover {
          box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0) !important;
     }
+    .v-csslayout-v-component-group.material .v-widget, .v-csslayout-v-component-group.borderless .v-widget  {
+        margin-left: 0px;
+    }
     .v-component-group.material {
         @extend .floating-border;
     }

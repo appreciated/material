@@ -61,21 +61,9 @@ public class DateFields extends VerticalLayout implements View {
         date.addStyleName(ValoTheme.DATEFIELD_BORDERLESS);
         row.addComponent(date);
 
-        CssLayout group = new CssLayout();
-        group.setCaption("Grouped with a Button");
-        group.addStyleName(ValoTheme.LAYOUT_COMPONENT_GROUP);
-        row.addComponent(group);
-
-        final TestDateField date2 = new TestDateField();
-        group.addComponent(date2);
-
-        Button today = new Button("Today", new ClickListener() {
-            @Override
-            public void buttonClick(ClickEvent event) {
-                date2.setValue(LocalDate.now());
-            }
-        });
-        group.addComponent(today);
+        row.addComponent(getCompoentGroupWithStyle(ValoTheme.LAYOUT_COMPONENT_GROUP));
+        row.addComponent(getCompoentGroupWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_BORDERLESS));
+        row.addComponent(getCompoentGroupWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_MATERIAL));
 
         date = new TestDateField("Default resolution, explicit size");
         setDate(date);
@@ -192,6 +180,25 @@ public class DateFields extends VerticalLayout implements View {
         binder.setReadOnly(true);
 
         row.addComponent(form);
+    }
+
+    private CssLayout getCompoentGroupWithStyle(String style) {
+        CssLayout group = new CssLayout();
+        group.setCaption("Grouped with a Button");
+        group.addStyleName(style);
+
+        final TestDateField date2 = new TestDateField();
+        group.addComponent(date2);
+
+        Button today = new Button("Today", new ClickListener() {
+            @Override
+            public void buttonClick(ClickEvent event) {
+                date2.setValue(LocalDate.now());
+            }
+        });
+        group.addComponent(today);
+
+        return group;
     }
 
     private void setDateRange(AbstractDateField<LocalDate, DateResolution> date) {
