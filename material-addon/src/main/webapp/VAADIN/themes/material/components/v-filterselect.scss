@@ -1,4 +1,4 @@
-body:not(.v-touch) > * > .v-filterselect:not(.v-disabled) .v-filterselect-button:hover {
+body:not(.v-touch) .v-filterselect:not(.v-disabled) > .v-filterselect-button:hover {
     background: rgba(valo-font-color($mat-background-color, 1), 0.1);
 }
 
@@ -29,6 +29,9 @@ body:not(.v-touch) > * > .v-filterselect:not(.v-disabled) .v-filterselect-button
         margin-top: 0;
         margin-left: 0;
         padding-top: 0;
+    }
+    .v-filterselect:not(.v-disabled) > .v-filterselect-button {
+        transition: background .3s;
     }
     .v-filterselect-suggestpopup [class$="suggestmenu"] {
         padding: 0px 0;
