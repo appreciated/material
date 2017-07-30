@@ -77,6 +77,7 @@
     .v-upload.floating-action-upload:after,
     .v-upload.primary:after {
         @include ripple-background-function($v-focus-color,60%);
+        border-radius: $v-border-radius;
     }
     .v-button.friendly:after, .v-upload.friendly:after {
         @include ripple-background-function($v-friendly-color,60%);
@@ -86,6 +87,9 @@
     }
     .v-button.custom:after, .v-upload.custom:after {
         @include ripple-background-function($mat-custom-color,60%);
+    }
+    .v-button.round:after {
+       border-radius: $v-button-round-border-radius;
     }
     .v-button:not(.v-disabled):active:after,
     .v-upload:not(.v-disabled):active:after,

@@ -151,7 +151,7 @@ body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
         color: $v-focus-color;
     }
     .v-button.round {
-        border-radius: 30px;
+        border-radius: $v-button-round-border-radius;
     }
     .v-button.border {
         box-shadow: $z-depth-0;
