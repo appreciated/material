@@ -68,7 +68,7 @@
         height: 32px;
         line-height: 32px;
     }
-    .v-inline-datefield-calendarpanel-day-selected {
+    .v-inline-datefield-calendarpanel-day-selected, .v-datefield-calendarpanel-day-selected {
         color: valo-font-color($v-focus-color, 1.0) !important;
     }
 }
