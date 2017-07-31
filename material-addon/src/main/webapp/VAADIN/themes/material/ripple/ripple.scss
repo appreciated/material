@@ -32,7 +32,7 @@
 @mixin ripple {
     :not(.v-upload) > * > .v-button:not(.v-disabled):not(.valo-menu-toggle),
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
-    .ripple
+    .ripple,
     .v-upload:not(.v-disabled),
     .valo-menu-item:not(.v-disabled),
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
