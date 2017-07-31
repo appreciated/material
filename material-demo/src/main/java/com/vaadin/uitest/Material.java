@@ -50,6 +50,7 @@ public class Material extends VerticalLayout implements View {
         h1.addStyleName(ValoTheme.LABEL_H2);
         addComponent(h1);
         addComponent(getLayoutWithStyle(MaterialTheme.CARD_HOVERABLE));
+        addComponent(getLayoutWithStyle(MaterialTheme.CARD_HOVERABLE + " " + RIPPLE));
 
         h1 = new Label("Cards without Padding");
         h1.addStyleName(ValoTheme.LABEL_H2);
@@ -62,7 +63,6 @@ public class Material extends VerticalLayout implements View {
         layout.addComponent(getLayoutWithStyle(CARD_4 + " " + CARD_NO_PADDING, getLabel(), false));
         layout.addComponent(getLayoutWithStyle(CARD_5 + " " + CARD_NO_PADDING, getLabel(), false));
         layout.addComponent(getLayoutWithStyle(CARD_HOVERABLE + " " + CARD_NO_PADDING, getLabel(), false));
-        layout.addComponent(getLayoutWithStyle(CARD_HOVERABLE + " " + CARD_NO_PADDING + " " + RIPPLE, getLabel(), false));
         addComponent(layout);
     }
 
