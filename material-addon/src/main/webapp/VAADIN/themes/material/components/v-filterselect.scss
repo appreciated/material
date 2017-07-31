@@ -32,7 +32,9 @@ body:not(.v-touch) .v-filterselect:not(.v-disabled) > .v-filterselect-button:hov
     }
     .v-filterselect:not(.v-disabled) > .v-filterselect-button {
         transition: background .3s;
-        bottom: 1px;
+    }
+    :not(.v-component-group) > .v-filterselect:not(.v-disabled) > .v-filterselect-button {
+          bottom: 1px;
     }
     .v-filterselect-suggestpopup [class$="suggestmenu"] {
         padding: 0px 0;

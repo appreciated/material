@@ -90,7 +90,7 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
         left: 0;
         border-radius: $v-border-radius;
         border: 2px solid valo-font-color($v-background-color, 0.65);
-        transition: background 0.2s ease, border 0.2s ease;
+        transition: background 0.1s ease, border 0.1s ease;
         &:after {
           content: '';
           width: 7px;
