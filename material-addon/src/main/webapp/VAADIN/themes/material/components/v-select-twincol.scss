@@ -3,6 +3,10 @@
     .v-select-twincol .v-select-twincol-options,
     .v-select-twincol .v-select-twincol-selections {
         overflow: auto !important;
+        option {
+            display: table;
+        }
+       
     }
     .v-select-twincol select:not(.borderless) {
         @extend .floating-border;
