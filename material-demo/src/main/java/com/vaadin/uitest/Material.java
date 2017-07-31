@@ -62,6 +62,7 @@ public class Material extends VerticalLayout implements View {
         layout.addComponent(getLayoutWithStyle(CARD_4 + " " + CARD_NO_PADDING, getLabel(), false));
         layout.addComponent(getLayoutWithStyle(CARD_5 + " " + CARD_NO_PADDING, getLabel(), false));
         layout.addComponent(getLayoutWithStyle(CARD_HOVERABLE + " " + CARD_NO_PADDING, getLabel(), false));
+        layout.addComponent(getLayoutWithStyle(CARD_HOVERABLE + " " + CARD_NO_PADDING + " " + RIPPLE, getLabel(), false));
         addComponent(layout);
     }
 
