@@ -1,5 +1,5 @@
 body:not(.v-touch) .v-filterselect:not(.v-disabled) > .v-filterselect-button:hover {
-    background: rgba(valo-font-color($mat-background-color, 1), 0.1);
+    background: valo-font-color($v-background-color, 0.05);
 }
 
 @mixin v-filterselect {
