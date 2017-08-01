@@ -1,3 +1,6 @@
+$mat-tooltip-size: 30px;
+
+
 @mixin v-progressbar {
     $mat-track-color: valo-font-color( $mat-background-color, 0.2) !default;
     .v-progressbar-wrapper {
@@ -13,36 +16,28 @@
     .v-slider-base {
         border-radius: 0px;
     }
+    .v-slider:not(.no-indicator) .v-slider-handle-active:before {
+        transform: scale(0);
+    }
+    .v-slider-handle:before {
+        transform: scale(1.0);
+        transition: transform 0.2s ease;
+    }
     .v-slider-base:after {
         border-radius: 0px;
     }
-    .v-slider-handle {
-        opacity: 1.0;
-        transition: opacity 0.2s ease;
-    }
-    .v-slider-handle-active {
-        opacity: 0;
-    }
     .v-slider-feedback {
         padding: 0px;
-        margin-left: 2px;
-        margin-top: -4px;
-        width: 30px !important;
-        height: 30px !important;
-        border-bottom-left-radius: 0;
-        border-top-right-radius: 100%;
-        border-bottom-right-radius: 100%;
-        border-top-left-radius: 100%;
-        transform: rotate(-45deg);
+        width: $mat-tooltip-size !important;
+        height: $mat-tooltip-size !important;
+        border-radius: $v-border-radius;
         background: $v-focus-color;
         color: valo-font-color($v-focus-color, 1.0);
-        transition: opacity 0.2s ease;
-        animation: valo-animate-in-slide-up .5s, valo-animate-in-fade .5s;
+        animation: valo-animate-in-fade .3s ease;
     }
     .v-slider-feedback .popupContent {
-        transform: rotate(45deg);
         text-align: center;
-        line-height: 35px;
+        line-height: $mat-tooltip-size;
     }
     .v-slider-handle:before {
         background: $v-selection-color;
