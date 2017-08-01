@@ -58,4 +58,7 @@
     .v-tabsheet-tabs-framed > tbody > tr >:not(:first-child) {
         margin-left: 5px;
     }
+    .v-tabsheet-tabitem-focus:after {
+        z-index: 4;
+    }
 }
