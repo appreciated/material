@@ -8,7 +8,7 @@
         border: 2px solid $v-selection-color;
     }
     .v-checkbox:not(.large):not(.small) > input:checked ~ label:after {
-        line-height:$v-unit-size/2 - 2px;
+        line-height: $v-unit-size/2 - 2px;
     }
     .v-checkbox.large > input:checked ~ label:after {
         line-height: $v-unit-size--large/2 - 2px;

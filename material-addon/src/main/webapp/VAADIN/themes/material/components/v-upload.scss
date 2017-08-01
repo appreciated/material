@@ -3,7 +3,7 @@
  }
  
  body:not(.v-touch) .v-upload:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action-upload):hover,
- body.v-touch :not(.v-component-group) > .v-upload:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action-upload):active {
+ body.v-touch:not(.v-component-group) > .v-upload:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action-upload):active {
      box-shadow: $z-depth-1-5 !important;
  }
  
@@ -103,9 +103,9 @@
          height: $v-unit-size;
          padding: 0 20px;
      }
-      .v-upload-immediate:not(.v-disabled) .gwt-FileUpload {
-        width: 100%
-      }
+     .v-upload-immediate:not(.v-disabled) .gwt-FileUpload {
+         width: 100%
+     }
      .v-upload .v-button.v-disabled {
          background: transparent;
          color: inital;

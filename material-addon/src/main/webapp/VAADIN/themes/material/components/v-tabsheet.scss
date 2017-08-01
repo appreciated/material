@@ -38,7 +38,7 @@
         border: unset;
     }
     .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-caption {
-        background-color: mix($mat-background-color,$mat-card-color);
+        background-color: mix($mat-background-color, $mat-card-color);
         border: unset;
     }
     .v-tabsheet-framed .v-tabsheet-tabcontainer.v-tabsheet-tabcontainer-framed {
@@ -55,7 +55,7 @@
     .v-tabsheet-framed .v-tabsheet-tabcontainer .v-tabsheet-tabs {
         overflow: visible;
     }
-    .v-tabsheet-tabs-framed > tbody > tr > :not(:first-child) {
+    .v-tabsheet-tabs-framed > tbody > tr >:not(:first-child) {
         margin-left: 5px;
     }
 }
