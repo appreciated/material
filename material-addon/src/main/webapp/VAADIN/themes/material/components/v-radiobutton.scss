@@ -33,11 +33,11 @@
     }
     .v-radiobutton > input ~ label:after {
         background: $v-selection-color !important;
-        opacity: 0.0;
-        transition: opacity .2s ease !important;
+        transform: scale(0);
+        transition: transform .2s ease-in !important;
     }
     .v-radiobutton > input:checked ~ label:after {
-        opacity: 1.0;
+        transform: scale(1.0);
     }
     .v-radiobutton > input:checked ~ label:before {
         border: 2px solid $v-selection-color !important;
