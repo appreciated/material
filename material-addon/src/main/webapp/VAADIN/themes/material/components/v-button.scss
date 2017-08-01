@@ -1,8 +1,12 @@
-body:not(.v-touch):not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.link):not(.quiet):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action):hover {
+:not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.link):not(.quiet):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action) {
+    background: $mat-card-color;
+}
+
+body:not(.v-touch) :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action):hover {
     background: valo-font-color($v-background-color, 0.05);
 }
 
-body:not(.v-touch):not(.v-upload) >:not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action).v-button:hover,
+body:not(.v-touch) :not(.v-upload) > :not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action).v-button:hover,
 body.v-touch:not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action).v-button:active {
     box-shadow: $z-depth-1-5;
 }
@@ -23,7 +27,7 @@ body:not(.v-touch) .primary.v-button:not(.v-disabled):not(.borderless):not(.bord
     background: valo-font-color($v-selection-color, 0.1);
 }
 
-body:not(.v-touch):not(.v-upload) > * > .v-button.borderless:not(.v-disabled):not(.borderless-colored):not(.primary):not(.friendly):not(.danger):not(.custom):hover {
+body:not(.v-touch) :not(.v-upload) > * > .v-button.borderless:not(.v-disabled):not(.borderless-colored):not(.primary):not(.friendly):not(.danger):not(.custom):hover {
     background: rgba(valo-font-color($mat-background-color, 1), 0.1);
 }
 
@@ -123,9 +127,7 @@ body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
         padding-top: 5px;
         padding-bottom: 5px;
     }
-    :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.link):not(.quiet):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action) {
-        background: $mat-card-color;
-    }
+
     :not(.v-upload) > * > .v-button:not(.borderless):not(.border).primary {
         background: $v-focus-color;
         color: valo-font-color($v-focus-color, 1.0);
