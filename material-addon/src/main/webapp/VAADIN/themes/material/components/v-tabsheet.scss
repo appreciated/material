@@ -61,8 +61,18 @@
     .v-tabsheet-framed.padded-tabbar > .v-tabsheet-tabcontainer {
         background: transparent;
     }
-    .v-tabsheet-content-padded-tabbar {
+    .v-tabsheet-content {
+        border-top-left-radius: 0px;
+        border-top-right-radius: $v-border-radius;
+        border-bottom-left-radius: $v-border-radius;
+        border-bottom-right-radius: $v-border-radius;
+    }
+    .v-tabsheet-content-padded-tabbar, .v-tabsheet-content-centered-tabs {
         border-radius: $v-border-radius;
+    }
+    .v-tabsheet-content-right-aligned-tabs {
+        border-top-left-radius: $v-border-radius;
+        border-top-right-radius: 0px;
     }
     // fixes for ripple
     .v-tabsheet-tabitem-focus:after {
