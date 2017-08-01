@@ -58,7 +58,12 @@
     .v-tabsheet-tabs-framed > tbody > tr >:not(:first-child) {
         margin-left: 5px;
     }
+
+    // fixes for ripple
     .v-tabsheet-tabitem-focus:after {
         z-index: 4;
+    }
+    .v-tabsheet:not(.v-tabsheet-framed) > .v-tabsheet-tabcontainer .v-tabsheet-tabitem {
+        position: relative;
     }
 }
