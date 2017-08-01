@@ -61,6 +61,9 @@
     .v-tabsheet-framed.padded-tabbar > .v-tabsheet-tabcontainer {
         background: transparent;
     }
+    .v-tabsheet-content-padded-tabbar {
+        border-radius: $v-border-radius;
+    }
     // fixes for ripple
     .v-tabsheet-tabitem-focus:after {
         z-index: 4;
