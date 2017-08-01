@@ -197,7 +197,7 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
         row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         addComponent(row);
         row.addComponent(getGroupWithStyleName(ValoTheme.LAYOUT_COMPONENT_GROUP));
-        row.addComponent(getGroupWithStyleName(MaterialTheme.LAYOUT_COMPONENT_GROUP_BORDERLESS));
+        row.addComponent(getGroupWithStyleName(MaterialTheme.LAYOUT_COMPONENT_GROUP_FLAT));
         row.addComponent(getGroupWithStyleName(MaterialTheme.LAYOUT_COMPONENT_GROUP_MATERIAL));
     }
 

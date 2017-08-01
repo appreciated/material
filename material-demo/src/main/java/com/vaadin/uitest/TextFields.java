@@ -126,7 +126,7 @@ public class TextFields extends VerticalLayout implements View {
         row.addComponent(tf);
 
         row.addComponent(getComponentGroupWithStyle(ValoTheme.LAYOUT_COMPONENT_GROUP));
-        row.addComponent(getComponentGroupWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_BORDERLESS));
+        row.addComponent(getComponentGroupWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_FLAT));
         row.addComponent(getComponentGroupWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_MATERIAL));
 
 
