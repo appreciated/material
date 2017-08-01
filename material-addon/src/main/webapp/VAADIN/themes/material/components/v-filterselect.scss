@@ -77,4 +77,16 @@ body:not(.v-touch) .v-filterselect:not(.v-disabled) > .v-filterselect-button:hov
     .v-filterselect[class*="prompt"] > [class*="input"] {
         color: $v-font-color;
     }
+    .v-filterselect-borderless.v-filterselect-prompt .v-filterselect-input {
+        opacity: 1.0;
+    }
+    .v-filterselect-error .v-filterselect-button {
+        opacity: 0.7;
+    }
+    .v-filterselect-error [class$="button"]:before {
+         color: $v-error-indicator-color !important;
+    }
+    .v-filterselect .v-filterselect-button:hover {
+        opacity: 1.0;
+    }
 }
