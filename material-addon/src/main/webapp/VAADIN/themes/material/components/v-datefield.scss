@@ -75,4 +75,24 @@
     .v-datefield-calendarpanel-day-selected {
         color: valo-font-color($v-focus-color, 1.0) !important;
     }
+    .v-datefield-error .v-datefield-button {
+        color: #d32f2f;
+        opacity: 0.7;
+    }
+    .v-datefield-error [class*="button"]:hover {
+        color: #d32f2f;
+    }
+    .v-datefield-error .v-datefield-button:hover {
+        opacity: 1.0;
+    }
+    .v-datefield [class*="button"]:active:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.0);
+        border-radius: inherit;
+    }
 }

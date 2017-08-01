@@ -38,6 +38,7 @@
     .v-upload:not(.v-disabled):after,
     .valo-menu-item:after,
     .ripple:after,
+    .v-datefield [class*="button"]:after,
     .v-filterselect .v-filterselect-button:after,
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after,
     .v-accordion-item-caption:not(.v-disabled):after {
@@ -59,6 +60,7 @@
     .v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action-upload):after,
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after,
     .valo-menu-item:not(.v-disabled):after,
+    .v-datefield [class*="button"]:after,
     .ripple:after,
     .v-accordion-item-caption:not(.v-disabled):after {
         @include ripple-background($mat-card-color);
@@ -102,6 +104,7 @@
     }
     .v-button:not(.v-disabled):active:after,
     .ripple:active:after,
+    .v-datefield [class*="button"]:active:after,
     .v-upload:not(.v-disabled):active:after,
     .v-filterselect .v-filterselect-button:active:after,
     .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):active:after,
