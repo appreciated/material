@@ -37,6 +37,7 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
     }
     .v-grid-header {
         @extend .z-depth-0-5;
+        width: auto;
     }
     .last-frozen {
         border-right: 1px solid $v-table-border-color !important;
