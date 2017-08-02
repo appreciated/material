@@ -1,4 +1,4 @@
-$mixin v-app-loading {
+@mixin v-app-loading {
   .v-app-loading:before {
     position: fixed;
     z-index: 100;
