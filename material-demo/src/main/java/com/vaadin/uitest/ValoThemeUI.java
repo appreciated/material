@@ -86,7 +86,7 @@ public class ValoThemeUI extends UI {
             Responsive.makeResponsive(this);
         }
 
-        getPage().setTitle("Valo Theme Test");
+        getPage().setTitle("Material Theme Test");
         setContent(root);
         root.setWidth("100%");
 

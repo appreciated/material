@@ -7,12 +7,15 @@
         color: white !important;
         border: 2px solid $v-selection-color;
     }
+    .v-select-optiongroup:not(.large):not(.small) .v-checkbox > input:checked ~ label:after,
     .v-checkbox:not(.large):not(.small) > input:checked ~ label:after {
-        line-height:$v-unit-size/2 - 2px;
+        line-height: $v-unit-size/2 - 2px;
     }
+    .v-select-optiongroup.large .v-checkbox > input:checked ~ label:after,
     .v-checkbox.large > input:checked ~ label:after {
         line-height: $v-unit-size--large/2 - 2px;
     }
+    .v-select-optiongroup.small .v-checkbox > input:checked ~ label:after,
     .v-checkbox.small > input:checked ~ label:after {
         line-height: $v-unit-size--small/2 - 2px;
     }
@@ -21,6 +24,6 @@
         background: transparent !important;
     }
     .v-checkbox > input ~ label:after {
-        transition: all 0.2s ease !important;
+        transition: all 0.1s ease !important;
     }
 }

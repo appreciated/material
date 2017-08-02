@@ -62,7 +62,7 @@ public class DateFields extends VerticalLayout implements View {
         row.addComponent(date);
 
         row.addComponent(getCompoentGroupWithStyle(ValoTheme.LAYOUT_COMPONENT_GROUP));
-        row.addComponent(getCompoentGroupWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_BORDERLESS));
+        row.addComponent(getCompoentGroupWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_FLAT));
         row.addComponent(getCompoentGroupWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_MATERIAL));
 
         date = new TestDateField("Default resolution, explicit size");

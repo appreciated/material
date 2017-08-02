@@ -41,25 +41,28 @@
     .v-datefield-error .v-datefield-textfield {
         color: $v-error-indicator-color;
     }
-    .v-datefield-popup td.v-datefield-calendarpanel-month, .v-inline-datefield-calendarpanel-month {
+    .v-datefield-popup td.v-datefield-calendarpanel-month,
+    .v-inline-datefield-calendarpanel-month {
         color: valo-font-color($mat-card-color, 1.0);
     }
-    .v-inline-datefield-calendarpanel-day, .v-datefield-popup .v-datefield-calendarpanel-day {
+    .v-inline-datefield-calendarpanel-day,
+    .v-datefield-popup .v-datefield-calendarpanel-day {
         box-sizing: border-box;
         width: 32px;
         height: 32px;
         line-height: 32px;
         border-radius: 100% !important;
         border: 0 solid transparent;
-        background:transparent;
+        background: transparent;
     }
     .v-inline-datefield-calendarpanel-weeknumbers .v-first:before {
         box-shadow: inset -2px 3px 4px -2px rgba(0, 0, 0, 0.1);
-        background: mix($mat-background-color,$mat-card-color,90%);
+        background: mix($mat-background-color, $mat-card-color, 90%);
         top: 42px;
         border-top-right-radius: $v-border-radius;
     }
-    .v-inline-datefield-calendarpanel-weeknumber, .v-inline-datefield-calendarpanel-weekdays.v-inline-datefield-calendarpanel-weeknumbers td:first-child {
+    .v-inline-datefield-calendarpanel-weeknumber,
+    .v-inline-datefield-calendarpanel-weekdays.v-inline-datefield-calendarpanel-weeknumbers td:first-child {
         width: 32px;
         height: 32px;
         line-height: 32px;
@@ -68,7 +71,21 @@
         height: 32px;
         line-height: 32px;
     }
-    .v-inline-datefield-calendarpanel-day-selected, .v-datefield-calendarpanel-day-selected {
+    .v-inline-datefield-calendarpanel-day-selected,
+    .v-datefield-calendarpanel-day-selected {
         color: valo-font-color($v-focus-color, 1.0) !important;
+    }
+    .v-datefield-error .v-datefield-button {
+        color: #d32f2f;
+        opacity: 0.7;
+    }
+    .v-datefield-error [class*="button"]:hover {
+        color: #d32f2f;
+    }
+    .v-datefield-error .v-datefield-button:hover {
+        opacity: 1.0;
+    }
+    .v-datefield [class*="button"]:active:after {
+        background-color: rgba(0, 0, 0, 0.0);
     }
 }

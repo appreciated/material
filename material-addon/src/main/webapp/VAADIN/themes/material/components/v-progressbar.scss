@@ -1,3 +1,6 @@
+$mat-tooltip-size: 30px;
+
+
 @mixin v-progressbar {
     $mat-track-color: valo-font-color( $mat-background-color, 0.2) !default;
     .v-progressbar-wrapper {
@@ -12,6 +15,29 @@
     }
     .v-slider-base {
         border-radius: 0px;
+    }
+    .v-slider:not(.no-indicator) .v-slider-handle-active:before {
+        transform: scale(0);
+    }
+    .v-slider-handle:before {
+        transform: scale(1.0);
+        transition: transform 0.2s ease;
+    }
+    .v-slider-base:after {
+        border-radius: 0px;
+    }
+    .v-slider-feedback {
+        padding: 0px;
+        width: $mat-tooltip-size !important;
+        height: $mat-tooltip-size !important;
+        border-radius: $v-border-radius;
+        background: $v-focus-color;
+        color: valo-font-color($v-focus-color, 1.0);
+        animation: valo-animate-in-fade .3s ease;
+    }
+    .v-slider-feedback .popupContent {
+        text-align: center;
+        line-height: $mat-tooltip-size;
     }
     .v-slider-handle:before {
         background: $v-selection-color;
@@ -51,9 +77,5 @@
         width: 18px;
         height: 18px;
     }
-     .v-slider-feedback {
-        @extend .floating-border;
-        @extend .z-depth-4;
-        color: valo-font-color($mat-card-color, 1.0);
-     }
+
 }

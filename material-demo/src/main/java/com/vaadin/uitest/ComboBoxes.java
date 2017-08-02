@@ -51,7 +51,7 @@ public class ComboBoxes extends VerticalLayout implements View {
         row.addComponent(combo);
 
         row.addComponent(getComboBoxWithStyle(ValoTheme.LAYOUT_COMPONENT_GROUP));
-        row.addComponent(getComboBoxWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_BORDERLESS));
+        row.addComponent(getComboBoxWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_FLAT));
         row.addComponent(getComboBoxWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_MATERIAL));
 
         combo = new ComboBox("Explicit size");

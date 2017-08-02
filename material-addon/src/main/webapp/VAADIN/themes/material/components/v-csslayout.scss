@@ -7,19 +7,22 @@
         border: none;
         overflow: hidden;
     }
-    .v-component-group:not(.borderless):not(.material) .v-widget:not(.v-label) {
+    .v-component-group:not(.flat):not(.material) .v-widget:not(.v-label) {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35) !important;
     }
-    .v-component-group:not(.borderless):not(.material) .v-widget:not(.v-label):hover {
+    .v-component-group:not(.flat):not(.material) .v-widget:not(.v-label):hover {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.40) !important;
     }
-    .v-component-group.borderless .v-widget:not(.v-label), .v-component-group.material .v-widget:not(.v-label) {
+    .v-component-group.flat .v-widget:not(.v-label),
+    .v-component-group.material .v-widget:not(.v-label) {
         box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0) !important;
     }
-    .v-component-group.borderless .v-widget:not(.v-label):hover, .v-component-group.material .v-widget:not(.v-label):hover {
-         box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0) !important;
+    .v-component-group.flat .v-widget:not(.v-label):hover,
+    .v-component-group.material .v-widget:not(.v-label):hover {
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0) !important;
     }
-    .v-csslayout-v-component-group.material .v-widget, .v-csslayout-v-component-group.borderless .v-widget  {
+    .v-csslayout-v-component-group.material .v-widget,
+    .v-csslayout-v-component-group.flat .v-widget {
         margin-left: 0px;
     }
     .v-component-group.material {

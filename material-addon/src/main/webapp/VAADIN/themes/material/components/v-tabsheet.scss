@@ -38,7 +38,7 @@
         border: unset;
     }
     .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-caption {
-        background-color: mix($mat-background-color,$mat-card-color);
+        background-color: mix($mat-background-color, $mat-card-color);
         border: unset;
     }
     .v-tabsheet-framed .v-tabsheet-tabcontainer.v-tabsheet-tabcontainer-framed {
@@ -55,7 +55,30 @@
     .v-tabsheet-framed .v-tabsheet-tabcontainer .v-tabsheet-tabs {
         overflow: visible;
     }
-    .v-tabsheet-tabs-framed > tbody > tr > :not(:first-child) {
+    .v-tabsheet-tabs-framed > tbody > tr >:not(:first-child) {
         margin-left: 5px;
+    }
+    .v-tabsheet-framed.padded-tabbar > .v-tabsheet-tabcontainer {
+        background: transparent;
+    }
+    .v-tabsheet-content {
+        border-top-left-radius: 0px;
+        border-top-right-radius: $v-border-radius;
+        border-bottom-left-radius: $v-border-radius;
+        border-bottom-right-radius: $v-border-radius;
+    }
+    .v-tabsheet-content-padded-tabbar, .v-tabsheet-content-centered-tabs {
+        border-radius: $v-border-radius;
+    }
+    .v-tabsheet-content-right-aligned-tabs {
+        border-top-left-radius: $v-border-radius;
+        border-top-right-radius: 0px;
+    }
+    // fixes for ripple
+    .v-tabsheet-tabitem-focus:after {
+        z-index: 4;
+    }
+    .v-tabsheet:not(.v-tabsheet-framed) > .v-tabsheet-tabcontainer .v-tabsheet-tabitem {
+        position: relative;
     }
 }

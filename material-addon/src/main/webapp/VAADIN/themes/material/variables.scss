@@ -1,10 +1,10 @@
-$v-font-family: "Source Sans Pro", sans-serif !default;
+$v-font-family: "Source Sans Pro",
+sans-serif !default;
 $v-font-weight: 400 !default;
 $v-unit-size: 45px !default;
 $v-focus-color: #0072C6 !default;
 $v-error-indicator-color: #d32f2f !default;
 $v-friendly-color: #4caf50 !default;
-
 $mat-background-color: #fafafa !default;
 $mat-card-color: lighten( $mat-background-color, 9%) !default;
 $mat-window-color: lighten( $mat-card-color, 3%) !default;
@@ -36,16 +36,14 @@ $v-selection-overlay-padding-horizontal: 0;
 $v-selection-item-height: $v-unit-size;
 $v-selection-item-border-radius: 0px;
 $v-panel-border: 0px;
-$v-layout-margin-top: 10px  !default;
-$v-layout-margin-left: 10px  !default;
+$v-layout-margin-top: 10px !default;
+$v-layout-margin-left: 10px !default;
 $v-layout-margin-right: 10px !default;
 $v-layout-margin-bottom: 10px !default;
-
 $h1-fontsize: 3.0rem !default;
 $h2-fontsize: 2.5rem !default;
 $h3-fontsize: 2.0rem !default;
 $h4-fontsize: 1.5rem !default;
 $h5-fontsize: 1.2rem !default;
 $h6-fontsize: 1rem !default;
-
 $v-button-round-border-radius: 30px;

@@ -4,31 +4,32 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
 }
 
 @mixin v-grid {
-     .v-grid:not(.borderless) {
-         @extend .floating-border;
-     }
-     .v-grid-row-selected > .v-grid-cell {
-         background: $v-table-row-selected-color;
-         color: inherit;
-         border-top: 1px solid $v-table-border-color;
-     }
+    .v-grid:not(.borderless) {
+        @extend .floating-border;
+    }
+    .v-grid-row-selected > .v-grid-cell {
+        background: $v-table-row-selected-color;
+        color: inherit;
+        border-top: 1px solid $v-table-border-color;
+    }
     .v-grid-row-stripe > td {
         background-color: $mat-card-color;
     }
     .v-grid-column-header-content {
-      color: valo-font-color($mat-card-color, 0.6);
+        color: valo-font-color($mat-card-color, 0.6);
     }
     .v-grid-row:not(:first-child) {
         border-top: 1px solid $v-table-border-color;
     }
     .v-grid-row-selected > .v-grid-cell {
-         border-top: none;
+        border-top: none;
     }
     .v-grid-cell {
         height: $v-unit-size--large;
         line-height: $v-unit-size--large;
     }
-    .v-grid-column-header-content, .v-grid-column-footer-content {
+    .v-grid-column-header-content,
+    .v-grid-column-footer-content {
         line-height: $v-unit-size--large;
     }
     .v-grid-cell.frozen {
@@ -36,6 +37,7 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
     }
     .v-grid-header {
         @extend .z-depth-0-5;
+        width: auto;
     }
     .last-frozen {
         border-right: 1px solid $v-table-border-color !important;
@@ -56,7 +58,8 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
     .v-grid-editor * .gwt-CheckBox > input {
         display: none;
     }
-    .v-grid-editor-save, .v-grid-editor-cancel {
+    .v-grid-editor-save,
+    .v-grid-editor-cancel {
         height: $v-unit-size--small;
         color: $v-focus-color;
         transition: box-shadow .3s ease-out, background .3s;
@@ -77,44 +80,45 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
         font-size: 15px;
         margin-left: 10px;
     }
-    .v-grid-select-all-checkbox, .v-grid-selection-checkbox {
-      width: $v-unit-size/2 - 4px;
-      position: relative;
-      margin: $v-unit-size/2 - 4px auto;
-      label {
+    .v-grid-select-all-checkbox,
+    .v-grid-selection-checkbox {
         width: $v-unit-size/2 - 4px;
-        height: $v-unit-size/2 - 4px;
-        cursor: pointer;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: $v-border-radius;
-        border: 2px solid valo-font-color($v-background-color, 0.65);
-        transition: background 0.2s ease, border 0.2s ease;
-        &:after {
-          content: '';
-          width: 7px;
-          height: 3px;
-          position: absolute;
-          top: 3px;
-          left: 3px;
-          border: 3px solid white;
-          border-top: none;
-          border-right: none;
-          background: transparent;
-          opacity: 0;
-          transform: rotate(-45deg);
+        position: relative;
+        margin: $v-unit-size/2 - 4px auto;
+        label {
+            width: $v-unit-size/2 - 4px;
+            height: $v-unit-size/2 - 4px;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: $v-border-radius;
+            border: 2px solid valo-font-color($v-background-color, 0.65);
+            transition: background 0.1s ease, border 0.1s ease;
+            &:after {
+                content: '';
+                width: 7px;
+                height: 3px;
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                border: 3px solid white;
+                border-top: none;
+                border-right: none;
+                background: transparent;
+                opacity: 0;
+                transform: rotate(-45deg);
+            }
         }
-      }
-      input[type=checkbox] {
-        visibility: hidden;
-        &:checked + label:after {
-          opacity: 1;
+        input[type=checkbox] {
+            visibility: hidden;
+            &:checked + label:after {
+                opacity: 1;
+            }
+            &:checked + label {
+                background: $v-selection-color;
+                border-color: $v-selection-color;
+            }
         }
-        &:checked + label {
-          background: $v-selection-color;
-          border-color:  $v-selection-color;
-        }
-      }
     }
 }
