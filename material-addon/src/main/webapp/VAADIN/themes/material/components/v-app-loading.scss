@@ -1,0 +1,30 @@
+@mixin v-app-loading {
+  .v-app-loading:before {
+    position: fixed;
+    z-index: 100;
+    top: 45%;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    padding: 10px;
+    margin-top: -24px;
+    margin-left: -24px;
+    border: 2px solid transparentize($v-primary-color, .6);
+    background: $mat-background-color;
+    border-top-color: $v-primary-color;
+    border-right-color: $v-primary-color;
+    border-radius: 100%;
+    @include animation(v-rotate-360 500ms infinite linear);
+    pointer-events: none;
+    .v-ie8 &, .v-ie9 & {
+        border: none;
+        border-radius: $v-border-radius;
+        background: #fff url(#{$valo-shared-pathPrefix}img/spinner.gif) no-repeat 50% 50%;
+        background-size: 80%;
+      }
+    .v-ie8 & {
+        min-width: 30px;
+        min-height: 30px;
+    }
+  }
+}

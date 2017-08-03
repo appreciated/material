@@ -30,6 +30,8 @@ $v-included-components: remove($v-included-components, button);
 @import "components/v-tooltip.scss";
 @import "components/v-colorpicker.scss";
 @import "components/v-menu.scss";
+@import "components/v-app-loading.scss";
+
 @import "cards.scss";
 @mixin material {
     @include valo;
@@ -62,4 +64,5 @@ $v-included-components: remove($v-included-components, button);
     @include v-tooltip;
     @include v-colorpicker;
     @include v-menu;
+    @include v-app-loading;
 }
