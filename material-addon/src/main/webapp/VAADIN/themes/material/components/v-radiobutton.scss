@@ -34,7 +34,7 @@
     .v-radiobutton > input ~ label:after {
         background: $v-selection-color !important;
         transform: scale(0);
-        transition: transform .2s ease-in !important;
+        transition: transform .2s ease-out !important;
     }
     .v-radiobutton > input:checked ~ label:after {
         transform: scale(1.0);
