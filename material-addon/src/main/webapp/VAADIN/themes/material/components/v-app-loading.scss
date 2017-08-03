@@ -14,7 +14,7 @@
     border-top-color: $v-focus-color;
     border-right-color: $v-focus-color;
     border-radius: 100%;
-    @include animation(v-rotate-360 500ms infinite linear);
+    @include animation(v-rotate-360 $loading-animation-speed infinite linear);
     pointer-events: none;
     .v-ie8 &, .v-ie9 & {
         border: none;
