@@ -74,6 +74,9 @@
     .v-tabsheet-content-padded-tabbar > .v-tabsheet-tabsheetpanel, .v-tabsheet-content-centered-tabs > .v-tabsheet-tabsheetpanel {
         border-radius: $v-border-radius;
     }
+    .v-tabsheet-deco { // loading indicator on non-framed tabsheet
+        z-index: 2;
+    }
     // fixes for ripple
     .v-tabsheet-tabitem-focus:after {
         z-index: 4;
@@ -81,4 +84,5 @@
     .v-tabsheet:not(.v-tabsheet-framed) > .v-tabsheet-tabcontainer .v-tabsheet-tabitem {
         position: relative;
     }
+
 }

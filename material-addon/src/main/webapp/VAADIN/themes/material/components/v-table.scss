@@ -4,9 +4,11 @@ $v-table-row-selected-color: valo-font-color($mat-card-color, 0.075);
 @mixin v-table {
     .v-table-header {
         color: valo-font-color($mat-card-color, 0.6);
-        @extend .z-depth-0-5;
         position: relative;
         z-index: 2;
+    }
+    .v-table:not(.borderless) .v-table-header {
+        @extend .z-depth-0-5;
     }
     .v-table-row-odd {
         background-color: $mat-card-color;
@@ -24,6 +26,11 @@ $v-table-row-selected-color: valo-font-color($mat-card-color, 0.075);
     }
     .v-table-focus:not(.v-selected) {
         background-color: $v-table-row-focus-color !important;
+    }
+    .v-table:not(.borderless) .v-table-footer {
+        position: relative;
+        z-index: 1;
+       @extend .z-depth-1;
     }
     .v-table-focus {
         outline: unset;
