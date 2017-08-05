@@ -135,7 +135,19 @@ public class Tables extends VerticalLayout implements View {
         List<Person> people = Arrays.asList(
                 new Person("Nicolaus Copernicus", 1543, 1),
                 new Person("Galileo Galilei", 1564, 2),
-                new Person("Johannes Kepler", 1571, 3));
+                new Person("Johannes Kepler", 1571, 3),
+                new Person("Nicolaus Copernicus", 1543, 3),
+                new Person("Galileo Galilei", 1564, 4),
+                new Person("Johannes Kepler", 1571, 5),
+                new Person("Nicolaus Copernicus", 1543, 6),
+                new Person("Galileo Galilei", 1564, 7),
+                new Person("Johannes Kepler", 1571, 8),
+                new Person("Nicolaus Copernicus", 1543, 9),
+                new Person("Galileo Galilei", 1564, 10),
+                new Person("Johannes Kepler", 1571, 11),
+                new Person("Nicolaus Copernicus", 1543, 12),
+                new Person("Galileo Galilei", 1564, 13),
+                new Person("Johannes Kepler", 1571, 14));
 
 // Create a grid bound to the list
         Grid<Person> grid = new Grid<>();

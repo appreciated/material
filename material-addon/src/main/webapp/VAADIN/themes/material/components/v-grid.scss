@@ -35,9 +35,17 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
     .v-grid-cell.frozen {
         box-shadow: none;
     }
+   .v-grid-tablewrapper {
+       overflow: visible;
+    }
     .v-grid-header {
-        @extend .z-depth-0-5;
         width: auto;
+    }
+    .v-grid:not(.borderless) .v-grid-header {
+        @extend .z-depth-0-5;
+    }
+    .v-grid-header {
+        right: -19px;
     }
     .last-frozen {
         border-right: 1px solid $v-table-border-color !important;
