@@ -77,5 +77,10 @@ $mat-tooltip-size: 30px;
         width: 18px;
         height: 18px;
     }
-
+    .v-label-spinner {
+        border: 2px solid valo-font-color($mat-background-color, 0.1);
+        border-top-color: $v-focus-color;
+        border-right-color: $v-focus-color;
+        @include animation(v-rotate-360 $mat-loading-animation-speed infinite linear);
+    }
 }
