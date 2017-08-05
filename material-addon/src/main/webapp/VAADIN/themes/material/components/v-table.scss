@@ -30,7 +30,7 @@ $v-table-row-selected-color: valo-font-color($mat-card-color, 0.075);
     .v-table:not(.borderless) .v-table-footer {
         position: relative;
         z-index: 1;
-       @extend .z-depth-1;
+        @extend .z-depth-1;
     }
     .v-table-focus {
         outline: unset;

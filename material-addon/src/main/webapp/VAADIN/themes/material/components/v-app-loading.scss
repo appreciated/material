@@ -1,20 +1,15 @@
 @mixin v-app-loading {
   .v-app-loading:before {
-    position: fixed;
-    z-index: 100;
-    top: 45%;
-    left: 50%;
-    width: 28px;
-    height: 28px;
-    padding: 10px;
-    margin-top: -24px;
-    margin-left: -24px;
-    border: 2px solid transparentize($v-focus-color, .6);
+    width: $mat-loading-animation-size;
+    height: $mat-loading-animation-size;
+    border-radius: 100%;
+    pointer-events: none;
+    border: $mat-loading-animation-thickness solid valo-font-color($mat-background-color, 0.1);
     background: $mat-background-color;
     border-top-color: $v-focus-color;
     border-right-color: $v-focus-color;
     border-radius: 100%;
-    @include animation(v-rotate-360 $loading-animation-speed infinite linear);
+    @include animation(v-rotate-360 $mat-loading-animation-speed infinite linear);
     pointer-events: none;
     .v-ie8 &, .v-ie9 & {
         border: none;
