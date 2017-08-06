@@ -2,10 +2,6 @@
 
 This is a Theme for the Vaadin Framework 7.3+ based on the Google Material Design.
 
-## Online demo
-
-//TODO
-
 ## Download release
 
 Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to https://vaadin.com/directory#!addon/material
