@@ -7,6 +7,9 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
     .v-grid:not(.borderless) {
         @extend .floating-border;
     }
+    .v-grid.borderless {
+        overflow: hidden;
+    }
     .v-grid-row-selected > .v-grid-cell {
         background: $v-table-row-selected-color;
         color: inherit;
