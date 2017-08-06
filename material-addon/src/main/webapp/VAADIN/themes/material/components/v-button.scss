@@ -2,12 +2,12 @@
     background: $mat-card-color;
 }
 
-body:not(.v-touch) :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action):hover {
+body:not(.v-touch) :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.link):not(.custom):not(.floating-action):hover {
     background: valo-font-color($v-background-color, 0.05);
 }
 
-body:not(.v-touch) :not(.v-upload) > :not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action).v-button:hover,
-body.v-touch:not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action).v-button:active {
+body:not(.v-touch) :not(.v-upload) > :not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.link):not(.floating-action).v-button:hover,
+body.v-touch:not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.link):not(.floating-action).v-button:active {
     box-shadow: $z-depth-1-5;
 }
 
