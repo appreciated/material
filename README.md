@@ -45,6 +45,10 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 The Designer won't be able to successfully compile the SCSS as long as it doesn't have access to the theme files. 
 To fix this you will either need to unzip the jar and copy the files to `src/main/webapp/VAADIN/themes` or you could use the following maven plugin that does the job for you.
 
+Note: When updating the Theme to a new version do a `mvn clean install` to refresh the theme files for the designer.
+
+To avoid pushing unecessary files to git you might want to add `src/main/webapp/VAADIN/themes/material/` to your .gitignore.
+
 ````
   <plugin>
     <artifactId>maven-dependency-plugin</artifactId>
@@ -67,8 +71,6 @@ To fix this you will either need to unzip the jar and copy the files to `src/mai
     </executions>
   </plugin>
 ````
-After updating the POM to a new version of the theme do a `mvn clean install` to refresh the files for the designer too. 
-If you plan to use the maven plugin above in combination with git you might want to add `src/main/webapp/VAADIN/themes/material/` to your .gitignore.
 
 ## Licenses & Authors
 
