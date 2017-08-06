@@ -30,12 +30,6 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 - Send a pull request for the original project
 - Comment on the original issue that you have implemented a fix for it
 
-## Roadmap to 1.0
-
-- improve scss abstraction
-- introduce theme variables to allow customizablity
-- include community feedback 
-
 ## Working with Vaadin Designer 1 or 2
 
 The Designer won't be able to successfully compile the SCSS as long as it doesn't have access to the theme files. 
