@@ -17,6 +17,7 @@ public class MaterialTheme extends ValoTheme {
     public static final String COMBOBOX_FLOATING = "floating";
     public static final String DATEFIELD_CUSTOM = "custom";
     public static final String DATEFIELD_FLOATING = "floating";
+    public static final String INLINE_DATEFIELD_BORDERLESS = "borderless";
     public static final String CARD_0 = "card-0";
     public static final String CARD_0_5 = "card-0-5";
     public static final String CARD_1 = "card-1";
