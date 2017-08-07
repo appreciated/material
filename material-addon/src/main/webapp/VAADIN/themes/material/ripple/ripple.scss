@@ -10,17 +10,9 @@
 // WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 // COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 // ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-@mixin ripple-background($color) {
-    @include ripple-background-function($color, 40%);
-}
 
-@mixin ripple-background-function($color, $percent) {
-    @if is-dark-color($color) {
-        @include radial-gradient(circle, lighten($color, $percent) 20%, transparent 10%);
-    }
-    @else {
-        @include radial-gradient(circle, darken($color, $percent) 20%, transparent 10%);
-    }
+@mixin ripple-background($color) {
+    @include radial-gradient(circle, material-hover-color($color, 60%) 20%, transparent 10%);
 }
 
 @mixin ripple {
@@ -76,14 +68,14 @@
     }
     .v-button.border:not(.primary):not(.friendly):not(.danger):not(.custom):after,
     .v-upload.border:not(.primary):not(.friendly):not(.danger):not(.custom):after {
-        @include ripple-background-function(valo-font-color($mat-background-color, 1), 60%);
+        @include ripple-background($mat-background-color);
     }
     .v-button.primary:after,
     .v-button.floating-action:after,
     .v-button.borderless-colored:after,
     .v-upload.floating-action-upload:after,
     .v-upload.primary:after {
-        @include ripple-background-function($v-focus-color, 60%);
+        @include ripple-background($v-focus-color);
         border-radius: $v-border-radius;
     }
     .v-button.floating-action:after,
@@ -92,15 +84,15 @@
     }
     .v-button.friendly:after,
     .v-upload.friendly:after {
-        @include ripple-background-function($v-friendly-color, 60%);
+        @include ripple-background($v-friendly-color);
     }
     .v-button.danger:after,
     .v-upload.danger:after {
-        @include ripple-background-function($v-error-indicator-color, 60%);
+        @include ripple-background($v-error-indicator-color);
     }
     .v-button.custom:after,
     .v-upload.custom:after {
-        @include ripple-background-function($mat-custom-color, 60%);
+        @include ripple-background($mat-custom-color);
     }
     .v-button.round:after,
     .v-upload.round:after {

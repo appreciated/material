@@ -1,3 +1,21 @@
+@function material-hover-color($background-color, $strength: $mat-button-hover-modifier) {
+    $color: $background-color;
+    @if saturation($background-color) > 0.1 {
+        @if is-dark-color($background-color) {
+            $color: scale-color($color, $lightness: $strength, $saturation: saturation($background-color) + 0.1);
+        } @else {
+            $color: scale-color($color, $lightness: -$strength, $saturation: saturation($background-color) + 0.1);
+        }
+    } @else {
+        @if is-dark-color($background-color) {
+            $color: scale-color($color, $lightness: $strength, $saturation: 0%);
+        } @else {
+            $color: scale-color($color, $lightness: -$strength, $saturation: 0%);
+        }
+    }
+    @return $color;
+}
+
 @mixin functions {
     .focus-border-bottom {
         border-bottom: 1px solid;

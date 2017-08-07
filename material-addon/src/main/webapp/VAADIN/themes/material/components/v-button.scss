@@ -3,7 +3,7 @@
 }
 
 body:not(.v-touch) :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.link):not(.custom):not(.floating-action):hover {
-    background: valo-font-color($v-background-color, 0.05);
+    background: material-hover-color($v-background-color);
 }
 
 body:not(.v-touch) :not(.v-upload) > :not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.link):not(.floating-action).v-button:hover,
@@ -12,27 +12,27 @@ body.v-touch:not(.v-component-group) > .v-button:not(.v-disabled):not(.borderles
 }
 
 body:not(.v-touch) .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-    background: valo-font-color($v-friendly-color, 0.1);
+    background: material-hover-color($v-friendly-color);
 }
 
 body:not(.v-touch) .custom.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-    background: valo-font-color($mat-custom-color, 0.1);
+    background: material-hover-color($mat-custom-color);
 }
 
 body:not(.v-touch) .danger.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-    background: valo-font-color($v-error-indicator-color, 0.1);
+    background: material-hover-color($v-error-indicator-color);
 }
 
 body:not(.v-touch) .primary.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-    background: valo-font-color($v-selection-color, 0.1);
+    background: material-hover-color($v-selection-color);
 }
 
 body:not(.v-touch) :not(.v-upload) > * > .v-button.borderless:not(.v-disabled):not(.borderless-colored):not(.primary):not(.friendly):not(.danger):not(.custom):hover {
-    background: rgba(valo-font-color($mat-background-color, 1), 0.1);
+    background: material-hover-color($mat-background-color);
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).floating-action:hover {
-    background: valo-font-color($v-selection-color, 0.1);
+    background: material-hover-color($v-selection-color);
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).floating-action:not(.flat):hover,
@@ -41,11 +41,11 @@ body.v-touch .v-button.floating-action:not(.flat):active {
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).floating-action:not(.flat).friendly:hover {
-    background: valo-font-color($v-friendly-color, 0.1);
+    background: material-hover-color($v-friendly-color);
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).floating-action:not(.flat).danger:hover {
-    background: valo-font-color($v-error-indicator-color, 0.1);
+    background: material-hover-color($v-error-indicator-color);
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).border:hover {
@@ -75,19 +75,19 @@ body:not(.v-touch) .v-button:not(.v-disabled).border.danger:hover {
 
 body:not(.v-touch) .v-button:not(.v-disabled).borderless.primary:hover,
 body:not(.v-touch) .v-button:not(.v-disabled).borderless-colored:hover {
-    background: rgba($v-focus-color, 0.2) !important;
+    background: material-hover-color($v-focus-color) !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).borderless.friendly:hover {
-    background: rgba($v-friendly-color, 0.2) !important;
+    background: material-hover-color($v-friendly-color) !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).borderless.danger:hover {
-    background: rgba($v-error-indicator-color, 0.2) !important;
+    background: material-hover-color($v-error-indicator-color) !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
-    background: rgba($mat-custom-color, 0.2) !important;
+    background: material-hover-color($mat-custom-color) !important;
 }
 
 @mixin v-button {
