@@ -6,7 +6,7 @@ body:not(.v-touch) .v-filterselect:not(.v-disabled) > .v-filterselect-button:hov
     .v-filterselect:not(.borderless):not(.floating):not(.custom) [class*="input"] {
         @extend .focus-border-bottom;
     }
-    .v-filterselect-focus:not(.borderless):not(.floating):not(.custom) [class*="input"] {
+    .v-filterselect-focus:not(.borderless):not(.floating):not(.custom):not(.v-readonly) [class*="input"] {
         border-bottom: 1px solid $v-selection-color;
         box-shadow: 0 1px 0 0 $v-selection-color;
     }
