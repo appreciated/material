@@ -12,7 +12,7 @@
 // ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 @mixin ripple-background($color) {
-    @include radial-gradient(circle, material-hover-color($color, 60%) 20%, transparent 10%);
+    @include radial-gradient(circle, material-hover-color($color, 70%) 20%, transparent 10%);
 }
 
 @mixin ripple {
@@ -68,7 +68,7 @@
     }
     .v-button.border:not(.primary):not(.friendly):not(.danger):not(.custom):after,
     .v-upload.border:not(.primary):not(.friendly):not(.danger):not(.custom):after {
-        @include ripple-background($mat-background-color);
+        @include ripple-background(valo-font-color($mat-background-color, 1));
     }
     .v-button.primary:after,
     .v-button.floating-action:after,
