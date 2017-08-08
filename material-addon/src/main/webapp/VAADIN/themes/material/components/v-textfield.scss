@@ -1,45 +1,45 @@
- @mixin v-textfield {
-     :not(.v-component-group) > .v-textfield:not(.v-datefield-textfield):not(.v-colorpicker-preview-textfield):not(.borderless):not(.floating):not(.custom) {
-         @extend .focus-border-bottom;
-         border-bottom-color: $v-font-color;
-     }
-     :not(.v-component-group) > .v-textfield.floating {
-         @extend .floating-border;
-     }
-     :not(.v-component-group) > .v-textfield:not(.v-datefield-textfield):not(.v-textfield-readonly):not(.v-textfield-error):not(.v-colorpicker-preview-textfield):not(.borderless):not(.floating):not(.custom):focus {
-         border-bottom: 1px solid $v-selection-color;
-         box-shadow: 0 1px 0 0 $v-selection-color;
-     }
-     :not(.v-component-group) > .v-textfield-error:not(.borderless):not(.floating):not(.custom):focus {
-         border-bottom: 1px solid $v-error-indicator-color !important;
-         box-shadow: 0 1px 0 0 $v-error-indicator-color !important;
-     }
-     :not(.v-component-group) > .v-textfield.custom {
-         @extend .focus-border-bottom;
-         color: $mat-custom-color;
-     }
-     .v-textfield.custom::-webkit-input-placeholder {
-         color: rgba($mat-custom-color, 0.4);
-     }
-     .v-caption-custom.v-caption-inline-icon {
-         color: $mat-custom-color;
-     }
-     :not(.v-component-group) > .v-textfield.custom:focus {
-         border-bottom: 1px solid $mat-custom-color;
-         box-shadow: 0 1px 0 0 $mat-custom-color;
-     }
-     .v-component-group > .v-textfield {
-         border-bottom: none;
-         background: $mat-card-color;
-     }
-     .v-component-group > .v-textfield:focus {
-         border-bottom: none;
-         box-shadow: none;
-     }
-     .v-textfield-error {
-         color: $v-error-indicator-color;
-     }
-     .v-table-compact * .v-textfield {
-         height: $v-unit-size--small;
-     }
- }
+@mixin v-textfield {
+  :not(.v-component-group) > .v-textfield:not(.v-datefield-textfield):not(.v-colorpicker-preview-textfield):not(.borderless):not(.floating):not(.custom) {
+    @extend .focus-border-bottom;
+    border-bottom-color: $v-font-color;
+  }
+  :not(.v-component-group) > .v-textfield.floating {
+    @extend .floating-border;
+  }
+  :not(.v-component-group) > .v-textfield:not(.v-datefield-textfield):not(.v-textfield-readonly):not(.v-textfield-error):not(.v-colorpicker-preview-textfield):not(.borderless):not(.floating):not(.custom):focus {
+    border-bottom: 1px solid $v-selection-color;
+    box-shadow: 0 1px 0 0 $v-selection-color;
+  }
+  :not(.v-component-group) > .v-textfield-error:not(.borderless):not(.floating):not(.custom):focus {
+    border-bottom: 1px solid $v-error-indicator-color !important;
+    box-shadow: 0 1px 0 0 $v-error-indicator-color !important;
+  }
+  :not(.v-component-group) > .v-textfield.custom {
+    @extend .focus-border-bottom;
+    color: $mat-custom-color;
+  }
+  .v-textfield.custom::-webkit-input-placeholder {
+    color: rgba($mat-custom-color, 0.4);
+  }
+  .v-caption-custom.v-caption-inline-icon {
+    color: $mat-custom-color;
+  }
+  :not(.v-component-group) > .v-textfield.custom:focus {
+    border-bottom: 1px solid $mat-custom-color;
+    box-shadow: 0 1px 0 0 $mat-custom-color;
+  }
+  .v-component-group > .v-textfield {
+    border-bottom: none;
+    background: $mat-card-color;
+  }
+  .v-component-group > .v-textfield:focus {
+    border-bottom: none;
+    box-shadow: none;
+  }
+  .v-textfield-error {
+    color: $v-error-indicator-color;
+  }
+  .v-table-compact * .v-textfield {
+    height: $v-unit-size--small;
+  }
+}

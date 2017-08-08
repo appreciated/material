@@ -1,18 +1,18 @@
- @mixin v-splitpanel {
-     .v-splitpanel-horizontal:not(.borderless),
-     .v-splitpanel-vertical:not(.borderless) {
-         @extend .floating-border;
-     }
-     .v-splitpanel-hsplitter div:before {
-         border: 1px solid #b2b2b2 !important;
-     }
-     .v-splitpanel-hsplitter div:after {
-         border: 1px solid #b2b2b2 !important;
-     }
-     .v-splitpanel-vsplitter div:before {
-         border: 1px solid #b2b2b2 !important;
-     }
-     .v-splitpanel-vsplitter div:after {
-         border: 1px solid #b2b2b2 !important;
-     }
- }
+@mixin v-splitpanel {
+  .v-splitpanel-horizontal:not(.borderless),
+  .v-splitpanel-vertical:not(.borderless) {
+    @extend .floating-border;
+  }
+  .v-splitpanel-hsplitter div:before {
+    border: 1px solid #b2b2b2 !important;
+  }
+  .v-splitpanel-hsplitter div:after {
+    border: 1px solid #b2b2b2 !important;
+  }
+  .v-splitpanel-vsplitter div:before {
+    border: 1px solid #b2b2b2 !important;
+  }
+  .v-splitpanel-vsplitter div:after {
+    border: 1px solid #b2b2b2 !important;
+  }
+}

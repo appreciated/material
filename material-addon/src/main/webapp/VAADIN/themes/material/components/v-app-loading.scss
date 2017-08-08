@@ -12,14 +12,14 @@
     @include animation(v-rotate-360 $mat-loading-animation-speed infinite linear);
     pointer-events: none;
     .v-ie8 &, .v-ie9 & {
-        border: none;
-        border-radius: $v-border-radius;
-        background: #fff url(#{$valo-shared-pathPrefix}img/spinner.gif) no-repeat 50% 50%;
-        background-size: 80%;
-      }
+      border: none;
+      border-radius: $v-border-radius;
+      background: #fff url(#{$valo-shared-pathPrefix}img/spinner.gif) no-repeat 50% 50%;
+      background-size: 80%;
+    }
     .v-ie8 & {
-        min-width: 30px;
-        min-height: 30px;
+      min-width: 30px;
+      min-height: 30px;
     }
   }
 }

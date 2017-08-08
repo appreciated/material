@@ -1,36 +1,36 @@
 // Header Styles
 @mixin v-label {
-    .h1 {
-        font-size: $h1-fontsize;
-    }
-    .h2 {
-        font-size: $h2-fontsize;
-    }
-    .h3 {
-        font-size: $h3-fontsize;
-    }
-    .h4 {
-        font-size: $h4-fontsize;
-    }
-    .h5 {
-        font-size: $h5-fontsize;
-    }
-    .v-label-success:not(.borderless),
-    .v-label-failure:not(.borderless) {
-        @extend .z-depth-1;
-    }
-    .v-label-success {
-        background: $v-friendly-color;
-        color: valo-font-color($v-friendly-color, 1.0);
-    }
-    .v-label-success:before {
-        color: valo-font-color($v-friendly-color, 1.0);
-    }
-    .v-label-failure {
-        background: $v-error-indicator-color;
-        color: valo-font-color($v-error-indicator-color, 1.0);
-    }
-    .v-label-failure:before {
-        color: valo-font-color($v-error-indicator-color, 1.0);
-    }
+  .h1 {
+    font-size: $h1-fontsize;
+  }
+  .h2 {
+    font-size: $h2-fontsize;
+  }
+  .h3 {
+    font-size: $h3-fontsize;
+  }
+  .h4 {
+    font-size: $h4-fontsize;
+  }
+  .h5 {
+    font-size: $h5-fontsize;
+  }
+  .v-label-success:not(.borderless),
+  .v-label-failure:not(.borderless) {
+    @extend .z-depth-1;
+  }
+  .v-label-success {
+    background: $v-friendly-color;
+    color: valo-font-color($v-friendly-color, 1.0);
+  }
+  .v-label-success:before {
+    color: valo-font-color($v-friendly-color, 1.0);
+  }
+  .v-label-failure {
+    background: $v-error-indicator-color;
+    color: valo-font-color($v-error-indicator-color, 1.0);
+  }
+  .v-label-failure:before {
+    color: valo-font-color($v-error-indicator-color, 1.0);
+  }
 }

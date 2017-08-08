@@ -1,26 +1,26 @@
 @mixin v-notification {
-    .v-Notification .v-Notification-caption {
-        color: valo-font-color($mat-window-color, 1.0);
-    }
-    .v-Notification .v-Notification-description {
-        color: valo-font-color($mat-window-color, 1.0);
-    }
-    .v-Notification {
-        @extend .floating-border;
-        @extend .z-depth-4;
-        background: $mat-window-color;
-    }
-    .v-Notification.success,
-    .v-Notification.success .v-Notification-caption {
-        background: $v-friendly-color;
-        color: valo-font-color($v-friendly-color, 1.0);
-    }
-    .v-Notification.failure,
-    .v-Notification.failure .v-Notification-caption {
-        background: $v-error-indicator-color;
-        color: valo-font-color($v-error-indicator-color, 1.0);
-    }
-    .v-Notification.dark {
-        background-color: rgba(68, 68, 68, 1);
-    }
+  .v-Notification .v-Notification-caption {
+    color: valo-font-color($mat-window-color, 1.0);
+  }
+  .v-Notification .v-Notification-description {
+    color: valo-font-color($mat-window-color, 1.0);
+  }
+  .v-Notification {
+    @extend .floating-border;
+    @extend .z-depth-4;
+    background: $mat-window-color;
+  }
+  .v-Notification.success,
+  .v-Notification.success .v-Notification-caption {
+    background: $v-friendly-color;
+    color: valo-font-color($v-friendly-color, 1.0);
+  }
+  .v-Notification.failure,
+  .v-Notification.failure .v-Notification-caption {
+    background: $v-error-indicator-color;
+    color: valo-font-color($v-error-indicator-color, 1.0);
+  }
+  .v-Notification.dark {
+    background-color: rgba(68, 68, 68, 1);
+  }
 }

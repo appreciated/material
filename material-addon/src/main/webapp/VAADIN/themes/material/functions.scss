@@ -1,37 +1,37 @@
 @function material-hover-color($background-color, $strength: $mat-button-hover-modifier) {
-    $color: $background-color;
-    @if saturation($background-color) > 0.1 {
-        @if is-dark-color($background-color) {
-            $color: scale-color($color, $lightness: $strength, $saturation: saturation($background-color) + 0.1);
-        } @else {
-            $color: scale-color($color, $lightness: -$strength, $saturation: saturation($background-color) + 0.1);
-        }
+  $color: $background-color;
+  @if saturation($background-color) > 0.1 {
+    @if is-dark-color($background-color) {
+      $color: scale-color($color, $lightness: $strength, $saturation: saturation($background-color) + 0.1);
     } @else {
-        @if is-dark-color($background-color) {
-            $color: scale-color($color, $lightness: $strength, $saturation: 0%);
-        } @else {
-            $color: scale-color($color, $lightness: -$strength, $saturation: 0%);
-        }
+      $color: scale-color($color, $lightness: -$strength, $saturation: saturation($background-color) + 0.1);
     }
-    @return $color;
+  } @else {
+    @if is-dark-color($background-color) {
+      $color: scale-color($color, $lightness: $strength, $saturation: 0%);
+    } @else {
+      $color: scale-color($color, $lightness: -$strength, $saturation: 0%);
+    }
+  }
+  @return $color;
 }
 
 @mixin functions {
-    .focus-border-bottom {
-        border-bottom: 1px solid;
-        border-radius: 0px;
-        transition: box-shadow .2s ease-out;
-        box-shadow: $z-depth-0;
-        background: transparent;
-    }
-    .material-border {
-        border-radius: $v-border-radius;
-        border: none;
-        background: $mat-card-color;
-        overflow: hidden;
-    }
-    .floating-border {
-        @extend .material-border;
-        @extend .z-depth-1;
-    }
+  .focus-border-bottom {
+    border-bottom: 1px solid;
+    border-radius: 0px;
+    transition: box-shadow .2s ease-out;
+    box-shadow: $z-depth-0;
+    background: transparent;
+  }
+  .material-border {
+    border-radius: $v-border-radius;
+    border: none;
+    background: $mat-card-color;
+    overflow: hidden;
+  }
+  .floating-border {
+    @extend .material-border;
+    @extend .z-depth-1;
+  }
 }

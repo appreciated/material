@@ -1,43 +1,43 @@
 @mixin v-window {
-    .v-window {
-        background-color: $mat-window-color;
-        color: valo-font-color($mat-window-color);
-    }
-    .v-window-outerheader:after {
-        border-top: none;
-    }
-    .v-window-closebox {
-        padding-right: 0px;
-    }
-    .v-window-maximizebox,
-    .v-window-restorebox {
-        right: 45px;
-    }
-    .v-window-closebox-disabled + .v-window-closebox,
-    .v-window-resizebox-disabled + .v-window-closebox,
-    .v-window-restorebox-disabled + .v-window-closebox,
-    .v-window-maximizebox-disabled + .v-window-closebox {
-        width: 64px;
-        padding-right: 0;
-        border-bottom-left-radius: $v-border-radius;
-    }
-    .v-window-closebox,
-    .v-window-maximizebox,
-    .v-window-restorebox {
-        background-color: transparent;
-    }
-    .v-window-header {
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 64px;
-        color: valo-font-color($mat-window-color);
-    }
-    .v-window-closebox,
-    .v-window-maximizebox,
-    .v-window-restorebox {
-        width: 64px;
-        height: 64px;
-        line-height: 62px;
-        font-size: 31px;
-    }
+  .v-window {
+    background-color: $mat-window-color;
+    color: valo-font-color($mat-window-color);
+  }
+  .v-window-outerheader:after {
+    border-top: none;
+  }
+  .v-window-closebox {
+    padding-right: 0px;
+  }
+  .v-window-maximizebox,
+  .v-window-restorebox {
+    right: 45px;
+  }
+  .v-window-closebox-disabled + .v-window-closebox,
+  .v-window-resizebox-disabled + .v-window-closebox,
+  .v-window-restorebox-disabled + .v-window-closebox,
+  .v-window-maximizebox-disabled + .v-window-closebox {
+    width: 64px;
+    padding-right: 0;
+    border-bottom-left-radius: $v-border-radius;
+  }
+  .v-window-closebox,
+  .v-window-maximizebox,
+  .v-window-restorebox {
+    background-color: transparent;
+  }
+  .v-window-header {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 64px;
+    color: valo-font-color($mat-window-color);
+  }
+  .v-window-closebox,
+  .v-window-maximizebox,
+  .v-window-restorebox {
+    width: 64px;
+    height: 64px;
+    line-height: 62px;
+    font-size: 31px;
+  }
 }

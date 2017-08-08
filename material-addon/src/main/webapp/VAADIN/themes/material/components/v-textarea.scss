@@ -1,17 +1,17 @@
 @mixin v-textarea {
-    .v-textarea {
-        overflow: auto !important;
-    }
-    .v-textarea:not(.borderless) {
-        @extend .floating-border;
-    }
-    .v-textarea-borderless {
-        @extend .z-depth-0;
-    }
-    .v-richtextarea:not(.borderless) {
-        @extend .floating-border;
-    }
-    .v-richtextarea .gwt-RichTextToolbar {
-        padding: 5px;
-    }
+  .v-textarea {
+    overflow: auto !important;
+  }
+  .v-textarea:not(.borderless) {
+    @extend .floating-border;
+  }
+  .v-textarea-borderless {
+    @extend .z-depth-0;
+  }
+  .v-richtextarea:not(.borderless) {
+    @extend .floating-border;
+  }
+  .v-richtextarea .gwt-RichTextToolbar {
+    padding: 5px;
+  }
 }

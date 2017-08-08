@@ -1,88 +1,88 @@
 @mixin v-tabsheet {
-    .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-caption {
-        border: 1px solid transparent;
-    }
-    .v-tabsheet-tabitem .v-caption {
-        font-size: 15px;
-        text-align: center;
-        line-height: 24px;
-        padding: 12px 24px;
-        text-transform: uppercase;
-        font-weight: 500;
-        margin-left: 0px;
-    }
-    .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-tabsheet-caption-close {
-        top: 0px;
-        right: 4px;
-        margin-top: 11px;
-    }
-    .v-tabsheet-framed > .v-tabsheet-content > div {
-        box-shadow: $z-depth-1;
-    }
-    .v-tabsheet-framed .v-tabsheet-content {
-        position: relative;
-        z-index: 2;
-    }
-    .v-tabsheet-framed > .v-tabsheet-content {
-        border: 0;
-    }
-    .v-tabsheet-framed .v-tabsheet-tabcontainer:before {
-        border-top: 0;
-    }
-    .v-tabsheet-framed .v-tabsheet-tabcontainer td {
-        padding-top: 10px;
-    }
-    .v-tabsheet-framed .v-tabsheet-tabitemcell .v-tabsheet-tabitem-selected .v-caption.v-caption {
-        position: relative;
-        z-index: 3;
-        border: unset;
-    }
-    .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-caption {
-        background-color: mix($mat-background-color, $mat-card-color);
-        border: unset;
-    }
-    .v-tabsheet-framed .v-tabsheet-tabcontainer.v-tabsheet-tabcontainer-framed {
-        overflow: visible !important;
-    }
-    .v-tabsheet-framed .v-tabsheet-tabitemcell .v-tabsheet-tabitem {
-        overflow: visible !important;
-        box-shadow: $z-depth-1;
-        position: relative;
-    }
-    .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-caption {
-        margin: 0;
-    }
-    .v-tabsheet-framed .v-tabsheet-tabcontainer .v-tabsheet-tabs {
-        overflow: visible;
-    }
-    .v-tabsheet-tabs-framed > tbody > tr >:not(:first-child) {
-        margin-left: 5px;
-    }
-    .v-tabsheet-framed.padded-tabbar > .v-tabsheet-tabcontainer {
-        background: transparent;
-    }
-    .v-tabsheet-content > .v-tabsheet-tabsheetpanel {
-        border-top-left-radius: 0px;
-        border-top-right-radius: $v-border-radius;
-        border-bottom-left-radius: $v-border-radius;
-        border-bottom-right-radius: $v-border-radius;
-    }
-    .v-tabsheet-content-right-aligned-tabs > .v-tabsheet-tabsheetpanel {
-        border-top-left-radius: $v-border-radius;
-        border-top-right-radius: 0px;
-    }
-    .v-tabsheet-content-padded-tabbar > .v-tabsheet-tabsheetpanel, .v-tabsheet-content-centered-tabs > .v-tabsheet-tabsheetpanel {
-        border-radius: $v-border-radius;
-    }
-    .v-tabsheet-deco { // loading indicator on non-framed tabsheet
-        z-index: 2;
-    }
-    // fixes for ripple
-    .v-tabsheet-tabitem-focus:after {
-        z-index: 4;
-    }
-    .v-tabsheet:not(.v-tabsheet-framed) > .v-tabsheet-tabcontainer .v-tabsheet-tabitem {
-        position: relative;
-    }
+  .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-caption {
+    border: 1px solid transparent;
+  }
+  .v-tabsheet-tabitem .v-caption {
+    font-size: 15px;
+    text-align: center;
+    line-height: 24px;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 0px;
+  }
+  .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-tabsheet-caption-close {
+    top: 0px;
+    right: 4px;
+    margin-top: 11px;
+  }
+  .v-tabsheet-framed > .v-tabsheet-content > div {
+    box-shadow: $z-depth-1;
+  }
+  .v-tabsheet-framed .v-tabsheet-content {
+    position: relative;
+    z-index: 2;
+  }
+  .v-tabsheet-framed > .v-tabsheet-content {
+    border: 0;
+  }
+  .v-tabsheet-framed .v-tabsheet-tabcontainer:before {
+    border-top: 0;
+  }
+  .v-tabsheet-framed .v-tabsheet-tabcontainer td {
+    padding-top: 10px;
+  }
+  .v-tabsheet-framed .v-tabsheet-tabitemcell .v-tabsheet-tabitem-selected .v-caption.v-caption {
+    position: relative;
+    z-index: 3;
+    border: unset;
+  }
+  .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-caption {
+    background-color: mix($mat-background-color, $mat-card-color);
+    border: unset;
+  }
+  .v-tabsheet-framed .v-tabsheet-tabcontainer.v-tabsheet-tabcontainer-framed {
+    overflow: visible !important;
+  }
+  .v-tabsheet-framed .v-tabsheet-tabitemcell .v-tabsheet-tabitem {
+    overflow: visible !important;
+    box-shadow: $z-depth-1;
+    position: relative;
+  }
+  .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-caption {
+    margin: 0;
+  }
+  .v-tabsheet-framed .v-tabsheet-tabcontainer .v-tabsheet-tabs {
+    overflow: visible;
+  }
+  .v-tabsheet-tabs-framed > tbody > tr > :not(:first-child) {
+    margin-left: 5px;
+  }
+  .v-tabsheet-framed.padded-tabbar > .v-tabsheet-tabcontainer {
+    background: transparent;
+  }
+  .v-tabsheet-content > .v-tabsheet-tabsheetpanel {
+    border-top-left-radius: 0px;
+    border-top-right-radius: $v-border-radius;
+    border-bottom-left-radius: $v-border-radius;
+    border-bottom-right-radius: $v-border-radius;
+  }
+  .v-tabsheet-content-right-aligned-tabs > .v-tabsheet-tabsheetpanel {
+    border-top-left-radius: $v-border-radius;
+    border-top-right-radius: 0px;
+  }
+  .v-tabsheet-content-padded-tabbar > .v-tabsheet-tabsheetpanel, .v-tabsheet-content-centered-tabs > .v-tabsheet-tabsheetpanel {
+    border-radius: $v-border-radius;
+  }
+  .v-tabsheet-deco { // loading indicator on non-framed tabsheet
+    z-index: 2;
+  }
+  // fixes for ripple
+  .v-tabsheet-tabitem-focus:after {
+    z-index: 4;
+  }
+  .v-tabsheet:not(.v-tabsheet-framed) > .v-tabsheet-tabcontainer .v-tabsheet-tabitem {
+    position: relative;
+  }
 
 }

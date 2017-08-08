@@ -1,49 +1,49 @@
 @mixin v-radiobutton {
-    .v-radiobutton > input ~ label:before {
-        border: 2px solid valo-font-color($v-background-color, 0.65) !important;
-    }
-    // $v-unit-size * 0.5
-    .v-select-optiongroup .v-radiobutton > input ~ label:before {
-        width: round($v-unit-size * 0.5) !important;
-        height: round($v-unit-size * 0.5) !important;
-    }
-    .v-select-optiongroup .v-radiobutton > input ~ label:after {
-        width: round($v-unit-size * 0.5 - 8px) !important;
-        height: round($v-unit-size * 0.5 - 8px) !important;
-        top: 4px !important;
-        left: 4px !important;
-    }
-    // $v-unit-size * 0.4222
-    .v-select-optiongroup-small .v-radiobutton > input ~ label:before {
-        width: round($v-unit-size * 0.4222) !important;
-        height: round($v-unit-size * 0.4222) !important;
-    }
-    .v-select-optiongroup-small .v-radiobutton > input ~ label:after {
-        width: round($v-unit-size * 0.4222 - 8px) !important;
-        height: round($v-unit-size * 0.4222 - 8px) !important;
-    }
-    // $v-unit-size * 0.6
-    .v-select-optiongroup-large .v-radiobutton > input ~ label:before {
-        width: round($v-unit-size * 0.6) !important;
-        height: round($v-unit-size * 0.6) !important;
-    }
-    .v-select-optiongroup-large .v-radiobutton > input ~ label:after {
-        width: round($v-unit-size * 0.6 - 8px) !important;
-        height: round($v-unit-size * 0.6 - 8px) !important;
-    }
-    .v-radiobutton > input ~ label:after {
-        background: $v-selection-color !important;
-        transform: scale(0);
-        transition: transform .2s ease-out !important;
-    }
-    .v-radiobutton > input:checked ~ label:after {
-        transform: scale(1.0);
-    }
-    .v-radiobutton > input:checked ~ label:before {
-        border: 2px solid $v-selection-color !important;
-    }
-    .v-radiobutton > input ~ label:before {
-        box-shadow: none !important;
-        background: transparent !important;
-    }
+  .v-radiobutton > input ~ label:before {
+    border: 2px solid valo-font-color($v-background-color, 0.65) !important;
+  }
+  // $v-unit-size * 0.5
+  .v-select-optiongroup .v-radiobutton > input ~ label:before {
+    width: round($v-unit-size * 0.5) !important;
+    height: round($v-unit-size * 0.5) !important;
+  }
+  .v-select-optiongroup .v-radiobutton > input ~ label:after {
+    width: round($v-unit-size * 0.5 - 8px) !important;
+    height: round($v-unit-size * 0.5 - 8px) !important;
+    top: 4px !important;
+    left: 4px !important;
+  }
+  // $v-unit-size * 0.4222
+  .v-select-optiongroup-small .v-radiobutton > input ~ label:before {
+    width: round($v-unit-size * 0.4222) !important;
+    height: round($v-unit-size * 0.4222) !important;
+  }
+  .v-select-optiongroup-small .v-radiobutton > input ~ label:after {
+    width: round($v-unit-size * 0.4222 - 8px) !important;
+    height: round($v-unit-size * 0.4222 - 8px) !important;
+  }
+  // $v-unit-size * 0.6
+  .v-select-optiongroup-large .v-radiobutton > input ~ label:before {
+    width: round($v-unit-size * 0.6) !important;
+    height: round($v-unit-size * 0.6) !important;
+  }
+  .v-select-optiongroup-large .v-radiobutton > input ~ label:after {
+    width: round($v-unit-size * 0.6 - 8px) !important;
+    height: round($v-unit-size * 0.6 - 8px) !important;
+  }
+  .v-radiobutton > input ~ label:after {
+    background: $v-selection-color !important;
+    transform: scale(0);
+    transition: transform .2s ease-out !important;
+  }
+  .v-radiobutton > input:checked ~ label:after {
+    transform: scale(1.0);
+  }
+  .v-radiobutton > input:checked ~ label:before {
+    border: 2px solid $v-selection-color !important;
+  }
+  .v-radiobutton > input ~ label:before {
+    box-shadow: none !important;
+    background: transparent !important;
+  }
 }

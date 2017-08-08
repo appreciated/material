@@ -1,86 +1,85 @@
 $mat-tooltip-size: 30px;
 
-
 @mixin v-progressbar {
-    $mat-track-color: valo-font-color( $mat-background-color, 0.2) !default;
-    .v-progressbar-wrapper {
-        height: 5px;
-        border-radius: 0px;
-    }
-    .v-progressbar-indicator {
-        border-radius: 0px;
-    }
-    .v-progressbar-point .v-progressbar-indicator:before {
-        width: 6px;
-    }
-    .v-slider-base {
-        border-radius: 0px;
-    }
-    .v-slider:not(.no-indicator) .v-slider-handle-active:before {
-        transform: scale(0);
-    }
-    .v-slider-handle:before {
-        transform: scale(1.0);
-        transition: transform 0.2s ease;
-    }
-    .v-slider-base:after {
-        border-radius: 0px;
-    }
-    .v-slider-feedback {
-        padding: 0px;
-        width: $mat-tooltip-size !important;
-        height: $mat-tooltip-size !important;
-        border-radius: $v-border-radius;
-        background: $v-focus-color;
-        color: valo-font-color($v-focus-color, 1.0);
-        animation: valo-animate-in-fade .3s ease;
-    }
-    .v-slider-feedback .popupContent {
-        text-align: center;
-        line-height: $mat-tooltip-size;
-    }
-    .v-slider-handle:before {
-        background: $v-selection-color;
-        box-shadow: none;
-    }
-    .v-slider-handle:before,
-    .demo .v-slider-handle:after {
-        margin-top: 8px;
-    }
-    .v-slider-base {
-        height: 4px;
-    }
-    .v-slider-vertical .v-slider-base {
-        width: 4px;
-    }
-    .v-slider-base {
-        background: $mat-track-color;
-    }
-    .v-slider-vertical .v-slider-base {
-        background: $mat-track-color;
-    }
-    .v-progressbar-wrapper {
-        background: $mat-track-color;
-    }
-    .v-slider-vertical .v-slider-handle:before,
-    .v-slider-vertical .v-slider-handle:after {
-        width: 18px;
-        height: 18px;
-        margin-left: -7px;
-    }
-    .v-slider-handle:before,
-    .v-slider-handle:after {
-        margin-top: 10px;
-    }
-    .v-slider-handle:before,
-    .v-slider-handle:after {
-        width: 18px;
-        height: 18px;
-    }
-    .v-label-spinner {
-        border: 2px solid valo-font-color($mat-background-color, 0.1);
-        border-top-color: $v-focus-color;
-        border-right-color: $v-focus-color;
-        @include animation(v-rotate-360 $mat-loading-animation-speed infinite linear);
-    }
+  $mat-track-color: valo-font-color($mat-background-color, 0.2) !default;
+  .v-progressbar-wrapper {
+    height: 5px;
+    border-radius: 0px;
+  }
+  .v-progressbar-indicator {
+    border-radius: 0px;
+  }
+  .v-progressbar-point .v-progressbar-indicator:before {
+    width: 6px;
+  }
+  .v-slider-base {
+    border-radius: 0px;
+  }
+  .v-slider:not(.no-indicator) .v-slider-handle-active:before {
+    transform: scale(0);
+  }
+  .v-slider-handle:before {
+    transform: scale(1.0);
+    transition: transform 0.2s ease;
+  }
+  .v-slider-base:after {
+    border-radius: 0px;
+  }
+  .v-slider-feedback {
+    padding: 0px;
+    width: $mat-tooltip-size !important;
+    height: $mat-tooltip-size !important;
+    border-radius: $v-border-radius;
+    background: $v-focus-color;
+    color: valo-font-color($v-focus-color, 1.0);
+    animation: valo-animate-in-fade .3s ease;
+  }
+  .v-slider-feedback .popupContent {
+    text-align: center;
+    line-height: $mat-tooltip-size;
+  }
+  .v-slider-handle:before {
+    background: $v-selection-color;
+    box-shadow: none;
+  }
+  .v-slider-handle:before,
+  .demo .v-slider-handle:after {
+    margin-top: 8px;
+  }
+  .v-slider-base {
+    height: 4px;
+  }
+  .v-slider-vertical .v-slider-base {
+    width: 4px;
+  }
+  .v-slider-base {
+    background: $mat-track-color;
+  }
+  .v-slider-vertical .v-slider-base {
+    background: $mat-track-color;
+  }
+  .v-progressbar-wrapper {
+    background: $mat-track-color;
+  }
+  .v-slider-vertical .v-slider-handle:before,
+  .v-slider-vertical .v-slider-handle:after {
+    width: 18px;
+    height: 18px;
+    margin-left: -7px;
+  }
+  .v-slider-handle:before,
+  .v-slider-handle:after {
+    margin-top: 10px;
+  }
+  .v-slider-handle:before,
+  .v-slider-handle:after {
+    width: 18px;
+    height: 18px;
+  }
+  .v-label-spinner {
+    border: 2px solid valo-font-color($mat-background-color, 0.1);
+    border-top-color: $v-focus-color;
+    border-right-color: $v-focus-color;
+    @include animation(v-rotate-360 $mat-loading-animation-speed infinite linear);
+  }
 }

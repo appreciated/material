@@ -1,264 +1,264 @@
 :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.link):not(.quiet):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action) {
-    background: $mat-card-color;
+  background: $mat-card-color;
 }
 
 body:not(.v-touch) :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.link):not(.custom):not(.floating-action):hover {
-    background: material-hover-color($v-background-color);
+  background: material-hover-color($v-background-color);
 }
 
 body:not(.v-touch) :not(.v-upload) > :not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.link):not(.floating-action).v-button:hover,
 body.v-touch:not(.v-component-group) > .v-button:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.link):not(.floating-action).v-button:active {
-    box-shadow: $z-depth-1-5;
+  box-shadow: $z-depth-1-5;
 }
 
 body:not(.v-touch) .friendly.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-    background: material-hover-color($v-friendly-color);
+  background: material-hover-color($v-friendly-color);
 }
 
 body:not(.v-touch) .custom.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-    background: material-hover-color($mat-custom-color);
+  background: material-hover-color($mat-custom-color);
 }
 
 body:not(.v-touch) .danger.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-    background: material-hover-color($v-error-indicator-color);
+  background: material-hover-color($v-error-indicator-color);
 }
 
 body:not(.v-touch) .primary.v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-    background: material-hover-color($v-selection-color);
+  background: material-hover-color($v-selection-color);
 }
 
 body:not(.v-touch) :not(.v-upload) > * > .v-button.borderless:not(.v-disabled):not(.borderless-colored):not(.primary):not(.friendly):not(.danger):not(.custom):hover {
-    background: material-hover-color($mat-background-color);
+  background: material-hover-color($mat-background-color);
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).floating-action:hover {
-    background: material-hover-color($v-selection-color);
+  background: material-hover-color($v-selection-color);
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).floating-action:not(.flat):hover,
 body.v-touch .v-button.floating-action:not(.flat):active {
-    box-shadow: $z-depth-4;
+  box-shadow: $z-depth-4;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).floating-action:not(.flat).friendly:hover {
-    background: material-hover-color($v-friendly-color);
+  background: material-hover-color($v-friendly-color);
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).floating-action:not(.flat).danger:hover {
-    background: material-hover-color($v-error-indicator-color);
+  background: material-hover-color($v-error-indicator-color);
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).border:hover {
-    color: valo-font-color(valo-font-color($mat-background-color, 1), 1);
-    background: valo-font-color($mat-background-color, 1) !important;
+  color: valo-font-color(valo-font-color($mat-background-color, 1), 1);
+  background: valo-font-color($mat-background-color, 1) !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).border.custom:hover {
-    color: valo-font-color($mat-custom-color, 1);
-    background: $mat-custom-color !important;
+  color: valo-font-color($mat-custom-color, 1);
+  background: $mat-custom-color !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).border.primary:hover {
-    color: valo-font-color($v-focus-color, 1);
-    background: $v-focus-color !important;
+  color: valo-font-color($v-focus-color, 1);
+  background: $v-focus-color !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).border.friendly:hover {
-    color: valo-font-color($v-friendly-color, 1);
-    background: $v-friendly-color !important;
+  color: valo-font-color($v-friendly-color, 1);
+  background: $v-friendly-color !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).border.danger:hover {
-    color: valo-font-color($v-error-indicator-color, 1);
-    background: $v-error-indicator-color !important;
+  color: valo-font-color($v-error-indicator-color, 1);
+  background: $v-error-indicator-color !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).borderless.primary:hover,
 body:not(.v-touch) .v-button:not(.v-disabled).borderless-colored:hover {
-    background: material-hover-color($v-focus-color) !important;
+  background: material-hover-color($v-focus-color) !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).borderless.friendly:hover {
-    background: material-hover-color($v-friendly-color) !important;
+  background: material-hover-color($v-friendly-color) !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).borderless.danger:hover {
-    background: material-hover-color($v-error-indicator-color) !important;
+  background: material-hover-color($v-error-indicator-color) !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
-    background: material-hover-color($mat-custom-color) !important;
+  background: material-hover-color($mat-custom-color) !important;
 }
 
 @mixin v-button {
-    :not(.v-upload) > * > .v-button {
-        text-transform: uppercase;
-        transition: box-shadow .3s ease-out, background .3s;
-        padding: 0 20px;
-        border-radius: $v-border-radius;
-        outline: none;
-        text-align: center;
-        color: $mat-card-font-color;
-    }
-    :not(.v-upload) > * > .v-button:not(.v-disabled) {
-        @extend .z-depth-0;
-    }
-    :not(.v-upload) > * > .v-button {
-        height: $v-unit-size;
-    }
-    :not(.v-upload) > * > .v-button.tiny {
-        height: $v-unit-size--tiny;
-    }
-    :not(.v-upload) > * > .v-button.small {
-        height: $v-unit-size--small;
-    }
-    :not(.v-upload) > * > .v-button.large {
-        height: $v-unit-size--large;
-    }
-    :not(.v-upload) > * > .v-button:not(.icon-align-top):before {
-        content: "";
-        display: inline-block;
-        width: 0;
-        height: 110%;
-        vertical-align: middle;
-    }
-    .v-button.icon-align-top {
-        height: auto;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
+  :not(.v-upload) > * > .v-button {
+    text-transform: uppercase;
+    transition: box-shadow .3s ease-out, background .3s;
+    padding: 0 20px;
+    border-radius: $v-border-radius;
+    outline: none;
+    text-align: center;
+    color: $mat-card-font-color;
+  }
+  :not(.v-upload) > * > .v-button:not(.v-disabled) {
+    @extend .z-depth-0;
+  }
+  :not(.v-upload) > * > .v-button {
+    height: $v-unit-size;
+  }
+  :not(.v-upload) > * > .v-button.tiny {
+    height: $v-unit-size--tiny;
+  }
+  :not(.v-upload) > * > .v-button.small {
+    height: $v-unit-size--small;
+  }
+  :not(.v-upload) > * > .v-button.large {
+    height: $v-unit-size--large;
+  }
+  :not(.v-upload) > * > .v-button:not(.icon-align-top):before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 110%;
+    vertical-align: middle;
+  }
+  .v-button.icon-align-top {
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 
-    :not(.v-upload) > * > .v-button:not(.borderless):not(.border).primary {
-        background: $v-focus-color;
-        color: valo-font-color($v-focus-color, 1.0);
-    }
-    :not(.v-upload) > * > .v-button:not(.borderless):not(.border).friendly {
-        background: $v-friendly-color;
-        color: valo-font-color($v-friendly-color, 1.0);
-    }
-    :not(.v-upload) > * > .v-button:not(.borderless):not(.border).danger {
-        background: $v-error-indicator-color;
-        color: valo-font-color($v-error-indicator-color, 1.0);
-    }
-    :not(.v-upload) > * > .v-button:not(.borderless):not(.border).custom {
-        background: $mat-custom-color;
-        color: valo-font-color($mat-custom-color, 1.0);
-    }
-    :not(.v-upload) > * > .v-button:not(.v-disabled):not(.floating-action):not(.flat):not(.borderless):not(.border):not(.borderless-colored):not(.quiet):not(.link) {
-        box-shadow: $z-depth-1;
-    }
-    .v-button:not(.borderless).flat,
-    .v-button.v-disabled {
-        box-shadow: $z-depth-0;
-    }
-    .v-button.borderless-colored,
-    .v-button.link {
-        color: $v-focus-color;
-    }
-    .v-button.round {
-        border-radius: $v-button-round-border-radius;
-    }
-    .v-button.border {
-        box-shadow: $z-depth-0;
-        border: 1px solid valo-font-color($mat-background-color);
-        background: transparent;
-        color: valo-font-color($mat-background-color);
-    }
-    .v-button.border.primary {
-        border: 1px solid $v-focus-color;
-        color: $v-focus-color;
-    }
-    .v-button.border:after {
-        border: 0px solid $v-focus-color;
-    }
-    .v-button.border.friendly {
-        border: 1px solid $v-friendly-color;
-        color: $v-friendly-color;
-    }
-    .v-button.border.danger {
-        border: 1px solid $v-error-indicator-color;
-        color: $v-error-indicator-color;
-    }
-    .v-button.border.custom {
-        border: 1px solid $mat-custom-color;
-        color: $mat-custom-color;
-    }
-    .v-button.borderless {
-        color: valo-font-color($mat-background-color);
-    }
-    .v-button.valo-menu-toggle {
-        color: inherit;
-    }
-    .v-button.borderless.primary {
-        color: $v-focus-color;
-    }
-    .v-button.borderless.friendly {
-        color: $v-friendly-color;
-    }
-    .v-button.borderless.danger {
-        color: $v-error-indicator-color;
-    }
-    .v-button.borderless.custom {
-        color: $mat-custom-color;
-    }
-    .v-button.floating-action {
-        width: 56px;
-        height: 56px;
-        padding: 0px;
-        border-radius: 100%;
-        background: $v-selection-color;
-        color: valo-font-color($v-focus-color, 1.0);
-    }
-    .v-button.floating-action:not(.v-disabled):not(.flat) {
-        box-shadow: $z-depth-3;
-    }
-    .v-button.floating-action.flat {
-        box-shadow: $z-depth-0;
-    }
-    .v-button.floating-action .v-icon {
-        line-height: 56px;
-        width: 56px;
-        text-align: center;
-    }
-    .v-button.floating-action.friendly {
-        background: $v-friendly-color;
-        color: valo-font-color( $v-friendly-color, 1.0);
-    }
-    .v-button.floating-action.danger {
-        background: $v-error-indicator-color;
-        color: valo-font-color( $v-error-indicator-color, 1.0);
-    }
-    .v-button.floating-action.custom {
-        color: valo-font-color( $mat-custom-color, 1.0);
-        background: $mat-custom-color;
-    }
-    .v-button.v-disabled {
-        background: valo-font-color($v-background-color, 0.2);
-        color: valo-font-color(valo-font-color($v-background-color, 0.2), 0.7);
-        opacity: 0.7;
-    }
-    .v-button-quiet {
-        visibility: visible;
-        background: transparent;
-    }
-    .v-button-primary {
-        font-weight: 500;
-    }
-    .v-button-primary.floating-action {
-        min-width: 56px;
-    }
-    .v-button-icon-align-top .v-icon {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
-    .v-button-icon-align-right .v-icon {
-        float: right;
-        padding-left: 8px;
-    }
-    .v-button-icon-align-right [class*="wrap"] {
-        display: inline-block;
-        padding-left: 5px;
-    }
+  :not(.v-upload) > * > .v-button:not(.borderless):not(.border).primary {
+    background: $v-focus-color;
+    color: valo-font-color($v-focus-color, 1.0);
+  }
+  :not(.v-upload) > * > .v-button:not(.borderless):not(.border).friendly {
+    background: $v-friendly-color;
+    color: valo-font-color($v-friendly-color, 1.0);
+  }
+  :not(.v-upload) > * > .v-button:not(.borderless):not(.border).danger {
+    background: $v-error-indicator-color;
+    color: valo-font-color($v-error-indicator-color, 1.0);
+  }
+  :not(.v-upload) > * > .v-button:not(.borderless):not(.border).custom {
+    background: $mat-custom-color;
+    color: valo-font-color($mat-custom-color, 1.0);
+  }
+  :not(.v-upload) > * > .v-button:not(.v-disabled):not(.floating-action):not(.flat):not(.borderless):not(.border):not(.borderless-colored):not(.quiet):not(.link) {
+    box-shadow: $z-depth-1;
+  }
+  .v-button:not(.borderless).flat,
+  .v-button.v-disabled {
+    box-shadow: $z-depth-0;
+  }
+  .v-button.borderless-colored,
+  .v-button.link {
+    color: $v-focus-color;
+  }
+  .v-button.round {
+    border-radius: $v-button-round-border-radius;
+  }
+  .v-button.border {
+    box-shadow: $z-depth-0;
+    border: 1px solid valo-font-color($mat-background-color);
+    background: transparent;
+    color: valo-font-color($mat-background-color);
+  }
+  .v-button.border.primary {
+    border: 1px solid $v-focus-color;
+    color: $v-focus-color;
+  }
+  .v-button.border:after {
+    border: 0px solid $v-focus-color;
+  }
+  .v-button.border.friendly {
+    border: 1px solid $v-friendly-color;
+    color: $v-friendly-color;
+  }
+  .v-button.border.danger {
+    border: 1px solid $v-error-indicator-color;
+    color: $v-error-indicator-color;
+  }
+  .v-button.border.custom {
+    border: 1px solid $mat-custom-color;
+    color: $mat-custom-color;
+  }
+  .v-button.borderless {
+    color: valo-font-color($mat-background-color);
+  }
+  .v-button.valo-menu-toggle {
+    color: inherit;
+  }
+  .v-button.borderless.primary {
+    color: $v-focus-color;
+  }
+  .v-button.borderless.friendly {
+    color: $v-friendly-color;
+  }
+  .v-button.borderless.danger {
+    color: $v-error-indicator-color;
+  }
+  .v-button.borderless.custom {
+    color: $mat-custom-color;
+  }
+  .v-button.floating-action {
+    width: 56px;
+    height: 56px;
+    padding: 0px;
+    border-radius: 100%;
+    background: $v-selection-color;
+    color: valo-font-color($v-focus-color, 1.0);
+  }
+  .v-button.floating-action:not(.v-disabled):not(.flat) {
+    box-shadow: $z-depth-3;
+  }
+  .v-button.floating-action.flat {
+    box-shadow: $z-depth-0;
+  }
+  .v-button.floating-action .v-icon {
+    line-height: 56px;
+    width: 56px;
+    text-align: center;
+  }
+  .v-button.floating-action.friendly {
+    background: $v-friendly-color;
+    color: valo-font-color($v-friendly-color, 1.0);
+  }
+  .v-button.floating-action.danger {
+    background: $v-error-indicator-color;
+    color: valo-font-color($v-error-indicator-color, 1.0);
+  }
+  .v-button.floating-action.custom {
+    color: valo-font-color($mat-custom-color, 1.0);
+    background: $mat-custom-color;
+  }
+  .v-button.v-disabled {
+    background: valo-font-color($v-background-color, 0.2);
+    color: valo-font-color(valo-font-color($v-background-color, 0.2), 0.7);
+    opacity: 0.7;
+  }
+  .v-button-quiet {
+    visibility: visible;
+    background: transparent;
+  }
+  .v-button-primary {
+    font-weight: 500;
+  }
+  .v-button-primary.floating-action {
+    min-width: 56px;
+  }
+  .v-button-icon-align-top .v-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .v-button-icon-align-right .v-icon {
+    float: right;
+    padding-left: 8px;
+  }
+  .v-button-icon-align-right [class*="wrap"] {
+    display: inline-block;
+    padding-left: 5px;
+  }
 }

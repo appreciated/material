@@ -1,71 +1,71 @@
 body:not(.v-touch) .card-hoverable:hover,
 body.v-touch .card-hoverable:active {
-    box-shadow: $mat-card-hover-end;
+  box-shadow: $mat-card-hover-end;
 }
 
 @mixin cards {
-    .card-0 {
-        @extend .material-border;
-        @extend .z-depth-0;
-    }
-    .card-0:not(.card-no-padding) {
-        padding: $mat-card-padding;
-    }
-    .card-0-5 {
-        @extend .material-border;
-        @extend .z-depth-0-5;
-    }
-    .card-0-5:not(.card-no-padding) {
-        padding: $mat-card-padding;
-    }
-    .card-1 {
-        @extend .material-border;
-        @extend .z-depth-1;
-    }
-    .card-1:not(.card-no-padding) {
-        padding: $mat-card-padding;
-    }
-    .card-1-5 {
-        @extend .material-border;
-        @extend .z-depth-1-half;
-    }
-    .card-1-5:not(.card-no-padding) {
-        padding: $mat-card-padding;
-    }
-    .card-2 {
-        @extend .material-border;
-        @extend .z-depth-2;
-    }
-    .card-2:not(.card-no-padding) {
-        padding: $mat-card-padding;
-    }
-    .card-3 {
-        @extend .material-border;
-        @extend .z-depth-3;
-    }
-    .card-3:not(.card-no-padding) {
-        padding: $mat-card-padding;
-    }
-    .card-4 {
-        @extend .material-border;
-        @extend .z-depth-4;
-    }
-    .card-4:not(.card-no-padding) {
-        padding: $mat-card-padding;
-    }
-    .card-5 {
-        @extend .material-border;
-        @extend .z-depth-5;
-    }
-    .card-5:not(.card-no-padding) {
-        padding: $mat-card-padding;
-    }
-    .card-hoverable {
-        @extend .hoverable;
-        @extend .material-border;
-        box-shadow: $mat-card-hover-begin;
-    }
-    .card-hoverable:not(.card-no-padding) {
-        padding: $mat-card-padding;
-    }
+  .card-0 {
+    @extend .material-border;
+    @extend .z-depth-0;
+  }
+  .card-0:not(.card-no-padding) {
+    padding: $mat-card-padding;
+  }
+  .card-0-5 {
+    @extend .material-border;
+    @extend .z-depth-0-5;
+  }
+  .card-0-5:not(.card-no-padding) {
+    padding: $mat-card-padding;
+  }
+  .card-1 {
+    @extend .material-border;
+    @extend .z-depth-1;
+  }
+  .card-1:not(.card-no-padding) {
+    padding: $mat-card-padding;
+  }
+  .card-1-5 {
+    @extend .material-border;
+    @extend .z-depth-1-half;
+  }
+  .card-1-5:not(.card-no-padding) {
+    padding: $mat-card-padding;
+  }
+  .card-2 {
+    @extend .material-border;
+    @extend .z-depth-2;
+  }
+  .card-2:not(.card-no-padding) {
+    padding: $mat-card-padding;
+  }
+  .card-3 {
+    @extend .material-border;
+    @extend .z-depth-3;
+  }
+  .card-3:not(.card-no-padding) {
+    padding: $mat-card-padding;
+  }
+  .card-4 {
+    @extend .material-border;
+    @extend .z-depth-4;
+  }
+  .card-4:not(.card-no-padding) {
+    padding: $mat-card-padding;
+  }
+  .card-5 {
+    @extend .material-border;
+    @extend .z-depth-5;
+  }
+  .card-5:not(.card-no-padding) {
+    padding: $mat-card-padding;
+  }
+  .card-hoverable {
+    @extend .hoverable;
+    @extend .material-border;
+    box-shadow: $mat-card-hover-begin;
+  }
+  .card-hoverable:not(.card-no-padding) {
+    padding: $mat-card-padding;
+  }
 }

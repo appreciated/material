@@ -1,13 +1,13 @@
 @mixin v-loading {
-    .v-reconnect-dialog {
-        top: 0px;
-        right: 0px;
-        margin: 10px;
-        @extend .card-5;
-        color: valo-font-color($mat-window-color, 1.0);
-        font-weight: 400;
-    }
-    .v-reconnect-dialog .text {
-        padding-left: 20px;
-    }
+  .v-reconnect-dialog {
+    top: 0px;
+    right: 0px;
+    margin: 10px;
+    @extend .card-5;
+    color: valo-font-color($mat-window-color, 1.0);
+    font-weight: 400;
+  }
+  .v-reconnect-dialog .text {
+    padding-left: 20px;
+  }
 }

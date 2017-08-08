@@ -1,34 +1,34 @@
 @mixin v-panel {
-    .v-panel-caption {
-        margin-top: 24px;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 32px;
-        padding: 0 16px;
-        margin-bottom: -10px;
-        background: transparent;
-    }
-    .v-caption-card,
-    .v-caption-well {
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 32px;
-        padding-left: 16px;
-    }
-    .v-panel-content > .v-margin-left {
-        padding-left: 16px;
-    }
-    .v-panel-content > .v-margin-bottom {
-        padding-bottom: 16px;
-    }
-    .v-panel-content > .v-margin-right {
-        padding-right: 16px;
-    }
-    .v-panel-content > .v-margin-top {
-        padding-top: 16px;
-    }
-    .v-panel-well,
-    .v-csslayout-well {
-        background: darken( $mat-background-color, 1%);
-    }
+  .v-panel-caption {
+    margin-top: 24px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    padding: 0 16px;
+    margin-bottom: -10px;
+    background: transparent;
+  }
+  .v-caption-card,
+  .v-caption-well {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    padding-left: 16px;
+  }
+  .v-panel-content > .v-margin-left {
+    padding-left: 16px;
+  }
+  .v-panel-content > .v-margin-bottom {
+    padding-bottom: 16px;
+  }
+  .v-panel-content > .v-margin-right {
+    padding-right: 16px;
+  }
+  .v-panel-content > .v-margin-top {
+    padding-top: 16px;
+  }
+  .v-panel-well,
+  .v-csslayout-well {
+    background: darken($mat-background-color, 1%);
+  }
 }
