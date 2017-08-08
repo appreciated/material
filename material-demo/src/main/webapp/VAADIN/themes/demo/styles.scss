@@ -5,5 +5,5 @@ $v-unit-size: 40px;
 @import "../material/material.scss";
 
 .demo {
-	@include material;
+  @include material;
 }
