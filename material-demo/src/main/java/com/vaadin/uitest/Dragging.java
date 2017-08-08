@@ -154,6 +154,12 @@ public class Dragging extends VerticalLayout implements View {
         return components;
     }
 
+    @Override
+    public void enter(ViewChangeEvent event) {
+        // TODO Auto-generated method stub
+
+    }
+
     private static class ReorderLayoutDropHandler implements DropHandler {
 
         private final AbstractOrderedLayout layout;
@@ -258,12 +264,6 @@ public class Dragging extends VerticalLayout implements View {
         public DropHandler getDropHandler() {
             return dropHandler;
         }
-
-    }
-
-    @Override
-    public void enter(ViewChangeEvent event) {
-        // TODO Auto-generated method stub
 
     }
 }

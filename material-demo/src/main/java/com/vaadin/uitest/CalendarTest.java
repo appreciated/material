@@ -67,26 +67,18 @@ public class CalendarTest extends GridLayout implements View {
     private static final long serialVersionUID = -5436777475398410597L;
 
     private static final String DEFAULT_ITEMID = "DEFAULT";
-
-    private enum Mode {
-        MONTH, WEEK, DAY;
-    }
-
+    private final Label captionLabel = new Label("");
+    private final FormLayout scheduleEventFieldLayout = new FormLayout();
     /**
      * This Gregorian calendar is used to control dates and time inside of this
      * test application.
      */
     private GregorianCalendar calendar;
-
     /**
      * Target calendar component that this test application is made for.
      */
     private Calendar calendarComponent;
-
     private Date currentMonthsFirstDate;
-
-    private final Label captionLabel = new Label("");
-
     private Button monthButton;
 
     private Button weekButton;
@@ -110,21 +102,13 @@ public class CalendarTest extends GridLayout implements View {
     private TextField captionField;
 
     private Window scheduleEventPopup;
-
-    private final FormLayout scheduleEventFieldLayout = new FormLayout();
     private FieldGroup scheduleEventFieldGroup = new FieldGroup();
     private Binder<CalendarEvent> scheduledEventBinder = new Binder<>();
-
     private Button deleteEventButton;
-
     private Button applyEventButton;
-
     private Mode viewMode = Mode.WEEK;
-
     private BasicEventProvider dataSource;
-
     private Button addNewEvent;
-
     /*
      * When testBench is set to true, CalendarTest will have static content that
      * is more suitable for Vaadin TestBench testing. Calendar will use a static
@@ -132,30 +116,18 @@ public class CalendarTest extends GridLayout implements View {
      * "testBench" parameter in the URL.
      */
     private boolean testBench = false;
-
     private String calendarHeight = null;
-
     private String calendarWidth = null;
-
     private CheckBox disabledButton;
-
     private Integer firstHour;
-
     private Integer lastHour;
-
     private Integer firstDay;
-
     private Integer lastDay;
-
     private Locale defaultLocale = Locale.US;
-
     private boolean showWeeklyView;
-
     private boolean useSecondResolution;
-
     private DateField startDateField;
     private DateField endDateField;
-
     public CalendarTest() {
         setSizeFull();
         setHeight("1000px");
@@ -166,6 +138,39 @@ public class CalendarTest extends GridLayout implements View {
         testBench = ValoThemeUI.isTestMode();
 
         initContent();
+    }
+
+    private static Date getEndOfDay(java.util.Calendar calendar, Date date) {
+        java.util.Calendar calendarClone = (java.util.Calendar) calendar
+                .clone();
+
+        calendarClone.setTime(date);
+        calendarClone.set(java.util.Calendar.MILLISECOND,
+                calendarClone.getActualMaximum(java.util.Calendar.MILLISECOND));
+        calendarClone.set(java.util.Calendar.SECOND,
+                calendarClone.getActualMaximum(java.util.Calendar.SECOND));
+        calendarClone.set(java.util.Calendar.MINUTE,
+                calendarClone.getActualMaximum(java.util.Calendar.MINUTE));
+        calendarClone.set(java.util.Calendar.HOUR,
+                calendarClone.getActualMaximum(java.util.Calendar.HOUR));
+        calendarClone.set(java.util.Calendar.HOUR_OF_DAY,
+                calendarClone.getActualMaximum(java.util.Calendar.HOUR_OF_DAY));
+
+        return calendarClone.getTime();
+    }
+
+    private static Date getStartOfDay(java.util.Calendar calendar, Date date) {
+        java.util.Calendar calendarClone = (java.util.Calendar) calendar
+                .clone();
+
+        calendarClone.setTime(date);
+        calendarClone.set(java.util.Calendar.MILLISECOND, 0);
+        calendarClone.set(java.util.Calendar.SECOND, 0);
+        calendarClone.set(java.util.Calendar.MINUTE, 0);
+        calendarClone.set(java.util.Calendar.HOUR, 0);
+        calendarClone.set(java.util.Calendar.HOUR_OF_DAY, 0);
+
+        return calendarClone.getTime();
     }
 
     public void initContent() {
@@ -1185,42 +1190,12 @@ public class CalendarTest extends GridLayout implements View {
         }
     }
 
-    private static Date getEndOfDay(java.util.Calendar calendar, Date date) {
-        java.util.Calendar calendarClone = (java.util.Calendar) calendar
-                .clone();
-
-        calendarClone.setTime(date);
-        calendarClone.set(java.util.Calendar.MILLISECOND,
-                calendarClone.getActualMaximum(java.util.Calendar.MILLISECOND));
-        calendarClone.set(java.util.Calendar.SECOND,
-                calendarClone.getActualMaximum(java.util.Calendar.SECOND));
-        calendarClone.set(java.util.Calendar.MINUTE,
-                calendarClone.getActualMaximum(java.util.Calendar.MINUTE));
-        calendarClone.set(java.util.Calendar.HOUR,
-                calendarClone.getActualMaximum(java.util.Calendar.HOUR));
-        calendarClone.set(java.util.Calendar.HOUR_OF_DAY,
-                calendarClone.getActualMaximum(java.util.Calendar.HOUR_OF_DAY));
-
-        return calendarClone.getTime();
-    }
-
-    private static Date getStartOfDay(java.util.Calendar calendar, Date date) {
-        java.util.Calendar calendarClone = (java.util.Calendar) calendar
-                .clone();
-
-        calendarClone.setTime(date);
-        calendarClone.set(java.util.Calendar.MILLISECOND, 0);
-        calendarClone.set(java.util.Calendar.SECOND, 0);
-        calendarClone.set(java.util.Calendar.MINUTE, 0);
-        calendarClone.set(java.util.Calendar.HOUR, 0);
-        calendarClone.set(java.util.Calendar.HOUR_OF_DAY, 0);
-
-        return calendarClone.getTime();
-    }
-
     @Override
     public void enter(ViewChangeEvent event) {
         // TODO Auto-generated method stub
+    }
 
+    private enum Mode {
+        MONTH, WEEK, DAY;
     }
 }

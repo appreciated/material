@@ -432,120 +432,6 @@ public class CommonParts extends VerticalLayout implements View {
             boolean toolbarLayout = false;
             String toolbarStyle = null;
 
-            VerticalLayout windowContent() {
-                VerticalLayout root = new VerticalLayout();
-                root.setMargin(false);
-
-                if (toolbarVisible) {
-                    MenuBar menuBar = MenuBars.getToolBar();
-                    menuBar.setSizeUndefined();
-                    menuBar.setStyleName(toolbarStyle);
-                    Component toolbar = menuBar;
-                    if (toolbarLayout) {
-                        menuBar.setWidth(null);
-                        HorizontalLayout toolbarLayout = new HorizontalLayout();
-                        toolbarLayout.setWidth("100%");
-                        toolbarLayout.setSpacing(true);
-                        Label label = new Label("Tools");
-                        label.setSizeUndefined();
-                        toolbarLayout.addComponents(label, menuBar);
-                        toolbarLayout.setExpandRatio(menuBar, 1);
-                        toolbarLayout.setComponentAlignment(menuBar,
-                                Alignment.TOP_RIGHT);
-                        toolbar = toolbarLayout;
-                    }
-                    toolbar.addStyleName(ValoTheme.WINDOW_TOP_TOOLBAR);
-                    root.addComponent(toolbar);
-                }
-
-                Component content = null;
-
-                if (tabsVisible) {
-                    TabSheet tabs = new TabSheet();
-                    tabs.setSizeFull();
-                    VerticalLayout l = new VerticalLayout();
-                    l.addComponent(new Label(
-                            "<h2>Subtitle</h2><p>Normal type for plain text. Etiam at risus et justo dignissim congue. Phasellus laoreet lorem vel dolor tempus vehicula.</p><p>Quisque ut dolor gravida, placerat libero vel, euismod. Etiam habebis sem dicantur magna mollis euismod. Nihil hic munitissimus habendi senatus locus, nihil horum? Curabitur est gravida et libero vitae dictum. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>",
-                            ContentMode.HTML));
-                    l.setMargin(true);
-                    tabs.addTab(l, "Selected");
-                    tabs.addTab(new Label("&nbsp;", ContentMode.HTML),
-                            "Another");
-                    tabs.addTab(new Label("&nbsp;", ContentMode.HTML),
-                            "One more");
-                    tabs.addStyleName(ValoTheme.TABSHEET_PADDED_TABBAR);
-                    tabs.addSelectedTabChangeListener(
-                            new SelectedTabChangeListener() {
-                                @Override
-                                public void selectedTabChange(
-                                        SelectedTabChangeEvent event) {
-                                    try {
-                                        Thread.sleep(600);
-                                    } catch (InterruptedException e) {
-                                        e.printStackTrace();
-                                    }
-                                }
-                            });
-                    content = tabs;
-                } else if (!autoHeight) {
-                    Panel p = new Panel();
-                    p.setSizeFull();
-                    p.addStyleName(ValoTheme.PANEL_BORDERLESS);
-                    if (!toolbarVisible || !toolbarLayout) {
-                        p.addStyleName(ValoTheme.PANEL_SCROLL_INDICATOR);
-                    }
-                    VerticalLayout l = new VerticalLayout();
-                    l.addComponent(new Label(
-                            "<h2>Subtitle</h2><p>Normal type for plain text. Etiam at risus et justo dignissim congue. Phasellus laoreet lorem vel dolor tempus vehicula.</p><p>Quisque ut dolor gravida, placerat libero vel, euismod. Etiam habebis sem dicantur magna mollis euismod. Nihil hic munitissimus habendi senatus locus, nihil horum? Curabitur est gravida et libero vitae dictum. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>",
-                            ContentMode.HTML));
-                    l.setMargin(true);
-                    p.setContent(l);
-                    content = p;
-                } else {
-                    content = new Label(
-                            "<h2>Subtitle</h2><p>Normal type for plain text. Etiam at risus et justo dignissim congue. Phasellus laoreet lorem vel dolor tempus vehicula.</p><p>Quisque ut dolor gravida, placerat libero vel, euismod. Etiam habebis sem dicantur magna mollis euismod. Nihil hic munitissimus habendi senatus locus, nihil horum? Curabitur est gravida et libero vitae dictum. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>",
-                            ContentMode.HTML);
-                    root.setMargin(true);
-                }
-
-                root.addComponent(content);
-
-                if (footerVisible) {
-                    HorizontalLayout footer = new HorizontalLayout();
-                    footer.setWidth("100%");
-                    footer.setSpacing(true);
-                    footer.addStyleName(ValoTheme.WINDOW_BOTTOM_TOOLBAR);
-
-                    Label footerText = new Label("Footer text");
-                    footerText.setSizeUndefined();
-
-                    Button ok = new Button("OK");
-                    ok.addStyleName(ValoTheme.BUTTON_PRIMARY);
-
-                    Button cancel = new Button("Cancel");
-
-                    footer.addComponents(footerText, ok, cancel);
-                    footer.setExpandRatio(footerText, 1);
-
-                    if (footerToolbar) {
-                        MenuBar menuBar = MenuBars.getToolBar();
-                        menuBar.setStyleName(toolbarStyle);
-                        menuBar.setWidth(null);
-                        footer.removeAllComponents();
-                        footer.addComponent(menuBar);
-                    }
-
-                    root.addComponent(footer);
-                }
-
-                if (!autoHeight) {
-                    root.setSizeFull();
-                    root.setExpandRatio(content, 1);
-                }
-
-                return root;
-            }
-
             {
                 setSpacing(true);
                 setMargin(true);
@@ -675,6 +561,120 @@ public class CommonParts extends VerticalLayout implements View {
                         show.setEnabled(true);
                     }
                 });
+            }
+
+            VerticalLayout windowContent() {
+                VerticalLayout root = new VerticalLayout();
+                root.setMargin(false);
+
+                if (toolbarVisible) {
+                    MenuBar menuBar = MenuBars.getToolBar();
+                    menuBar.setSizeUndefined();
+                    menuBar.setStyleName(toolbarStyle);
+                    Component toolbar = menuBar;
+                    if (toolbarLayout) {
+                        menuBar.setWidth(null);
+                        HorizontalLayout toolbarLayout = new HorizontalLayout();
+                        toolbarLayout.setWidth("100%");
+                        toolbarLayout.setSpacing(true);
+                        Label label = new Label("Tools");
+                        label.setSizeUndefined();
+                        toolbarLayout.addComponents(label, menuBar);
+                        toolbarLayout.setExpandRatio(menuBar, 1);
+                        toolbarLayout.setComponentAlignment(menuBar,
+                                Alignment.TOP_RIGHT);
+                        toolbar = toolbarLayout;
+                    }
+                    toolbar.addStyleName(ValoTheme.WINDOW_TOP_TOOLBAR);
+                    root.addComponent(toolbar);
+                }
+
+                Component content = null;
+
+                if (tabsVisible) {
+                    TabSheet tabs = new TabSheet();
+                    tabs.setSizeFull();
+                    VerticalLayout l = new VerticalLayout();
+                    l.addComponent(new Label(
+                            "<h2>Subtitle</h2><p>Normal type for plain text. Etiam at risus et justo dignissim congue. Phasellus laoreet lorem vel dolor tempus vehicula.</p><p>Quisque ut dolor gravida, placerat libero vel, euismod. Etiam habebis sem dicantur magna mollis euismod. Nihil hic munitissimus habendi senatus locus, nihil horum? Curabitur est gravida et libero vitae dictum. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>",
+                            ContentMode.HTML));
+                    l.setMargin(true);
+                    tabs.addTab(l, "Selected");
+                    tabs.addTab(new Label("&nbsp;", ContentMode.HTML),
+                            "Another");
+                    tabs.addTab(new Label("&nbsp;", ContentMode.HTML),
+                            "One more");
+                    tabs.addStyleName(ValoTheme.TABSHEET_PADDED_TABBAR);
+                    tabs.addSelectedTabChangeListener(
+                            new SelectedTabChangeListener() {
+                                @Override
+                                public void selectedTabChange(
+                                        SelectedTabChangeEvent event) {
+                                    try {
+                                        Thread.sleep(600);
+                                    } catch (InterruptedException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            });
+                    content = tabs;
+                } else if (!autoHeight) {
+                    Panel p = new Panel();
+                    p.setSizeFull();
+                    p.addStyleName(ValoTheme.PANEL_BORDERLESS);
+                    if (!toolbarVisible || !toolbarLayout) {
+                        p.addStyleName(ValoTheme.PANEL_SCROLL_INDICATOR);
+                    }
+                    VerticalLayout l = new VerticalLayout();
+                    l.addComponent(new Label(
+                            "<h2>Subtitle</h2><p>Normal type for plain text. Etiam at risus et justo dignissim congue. Phasellus laoreet lorem vel dolor tempus vehicula.</p><p>Quisque ut dolor gravida, placerat libero vel, euismod. Etiam habebis sem dicantur magna mollis euismod. Nihil hic munitissimus habendi senatus locus, nihil horum? Curabitur est gravida et libero vitae dictum. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>",
+                            ContentMode.HTML));
+                    l.setMargin(true);
+                    p.setContent(l);
+                    content = p;
+                } else {
+                    content = new Label(
+                            "<h2>Subtitle</h2><p>Normal type for plain text. Etiam at risus et justo dignissim congue. Phasellus laoreet lorem vel dolor tempus vehicula.</p><p>Quisque ut dolor gravida, placerat libero vel, euismod. Etiam habebis sem dicantur magna mollis euismod. Nihil hic munitissimus habendi senatus locus, nihil horum? Curabitur est gravida et libero vitae dictum. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>",
+                            ContentMode.HTML);
+                    root.setMargin(true);
+                }
+
+                root.addComponent(content);
+
+                if (footerVisible) {
+                    HorizontalLayout footer = new HorizontalLayout();
+                    footer.setWidth("100%");
+                    footer.setSpacing(true);
+                    footer.addStyleName(ValoTheme.WINDOW_BOTTOM_TOOLBAR);
+
+                    Label footerText = new Label("Footer text");
+                    footerText.setSizeUndefined();
+
+                    Button ok = new Button("OK");
+                    ok.addStyleName(ValoTheme.BUTTON_PRIMARY);
+
+                    Button cancel = new Button("Cancel");
+
+                    footer.addComponents(footerText, ok, cancel);
+                    footer.setExpandRatio(footerText, 1);
+
+                    if (footerToolbar) {
+                        MenuBar menuBar = MenuBars.getToolBar();
+                        menuBar.setStyleName(toolbarStyle);
+                        menuBar.setWidth(null);
+                        footer.removeAllComponents();
+                        footer.addComponent(menuBar);
+                    }
+
+                    root.addComponent(footer);
+                }
+
+                if (!autoHeight) {
+                    root.setSizeFull();
+                    root.setExpandRatio(content, 1);
+                }
+
+                return root;
             }
         };
         p.setContent(content);

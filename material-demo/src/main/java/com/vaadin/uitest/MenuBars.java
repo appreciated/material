@@ -38,97 +38,6 @@ public class MenuBars extends VerticalLayout implements View {
         addBarswithStyle(MaterialTheme.MENUBAR_CUSTOM);
     }
 
-    public void addBarswithStyle(String style) {
-        Label h1 = new Label(style + " Menu Bars");
-        h1.addStyleName(ValoTheme.LABEL_H4);
-        addComponent(h1);
-
-        MenuBar menuBar = getMenuBar(style);
-        menuBar.setCaption(style + " Normal style");
-        addComponent(menuBar);
-
-        menuBar = getMenuBar(style);
-        menuBar.setCaption(style + " Small style");
-        menuBar.addStyleName(ValoTheme.MENUBAR_SMALL);
-        addComponent(menuBar);
-
-        menuBar = getMenuBar(style);
-        menuBar.setCaption(style + " Borderless style");
-        menuBar.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
-        addComponent(menuBar);
-
-        menuBar = new MenuBar();
-        menuBar.addItem("test", VaadinIcons.ABACUS, null);
-        menuBar.setCaption(style + " Borderless style");
-        menuBar.addStyleName(style);
-        menuBar.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
-        addComponent(menuBar);
-
-        menuBar = getMenuBar(style);
-        menuBar.setCaption(style + " Small borderless style");
-        menuBar.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
-        menuBar.addStyleName(ValoTheme.MENUBAR_SMALL);
-        addComponent(menuBar);
-
-        Label h2 = new Label(style + " Drop Down Button");
-        h2.addStyleName(ValoTheme.LABEL_H4);
-        addComponent(h2);
-
-        HorizontalLayout wrap = new HorizontalLayout();
-        wrap.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
-        wrap.setSpacing(true);
-        addComponent(wrap);
-
-        wrap.addComponent(getMenuButton(style + " Normal", style, false));
-
-        MenuBar split = getMenuButton(style + " Small", style, false);
-        split.addStyleName(ValoTheme.MENUBAR_SMALL);
-        wrap.addComponent(split);
-
-        split = getMenuButton(style + " Borderless", style, false);
-        split.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
-        wrap.addComponent(split);
-
-        split = getMenuButton(style + " Themed", style, false);
-        split.addStyleName("color1");
-        wrap.addComponent(split);
-
-        split = getMenuButton(style + " Small", style, false);
-        split.addStyleName("color1");
-        split.addStyleName(ValoTheme.MENUBAR_SMALL);
-        wrap.addComponent(split);
-
-        h2 = new Label(style + " Split Button");
-        h2.addStyleName(ValoTheme.LABEL_H4);
-        addComponent(h2);
-
-        wrap = new HorizontalLayout();
-        wrap.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
-        wrap.setSpacing(true);
-        addComponent(wrap);
-
-        wrap.addComponent(getMenuButton(style + " defaut", style, true));
-
-        split = getMenuButton(style + " Small", style, true);
-        split.addStyleName(ValoTheme.MENUBAR_SMALL);
-        wrap.addComponent(split);
-
-        split = getMenuButton(style + " Borderless", style, true);
-        split.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
-        wrap.addComponent(split);
-
-        split = getMenuButton(style + " Themed", style, true);
-        split.addStyleName("color1");
-        wrap.addComponent(split);
-
-        split = getMenuButton(style + " Small", style, true);
-        split.addStyleName("color1");
-        split.addStyleName(ValoTheme.MENUBAR_SMALL);
-        wrap.addComponent(split);
-
-    }
-
-
     static MenuBar getMenuBar(String style) {
         Command click = (Command) selectedItem -> Notification.show("Clicked " + selectedItem.getText());
 
@@ -257,6 +166,96 @@ public class MenuBars extends VerticalLayout implements View {
         dropdown.addItem("Last Action", null);
 
         return split;
+    }
+
+    public void addBarswithStyle(String style) {
+        Label h1 = new Label(style + " Menu Bars");
+        h1.addStyleName(ValoTheme.LABEL_H4);
+        addComponent(h1);
+
+        MenuBar menuBar = getMenuBar(style);
+        menuBar.setCaption(style + " Normal style");
+        addComponent(menuBar);
+
+        menuBar = getMenuBar(style);
+        menuBar.setCaption(style + " Small style");
+        menuBar.addStyleName(ValoTheme.MENUBAR_SMALL);
+        addComponent(menuBar);
+
+        menuBar = getMenuBar(style);
+        menuBar.setCaption(style + " Borderless style");
+        menuBar.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
+        addComponent(menuBar);
+
+        menuBar = new MenuBar();
+        menuBar.addItem("test", VaadinIcons.ABACUS, null);
+        menuBar.setCaption(style + " Borderless style");
+        menuBar.addStyleName(style);
+        menuBar.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
+        addComponent(menuBar);
+
+        menuBar = getMenuBar(style);
+        menuBar.setCaption(style + " Small borderless style");
+        menuBar.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
+        menuBar.addStyleName(ValoTheme.MENUBAR_SMALL);
+        addComponent(menuBar);
+
+        Label h2 = new Label(style + " Drop Down Button");
+        h2.addStyleName(ValoTheme.LABEL_H4);
+        addComponent(h2);
+
+        HorizontalLayout wrap = new HorizontalLayout();
+        wrap.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
+        wrap.setSpacing(true);
+        addComponent(wrap);
+
+        wrap.addComponent(getMenuButton(style + " Normal", style, false));
+
+        MenuBar split = getMenuButton(style + " Small", style, false);
+        split.addStyleName(ValoTheme.MENUBAR_SMALL);
+        wrap.addComponent(split);
+
+        split = getMenuButton(style + " Borderless", style, false);
+        split.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
+        wrap.addComponent(split);
+
+        split = getMenuButton(style + " Themed", style, false);
+        split.addStyleName("color1");
+        wrap.addComponent(split);
+
+        split = getMenuButton(style + " Small", style, false);
+        split.addStyleName("color1");
+        split.addStyleName(ValoTheme.MENUBAR_SMALL);
+        wrap.addComponent(split);
+
+        h2 = new Label(style + " Split Button");
+        h2.addStyleName(ValoTheme.LABEL_H4);
+        addComponent(h2);
+
+        wrap = new HorizontalLayout();
+        wrap.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
+        wrap.setSpacing(true);
+        addComponent(wrap);
+
+        wrap.addComponent(getMenuButton(style + " defaut", style, true));
+
+        split = getMenuButton(style + " Small", style, true);
+        split.addStyleName(ValoTheme.MENUBAR_SMALL);
+        wrap.addComponent(split);
+
+        split = getMenuButton(style + " Borderless", style, true);
+        split.addStyleName(ValoTheme.MENUBAR_BORDERLESS);
+        wrap.addComponent(split);
+
+        split = getMenuButton(style + " Themed", style, true);
+        split.addStyleName("color1");
+        wrap.addComponent(split);
+
+        split = getMenuButton(style + " Small", style, true);
+        split.addStyleName("color1");
+        split.addStyleName(ValoTheme.MENUBAR_SMALL);
+        wrap.addComponent(split);
+
     }
 
     @Override

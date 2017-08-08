@@ -50,21 +50,110 @@ import java.util.Map.Entry;
 @Viewport("user-scalable=no,initial-scale=1.0")
 public class ValoThemeUI extends UI {
 
-    private boolean testMode = false;
+    static final String CAPTION_PROPERTY = "caption";
+    static final String DESCRIPTION_PROPERTY = "description";
+    static final String ICON_PROPERTY = "icon";
+    static final String INDEX_PROPERTY = "index";
+    static Handler actionHandler = new Handler() {
+        private final Action ACTION_ONE = new Action("Action One");
+        private final Action ACTION_TWO = new Action("Action Two");
+        private final Action ACTION_THREE = new Action("Action Three");
+        private final Action[] ACTIONS = new Action[]{ACTION_ONE, ACTION_TWO,
+                ACTION_THREE};
 
-    private TestIcon testIcon = new TestIcon(100);
+        @Override
+        public void handleAction(Action action, Object sender, Object target) {
+            Notification.show(action.getCaption());
+        }
 
+        @Override
+        public Action[] getActions(Object target, Object sender) {
+            return ACTIONS;
+        }
+    };
     ValoMenuLayout root = new ValoMenuLayout();
     ComponentContainer viewDisplay = root.getContentContainer();
     CssLayout menu = new CssLayout();
     CssLayout menuItemsLayout = new CssLayout();
+    private boolean testMode = false;
+    private TestIcon testIcon = new TestIcon(100);
+    private Navigator navigator;
+    private LinkedHashMap<String, String> menuItems = new LinkedHashMap<>();
 
     {
         menu.setId("testMenu");
     }
 
-    private Navigator navigator;
-    private LinkedHashMap<String, String> menuItems = new LinkedHashMap<>();
+    static boolean isTestMode() {
+        return ((ValoThemeUI) getCurrent()).testMode;
+    }
+
+    static Handler getActionHandler() {
+        return actionHandler;
+    }
+
+    @SuppressWarnings("unchecked")
+    static Container generateContainer(final int size,
+                                       final boolean hierarchical) {
+        TestIcon testIcon = new TestIcon(90);
+        IndexedContainer container = hierarchical ? new HierarchicalContainer()
+                : new IndexedContainer();
+        StringGenerator sg = new StringGenerator();
+        container.addContainerProperty(CAPTION_PROPERTY, String.class, null);
+        container.addContainerProperty(ICON_PROPERTY, Resource.class, null);
+        container.addContainerProperty(INDEX_PROPERTY, Integer.class, null);
+        container.addContainerProperty(DESCRIPTION_PROPERTY, String.class,
+                null);
+        for (int i = 1; i < size + 1; i++) {
+            Item item = container.addItem(i);
+            item.getItemProperty(CAPTION_PROPERTY)
+                    .setValue(sg.nextString(true) + " " + sg.nextString(false));
+            item.getItemProperty(INDEX_PROPERTY).setValue(i);
+            item.getItemProperty(DESCRIPTION_PROPERTY)
+                    .setValue(sg.nextString(true) + " " + sg.nextString(false)
+                            + " " + sg.nextString(false));
+            item.getItemProperty(ICON_PROPERTY).setValue(testIcon.get());
+        }
+        container.getItem(container.getIdByIndex(0))
+                .getItemProperty(ICON_PROPERTY).setValue(testIcon.get());
+
+        if (hierarchical) {
+            for (int i = 1; i < size + 1; i++) {
+                for (int j = 1; j < 5; j++) {
+                    String id = i + " -> " + j;
+                    Item child = container.addItem(id);
+                    child.getItemProperty(CAPTION_PROPERTY).setValue(
+                            sg.nextString(true) + " " + sg.nextString(false));
+                    child.getItemProperty(ICON_PROPERTY)
+                            .setValue(testIcon.get());
+                    ((Hierarchical) container).setParent(id, i);
+
+                    for (int k = 1; k < 6; k++) {
+                        String id2 = id + " -> " + k;
+                        child = container.addItem(id2);
+                        child.getItemProperty(CAPTION_PROPERTY)
+                                .setValue(sg.nextString(true) + " "
+                                        + sg.nextString(false));
+                        child.getItemProperty(ICON_PROPERTY)
+                                .setValue(testIcon.get());
+                        ((Hierarchical) container).setParent(id2, id);
+
+                        for (int l = 1; l < 5; l++) {
+                            String id3 = id2 + " -> " + l;
+                            child = container.addItem(id3);
+                            child.getItemProperty(CAPTION_PROPERTY)
+                                    .setValue(sg.nextString(true) + " "
+                                            + sg.nextString(false));
+                            child.getItemProperty(ICON_PROPERTY)
+                                    .setValue(testIcon.get());
+                            ((Hierarchical) container).setParent(id3, id2);
+                        }
+                    }
+                }
+            }
+        }
+        return container;
+    }
 
     @Override
     protected void init(VaadinRequest request) {
@@ -164,10 +253,6 @@ public class ValoThemeUI extends UI {
 
         return getPage().getWebBrowser().getBrowserApplication()
                 .contains("PhantomJS");
-    }
-
-    static boolean isTestMode() {
-        return ((ValoThemeUI) getCurrent()).testMode;
     }
 
     Component buildTestMenu() {
@@ -326,95 +411,5 @@ public class ValoThemeUI extends UI {
                 + count + "</span>");
 
         return menu;
-    }
-
-    static Handler actionHandler = new Handler() {
-        private final Action ACTION_ONE = new Action("Action One");
-        private final Action ACTION_TWO = new Action("Action Two");
-        private final Action ACTION_THREE = new Action("Action Three");
-        private final Action[] ACTIONS = new Action[]{ACTION_ONE, ACTION_TWO,
-                ACTION_THREE};
-
-        @Override
-        public void handleAction(Action action, Object sender, Object target) {
-            Notification.show(action.getCaption());
-        }
-
-        @Override
-        public Action[] getActions(Object target, Object sender) {
-            return ACTIONS;
-        }
-    };
-
-    static Handler getActionHandler() {
-        return actionHandler;
-    }
-
-    static final String CAPTION_PROPERTY = "caption";
-    static final String DESCRIPTION_PROPERTY = "description";
-    static final String ICON_PROPERTY = "icon";
-    static final String INDEX_PROPERTY = "index";
-
-    @SuppressWarnings("unchecked")
-    static Container generateContainer(final int size,
-                                       final boolean hierarchical) {
-        TestIcon testIcon = new TestIcon(90);
-        IndexedContainer container = hierarchical ? new HierarchicalContainer()
-                : new IndexedContainer();
-        StringGenerator sg = new StringGenerator();
-        container.addContainerProperty(CAPTION_PROPERTY, String.class, null);
-        container.addContainerProperty(ICON_PROPERTY, Resource.class, null);
-        container.addContainerProperty(INDEX_PROPERTY, Integer.class, null);
-        container.addContainerProperty(DESCRIPTION_PROPERTY, String.class,
-                null);
-        for (int i = 1; i < size + 1; i++) {
-            Item item = container.addItem(i);
-            item.getItemProperty(CAPTION_PROPERTY)
-                    .setValue(sg.nextString(true) + " " + sg.nextString(false));
-            item.getItemProperty(INDEX_PROPERTY).setValue(i);
-            item.getItemProperty(DESCRIPTION_PROPERTY)
-                    .setValue(sg.nextString(true) + " " + sg.nextString(false)
-                            + " " + sg.nextString(false));
-            item.getItemProperty(ICON_PROPERTY).setValue(testIcon.get());
-        }
-        container.getItem(container.getIdByIndex(0))
-                .getItemProperty(ICON_PROPERTY).setValue(testIcon.get());
-
-        if (hierarchical) {
-            for (int i = 1; i < size + 1; i++) {
-                for (int j = 1; j < 5; j++) {
-                    String id = i + " -> " + j;
-                    Item child = container.addItem(id);
-                    child.getItemProperty(CAPTION_PROPERTY).setValue(
-                            sg.nextString(true) + " " + sg.nextString(false));
-                    child.getItemProperty(ICON_PROPERTY)
-                            .setValue(testIcon.get());
-                    ((Hierarchical) container).setParent(id, i);
-
-                    for (int k = 1; k < 6; k++) {
-                        String id2 = id + " -> " + k;
-                        child = container.addItem(id2);
-                        child.getItemProperty(CAPTION_PROPERTY)
-                                .setValue(sg.nextString(true) + " "
-                                        + sg.nextString(false));
-                        child.getItemProperty(ICON_PROPERTY)
-                                .setValue(testIcon.get());
-                        ((Hierarchical) container).setParent(id2, id);
-
-                        for (int l = 1; l < 5; l++) {
-                            String id3 = id2 + " -> " + l;
-                            child = container.addItem(id3);
-                            child.getItemProperty(CAPTION_PROPERTY)
-                                    .setValue(sg.nextString(true) + " "
-                                            + sg.nextString(false));
-                            child.getItemProperty(ICON_PROPERTY)
-                                    .setValue(testIcon.get());
-                            ((Hierarchical) container).setParent(id3, id2);
-                        }
-                    }
-                }
-            }
-        }
-        return container;
     }
 }

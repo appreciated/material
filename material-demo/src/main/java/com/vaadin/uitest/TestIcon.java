@@ -29,31 +29,6 @@ import java.util.List;
  */
 public class TestIcon {
 
-    int iconCount = 0;
-
-    public TestIcon(int startIndex) {
-        iconCount = startIndex;
-    }
-
-    public Resource get() {
-        return get(false, 32);
-    }
-
-    public Resource get(boolean isImage) {
-        return get(isImage, 32);
-    }
-
-    public Resource get(boolean isImage, int imageSize) {
-        if (!isImage) {
-            if (++iconCount >= ICONS.size()) {
-                iconCount = 0;
-            }
-            return ICONS.get(iconCount);
-        }
-        return new ThemeResource(
-                "../../icons/" + imageSize + "/document.png");
-    }
-
     static List<VaadinIcons> ICONS = new ArrayList<>();
 
     static {
@@ -316,5 +291,30 @@ public class TestIcon {
         ICONS.add(VaadinIcons.WRENCH);
         ICONS.add(VaadinIcons.YOUTUBE);
         ICONS.add(VaadinIcons.YOUTUBE_SQUARE);
+    }
+
+    int iconCount = 0;
+
+    public TestIcon(int startIndex) {
+        iconCount = startIndex;
+    }
+
+    public Resource get() {
+        return get(false, 32);
+    }
+
+    public Resource get(boolean isImage) {
+        return get(isImage, 32);
+    }
+
+    public Resource get(boolean isImage, int imageSize) {
+        if (!isImage) {
+            if (++iconCount >= ICONS.size()) {
+                iconCount = 0;
+            }
+            return ICONS.get(iconCount);
+        }
+        return new ThemeResource(
+                "../../icons/" + imageSize + "/document.png");
     }
 }

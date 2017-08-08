@@ -24,6 +24,35 @@ import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
 
 public class Sliders extends VerticalLayout implements View {
+    float progress = 0;
+    private ProgressBar pb;
+    private ProgressBar pb2;
+    Thread update = new Thread() {
+        @Override
+        public void run() {
+            while (true) {
+                try {
+                    Thread.sleep(1000);
+                    getUI().access(new Runnable() {
+                        @Override
+                        public void run() {
+                            pb.setValue(progress);
+                            pb2.setValue(progress);
+                            if (progress > 1) {
+                                progress = 0;
+                            } else {
+                                progress += 0.2 * Math.random();
+                            }
+                        }
+                    });
+                } catch (InterruptedException e) {
+                    break;
+                }
+            }
+        }
+
+        ;
+    };
     public Sliders() {
         setSpacing(false);
 
@@ -162,37 +191,6 @@ public class Sliders extends VerticalLayout implements View {
             row.addComponent(pb3);
         }
     }
-
-    float progress = 0;
-
-    Thread update = new Thread() {
-        @Override
-        public void run() {
-            while (true) {
-                try {
-                    Thread.sleep(1000);
-                    getUI().access(new Runnable() {
-                        @Override
-                        public void run() {
-                            pb.setValue(progress);
-                            pb2.setValue(progress);
-                            if (progress > 1) {
-                                progress = 0;
-                            } else {
-                                progress += 0.2 * Math.random();
-                            }
-                        }
-                    });
-                } catch (InterruptedException e) {
-                    break;
-                }
-            }
-        }
-
-        ;
-    };
-    private ProgressBar pb;
-    private ProgressBar pb2;
 
     @Override
     public void enter(ViewChangeEvent event) {
