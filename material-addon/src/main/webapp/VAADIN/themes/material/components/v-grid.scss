@@ -20,9 +20,6 @@ body.v-webkit .v-grid-scroller-horizontal {
   border: 2px solid transparent !important;
 }
 
-body.v-webkit .v-grid-scroller, .v-grid-horizontal-scrollbar-deco {
-  background: transparent;
-}
 
 @mixin v-grid {
   .v-grid:not(.borderless) {
@@ -156,5 +153,11 @@ body.v-webkit .v-grid-scroller, .v-grid-horizontal-scrollbar-deco {
         border-color: $v-selection-color;
       }
     }
+  }
+  .v-grid-scroller, .v-grid-horizontal-scrollbar-deco {
+    background: transparent !important;
+  }
+  .v-grid-cell.last-frozen.frozen {
+    height: $v-unit-size + 19px !important;
   }
 }
