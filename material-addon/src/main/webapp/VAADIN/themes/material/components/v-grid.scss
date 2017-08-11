@@ -157,7 +157,7 @@ body.v-webkit .v-grid-scroller-horizontal {
   .v-grid-scroller, .v-grid-horizontal-scrollbar-deco {
     background: transparent !important;
   }
-  :not(.v-grid-header) .v-grid-cell.last-frozen.frozen {
+  :not(.v-grid-header) > .v-grid-row > .v-grid-cell.last-frozen.frozen {
     height: $v-unit-size + 19px !important;
   }
 }
