@@ -70,6 +70,7 @@ body.v-webkit .v-grid-scroller-horizontal {
     position: absolute;
     height: $v-unit-size--large;
     content: "";
+    background: $mat-card-color;
     @extend .z-depth-0-5;
   }
   .last-frozen {
