@@ -26,7 +26,6 @@ import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.ui.*;
 import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.Grid;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.ProgressBar;
@@ -41,9 +40,6 @@ import com.vaadin.v7.ui.Table.ColumnGenerator;
 import com.vaadin.v7.ui.Table.RowHeaderMode;
 import com.vaadin.v7.ui.Table.TableDragMode;
 import com.vaadin.v7.ui.TextField;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class Tables extends VerticalLayout implements View {
 
@@ -128,59 +124,7 @@ public class Tables extends VerticalLayout implements View {
         rowCaption.addValueChangeListener(update);
         rowIcon.addValueChangeListener(update);
         componentsInCells.addValueChangeListener(update);
-
         footer.setValue(false);
-
-
-        List<Person> people = Arrays.asList(
-                new Person("Nicolaus Copernicus", 1543, 1),
-                new Person("Galileo Galilei", 1564, 2),
-                new Person("Johannes Kepler", 1571, 3),
-                new Person("Nicolaus Copernicus", 1543, 3),
-                new Person("Galileo Galilei", 1564, 4),
-                new Person("Johannes Kepler", 1571, 5),
-                new Person("Nicolaus Copernicus", 1543, 6),
-                new Person("Galileo Galilei", 1564, 7),
-                new Person("Johannes Kepler", 1571, 8),
-                new Person("Nicolaus Copernicus", 1543, 9),
-                new Person("Galileo Galilei", 1564, 10),
-                new Person("Johannes Kepler", 1571, 11),
-                new Person("Nicolaus Copernicus", 1543, 12),
-                new Person("Galileo Galilei", 1564, 13),
-                new Person("Johannes Kepler", 1571, 14));
-
-// Create a grid bound to the list
-        Grid<Person> grid = new Grid<>();
-        grid.setItems(people);
-        grid.addColumn(Person::getName).setCaption("Name");
-        grid.addColumn(Person::getBirthYear).setCaption("Year of birth");
-        grid.addColumn(Person::getID).setCaption("ID");
-        grid.addColumn(Person::getID).setCaption("ID2");
-        grid.addColumn(Person::getID).setCaption("ID3");
-        grid.addColumn(Person::getID).setCaption("ID4");
-        grid.addColumn(Person::getID).setCaption("ID5");
-        grid.addColumn(Person::getID).setCaption("ID6");
-
-        grid.setFrozenColumnCount(1);
-        grid.setSelectionMode(Grid.SelectionMode.MULTI);
-
-        grid.getEditor().setEnabled(true);
-        addComponent(grid);
-
-        // Create a grid bound to the list
-        grid = new Grid<>();
-        grid.setItems(people);
-        grid.addColumn(Person::getName).setCaption("Name");
-        grid.addColumn(Person::getBirthYear).setCaption("Year of birth");
-        grid.addColumn(Person::getID).setCaption("ID");
-        grid.addColumn(Person::getID).setCaption("ID2");
-        grid.addColumn(Person::getID).setCaption("ID3");
-        grid.addColumn(Person::getID).setCaption("ID4");
-        grid.addColumn(Person::getID).setCaption("ID5");
-        grid.addColumn(Person::getID).setCaption("ID6");
-        grid.setSelectionMode(Grid.SelectionMode.MULTI);
-        grid.getEditor().setEnabled(true);
-        addComponent(grid);
     }
 
     static void configure(Table table, boolean footer, boolean sized,
