@@ -3,6 +3,27 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
   background: rgba($v-focus-color, 0.2) !important;
 }
 
+body.v-webkit .v-grid-scroller::-webkit-scrollbar-thumb {
+  border-radius: 0 !important;
+  border: 0px solid transparent !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+body.v-webkit .v-grid-scroller-vertical {
+  padding-right: 5px !important;
+  margin-top: 1px;
+  border: 2px solid transparent !important;
+}
+
+body.v-webkit .v-grid-scroller-horizontal {
+  padding-bottom: 5px !important;
+  border: 2px solid transparent !important;
+}
+
+body.v-webkit .v-grid-scroller, .v-grid-horizontal-scrollbar-deco {
+  background: transparent;
+}
+
 @mixin v-grid {
   .v-grid:not(.borderless) {
     @extend .floating-border;
@@ -23,6 +44,7 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
   }
   .v-grid-row:not(:first-child) {
     border-top: 1px solid $v-table-border-color;
+    padding-right: 20px;
   }
   .v-grid-row-selected > .v-grid-cell {
     border-top: none;
@@ -40,15 +62,18 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
   }
   .v-grid-tablewrapper {
     overflow: visible;
+    position: unset;
+    width: 100% !important;
   }
   .v-grid-header {
     width: auto;
   }
-  .v-grid:not(.borderless) .v-grid-header {
+  .v-grid:not(.borderless) .v-grid-tablewrapper::after {
+    width: 100%;
+    position: absolute;
+    height: $v-unit-size--large;
+    content: "";
     @extend .z-depth-0-5;
-  }
-  .v-grid-header {
-    right: -19px;
   }
   .last-frozen {
     border-right: 1px solid $v-table-border-color !important;

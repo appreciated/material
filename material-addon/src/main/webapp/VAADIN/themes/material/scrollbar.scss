@@ -1,0 +1,11 @@
+*::-webkit-scrollbar {
+  height: 11px;
+  overflow: visible;
+  width: 11px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}

@@ -155,9 +155,30 @@ public class Tables extends VerticalLayout implements View {
         grid.addColumn(Person::getName).setCaption("Name");
         grid.addColumn(Person::getBirthYear).setCaption("Year of birth");
         grid.addColumn(Person::getID).setCaption("ID");
+        grid.addColumn(Person::getID).setCaption("ID2");
+        grid.addColumn(Person::getID).setCaption("ID3");
+        grid.addColumn(Person::getID).setCaption("ID4");
+        grid.addColumn(Person::getID).setCaption("ID5");
+        grid.addColumn(Person::getID).setCaption("ID6");
+
         grid.setFrozenColumnCount(1);
         grid.setSelectionMode(Grid.SelectionMode.MULTI);
 
+        grid.getEditor().setEnabled(true);
+        addComponent(grid);
+
+        // Create a grid bound to the list
+        grid = new Grid<>();
+        grid.setItems(people);
+        grid.addColumn(Person::getName).setCaption("Name");
+        grid.addColumn(Person::getBirthYear).setCaption("Year of birth");
+        grid.addColumn(Person::getID).setCaption("ID");
+        grid.addColumn(Person::getID).setCaption("ID2");
+        grid.addColumn(Person::getID).setCaption("ID3");
+        grid.addColumn(Person::getID).setCaption("ID4");
+        grid.addColumn(Person::getID).setCaption("ID5");
+        grid.addColumn(Person::getID).setCaption("ID6");
+        grid.setSelectionMode(Grid.SelectionMode.MULTI);
         grid.getEditor().setEnabled(true);
         addComponent(grid);
     }

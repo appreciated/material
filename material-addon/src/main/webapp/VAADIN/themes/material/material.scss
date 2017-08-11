@@ -32,6 +32,7 @@ $v-included-components: remove($v-included-components, button);
 @import "components/v-colorpicker.scss";
 @import "components/v-menu.scss";
 @import "components/v-app-loading.scss";
+@import "scrollbar.scss";
 
 @import "cards.scss";
 @mixin material {
@@ -66,4 +67,5 @@ $v-included-components: remove($v-included-components, button);
   @include v-colorpicker;
   @include v-menu;
   @include v-app-loading;
+
 }

@@ -52,6 +52,7 @@ public class Material extends VerticalLayout implements View {
         addComponent(getLayoutWithStyle(MaterialTheme.CARD_HOVERABLE));
         addComponent(getLayoutWithStyle(MaterialTheme.CARD_HOVERABLE + " " + RIPPLE));
 
+
         h1 = new Label("Cards without Padding");
         h1.addStyleName(ValoTheme.LABEL_H2);
         addComponent(h1);

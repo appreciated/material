@@ -17,6 +17,7 @@
  */
 package com.vaadin.uitest;
 
+import com.github.appreciated.material.MaterialTheme;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.server.UserError;
@@ -49,10 +50,14 @@ public class Forms extends VerticalLayout implements View {
         addComponent(title);
 
         final FormLayout form = new FormLayout();
+
         form.setMargin(false);
         form.setWidth("800px");
-        form.addStyleName(ValoTheme.FORMLAYOUT_LIGHT);
+        form.addStyleName(MaterialTheme.BUTTON_BORDERLESS);
         addComponent(form);
+
+        HorizontalLayout wrapper = new HorizontalLayout(form);
+        wrapper.setMargin(true);
 
         Label section = new Label("Personal Info");
         section.addStyleName(ValoTheme.LABEL_H2);
