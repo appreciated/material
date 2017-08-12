@@ -5,7 +5,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
+  background: $mat-scroll-bar-color;
   background-clip: padding-box;
   border: 2px solid transparent;
 }
