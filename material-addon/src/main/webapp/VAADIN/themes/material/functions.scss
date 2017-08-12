@@ -1,4 +1,4 @@
-@function material-hover-color($background-color, $strength: $mat-button-hover-modifier) {
+@function material-hover-color($background-color, $strength: $mat-button-hover-modifier, $opacity: 1.0) {
   $color: $background-color;
   @if saturation($background-color) > 0.1 {
     @if is-dark-color($background-color) {
@@ -13,7 +13,7 @@
       $color: scale-color($color, $lightness: -$strength, $saturation: 0%);
     }
   }
-  @return $color;
+  @return rgba($color, $opacity);
 }
 
 @mixin functions {

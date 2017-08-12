@@ -75,19 +75,19 @@ body:not(.v-touch) .v-button:not(.v-disabled).border.danger:hover {
 
 body:not(.v-touch) .v-button:not(.v-disabled).borderless.primary:hover,
 body:not(.v-touch) .v-button:not(.v-disabled).borderless-colored:hover {
-  background: material-hover-color($v-focus-color) !important;
+  background: material-hover-color($v-focus-color, $mat-button-hover-modifier, $mat-button-borderless-opacity) !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).borderless.friendly:hover {
-  background: material-hover-color($v-friendly-color) !important;
+  background: material-hover-color($v-friendly-color, $mat-button-hover-modifier, $mat-button-borderless-opacity) !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).borderless.danger:hover {
-  background: material-hover-color($v-error-indicator-color) !important;
+  background: material-hover-color($v-error-indicator-color, $mat-button-hover-modifier, $mat-button-borderless-opacity) !important;
 }
 
 body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
-  background: material-hover-color($mat-custom-color) !important;
+  background: material-hover-color($mat-custom-color, $mat-button-hover-modifier, $mat-button-borderless-opacity) !important;
 }
 
 @mixin v-button {

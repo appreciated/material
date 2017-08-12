@@ -5,7 +5,7 @@
 	<groupId>com.github.appreciated</groupId>
 	<artifactId>material-root</artifactId>
 	<packaging>pom</packaging>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<name>Material Root Project</name>
 
 	<prerequisites>

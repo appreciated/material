@@ -70,14 +70,20 @@
   .v-upload.border:not(.primary):not(.friendly):not(.danger):not(.custom):after {
     @include ripple-background(valo-font-color($mat-background-color, 1));
   }
-  .v-button.primary:after,
+  .v-button.primary:not(.borderless):after,
   .v-button.floating-action:after,
-  .v-button.borderless-colored:after,
   .v-upload.floating-action-upload:after,
   .v-upload.primary:after {
     @include ripple-background($v-focus-color);
     border-radius: $v-border-radius;
   }
+
+  .v-button.borderless-colored:after,
+  .v-button.primary.borderless:after {
+    @include ripple-background(material-hover-color($v-focus-color, $mat-button-hover-modifier, $mat-button-borderless-opacity));
+    border-radius: $v-border-radius;
+  }
+
   .v-button.floating-action:after,
   .v-upload.floating-action-upload:after {
     border-radius: 100%;
