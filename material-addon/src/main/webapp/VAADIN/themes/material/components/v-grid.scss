@@ -49,6 +49,7 @@ body.v-webkit .v-grid-scroller-horizontal {
   .v-grid-cell {
     height: $v-unit-size--large;
     line-height: $v-unit-size--large;
+    background-color: $mat-card-color !important;
   }
   .v-grid-column-header-content,
   .v-grid-column-footer-content {
@@ -79,6 +80,7 @@ body.v-webkit .v-grid-scroller-horizontal {
   .v-grid-editor {
     @extend .floating-border;
     @extend .z-depth-2;
+    background-color: $mat-card-color;
   }
   .v-grid-editor * .gwt-CheckBox:after {
     position: absolute;
@@ -113,6 +115,7 @@ body.v-webkit .v-grid-scroller-horizontal {
     height: 47px;
     font-size: 15px;
     margin-left: 10px;
+    background-color: $mat-card-color;
   }
   .v-grid-select-all-checkbox,
   .v-grid-selection-checkbox {
