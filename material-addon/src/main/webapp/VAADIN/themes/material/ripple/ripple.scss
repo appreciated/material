@@ -12,7 +12,15 @@
 // ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 @mixin ripple-background($color) {
-  @include radial-gradient(circle, valo-font-color(material-hover-color($color)) 20%, transparent 10%);
+  $background-color: $color;
+  @if (opacity($color) <= 0.5) {
+    $background-color: $mat-background-color;
+  }
+  @if is-dark-color($background-color) {
+    @include radial-gradient(circle, rgb(255, 255, 255) 20%, transparent 10%);
+  } @else {
+    @include radial-gradient(circle, rgb(0, 0, 0) 20%, transparent 10%);
+  }
 }
 
 @mixin ripple {
@@ -61,8 +69,8 @@
   .v-accordion-item-caption:not(.v-disabled):after {
     @include ripple-background($mat-card-color);
   }
-  .v-button.borderless:after,
-  .v-upload.borderless:after,
+  .v-button.borderless:not(.primary):not(.friendly):not(.danger):not(.custom):after,
+  .v-upload.borderless:not(.primary):not(.friendly):not(.danger):not(.custom):after,
   .v-filterselect .v-filterselect-button:after {
     @include ripple-background($mat-background-color);
   }
@@ -75,6 +83,10 @@
   .v-upload.floating-action-upload:after,
   .v-upload.primary:after {
     @include ripple-background($v-focus-color);
+  }
+
+  .v-button:not(.floating-action):not(.round):after,
+  .v-upload:not(.floating-action-upload):not(.round):after {
     border-radius: $v-border-radius;
   }
 
@@ -88,18 +100,37 @@
   .v-upload.floating-action-upload:after {
     border-radius: 100%;
   }
-  .v-button.friendly:after,
-  .v-upload.friendly:after {
+
+  .v-button.friendly:not(.borderless):after,
+  .v-upload.friendly:not(.borderless):after {
     @include ripple-background($v-friendly-color);
   }
-  .v-button.danger:after,
-  .v-upload.danger:after {
+
+  .v-button.danger:not(.borderless):after,
+  .v-upload.danger:not(.borderless):after {
     @include ripple-background($v-error-indicator-color);
   }
-  .v-button.custom:after,
-  .v-upload.custom:after {
+
+  .v-button.custom:not(.borderless):after,
+  .v-upload.custom:not(.borderless):after {
     @include ripple-background($mat-custom-color);
   }
+
+  .v-button.friendly.borderless:after,
+  .v-upload.friendly.borderless:after {
+    @include ripple-background(rgba($v-friendly-color, $mat-button-borderless-opacity));
+  }
+
+  .v-button.danger.borderless:after,
+  .v-upload.danger.borderless:after {
+    @include ripple-background(rgba($v-error-indicator-color, $mat-button-borderless-opacity));
+  }
+
+  .v-button.custom.borderless:after,
+  .v-upload.custom.borderless:after {
+    @include ripple-background(rgba($mat-custom-color, $mat-button-borderless-opacity));
+  }
+
   .v-button.round:after,
   .v-upload.round:after {
     border-radius: $v-button-round-border-radius;
