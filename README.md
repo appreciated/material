@@ -35,7 +35,7 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 The Designer won't be able to successfully compile the SCSS as long as it doesn't have access to the theme files. 
 To fix this you will either need to unzip the jar and copy the files to `src/main/webapp/VAADIN/themes` or you could use the following maven plugin that does the job for you.
 
-Note: When updating the Theme to a new version do a `mvn clean install` to refresh the theme files for the designer.
+Note: Every time you are updating the Theme to a new version (1.0.0 to 1.0.1) you need to run a `mvn install` otherwise the designer will continue to present the old theme in the preview.
 
 To avoid pushing unecessary files to git you might want to add `src/main/webapp/VAADIN/themes/material/` to your .gitignore.
 
