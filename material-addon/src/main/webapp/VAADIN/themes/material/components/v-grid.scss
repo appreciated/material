@@ -137,8 +137,8 @@ body.v-webkit .v-grid-scroller-horizontal {
         width: $v-unit-size * 0.175;
         height: $v-unit-size * 0.075;
         position: absolute;
-        top: $v-unit-size * 0.12;
-        left: $v-unit-size * 0.075;
+        top: $v-unit-size * 0.22 - 4.8px; // 40 ->  4; 55 -> 7.3
+        left: $v-unit-size * 0.15 - 3.13px; // 40 -> 3; 55 -> 5.3
         border: 3px solid white;
         border-top: none;
         border-right: none;
