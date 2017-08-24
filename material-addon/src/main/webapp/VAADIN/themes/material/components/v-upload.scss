@@ -1,5 +1,5 @@
 body:not(.v-touch) .v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.primary):not(.border):not(.friendly):not(.danger):not(.custom):not(.floating-action-upload):not(.danger):hover {
-  background: valo-font-color($v-background-color, 0.05) !important;
+  background: material-hover-color($v-background-color) !important;
 }
 
 body:not(.v-touch) .v-upload:not(.v-disabled):not(.borderless):not(.flat):not(.borderless-colored):not(.floating-action-upload):hover,
@@ -8,27 +8,27 @@ body.v-touch:not(.v-component-group) > .v-upload:not(.v-disabled):not(.borderles
 }
 
 body:not(.v-touch) .friendly.v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-  background: valo-font-color($v-friendly-color, 0.1);
+  background: material-hover-color($v-friendly-color);
 }
 
 body:not(.v-touch) .custom.v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-  background: valo-font-color($mat-custom-color, 0.1);
+  background: material-hover-color($mat-custom-color);
 }
 
 body:not(.v-touch) .danger.v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-  background: valo-font-color($v-error-indicator-color, 0.1);
+  background: material-hover-color($v-error-indicator-color);
 }
 
 body:not(.v-touch) .primary.v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):hover {
-  background: valo-font-color($v-selection-color, 0.1);
+  background: material-hover-color($v-selection-color);
 }
 
 body:not(.v-touch) .v-upload.borderless:not(.v-disabled):not(.borderless-colored):not(.primary):not(.friendly):not(.danger):not(.custom):hover {
-  background: rgba(valo-font-color($mat-background-color, 1), 0.1) !important;
+  background: material-hover-color($mat-background-color) !important;
 }
 
 body:not(.v-touch) .v-upload:not(.v-disabled).floating-action-upload:hover {
-  background: valo-font-color($v-selection-color, 0.1);
+  background: material-hover-color($v-selection-color);
 }
 
 body:not(.v-touch) .v-upload:not(.v-disabled).floating-action-upload:not(.flat):hover,
@@ -37,11 +37,11 @@ body.v-touch .v-upload.floating-action-upload:not(.flat):active {
 }
 
 body:not(.v-touch) .v-upload:not(.v-disabled).floating-action-upload:not(.flat).friendly:hover {
-  background: valo-font-color($v-friendly-color, 0.1);
+  background: material-hover-color($v-friendly-color);
 }
 
 body:not(.v-touch) .v-upload:not(.v-disabled).floating-action-upload:not(.flat).danger:hover {
-  background: valo-font-color($v-error-indicator-color, 0.1);
+  background: material-hover-color($v-error-indicator-color);
 }
 
 body:not(.v-touch) .v-upload:not(.v-disabled).border:hover {
@@ -71,19 +71,19 @@ body:not(.v-touch) .v-upload:not(.v-disabled).border.danger:hover {
 
 body:not(.v-touch) .v-upload:not(.v-disabled).borderless.primary:hover,
 body:not(.v-touch) .v-upload:not(.v-disabled).borderless-colored:hover {
-  background: rgba($v-focus-color, 0.2) !important;
+  background: material-hover-color($v-focus-color, $mat-button-hover-modifier, $mat-button-borderless-opacity) !important;
 }
 
 body:not(.v-touch) .v-upload:not(.v-disabled).borderless.friendly:hover {
-  background: rgba($v-friendly-color, 0.2) !important;
+  background: material-hover-color($v-friendly-color, $mat-button-hover-modifier, $mat-button-borderless-opacity) !important;
 }
 
 body:not(.v-touch) .v-upload:not(.v-disabled).borderless.danger:hover {
-  background: rgba($v-error-indicator-color, 0.2) !important;
+  background: material-hover-color($v-error-indicator-color, $mat-button-hover-modifier, $mat-button-borderless-opacity) !important;
 }
 
 body:not(.v-touch) .v-upload:not(.v-disabled).borderless.custom:hover {
-  background: rgba($mat-custom-color, 0.2) !important;
+  background: material-hover-color($mat-custom-color, $mat-button-hover-modifier, $mat-button-borderless-opacity) !important;
 }
 
 @mixin v-upload {
@@ -96,6 +96,7 @@ body:not(.v-touch) .v-upload:not(.v-disabled).borderless.custom:hover {
     outline: none;
     text-align: center;
     color: $mat-card-font-color;
+    cursor: pointer;
   }
   .v-upload-immediate .v-button {
     line-height: $v-unit-size;
@@ -108,8 +109,14 @@ body:not(.v-touch) .v-upload:not(.v-disabled).borderless.custom:hover {
   }
   .v-upload .v-button.v-disabled {
     background: transparent;
-    color: initial;
+    color: valo-font-color(valo-font-color($v-background-color, 0.2), 0.7);;
     opacity: 1;
+  }
+  .v-caption.v-caption-floating-action-upload.v-disabled .v-icon {
+    color: valo-font-color(valo-font-color($v-background-color, 0.2), 0.7);
+  }
+  .v-upload.floating-action-upload .v-button.v-disabled .v-button-caption {
+    color: transparent;
   }
   .v-upload-immediate.floating-action-upload .v-button {
     line-height: 56px;

@@ -102,6 +102,7 @@ body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
   }
   :not(.v-upload) > * > .v-button:not(.v-disabled) {
     @extend .z-depth-0;
+    cursor: pointer;
   }
   :not(.v-upload) > * > .v-button {
     height: $v-unit-size;
