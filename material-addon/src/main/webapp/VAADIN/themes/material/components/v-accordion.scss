@@ -2,4 +2,12 @@
   .v-accordion-item:not(:last-child) {
     border-bottom: 1px solid valo-font-color($mat-card-color, 0.2);
   }
+  .v-accordion-item-content {
+    background-color: $mat-card-color;
+  }
+  .v-accordion-item {
+    height: $v-unit-size + 2px;
+    transition: height 0.3s ease;
+    overflow: hidden;
+  }
 }
