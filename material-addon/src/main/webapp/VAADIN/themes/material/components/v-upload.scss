@@ -104,6 +104,13 @@ body:not(.v-touch) .v-upload:not(.v-disabled).borderless.custom:hover {
     height: $v-unit-size;
     padding: 0 20px;
   }
+  .v-upload-immediate .v-button:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 110%;
+    vertical-align: middle;
+  }
   .v-upload-immediate:not(.v-disabled) .gwt-FileUpload {
     width: 100%
   }
