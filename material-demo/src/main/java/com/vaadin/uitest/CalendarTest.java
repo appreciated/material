@@ -919,7 +919,7 @@ public class CalendarTest extends GridLayout implements View {
                 }
             }
         });
-        applyEventButton.addStyleName(ValoTheme.BUTTON_PRIMARY);
+        applyEventButton.addStyleNames(ValoTheme.BUTTON_PRIMARY, ValoTheme.BUTTON_BORDERLESS);
         Button cancel = new Button("Cancel", new ClickListener() {
 
             private static final long serialVersionUID = 1L;
@@ -929,6 +929,7 @@ public class CalendarTest extends GridLayout implements View {
                 discardCalendarEvent();
             }
         });
+        cancel.addStyleNames(ValoTheme.BUTTON_BORDERLESS);
         deleteEventButton = new Button("Delete", new ClickListener() {
 
             private static final long serialVersionUID = 1L;

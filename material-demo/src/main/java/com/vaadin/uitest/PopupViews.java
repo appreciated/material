@@ -42,7 +42,6 @@ public class PopupViews extends VerticalLayout implements View {
                 return new VerticalLayout() {
                     {
                         setSpacing(false);
-                        setWidth("300px");
                         addComponent(new Label(
                                 "Fictum,  deserunt mollit anim laborum astutumque! Magna pars studiorum, prodita quaerimus."));
                     }
