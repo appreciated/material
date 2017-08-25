@@ -30,6 +30,9 @@
   .v-datefield.floating {
     @extend .floating-border;
   }
+  .v-datefield.floating .v-datefield-textfield {
+    background: transparent;
+  }
   .v-component-group .v-datefield [class*="textfield"] {
     box-shadow: none;
     border-bottom: none;

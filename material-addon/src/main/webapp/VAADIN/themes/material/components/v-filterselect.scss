@@ -12,15 +12,24 @@ body:not(.v-touch) .v-filterselect:not(.v-disabled) > .v-filterselect-button:hov
   }
   .v-filterselect.custom [class*="input"] {
     @extend .focus-border-bottom;
-    color: $mat-custom-color;
+    color: $mat-custom-color !important;
   }
   .v-filterselect-focus.custom [class*="input"] {
-    border-bottom: 1px solid $mat-custom-color;
-    box-shadow: 0 1px 0 0 $mat-custom-color;
+    border-bottom: 1px solid $mat-custom-color !important;
+    box-shadow: 0 1px 0 0 $mat-custom-color !important;
+  }
+  .v-filterselect.custom .v-filterselect-button {
+    opacity: 0.7;
+  }
+  .v-filterselect.custom [class$="button"]:before {
+    color: $mat-custom-color !important;
+  }
+  .v-filterselect .v-filterselect-button:hover {
+    opacity: 1.0;
   }
   .v-filterselect-error.v-filterselect-focus:not(.borderless):not(.floating) [class*="input"] {
-    border-bottom: 1px solid $v-error-indicator-color;
-    box-shadow: 0 1px 0 0 $v-error-indicator-color;
+    border-bottom: 1px solid $v-error-indicator-color !important;
+    box-shadow: 0 1px 0 0 $v-error-indicator-color !important;
   }
   .v-filterselect span.v-icon {
     width: $v-unit-size;
