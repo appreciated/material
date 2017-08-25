@@ -104,7 +104,7 @@ body:not(.v-touch) .v-upload:not(.v-disabled).borderless.custom:hover {
     height: $v-unit-size;
     padding: 0 20px;
   }
-  .v-upload-immediate .v-button:before {
+  .v-upload .v-button:before {
     content: "";
     display: inline-block;
     width: 0;
