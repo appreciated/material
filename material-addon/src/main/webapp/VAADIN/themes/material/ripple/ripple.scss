@@ -24,6 +24,10 @@
 }
 
 @mixin ripple {
+  .ripple {
+    cursor: pointer;
+  }
+
   :not(.v-upload) > * > .v-button:not(.v-disabled):not(.valo-menu-toggle),
   .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
   .ripple,

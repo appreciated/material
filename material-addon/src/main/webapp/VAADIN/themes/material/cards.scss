@@ -61,10 +61,12 @@ body.v-touch .card-hoverable:active {
     padding: $mat-card-padding;
   }
   .card-hoverable {
+    cursor: pointer;
     @extend .hoverable;
     @extend .material-border;
     box-shadow: $mat-card-hover-begin;
   }
+
   .card-hoverable:not(.card-no-padding) {
     padding: $mat-card-padding;
   }
