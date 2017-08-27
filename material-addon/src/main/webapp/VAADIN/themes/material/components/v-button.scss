@@ -128,7 +128,10 @@ body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
     padding-top: 5px;
     padding-bottom: 5px;
   }
-
+  .v-button .v-icon {
+    margin-left: -10px;
+    padding: 0px 4px;
+  }
   :not(.v-upload) > * > .v-button:not(.borderless):not(.border).primary {
     background: $v-focus-color;
     color: valo-font-color($v-focus-color, 1.0);
