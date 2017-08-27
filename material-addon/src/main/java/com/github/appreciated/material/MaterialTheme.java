@@ -36,6 +36,7 @@ public class MaterialTheme extends ValoTheme {
     public static final String UPLOAD_FLOATING_ACTION = "floating-action-upload";
     public static final String UPLOAD_BORDER = "border";
     public static final String UPLOAD_BORDERLESS = "borderless";
+    public static final String UPLOAD_INLINE_ICON = "upload-inline-icon";
     public static final String UPLOAD_CUSTOM = "custom";
     public static final String LABEL_BORDERLESS = "borderless";
     public static final String LAYOUT_COMPONENT_GROUP_FLAT = "v-component-group flat";

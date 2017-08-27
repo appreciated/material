@@ -158,6 +158,32 @@ body:not(.v-touch) .v-upload:not(.v-disabled).borderless.custom:hover {
     z-index: 1;
     pointer-events: none;
   }
+
+  .v-caption-floating-action-upload .v-icon {
+    position: relative;
+    top: 45px;
+    left: 20px;
+    color: white;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .v-caption-upload-inline-icon .v-icon {
+    position: relative;
+    top: 37px;
+    left: 14px;
+    color: white;
+    z-index: 1;
+    pointer-events: none;
+    width: 0px;
+  }
+  .v-caption-upload-inline-icon .v-captiontext {
+    margin-left: 0px !important;
+  }
+  .v-upload-upload-inline-icon {
+    padding-left: 19px;
+  }
+
   .v-upload:not(.v-disabled):not(.floating-action-upload):not(.flat):not(.borderless):not(.border):not(.borderless-colored):not(.quiet):not(.link) {
     @extend .z-depth-1;
   }

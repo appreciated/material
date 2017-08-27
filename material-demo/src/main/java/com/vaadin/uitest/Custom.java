@@ -36,27 +36,65 @@ public class Custom extends VerticalLayout implements View {
         addComponent(getUploadsButtonsWithStyle(MaterialTheme.UPLOAD_BORDER, MaterialTheme.BUTTON_FLAT));
         addComponent(getUploadsButtonsWithStyle(MaterialTheme.UPLOAD_BORDERLESS, MaterialTheme.BUTTON_FLAT));
         setSpacing(true);
+
+
+        setSpacing(false);
+        h1 = new Label("Uploads Flat with Icon");
+        h1.addStyleName(ValoTheme.LABEL_H1);
+        addComponent(h1);
+        addComponent(getIconUploadsButtonsWithStyle(""));
+        addComponent(getIconUploadsButtonsWithStyle(MaterialTheme.UPLOAD_FLOATING_ACTION));
+        addComponent(getIconUploadsButtonsWithStyle(MaterialTheme.UPLOAD_ROUND));
+        addComponent(getIconUploadsButtonsWithStyle(MaterialTheme.UPLOAD_BORDER));
+        addComponent(getIconUploadsButtonsWithStyle(MaterialTheme.UPLOAD_BORDERLESS));
+
+        h1 = new Label("Uploads Flat with Icon");
+        h1.addStyleName(ValoTheme.LABEL_H1);
+        addComponent(h1);
+        addComponent(getIconUploadsButtonsWithStyle(MaterialTheme.UPLOAD_FLAT));
+        addComponent(getIconUploadsButtonsWithStyle(MaterialTheme.UPLOAD_FLOATING_ACTION, MaterialTheme.BUTTON_FLAT));
+        addComponent(getIconUploadsButtonsWithStyle(MaterialTheme.UPLOAD_ROUND, MaterialTheme.BUTTON_FLAT));
+        addComponent(getIconUploadsButtonsWithStyle(MaterialTheme.UPLOAD_BORDER, MaterialTheme.BUTTON_FLAT));
+        addComponent(getIconUploadsButtonsWithStyle(MaterialTheme.UPLOAD_BORDERLESS, MaterialTheme.BUTTON_FLAT));
+        setSpacing(true);
+    }
+
+    public HorizontalLayout getIconUploadsButtonsWithStyle(String... styles) {
+        return getUploadsButtonsWithStyle(styles, true);
     }
 
     public HorizontalLayout getUploadsButtonsWithStyle(String... styles) {
+        return getUploadsButtonsWithStyle(styles, false);
+    }
+
+    public HorizontalLayout getUploadsButtonsWithStyle(String[] styles, boolean withIcon) {
         String style = Arrays.stream(styles).reduce((s, s2) -> s + " " + s2).orElse("");
         HorizontalLayout layout = new HorizontalLayout();
         Arrays.asList("", ValoTheme.BUTTON_PRIMARY, ValoTheme.BUTTON_FRIENDLY, ValoTheme.BUTTON_DANGER, MaterialTheme.BUTTON_CUSTOM)
                 .stream()
                 .forEach(s -> {
                     Upload upload = new Upload(style.contains(MaterialTheme.BUTTON_FLOATING_ACTION) ? "" : "Click Me!", (Upload.Receiver) (s12, s1) -> null);
-                    upload.setIcon(style.contains(MaterialTheme.BUTTON_FLOATING_ACTION) ? VaadinIcons.PLUS : null);
+                    if (style.contains(MaterialTheme.BUTTON_FLOATING_ACTION)) {
+                        upload.setIcon(VaadinIcons.PLUS);
+                    } else if (withIcon) {
+                        upload.setIcon(VaadinIcons.UPLOAD);
+                        upload.addStyleName(MaterialTheme.UPLOAD_INLINE_ICON);
+                    }
                     upload.addStyleName(style + " " + s);
                     layout.addComponent(upload);
                 });
         Upload upload = new Upload(style.contains(MaterialTheme.BUTTON_FLOATING_ACTION) ? "" : "Click Me!", (Upload.Receiver) (s12, s1) -> null);
-        upload.setIcon(style.contains(MaterialTheme.BUTTON_FLOATING_ACTION) ? VaadinIcons.PLUS : null);
+        if (style.contains(MaterialTheme.BUTTON_FLOATING_ACTION)) {
+            upload.setIcon(VaadinIcons.PLUS);
+        } else if (withIcon) {
+            upload.setIcon(VaadinIcons.UPLOAD);
+            upload.addStyleName(MaterialTheme.UPLOAD_INLINE_ICON);
+        }
         upload.addStyleName(style);
         upload.setEnabled(false);
         layout.addComponent(upload);
         return layout;
     }
-
 
     private void addUploadWithStyle(String style) {
         Upload upload = new Upload("Labels", (Upload.Receiver) (s, s1) -> null);
