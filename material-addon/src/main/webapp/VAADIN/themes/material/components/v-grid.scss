@@ -20,7 +20,6 @@ body.v-webkit .v-grid-scroller-horizontal {
   border: 2px solid transparent !important;
 }
 
-
 @mixin v-grid {
   .v-grid:not(.borderless) {
     @extend .floating-border;
@@ -29,7 +28,6 @@ body.v-webkit .v-grid-scroller-horizontal {
     overflow: hidden;
   }
   .v-grid-row-selected > .v-grid-cell {
-    background: $v-table-row-selected-color;
     color: inherit;
     border-top: 1px solid $v-table-border-color;
   }
@@ -102,17 +100,33 @@ body.v-webkit .v-grid-scroller-horizontal {
     padding: 0 20px;
     border-radius: $v-border-radius;
   }
-  .v-grid-cell-focused {
+  .v-grid-cell-focused,
+  .v-grid-row-selected .v-grid-cell {
+    position: relative;
     border-color: transparent;
     z-index: 0;
   }
-  .v-grid-cell-focused:before {
+  .v-grid-cell-focused:before,
+  .v-grid-row-selected .v-grid-cell:before {
     border: 1px solid transparent !important;
     background-color: $v-table-row-focus-color !important;
     z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  .v-grid-row-selected .v-grid-cell:before {
+    display: block;
+  }
+  .v-grid-cell.frozen {
+    z-index: 1;
   }
   .v-grid-editor-footer {
-    height: 47px;
+    height: $v-unit-size + 2px;
     font-size: 15px;
     margin-left: 10px;
     background-color: $mat-card-color;

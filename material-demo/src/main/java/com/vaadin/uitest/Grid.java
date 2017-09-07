@@ -69,6 +69,19 @@ public class Grid extends VerticalLayout implements View {
         addComponent(grid);
 
         grid = getGrid();
+        grid.setCaption("Single");
+        grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.SINGLE);
+        grid.getEditor().setEnabled(true);
+        addComponent(grid);
+
+        grid = getGrid();
+        grid.setCaption("None");
+        grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.NONE);
+        grid.getEditor().setEnabled(true);
+        addComponent(grid);
+
+        grid = getGrid();
+        grid.setCaption("Multi");
         grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.MULTI);
         grid.getEditor().setEnabled(true);
         addComponent(grid);
