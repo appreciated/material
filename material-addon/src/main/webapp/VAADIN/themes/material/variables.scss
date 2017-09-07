@@ -1,10 +1,7 @@
-$v-font-family: "Source Sans Pro",
-sans-serif !default;
-$v-font-weight: 400 !default;
-$v-unit-size: 45px !default;
+// required for material theme
 $v-focus-color: #0072C6 !default;
-$v-error-indicator-color: #d32f2f !default;
-$v-friendly-color: #4caf50 !default;
+
+// material variables
 $mat-background-color: #fafafa !default;
 $mat-card-color: lighten($mat-background-color, 9%) !default;
 $mat-window-color: lighten($mat-card-color, 3%) !default;
@@ -14,15 +11,21 @@ $mat-card-padding: 20px !default;
 $mat-card-hover-begin: $z-depth-1 !default;
 $mat-card-hover-end: $z-depth-3 !default;
 $mat-custom-color: $v-focus-color !default;
-$mat-upload: true;
 $mat-button-hover-modifier: 10%;
 $mat-button-borderless-opacity: 0.2 !default;
+
+// valo
+$v-font-family: "Source Sans Pro", sans-serif !default;
+$v-font-weight: 400 !default;
+$v-unit-size: 45px !default;
+$v-error-indicator-color: #d32f2f !default;
+$v-friendly-color: #4caf50 !default;
 $v-app-background-color: $mat-background-color !default;
 $v-background-color: $mat-card-color !default;
 $v-focus-style: none;
 $valo-menu-background-color: $v-selection-color;
 $v-border: 0 solid v-shade;
-$v-border-radius: 2px;
+$v-border-radius: 2px !default;
 $v-bevel: false;
 $v-gradient: false;
 $v-shadow: $z-depth-1 !default;
@@ -32,7 +35,7 @@ $v-textfield-border: 0 solid v-shade;
 $v-link-text-decoration: none;
 $v-overlay-shadow: $z-depth-4 !default;
 $v-overlay-border-width: 0px; // For IE8
-$v-window-shadow: $z-depth-5;
+$v-window-shadow: $z-depth-5 !default;
 $v-selection-overlay-background-color: #fff;
 $v-selection-overlay-padding-vertical: 6px;
 $v-selection-overlay-padding-horizontal: 0;
@@ -50,6 +53,13 @@ $h4-fontsize: 1.5rem !default;
 $h5-fontsize: 1.2rem !default;
 $h6-fontsize: 1rem !default;
 $v-button-round-border-radius: 30px !default;
+
+// loading animation parameters
 $mat-loading-animation-speed: 750ms !default;
 $mat-loading-animation-size: 3em !default;
 $mat-loading-animation-thickness: 3px !default;
+
+// v-grid and v-table
+$v-table-border-color: valo-font-color($mat-card-color, 0.15) !default;
+$v-table-row-focus-color: valo-font-color($mat-card-color, 0.15) !default;
+$v-table-row-selected-color: valo-font-color($mat-card-color, 0.075) !default;
