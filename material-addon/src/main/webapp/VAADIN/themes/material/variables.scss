@@ -13,6 +13,7 @@ $mat-card-hover-end: $z-depth-3 !default;
 $mat-custom-color: $v-focus-color !default;
 $mat-button-hover-modifier: 10%;
 $mat-button-borderless-opacity: 0.2 !default;
+$v-button-round-border-radius: 30px !default;
 
 // valo
 $v-font-family: "Source Sans Pro", sans-serif !default;
@@ -52,7 +53,6 @@ $h3-fontsize: 2.0rem !default;
 $h4-fontsize: 1.5rem !default;
 $h5-fontsize: 1.2rem !default;
 $h6-fontsize: 1rem !default;
-$v-button-round-border-radius: 30px !default;
 
 // loading animation parameters
 $mat-loading-animation-speed: 750ms !default;
