@@ -109,7 +109,7 @@ body.v-webkit .v-grid-scroller-horizontal {
   .v-grid-cell-focused:before,
   .v-grid-row-selected .v-grid-cell:before {
     border: 1px solid transparent !important;
-    background-color: $v-table-row-focus-color !important;
+    background-color: $v-table-row-selected-color !important;
     z-index: -1;
     content: "";
     position: absolute;
