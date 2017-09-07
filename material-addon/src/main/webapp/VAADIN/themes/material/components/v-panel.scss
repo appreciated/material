@@ -8,7 +8,7 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
-    padding: 0 16px;
+    padding: 0 $mat-card-padding;
     margin-bottom: -10px;
     background: transparent;
   }
@@ -17,19 +17,19 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
-    padding-left: 16px;
+    padding-left: $mat-card-padding;
   }
-  .v-panel-content > .v-margin-left {
-    padding-left: 16px;
+  .v-panel-content > .v-margin-left, .v-csslayout-card > .v-margin-left {
+    padding-left: $mat-card-padding;
   }
-  .v-panel-content > .v-margin-bottom {
-    padding-bottom: 16px;
+  .v-panel-content > .v-margin-bottom, .v-csslayout-card > .v-margin-bottom {
+    padding-bottom: $mat-card-padding;
   }
-  .v-panel-content > .v-margin-right {
-    padding-right: 16px;
+  .v-panel-content > .v-margin-right, .v-csslayout-card > .v-margin-right {
+    padding-right: $mat-card-padding;
   }
-  .v-panel-content > .v-margin-top {
-    padding-top: 16px;
+  .v-panel-content > .v-margin-top, .v-csslayout-card > .v-margin-top {
+    padding-top: $mat-card-padding;
   }
   .v-panel-well,
   .v-csslayout-well {
