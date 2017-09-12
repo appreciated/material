@@ -95,12 +95,22 @@ public class ButtonsAndLinks extends VerticalLayout implements View {
 
         button = new Button();
         button.setIcon(testIcon.get());
+        row.addComponent(button);
+
+        button = new Button();
         button.addStyleName(ValoTheme.BUTTON_ICON_ONLY);
+        button.setIcon(testIcon.get());
         row.addComponent(button);
 
         button = new Button("Borderless");
         button.setIcon(testIcon.get());
         button.addStyleName(ValoTheme.BUTTON_BORDERLESS);
+        row.addComponent(button);
+
+        button = new Button("Borderless no border radius");
+        button.setIcon(testIcon.get());
+        button.addStyleName(ValoTheme.BUTTON_BORDERLESS);
+        button.addStyleName(MaterialTheme.BUTTON_NO_BORDER_RADIUS);
         row.addComponent(button);
 
         button = new Button("Borderless, colored");

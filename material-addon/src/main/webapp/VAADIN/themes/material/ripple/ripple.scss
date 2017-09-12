@@ -89,19 +89,19 @@
     @include ripple-background($v-focus-color);
   }
 
-  .v-button:not(.floating-action):not(.round):after,
-  .v-upload:not(.floating-action-upload):not(.round):after {
+  .v-button:not(.no-border-radius):not(.floating-action):not(.round):after,
+  .v-upload:not(.no-border-radius):not(.floating-action-upload):not(.round):after {
     border-radius: $v-border-radius;
   }
 
-  .v-button.borderless-colored:after,
-  .v-button.primary.borderless:after {
+  .v-button:not(.no-border-radius).borderless-colored:after,
+  .v-button:not(.no-border-radius).primary.borderless:after {
     @include ripple-background(material-hover-color($v-focus-color, $mat-button-hover-modifier, $mat-button-borderless-opacity));
     border-radius: $v-border-radius;
   }
 
-  .v-button.floating-action:after,
-  .v-upload.floating-action-upload:after {
+  .v-button:not(.no-border-radius).floating-action:after,
+  .v-upload:not(.no-border-radius).floating-action-upload:after {
     border-radius: 100%;
   }
 

@@ -98,6 +98,11 @@ body:not(.v-touch) .v-upload:not(.v-disabled).borderless.custom:hover {
     color: $mat-card-font-color;
     cursor: pointer;
   }
+
+  .v-upload.no-border-radius {
+    border-radius: 0px !important;
+  }
+
   .v-upload-immediate .v-button {
     line-height: $v-unit-size;
     outline: none;

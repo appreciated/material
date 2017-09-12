@@ -107,6 +107,12 @@ body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
   :not(.v-upload) > * > .v-button {
     height: $v-unit-size;
   }
+  :not(.v-upload) > * > .v-button.no-border-radius {
+    border-radius: 0px !important;
+  }
+  :not(.v-upload) > * > .v-button.icon-only {
+    padding: 0px 12px;
+  }
   :not(.v-upload) > * > .v-button.tiny {
     height: $v-unit-size--tiny;
   }
@@ -127,10 +133,6 @@ body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
     height: auto;
     padding-top: 5px;
     padding-bottom: 5px;
-  }
-  :not(.icon-align-right):not(.floating-action):not(.icon-only).v-button .v-icon {
-    margin-left: -10px;
-    padding: 0px 4px;
   }
   :not(.v-upload) > * > .v-button:not(.borderless):not(.border).primary {
     background: $v-focus-color;
