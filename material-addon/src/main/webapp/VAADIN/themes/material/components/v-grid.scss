@@ -3,6 +3,10 @@ body:not(.v-touch) .v-grid-editor-cancel:hover {
   background: rgba($v-focus-color, 0.2) !important;
 }
 
+body.v-ie .v-grid-scroller {
+  z-index: 6 !important;
+}
+
 body.v-webkit .v-grid-scroller::-webkit-scrollbar-thumb {
   border-radius: 0 !important;
   border: 0px solid transparent !important;
@@ -175,6 +179,7 @@ body.v-webkit .v-grid-scroller-horizontal {
   .v-grid-scroller, .v-grid-horizontal-scrollbar-deco {
     background: transparent !important;
   }
+
   :not(.v-grid-header) > .v-grid-row > .v-grid-cell.last-frozen.frozen {
     height: $v-unit-size + 19px !important;
   }
