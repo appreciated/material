@@ -85,12 +85,22 @@ public class Grid extends VerticalLayout implements View {
         grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.MULTI);
         grid.getEditor().setEnabled(true);
         addComponent(grid);
+
+        grid = getGrid(3);
+        grid.setCaption("Multi 2");
+        grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.MULTI);
+        grid.getEditor().setEnabled(true);
+        addComponent(grid);
     }
 
 
     private com.vaadin.ui.Grid<Person> getGrid() {
+        return getGrid(people.size());
+    }
+
+    private com.vaadin.ui.Grid<Person> getGrid(int size) {
         com.vaadin.ui.Grid<Person> grid = new com.vaadin.ui.Grid<>();
-        grid.setItems(people);
+        grid.setItems(people.subList(0, size));
         grid.addColumn(Person::getName).setCaption("Name");
         grid.addColumn(Person::getBirthYear).setCaption("Year of birth");
         grid.addColumn(Person::getID).setCaption("ID");
@@ -101,6 +111,7 @@ public class Grid extends VerticalLayout implements View {
         grid.addColumn(Person::getID).setCaption("ID6");
         return grid;
     }
+
 
     @Override
     public void enter(ViewChangeEvent event) {

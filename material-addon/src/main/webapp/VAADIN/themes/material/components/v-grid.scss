@@ -14,13 +14,13 @@ body.v-webkit .v-grid-scroller::-webkit-scrollbar-thumb {
 }
 
 body.v-webkit .v-grid-scroller-vertical {
-  padding-right: 5px !important;
+  padding-right: 4px !important;
   margin-top: 1px;
   border: 2px solid transparent !important;
 }
 
 body.v-webkit .v-grid-scroller-horizontal {
-  padding-bottom: 5px !important;
+  padding-bottom: 4px !important;
   border: 2px solid transparent !important;
 }
 
@@ -135,17 +135,19 @@ body.v-webkit .v-grid-scroller-horizontal {
     margin-left: 10px;
     background-color: $mat-card-color;
   }
+  $label-width: $v-unit-size/2 - 4px;
+  $label-top-margin: $v-unit-size / 4;
   .v-grid-select-all-checkbox,
   .v-grid-selection-checkbox {
-    width: $v-unit-size/2 - 4px;
+    width: $label-width;
     position: relative;
-    margin: $v-unit-size/2 - 4px auto;
+    margin: $label-width auto;
     label {
-      width: $v-unit-size/2 - 4px;
-      height: $v-unit-size/2 - 4px;
+      width: $label-width;
+      height: $label-width;
       cursor: pointer;
       position: absolute;
-      top: 0;
+      top: calc(50% - $label-top-margin);
       left: 0;
       border-radius: $v-border-radius;
       border: 2px solid valo-font-color($v-background-color, 0.65);
@@ -165,8 +167,9 @@ body.v-webkit .v-grid-scroller-horizontal {
         transform: rotate(-45deg);
       }
     }
-    input[type=checkbox] {
-      visibility: hidden;
+    input[type="checkbox"] {
+      opacity: 0;
+      width: 100%;
       &:checked + label:after {
         opacity: 1;
       }
@@ -180,7 +183,17 @@ body.v-webkit .v-grid-scroller-horizontal {
     background: transparent !important;
   }
 
-  :not(.v-grid-header) > .v-grid-row > .v-grid-cell.last-frozen.frozen {
-    height: $v-unit-size + 19px !important;
+  :not(.v-grid-header) > .v-grid-row:last-child {
+    border-bottom: 1px solid $v-table-border-color;
+  }
+  .v-grid-horizontal-scrollbar-deco:after {
+    position: absolute;
+    bottom: -10px;
+    z-index: 5;
+    right: -1px;
+    height: 10px;
+    content: "";
+    width: 1px;
+    background: $v-table-border-color;
   }
 }

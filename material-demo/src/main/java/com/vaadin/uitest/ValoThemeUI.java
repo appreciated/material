@@ -65,7 +65,6 @@ public class ValoThemeUI extends UI {
         public void handleAction(Action action, Object sender, Object target) {
             Notification.show(action.getCaption());
         }
-
         @Override
         public Action[] getActions(Object target, Object sender) {
             return ACTIONS;
