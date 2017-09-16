@@ -169,7 +169,7 @@ body.v-webkit .v-grid-scroller-horizontal {
     }
     input[type="checkbox"] {
       opacity: 0;
-      width: 100%;
+      width: $label-width;
       &:checked + label:after {
         opacity: 1;
       }
