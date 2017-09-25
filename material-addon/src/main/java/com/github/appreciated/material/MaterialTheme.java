@@ -43,5 +43,6 @@ public class MaterialTheme extends ValoTheme {
     public static final String LAYOUT_COMPONENT_GROUP_MATERIAL = "v-component-group material";
     public static final String RIPPLE = "ripple";
     public static final String BUTTON_NO_BORDER_RADIUS = "no-border-radius";
+    public static final String PROGRESSBAR_INDETERMINATE = "indeterminate";
 }
 
