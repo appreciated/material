@@ -83,4 +83,27 @@ $mat-tooltip-size: 30px;
     border-right-color: $v-focus-color;
     @include animation(v-rotate-360 $mat-loading-animation-speed infinite linear);
   }
+  
+  .v-progressbar.indeterminate div.v-progressbar-wrapper{
+		overflow: hidden;
+	}
+	.v-progressbar.indeterminate div.v-progressbar-wrapper div.v-progressbar-indicator {
+		width: 0;
+		animation: indeterminate_progress 1.8s infinite linear;
+	}
+ 
+}
+
+@keyframes indeterminate_progress {
+	0% {
+		width: 0;
+		margin-left: 0%;
+	}
+		50% {
+		width: 50%;
+	}
+		100% {
+		width: 0;
+		margin-left: 100%;
+	}
 }
