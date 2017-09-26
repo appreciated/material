@@ -49,10 +49,7 @@
     &.warning .popupContent .v-Notification-caption:before {
       content: '\E706';
     }
-    &.failure .popupContent .v-Notification-caption:before {
-      content: '\E707';
-    }
-    &.error .popupContent .v-Notification-caption:before {
+    &.failure .popupContent .v-Notification-caption:before, &.error .popupContent .v-Notification-caption:before {
       content: '\E707';
     }
   }
