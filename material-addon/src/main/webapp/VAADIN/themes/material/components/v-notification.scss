@@ -1,76 +1,59 @@
 @mixin v-notification {
-  .v-Notification .v-Notification-caption {
-    color: valo-font-color($mat-window-color, 1.0);
-  }
-  .v-Notification .v-Notification-description {
-    color: valo-font-color($mat-window-color, 1.0);
-  }
   .v-Notification {
+    border-radius: $v-border-radius;
+    box-shadow: $z-depth-2;
     @extend .floating-border;
     @extend .z-depth-4;
-    background: $mat-window-color;
+    & .popupContent {
+      & .v-Notification-caption {
+        padding-left: 50px;
+        position: relative;
+        &:before {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 5px;
+          content: '\E71C';
+          height: 100%;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          font-size: 25px;
+          font-family: "Vaadin-Icons";
+        }
+      }
+    }
+    &, & .v-Notification-caption {
+      color: valo-font-color($mat-window-color, 1.0) !important;
+      background: $mat-window-color;
+    }
+    &.success, &.success .v-Notification-caption {
+      background: $v-friendly-color;
+      color: valo-font-color($v-friendly-color, 1.0) !important;
+    }
+    &.failure, &.failure .v-Notification-caption, &.error, &.error .v-Notification-caption {
+      background: $v-error-indicator-color;
+      color: valo-font-color($v-error-indicator-color, 1.0) !important;
+    }
+    &.dark, &.dark .v-Notification-caption {
+      background-color: rgba(68, 68, 68, 1);
+      color: valo-font-color(rgba(68, 68, 68, 1), 1.0) !important;
+    }
+    &.tray, &.success {
+      & .v-Notification-caption {
+        &:before {
+          content: '\E7C5';
+        }
+      }
+    }
+    &.warning .popupContent .v-Notification-caption:before {
+      content: '\E706';
+    }
+    &.failure .popupContent .v-Notification-caption:before {
+      content: '\E707';
+    }
+    &.error .popupContent .v-Notification-caption:before {
+      content: '\E707';
+    }
   }
-  .v-Notification.success,
-  .v-Notification.success .v-Notification-caption {
-    background: $v-friendly-color;
-    color: valo-font-color($v-friendly-color, 1.0);
-  }
-  .v-Notification.failure,
-  .v-Notification.failure .v-Notification-caption {
-    background: $v-error-indicator-color;
-    color: valo-font-color($v-error-indicator-color, 1.0);
-  }
-  .v-Notification.dark {
-    background-color: rgba(68, 68, 68, 1);
-  }
-  .v-Notification {
-		border-radius: $v-border-radius;
-		box-shadow: $z-depth-2;
-		& .popupContent{
-			& .v-Notification-caption{
-				padding-left: 50px;
-				position: relative;
-				&:before {
-					position: absolute;
-					top: 0;
-					bottom: 0;
-					left: 5px;
-					content: '\E71C';
-					height: 100%;
-					display: flex;
-					color: valo-font-color($mat-background-color, .5);
-					align-items: center;
-					text-align: center;
-					font-size: 25px;
-					font-family: "Vaadin-Icons";
-				}
-			}
-		}
-	}
-
-	.v-Notification.tray .popupContent{
-		& .v-Notification-caption {
-			color: $mat-friendly-color !important;
-			&:before {
-				content: '\E7C5';
-				color: $mat-friendly-color;
-			}
-		}
-		& .v-Notification-description {
-			color: $mat-friendly-color !important;
-		}
-	}
-
-	.v-Notification.warning .popupContent .v-Notification-caption:before {
-		content: '\E706';
-		color: #AC7C00;
-	}
-	.v-Notification.failure .popupContent .v-Notification-caption:before {
-		content: '\E707';
-		color: valo-font-color($v-error-indicator-color, .8)
-	}
-	.v-Notification.error .popupContent .v-Notification-caption:before {
-		content: '\E707';
-		color: valo-font-color($v-error-indicator-color, .8)
-	}
 }
