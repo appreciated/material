@@ -23,13 +23,19 @@
         }
       }
     }
-    &, & .v-Notification-caption {
+    &, & .v-Notification-caption, &.system:not(.dark):not(.success):not(.failure),
+    &.system:not(.dark):not(.success):not(.failure) .v-Notification-caption,
+    &.system:not(.dark):not(.success):not(.failure) .v-Notification-description {
       color: valo-font-color($mat-window-color, 1.0) !important;
       background: $mat-window-color;
     }
     &.success, &.success .v-Notification-caption {
       background: $v-friendly-color;
       color: valo-font-color($v-friendly-color, 1.0) !important;
+    }
+    &.warning, &.warning .v-Notification-caption {
+      background: #FFF3D2;
+      color: valo-font-color(#FFF3D2, 1.0) !important;
     }
     &.failure, &.failure .v-Notification-caption, &.error, &.error .v-Notification-caption {
       background: $v-error-indicator-color;
@@ -39,14 +45,10 @@
       background-color: rgba(68, 68, 68, 1);
       color: valo-font-color(rgba(68, 68, 68, 1), 1.0) !important;
     }
-    &.tray, &.success {
-      & .v-Notification-caption {
-        &:before {
-          content: '\E7C5';
-        }
-      }
+    &.tray, &.success .v-Notification-caption:before {
+      content: '\E7C5';
     }
-    &.warning .popupContent .v-Notification-caption:before {
+    &.warning .popupContent .v-Notification-caption:before, &.system .popupContent .v-Notification-caption {
       content: '\E706';
     }
     &.failure .popupContent .v-Notification-caption:before, &.error .popupContent .v-Notification-caption:before {
