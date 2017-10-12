@@ -17,73 +17,38 @@
  */
 package com.vaadin.uitest;
 
+import com.github.appreciated.material.MaterialTheme;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
-import com.vaadin.ui.themes.ValoTheme;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
-public class Grid extends VerticalLayout implements View {
+public class GridTest extends VerticalLayout implements View {
 
     List<Person> people = new ArrayList<>();
 
-    public Grid() {
-        Random random = new Random();
 
+    public GridTest() {
+        setSizeFull();
+        Random random = new Random();
         for (int i = 0; i < 300; i++) {
             people.add(new Person(UUID.randomUUID().toString(), random.nextInt(), i));
         }
-
         setMargin(true);
         setSpacing(true);
 
-        Label h1 = new Label("Tables");
-        h1.addStyleName(ValoTheme.LABEL_H1);
-        addComponent(h1);
-
-        HorizontalLayout wrap = new HorizontalLayout();
-        wrap.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
-        wrap.setSpacing(true);
-        addComponent(wrap);
-
         com.vaadin.ui.Grid<Person> grid = getGrid();
-        addComponent(grid);
-
-        grid = getGrid();
-        grid.setFrozenColumnCount(1);
-        grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.MULTI);
-        grid.getEditor().setEnabled(true);
-        addComponent(grid);
-
-        grid = getGrid();
-        grid.setCaption("Single");
+        grid.setSizeFull();
+        grid.setCaption("Compact");
         grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.SINGLE);
         grid.getEditor().setEnabled(true);
+        grid.setStyleName(MaterialTheme.TABLE_COMPACT);
         addComponent(grid);
-
-        grid = getGrid();
-        grid.setCaption("None");
-        grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.NONE);
-        grid.getEditor().setEnabled(true);
-        addComponent(grid);
-
-        grid = getGrid();
-        grid.setCaption("Multi");
-        grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.MULTI);
-        grid.getEditor().setEnabled(true);
-        addComponent(grid);
-
-        grid = getGrid(3);
-        grid.setCaption("Multi 2");
-        grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.MULTI);
-        grid.getEditor().setEnabled(true);
-        addComponent(grid);
+        setExpandRatio(grid, 1.0f);
     }
 
 

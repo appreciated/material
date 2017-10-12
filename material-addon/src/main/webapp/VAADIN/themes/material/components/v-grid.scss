@@ -52,6 +52,7 @@ body.v-webkit .v-grid-scroller-horizontal {
     height: $v-unit-size--large;
     line-height: $v-unit-size--large;
     background-color: $mat-card-color !important;
+    padding: 0 round($v-unit-size/2);
   }
   .v-grid-column-header-content,
   .v-grid-column-footer-content {

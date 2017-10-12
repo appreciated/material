@@ -17,6 +17,7 @@
  */
 package com.vaadin.uitest;
 
+import com.github.appreciated.material.MaterialTheme;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.shared.ui.slider.SliderOrientation;
@@ -182,6 +183,12 @@ public class Sliders extends VerticalLayout implements View {
         pb2.setWidth("300px");
         pb2.addStyleName(ValoTheme.PROGRESSBAR_POINT);
         // pb2.setValue(0.6f);
+        row.addComponent(pb2);
+
+        pb2 = new ProgressBar();
+        pb2.setCaption("Indeterminate style");
+        pb2.setWidth("300px");
+        pb2.addStyleName(MaterialTheme.PROGRESSBAR_INDETERMINATE);
         row.addComponent(pb2);
 
         if (!ValoThemeUI.isTestMode()) {
