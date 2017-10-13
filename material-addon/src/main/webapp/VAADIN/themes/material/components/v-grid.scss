@@ -41,11 +41,20 @@ body.v-webkit .v-grid-scroller-horizontal {
   .v-grid-column-header-content {
     color: valo-font-color($mat-card-color, 0.6);
   }
-  .v-grid-row:not(:first-child) {
+  .v-grid-body .v-grid-row:not(:first-child) {
     border-top: 1px solid $v-table-border-color;
-    .v-grid-cell:last-child {
-      padding-right: 40px;
-    }
+  }
+  .v-grid-body .v-grid-row:not(:first-child):after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    right: -20px;
+    bottom: -1px;
+    top: -1px;
+    border-top: 1px solid $v-table-border-color;
+  }
+  .v-grid-body .v-grid-row:last-child:after {
+    border-bottom: 1px solid $v-table-border-color;
   }
   .v-grid-row-selected > .v-grid-cell {
     border-top: none;
