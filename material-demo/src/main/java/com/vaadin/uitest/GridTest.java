@@ -20,6 +20,7 @@ package com.vaadin.uitest;
 import com.github.appreciated.material.MaterialTheme;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
+import com.vaadin.ui.Grid;
 import com.vaadin.ui.VerticalLayout;
 
 import java.util.ArrayList;
@@ -41,7 +42,7 @@ public class GridTest extends VerticalLayout implements View {
         setMargin(true);
         setSpacing(true);
 
-        com.vaadin.ui.Grid<Person> grid = getGrid();
+        Grid<Person> grid = getGrid();
         grid.setSizeFull();
         grid.setCaption("Compact");
         grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.SINGLE);
@@ -52,25 +53,18 @@ public class GridTest extends VerticalLayout implements View {
     }
 
 
-    private com.vaadin.ui.Grid<Person> getGrid() {
+    private Grid<Person> getGrid() {
         return getGrid(people.size());
     }
 
-    private com.vaadin.ui.Grid<Person> getGrid(int size) {
+    private Grid<Person> getGrid(int size) {
         com.vaadin.ui.Grid<Person> grid = new com.vaadin.ui.Grid<>();
         grid.setItems(people.subList(0, size));
         grid.addColumn(Person::getName).setCaption("Name 1");
         grid.addColumn(Person::getName).setCaption("Name 2");
         grid.addColumn(Person::getName).setCaption("Name 3");
         grid.addColumn(Person::getName).setCaption("Name 4");
-        grid.addColumn(Person::getBirthYear).setCaption("Year of birth 1");
-        grid.addColumn(Person::getBirthYear).setCaption("Year of birth 2");
-        grid.addColumn(Person::getBirthYear).setCaption("Year of birth 3");
-        grid.addColumn(Person::getBirthYear).setCaption("Year of birth 4");
-        grid.addColumn(Person::getBirthYear).setCaption("Year of birth 5");
-        grid.addColumn(Person::getBirthYear).setCaption("Year of birth 6");
-        grid.addColumn(Person::getID).setCaption("ID");
-        grid.addColumn(Person::getName).setCaption("Name 5");
+        grid.getColumns().forEach(personColumn -> personColumn.setExpandRatio(1));
         return grid;
     }
 

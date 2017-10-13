@@ -196,7 +196,7 @@ public class ValoThemeUI extends UI {
         navigator.addView("tables", Tables.class);
         navigator.addView("splitpanels", SplitPanels.class);
         navigator.addView("tabs", Tabsheets.class);
-        navigator.addView("grids", Grid.class);
+        navigator.addView("grids", GridView.class);
         navigator.addView("test-grid", GridTest.class);
         navigator.addView("trees", Trees.class);
         navigator.addView("accordions", Accordions.class);

@@ -89,7 +89,7 @@
     @include ripple-background($v-focus-color);
   }
 
-  .v-button:not(.no-border-radius):not(.floating-action):not(.round):after,
+  :not(.v-component-group) .v-button:not(.no-border-radius):not(.floating-action):not(.round):after,
   .v-upload:not(.no-border-radius):not(.floating-action-upload):not(.round):after {
     border-radius: $v-border-radius;
   }

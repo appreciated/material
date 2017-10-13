@@ -29,11 +29,11 @@ import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
-public class Grid extends VerticalLayout implements View {
+public class GridView extends VerticalLayout implements View {
 
     List<Person> people = new ArrayList<>();
 
-    public Grid() {
+    public GridView() {
         Random random = new Random();
 
         for (int i = 0; i < 300; i++) {

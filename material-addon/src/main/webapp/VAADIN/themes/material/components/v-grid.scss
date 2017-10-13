@@ -43,7 +43,9 @@ body.v-webkit .v-grid-scroller-horizontal {
   }
   .v-grid-row:not(:first-child) {
     border-top: 1px solid $v-table-border-color;
-    padding-right: 20px;
+    .v-grid-cell:last-child {
+      padding-right: 40px;
+    }
   }
   .v-grid-row-selected > .v-grid-cell {
     border-top: none;
