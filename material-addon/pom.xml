@@ -28,6 +28,10 @@
         <Vaadin-Addon>${project.artifactId}-${project.version}.jar</Vaadin-Addon>
     </properties>
 
+    <organization>
+        <name>appreciated</name>
+    </organization>
+
     <scm>
         <url>git://github.com/appreciated/material-design.git</url>
         <connection>scm:git:git@github.com:appreciated/material-design.git</connection>
