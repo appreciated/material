@@ -47,6 +47,7 @@ public class GridTest extends VerticalLayout implements View {
         grid.setCaption("Compact");
         grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.SINGLE);
         grid.getEditor().setEnabled(true);
+
         grid.setStyleName(MaterialTheme.TABLE_COMPACT);
         addComponent(grid);
         setExpandRatio(grid, 1.0f);
@@ -63,7 +64,6 @@ public class GridTest extends VerticalLayout implements View {
         grid.addColumn(Person::getName).setCaption("Name 1");
         grid.addColumn(Person::getName).setCaption("Name 2");
         grid.addColumn(Person::getName).setCaption("Name 3");
-        grid.addColumn(Person::getName).setCaption("Name 4");
         grid.getColumns().forEach(personColumn -> personColumn.setExpandRatio(1));
         return grid;
     }

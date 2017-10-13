@@ -20,10 +20,14 @@ body.v-webkit .v-grid-scroller-vertical {
 }
 
 body.v-webkit .v-grid-scroller-horizontal {
-  padding-bottom: 4px !important;
-  border: 2px solid transparent !important;
+  padding-bottom: 5px !important;
+  border: 0px solid transparent !important;
+  bottom: 2px;
 }
 
+body.v-gecko .v-grid-scroller.v-grid-scroller-horizontal > div {
+  margin: 0 -17px !important;
+}
 @mixin v-grid {
   .v-grid:not(.borderless) {
     @extend .floating-border;
@@ -44,20 +48,11 @@ body.v-webkit .v-grid-scroller-horizontal {
   .v-grid-body .v-grid-row:not(:first-child) {
     border-top: 1px solid $v-table-border-color;
   }
-  .v-grid-body .v-grid-row:not(:first-child):after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    right: -20px;
-    bottom: -1px;
-    top: -1px;
-    border-top: 1px solid $v-table-border-color;
-  }
-  .v-grid-body .v-grid-row:last-child:after {
-    border-bottom: 1px solid $v-table-border-color;
-  }
   .v-grid-row-selected > .v-grid-cell {
     border-top: none;
+  }
+  .v-grid-scroller.v-grid-scroller-horizontal {
+    overflow-x: auto !important;
   }
   .v-grid-cell {
     height: $v-unit-size--large;
@@ -71,6 +66,9 @@ body.v-webkit .v-grid-scroller-horizontal {
   }
   .v-grid-cell.frozen {
     box-shadow: none;
+  }
+  .v-grid-scroller.v-grid-scroller-horizontal > div {
+    margin: 0 -12px;
   }
   .v-grid-tablewrapper {
     overflow: visible;
