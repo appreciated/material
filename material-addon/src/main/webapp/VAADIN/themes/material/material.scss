@@ -2,6 +2,8 @@
 @import "../valo/valo.scss";
 
 $v-included-components: remove($v-included-components, button);
+$v-included-components: remove($v-included-components, panel);
+
 @import "functions.scss";
 @import "materialize/globals.scss";
 @import "components/v-window.scss";
@@ -40,7 +42,6 @@ $v-included-components: remove($v-included-components, button);
   @include functions;
   @include globals;
   @include cards;
-  @include v-panel;
   @include ripple;
   @include v-button;
   @include v-textfield;
@@ -68,4 +69,5 @@ $v-included-components: remove($v-included-components, button);
   @include v-menu;
   @include v-app-loading;
 
+  @include valo-panel($include-additional-styles: true);
 }

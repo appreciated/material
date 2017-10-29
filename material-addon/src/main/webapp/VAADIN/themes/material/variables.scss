@@ -8,6 +8,8 @@ $mat-window-color: lighten($mat-card-color, 3%) !default;
 $mat-card-font-color: valo-font-color($mat-card-color, 1.0) !default;
 $mat-scroll-bar-color: rgba(valo-font-color($mat-card-color, 1.0), 0.2);
 $mat-card-padding: 20px !default;
+$mat-card-caption-font-size: 27px !default;
+$mat-card-caption-font-weight: 200 !default;
 $mat-card-hover-begin: $z-depth-1 !default;
 $mat-card-hover-end: $z-depth-3 !default;
 $mat-custom-color: $v-focus-color !default;

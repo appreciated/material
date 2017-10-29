@@ -1,23 +1,55 @@
-@mixin v-panel {
-  .v-panel:not(.borderless):not(.well),
-  .v-csslayout-card {
-    background: $mat-card-color;
+@mixin valo-panel-caption-style($background-color: $v-background-color, $bevel: $v-bevel, $gradient: null, $border: null) {
+  @include box-sizing(border-box);
+  padding: $mat-card-padding 0 0 $mat-card-padding;
+  line-height: $v-unit-size;
+  $bg: $mat-card-color;
+  color: valo-font-color($bg);
+  font-size: $mat-card-caption-font-size;
+  font-weight: $mat-card-caption-font-weight;
+  @include box-shadow(valo-bevel-and-shadow($background-color: $bg, $bevel: null, $shadow: null, $gradient: null));
+  text-shadow: valo-text-shadow(valo-font-color($bg), $bg);
+}
+
+@mixin valo-panel($include-additional-styles,$primary-stylename: v-panel) {
+  .#{$primary-stylename} {
+    @include valo-panel-style;
+    overflow: visible !important;
   }
-  .v-panel-caption {
-    margin-top: 24px;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 32px;
-    padding: 0 $mat-card-padding;
-    margin-bottom: -10px;
-    background: transparent;
+  .#{$primary-stylename}-caption {
+    @include valo-panel-caption-style;
+    border-radius: $v-border-radius - first-number($v-border) $v-border-radius - first-number($v-border) 0 0;
   }
-  .v-caption-card,
-  .v-caption-well {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 32px;
-    padding-left: $mat-card-padding;
+  .#{$primary-stylename}-content {
+    @include box-sizing(border-box);
+    width: 100%;
+    height: 100%;
+    @include valo-panel-adjust-content-margins;
+  }
+  @if $include-additional-styles {
+    .#{$primary-stylename}-borderless {
+      @include valo-panel-borderless-style;
+    }
+
+    .#{$primary-stylename}-well {
+      @include valo-panel-well-style;
+    }
+
+    .#{$primary-stylename}-scroll-divider {
+      @include valo-panel-scroll-divider-style;
+    }
+
+    .#{$primary-stylename}-caption.v-horizontallayout {
+      height: auto !important;
+      line-height: 0;
+
+      .v-slot {
+        vertical-align: middle;
+      }
+
+      .v-label {
+        line-height: $v-unit-size;
+      }
+    }
   }
   .v-panel-content > .v-margin-left, .v-csslayout-card > .v-margin-left {
     padding-left: $mat-card-padding;
