@@ -2,26 +2,54 @@
   .valo-menu-responsive {
     @include width-range($min: 801px) {
       .valo-menu-part {
-        @extend .z-depth-5;
+        @extend .z-depth-3;
       }
     }
     @include width-range($max: 800px) {
+      .valo-menu-toggle {
+        top: 0px;
+        left: 0px;
+        line-height: v-scaling-factor--large;
+        height: v-scaling-factor--large !important;
+        color: valo-font-color($v-focus-color);
+        z-index: 9002 !important;
+      }
+      .valo-menu-title {
+        z-index: 9001;
+        height: v-scaling-factor--large !important;
+        @extend .z-depth-3;
+      }
+      .v-menubar-user-menu {
+        color: $mat-card-color !important;
+        z-index: 9002 !important;
+        height: v-scaling-factor--large !important;
+        .v-menubar-menuitem {
+          line-height: v-scaling-factor--large !important;
+        }
+      }
       .valo-menuitems {
-        box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.0), 0px 0px 0px 0px rgba(0, 0, 0, 0.0), 0 0px 0px 0px rgba(0, 0, 0, 0.0);
+        @extend .z-depth-0;
+        background-color: $mat-card-color;
+        background-image: none;
+        color: valo-font-color($mat-card-color);
       }
       .valo-menu-visible .valo-menuitems {
-        box-shadow: 0 24px 24px 2px rgba(0, 0, 0, 0.3), 0px 30px 30px 5px rgba(0, 0, 0, 0.4), 0 8px 10px -5px rgba(0, 0, 0, 0.5);
+        @extend .z-depth-3;
       }
     }
+  }
+  .valo-menu-responsive[width-range~="801px-1100px"] .valo-menu-part {
+    background-color: $mat-card-color;
+  }
+  .v-menubar-user-menu .v-menubar-menuitem:hover {
+    color: inherit !important;
+    background: rgba(valo-font-color($v-focus-color), 0.1);
   }
   .valo-menu-part {
     background: $mat-card-color;
   }
   .v-menubar-user-menu .v-menubar-menuitem-selected:hover {
     color: $v-focus-color;
-  }
-  .valo-menu-item:hover {
-    color: inherit;
   }
   .valo-menu-item:focus, .valo-menu-item:hover, .valo-menu-item.selected {
     color: inherit;
@@ -38,9 +66,12 @@
   .valo-menu {
     color: valo-font-color($mat-card-color);
   }
-  .valo-menu-item [class*="badge"] {
-    color: valo-font-color($v-focus-color) !important;
-    border-radius: 30px !important;
-    padding: 4px 7px;
+  .valo-menu-item {
+    padding: 3px 45px 3px 23px;
+    [class*="badge"] {
+      color: valo-font-color($v-focus-color) !important;
+      border-radius: 30px !important;
+      padding: 4px 7px;
+    }
   }
 }
