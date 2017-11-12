@@ -14,4 +14,33 @@
       }
     }
   }
+  .valo-menu-part {
+    background: $mat-card-color;
+  }
+  .v-menubar-user-menu .v-menubar-menuitem-selected:hover {
+    color: $v-focus-color;
+  }
+  .valo-menu-item:hover {
+    color: inherit;
+  }
+  .valo-menu-item:focus, .valo-menu-item:hover, .valo-menu-item.selected {
+    color: inherit;
+    background: valo-font-color($mat-card-color, 0.125);
+  }
+  .valo-menu-item.selected .v-icon {
+    color: valo-font-color($mat-card-color, 0.7);
+  }
+  .valo-menu-subtitle {
+    font-size: 1rem !important;
+    color: valo-font-color($mat-card-color) !important;
+    margin: 9px 0 9px 23px !important;
+  }
+  .valo-menu {
+    color: valo-font-color($mat-card-color);
+  }
+  .valo-menu-item [class*="badge"] {
+    color: valo-font-color($v-focus-color) !important;
+    border-radius: 30px !important;
+    padding: 4px 7px;
+  }
 }
