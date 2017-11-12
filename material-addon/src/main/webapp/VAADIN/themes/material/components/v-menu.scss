@@ -61,7 +61,7 @@
   .valo-menu-subtitle {
     font-size: 1rem !important;
     color: valo-font-color($mat-card-color) !important;
-    margin: 9px 0 9px 23px !important;
+    margin: 9px 0 9px 21px !important;
   }
   .valo-menu {
     color: valo-font-color($mat-card-color);
@@ -72,6 +72,7 @@
       color: valo-font-color($v-focus-color) !important;
       border-radius: 30px !important;
       padding: 4px 7px;
+      top: 11px !important;
     }
   }
 }
