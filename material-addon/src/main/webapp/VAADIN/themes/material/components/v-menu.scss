@@ -9,22 +9,22 @@
       .valo-menu-toggle {
         top: 0px;
         left: 0px;
-        line-height: v-scaling-factor--large;
-        height: v-scaling-factor--large !important;
+        line-height: $v-unit-size--large !important;
+        height: $v-unit-size--large !important;
         color: valo-font-color($v-focus-color);
         z-index: 9002 !important;
       }
       .valo-menu-title {
         z-index: 9001;
-        height: v-scaling-factor--large !important;
+        height: $v-unit-size--large !important;
         @extend .z-depth-3;
       }
       .v-menubar-user-menu {
         color: $mat-card-color !important;
         z-index: 9002 !important;
-        height: v-scaling-factor--large !important;
+        height: $v-unit-size--large !important;
         .v-menubar-menuitem {
-          line-height: v-scaling-factor--large !important;
+          line-height: $v-unit-size--large !important;
         }
       }
       .valo-menuitems {
