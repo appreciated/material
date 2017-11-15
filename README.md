@@ -36,9 +36,9 @@ The Designer won't be able to successfully compile the SCSS as long as it doesn'
 To fix this you will either need to unzip the jar and copy the files to `src/main/webapp/VAADIN/themes` or you could use the following maven plugin that does the job for you.
 
 Notes: 
-- Every time you are updating the Theme to a new version (1.0.0 to 1.0.1) you need to run a `mvn install` otherwise the designer and the scss compiler will continue to use the old theme. 
+- Every time you are updating the Theme to a newer version (f.e. 1.0.0 to 1.0.1) you need to run a `mvn clean install` otherwise the designer and the scss compiler will continue to use the older version (since they are in the same folder). 
 - I do not recommend to include this job for jenkins builds, only for developement purposes.
-- To avoid pushing unecessary files to git you might want to add `src/main/webapp/VAADIN/themes/material/` to your .gitignore.
+- To avoid pushing unecessary files to git you might want to add `src/main/webapp/VAADIN/themes/material/` to your `.gitignore`.
 ````
   <plugin>
     <artifactId>maven-dependency-plugin</artifactId>
