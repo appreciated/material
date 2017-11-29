@@ -31,5 +31,6 @@
   .v-component-group .v-button {
     padding: 0 10px;
     overflow: hidden;
+    vertical-align: top !important; // fixes styling issue of buttons in component groups with textfields
   }
 }
