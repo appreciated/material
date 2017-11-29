@@ -25,7 +25,6 @@ import com.vaadin.server.ThemeResource;
 import com.vaadin.server.UserError;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
-import com.vaadin.v7.ui.ComboBox;
 
 public class ComboBoxes extends VerticalLayout implements View {
     public ComboBoxes() {
@@ -39,15 +38,12 @@ public class ComboBoxes extends VerticalLayout implements View {
         row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         addComponent(row);
 
-        ComboBox combo = new ComboBox("Normal");
-        combo.setInputPrompt("You can type here");
-        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
-        combo.setNullSelectionAllowed(false);
-        combo.select(combo.getItemIds().iterator().next());
-        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
-        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
-        combo.setItemIcon(combo.getItemIds().iterator().next(),
-                new ThemeResource("../runo/icons/16/document.png"));
+        ComboBox<String> combo = new ComboBox("Normal");
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
+        combo.setEmptySelectionAllowed(false);
+        combo.setValue("First");
+        combo.setIcon(new ThemeResource("../runo/icons/16/document.png"));
         row.addComponent(combo);
 
         row.addComponent(getComboBoxWithStyle(ValoTheme.LAYOUT_COMPONENT_GROUP));
@@ -55,130 +51,100 @@ public class ComboBoxes extends VerticalLayout implements View {
         row.addComponent(getComboBoxWithStyle(MaterialTheme.LAYOUT_COMPONENT_GROUP_MATERIAL));
 
         combo = new ComboBox("Explicit size");
-        combo.setInputPrompt("You can type here");
-        combo.addItem("Option One");
-        combo.addItem("Option Two");
-        combo.addItem("Option Three");
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
         combo.setWidth("260px");
         combo.setHeight("60px");
         row.addComponent(combo);
 
         combo = new ComboBox("No text input allowed");
-        combo.setInputPrompt("You can click here");
-        combo.addItem("Option One");
-        combo.addItem("Option Two");
-        combo.addItem("Option Three");
+        combo.setPlaceholder("You can click here");
+        combo.setItems("First", "Second", "Third");
         combo.setTextInputAllowed(false);
-        combo.setNullSelectionAllowed(false);
-        combo.select("Option One");
+        combo.setEmptySelectionAllowed(false);
+        combo.setValue("First");
         row.addComponent(combo);
 
         combo = new ComboBox("Error");
-        combo.setInputPrompt("You can type here");
-        combo.addItem("Option One");
-        combo.addItem("Option Two");
-        combo.addItem("Option Three");
-        combo.setNullSelectionAllowed(false);
-        combo.select("Option One");
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
+        combo.setEmptySelectionAllowed(false);
+        combo.setValue("First");
         combo.setComponentError(new UserError("Fix it, now!"));
         row.addComponent(combo);
 
         combo = new ComboBox("Error, borderless");
-        combo.setInputPrompt("You can type here");
-        combo.addItem("Option One");
-        combo.addItem("Option Two");
-        combo.addItem("Option Three");
-        combo.setNullSelectionAllowed(false);
-        combo.select("Option One");
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
+        combo.setEmptySelectionAllowed(false);
+        combo.setValue("First");
         combo.setComponentError(new UserError("Fix it, now!"));
         combo.addStyleName(ValoTheme.COMBOBOX_BORDERLESS);
         row.addComponent(combo);
 
         combo = new ComboBox("Disabled");
-        combo.setInputPrompt("You can't type here");
-        combo.addItem("Option One");
-        combo.addItem("Option Two");
-        combo.addItem("Option Three");
+        combo.setPlaceholder("You can't type here");
+        combo.setItems("First", "Second", "Third");
         combo.setEnabled(false);
         row.addComponent(combo);
 
         combo = new ComboBox("Custom color");
-        combo.setInputPrompt("You can type here");
-        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
-        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
-        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
         combo.addStyleName("color1");
         row.addComponent(combo);
 
         combo = new ComboBox("Custom color");
-        combo.setInputPrompt("You can type here");
-        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
-        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
-        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
         combo.addStyleName("color2");
         row.addComponent(combo);
 
         combo = new ComboBox("Custom color");
-        combo.setInputPrompt("You can type here");
-        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
-        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
-        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
         combo.addStyleName("color3");
         row.addComponent(combo);
 
         combo = new ComboBox("Small");
-        combo.setInputPrompt("You can type here");
-        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
-        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
-        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
         combo.addStyleName(ValoTheme.COMBOBOX_SMALL);
         row.addComponent(combo);
 
         combo = new ComboBox("Large");
-        combo.setInputPrompt("You can type here");
-        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
-        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
-        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
         combo.addStyleName(ValoTheme.COMBOBOX_LARGE);
         row.addComponent(combo);
 
         combo = new ComboBox("Borderless");
-        combo.setInputPrompt("You can type here");
-        combo.addItem("Option One");
-        combo.addItem("Option Two");
-        combo.addItem("Option Three");
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
         combo.addStyleName(ValoTheme.COMBOBOX_BORDERLESS);
         row.addComponent(combo);
 
         combo = new ComboBox("Tiny");
-        combo.setInputPrompt("You can type here");
-        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
-        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
-        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
         combo.addStyleName(ValoTheme.COMBOBOX_TINY);
         row.addComponent(combo);
 
         combo = new ComboBox("Huge");
-        combo.setInputPrompt("You can type here");
-        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
-        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
-        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
         combo.addStyleName(ValoTheme.COMBOBOX_HUGE);
         row.addComponent(combo);
 
         combo = new ComboBox("Floating");
-        combo.setInputPrompt("You can type here");
-        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
-        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
-        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
         combo.addStyleName(MaterialTheme.COMBOBOX_FLOATING);
         row.addComponent(combo);
 
         combo = new ComboBox("Custom");
-        combo.setInputPrompt("You can type here");
-        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
-        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
-        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
+        combo.setPlaceholder("You can type here");
+        combo.setItems("First", "Second", "Third");
         combo.addStyleName(MaterialTheme.COMBOBOX_CUSTOM);
         row.addComponent(combo);
     }
@@ -189,12 +155,11 @@ public class ComboBoxes extends VerticalLayout implements View {
         group.addStyleName(style);
 
         ComboBox combo = new ComboBox();
-        combo.setInputPrompt("You can type here");
-        combo.setContainerDataSource(ValoThemeUI.generateContainer(200, false));
-        combo.setNullSelectionAllowed(false);
-        combo.select(combo.getItemIds().iterator().next());
-        combo.setItemCaptionPropertyId(ValoThemeUI.CAPTION_PROPERTY);
-        combo.setItemIconPropertyId(ValoThemeUI.ICON_PROPERTY);
+        combo.setPlaceholder("You can type here");
+
+        combo.setEmptySelectionAllowed(false);
+        combo.setItems("First", "Second", "Third");
+        combo.setValue("First");
         combo.setWidth("240px");
         group.addComponent(combo);
         Button today = new Button("Do It");

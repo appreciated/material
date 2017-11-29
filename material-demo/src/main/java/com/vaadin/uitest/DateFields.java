@@ -26,9 +26,6 @@ import com.vaadin.ui.*;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.themes.ValoTheme;
-import com.vaadin.v7.data.fieldgroup.FieldGroup;
-import com.vaadin.v7.data.util.ObjectProperty;
-import com.vaadin.v7.data.util.PropertysetItem;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -167,19 +164,6 @@ public class DateFields extends VerticalLayout implements View {
         setDate(date);
         date.setShowISOWeekNumbers(true);
         row.addComponent(date);
-
-        PropertysetItem item = new PropertysetItem();
-        item.addItemProperty("date", new ObjectProperty<>(getDefaultOldDate()));
-
-        FormLayout form = new FormLayout();
-        form.setMargin(false);
-
-        FieldGroup binder = new FieldGroup(item);
-        form.addComponent(
-                binder.buildAndBind("Picker in read-only field group", "date"));
-        binder.setReadOnly(true);
-
-        row.addComponent(form);
     }
 
     private CssLayout getCompoentGroupWithStyle(String style) {

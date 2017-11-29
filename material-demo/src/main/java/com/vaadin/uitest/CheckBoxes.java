@@ -19,13 +19,8 @@ package com.vaadin.uitest;
 
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
-import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
-import com.vaadin.v7.data.Item;
-import com.vaadin.v7.ui.OptionGroup;
 
 public class CheckBoxes extends VerticalLayout implements View {
     public CheckBoxes() {
@@ -99,113 +94,79 @@ public class CheckBoxes extends VerticalLayout implements View {
         row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
         addComponent(row);
 
-        OptionGroup options = new OptionGroup("Choose one, explicit width");
-        options.setWidth("200px");
-        options.addItem("Option One");
-        Item two = options.addItem(
-                "Option Two, with a longer caption that should wrap when the components width is explicitly set.");
-        options.addItem("Option Three");
-        options.select("Option One");
-        options.setItemIcon("Option One", testIcon.get());
-        options.setItemIcon(two, testIcon.get());
-        options.setItemIcon("Option Three", testIcon.get(true));
-        row.addComponent(options);
+        RadioButtonGroup<String> rGroup = new RadioButtonGroup("Choose one, explicit width");
+        rGroup.setWidth("200px");
+        rGroup.setItems("Option One",
+                "Option Two, with a longer caption that should wrap when the components width is explicitly set."
+                , "Option Three");
+        rGroup.setValue("Option One");
+        row.addComponent(rGroup);
 
-        options = new OptionGroup("Choose many, explicit width");
-        options.setMultiSelect(true);
-        options.setWidth("200px");
-        options.addItem("Option One");
-        two = options.addItem(
-                "Option Two, with a longer caption that should wrap when the components width is explicitly set.");
-        options.addItem("Option Three");
-        options.select("Option One");
-        options.setItemIcon("Option One", testIcon.get());
-        options.setItemIcon(two, testIcon.get());
-        options.setItemIcon("Option Three", testIcon.get(true));
-        row.addComponent(options);
+        CheckBoxGroup<String> cGroup = new CheckBoxGroup("Choose many, explicit width");
+        cGroup.setWidth("200px");
+        cGroup.setItems("Option One",
+                "Option Two, with a longer caption that should wrap when the components width is explicitly set."
+                , "Option Three");
+        //cGroup.setValue("Option One");
+        row.addComponent(cGroup);
 
-        options = new OptionGroup("Choose one, small");
-        options.addStyleName(ValoTheme.OPTIONGROUP_SMALL);
-        options.setMultiSelect(false);
-        options.addItem("Option One");
-        options.addItem("Option Two");
-        options.addItem("Option Three");
-        options.select("Option One");
-        options.setItemIcon("Option One", testIcon.get());
-        options.setItemIcon("Option Two", testIcon.get());
-        options.setItemIcon("Option Three", testIcon.get(true));
-        row.addComponent(options);
+        rGroup = new RadioButtonGroup("Choose one, small");
+        rGroup.addStyleName(ValoTheme.OPTIONGROUP_SMALL);
+        rGroup.setItems("Option One",
+                "Option Two, with a longer caption that should wrap when the components width is explicitly set."
+                , "Option Three");
+        rGroup.setValue("Option One");
+        row.addComponent(rGroup);
 
-        options = new OptionGroup("Choose many, small");
-        options.addStyleName(ValoTheme.OPTIONGROUP_SMALL);
-        options.setMultiSelect(true);
-        options.addItem("Option One");
-        options.addItem("Option Two");
-        options.addItem("Option Three");
-        options.select("Option One");
-        options.setItemIcon("Option One", testIcon.get());
-        options.setItemIcon("Option Two", testIcon.get());
-        options.setItemIcon("Option Three", testIcon.get(true));
-        row.addComponent(options);
+        cGroup = new CheckBoxGroup("Choose many, small");
+        cGroup.addStyleName(ValoTheme.OPTIONGROUP_SMALL);
+        cGroup.setItems("Option One",
+                "Option Two, with a longer caption that should wrap when the components width is explicitly set."
+                , "Option Three");
+        //cGroup.setValue("Option One");
+        row.addComponent(cGroup);
 
-        options = new OptionGroup("Choose one, large");
-        options.addStyleName(ValoTheme.OPTIONGROUP_LARGE);
-        options.setMultiSelect(false);
-        options.addItem("Option One");
-        options.addItem("Option Two");
-        options.addItem("Option Three");
-        options.select("Option One");
-        options.setItemIcon("Option One", testIcon.get());
-        options.setItemIcon("Option Two", testIcon.get());
-        options.setItemIcon("Option Three", testIcon.get(true));
-        row.addComponent(options);
+        rGroup = new RadioButtonGroup("Choose one, large");
+        rGroup.addStyleName(ValoTheme.OPTIONGROUP_LARGE);
+        rGroup.setItems("Option One",
+                "Option Two, with a longer caption that should wrap when the components width is explicitly set."
+                , "Option Three");
+        rGroup.setValue("Option One");
+        row.addComponent(rGroup);
 
-        options = new OptionGroup("Choose many, large");
-        options.addStyleName(ValoTheme.OPTIONGROUP_LARGE);
-        options.setMultiSelect(true);
-        options.addItem("Option One");
-        options.addItem("Option Two");
-        options.addItem("Option Three");
-        options.select("Option One");
-        options.setItemIcon("Option One", testIcon.get());
-        options.setItemIcon("Option Two", testIcon.get());
-        options.setItemIcon("Option Three", testIcon.get(true));
-        row.addComponent(options);
+        cGroup = new CheckBoxGroup("Choose many, large");
+        cGroup.addStyleName(ValoTheme.OPTIONGROUP_LARGE);
+        cGroup.setItems("Option One",
+                "Option Two, with a longer caption that should wrap when the components width is explicitly set."
+                , "Option Three");
+        //cGroup.setValue("Option One");
+        row.addComponent(cGroup);
 
-        options = new OptionGroup("Horizontal items");
-        options.addStyleName(ValoTheme.OPTIONGROUP_HORIZONTAL);
-        options.addItem("Option One");
-        two = options.addItem("Option Two, with a longer caption");
-        options.addItem("Option Three");
-        options.select("Option One");
-        options.setItemIcon("Option One", testIcon.get());
-        options.setItemIcon(two, testIcon.get());
-        options.setItemIcon("Option Three", testIcon.get());
-        row.addComponent(options);
+        rGroup = new RadioButtonGroup("Horizontal items");
+        rGroup.addStyleName(ValoTheme.OPTIONGROUP_HORIZONTAL);
+        rGroup.setItems("Option One",
+                "Option Two, with a longer caption that should wrap when the components width is explicitly set."
+                , "Option Three");
+        rGroup.setValue("Option One");
+        row.addComponent(rGroup);
 
-        options = new OptionGroup("Horizontal items, explicit width");
-        options.setMultiSelect(true);
-        options.setWidth("500px");
-        options.addStyleName(ValoTheme.OPTIONGROUP_HORIZONTAL);
-        options.addItem("Option One");
-        two = options.addItem("Option Two, with a longer caption");
-        options.addItem("Option Three");
-        options.select("Option One");
-        options.setItemIcon("Option One", testIcon.get());
-        options.setItemIcon(two, testIcon.get());
-        options.setItemIcon("Option Three", testIcon.get());
-        row.addComponent(options);
+        cGroup = new CheckBoxGroup("Horizontal items, explicit width");
+        cGroup.addStyleName(ValoTheme.OPTIONGROUP_HORIZONTAL);
+        cGroup.setWidth(500, Unit.PIXELS);
+        cGroup.setItems("Option One",
+                "Option Two, with a longer caption that should wrap when the components width is explicitly set."
+                , "Option Three");
+        //cGroup.setValue("Option One");
+        row.addComponent(cGroup);
 
-        options = new OptionGroup("Disabled items");
-        options.setEnabled(false);
-        options.addItem("Option One");
-        options.addItem("Option Two");
-        options.addItem("Option Three");
-        options.select("Option One");
-        options.setItemIcon("Option One", testIcon.get());
-        options.setItemIcon("Option Two", testIcon.get());
-        options.setItemIcon("Option Three", testIcon.get(true));
-        row.addComponent(options);
+        rGroup = new RadioButtonGroup("Disabled items");
+        rGroup.setEnabled(false);
+        rGroup.addStyleName(ValoTheme.OPTIONGROUP_HORIZONTAL);
+        rGroup.setItems("Option One",
+                "Option Two, with a longer caption that should wrap when the components width is explicitly set."
+                , "Option Three");
+        rGroup.setValue("Option One");
+        row.addComponent(rGroup);
     }
 
     @Override

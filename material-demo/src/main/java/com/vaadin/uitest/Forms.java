@@ -27,10 +27,6 @@ import com.vaadin.ui.*;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.themes.ValoTheme;
-import com.vaadin.v7.ui.ComboBox;
-import com.vaadin.v7.ui.OptionGroup;
-import com.vaadin.v7.ui.TextArea;
-import com.vaadin.v7.ui.TextField;
 
 import java.time.LocalDate;
 
@@ -76,13 +72,11 @@ public class Forms extends VerticalLayout implements View {
 
         TextField username = new TextField("Username");
         username.setValue(sg.nextString(false) + sg.nextString(false));
-        username.setRequired(true);
         form.addComponent(username);
 
-        OptionGroup sex = new OptionGroup("Sex");
-        sex.addItem("Female");
-        sex.addItem("Male");
-        sex.select("Male");
+        RadioButtonGroup sex = new RadioButtonGroup<String>("Sex");
+        sex.setItems("Female", "Male");
+        sex.setValue("Male");
         sex.addStyleName(ValoTheme.OPTIONGROUP_HORIZONTAL);
         form.addComponent(sex);
 
@@ -95,7 +89,6 @@ public class Forms extends VerticalLayout implements View {
         email.setValue(
                 sg.nextString(false) + "@" + sg.nextString(false) + ".com");
         email.setWidth("50%");
-        email.setRequired(true);
         form.addComponent(email);
 
         TextField location = new TextField("Location");
@@ -115,13 +108,11 @@ public class Forms extends VerticalLayout implements View {
         CheckBox newsletter = new CheckBox("Subscribe to newsletter", true);
         wrap.addComponent(newsletter);
 
-        ComboBox period = new ComboBox();
+        ComboBox<String> period = new ComboBox<>();
         period.setTextInputAllowed(false);
-        period.addItem("Daily");
-        period.addItem("Weekly");
-        period.addItem("Montly");
-        period.setNullSelectionAllowed(false);
-        period.select("Weekly");
+        period.setItems("Daily", "Weekly", "Montly");
+        period.setEmptySelectionAllowed(false);
+        period.setValue("Weekly");
         period.addStyleName(ValoTheme.COMBOBOX_SMALL);
         period.setWidth("10em");
         wrap.addComponent(period);
@@ -133,7 +124,7 @@ public class Forms extends VerticalLayout implements View {
         form.addComponent(section);
 
         TextField website = new TextField("Website");
-        website.setInputPrompt("http://");
+        website.setPlaceholder("http://");
         website.setWidth("100%");
         form.addComponent(website);
 

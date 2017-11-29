@@ -25,21 +25,15 @@ import com.vaadin.event.dd.acceptcriteria.AcceptCriterion;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.ui.*;
-import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.ProgressBar;
-import com.vaadin.ui.Slider;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 import com.vaadin.v7.data.Container;
-import com.vaadin.v7.ui.ComboBox;
-import com.vaadin.v7.ui.*;
+import com.vaadin.v7.ui.OptionGroup;
+import com.vaadin.v7.ui.Table;
 import com.vaadin.v7.ui.Table.Align;
 import com.vaadin.v7.ui.Table.ColumnGenerator;
 import com.vaadin.v7.ui.Table.RowHeaderMode;
 import com.vaadin.v7.ui.Table.TableDragMode;
-import com.vaadin.v7.ui.TextField;
+import com.vaadin.v7.ui.TreeTable;
 
 public class Tables extends VerticalLayout implements View {
 
@@ -180,7 +174,7 @@ public class Tables extends VerticalLayout implements View {
                 public Object generateCell(Table source, Object itemId,
                                            Object columnId) {
                     TextField tf = new TextField();
-                    tf.setInputPrompt("Type here…");
+                    tf.setPlaceholder("Type here…");
                     // tf.addStyleName(ValoTheme.TABLE_COMPACT);
                     if ((Integer) itemId % 2 == 0) {
                         tf.addStyleName(ValoTheme.TABLE_BORDERLESS);
@@ -209,7 +203,7 @@ public class Tables extends VerticalLayout implements View {
                 public Object generateCell(Table source, Object itemId,
                                            Object columnId) {
                     ComboBox tf = new ComboBox();
-                    tf.setInputPrompt("Select");
+                    tf.setPlaceholder("Select");
                     tf.addStyleName(ValoTheme.TABLE_COMPACT);
                     if ((Integer) itemId % 2 == 0) {
                         tf.addStyleName(ValoTheme.DATEFIELD_BORDERLESS);

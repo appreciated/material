@@ -32,7 +32,6 @@ public class GridTest extends VerticalLayout implements View {
 
     List<Person> people = new ArrayList<>();
 
-
     public GridTest() {
         setSizeFull();
         Random random = new Random();
@@ -51,7 +50,6 @@ public class GridTest extends VerticalLayout implements View {
         addComponent(grid);
         setExpandRatio(grid, 1.0f);
     }
-
 
     private Grid<Person> getGrid() {
         return getGrid(people.size());
