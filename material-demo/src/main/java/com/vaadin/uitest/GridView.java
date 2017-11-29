@@ -84,6 +84,13 @@ public class GridView extends VerticalLayout implements View {
         grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.MULTI);
         grid.getEditor().setEnabled(true);
         addComponent(grid);
+
+        grid = getGrid();
+        grid.setCaption("No Header");
+        grid.removeHeaderRow(0);
+        grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.MULTI);
+        grid.getEditor().setEnabled(true);
+        addComponent(grid);
     }
 
 

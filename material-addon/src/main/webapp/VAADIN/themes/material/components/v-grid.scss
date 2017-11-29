@@ -28,6 +28,7 @@ body.v-webkit .v-grid-scroller-horizontal {
 body.v-gecko .v-grid-scroller.v-grid-scroller-horizontal > div {
   margin: 0 -17px !important;
 }
+
 @mixin v-grid {
   .v-grid:not(.borderless) {
     @extend .floating-border;
@@ -78,10 +79,13 @@ body.v-gecko .v-grid-scroller.v-grid-scroller-horizontal > div {
   .v-grid-header {
     width: auto;
   }
-  .v-grid:not(.borderless) .v-grid-tablewrapper::after {
+  .v-grid:not(.borderless) .v-grid-header::after {
     width: 100%;
     position: absolute;
     height: $v-unit-size--large;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
     content: "";
     background: $mat-card-color;
     @extend .z-depth-0-5;
@@ -147,8 +151,7 @@ body.v-gecko .v-grid-scroller.v-grid-scroller-horizontal > div {
   }
   $label-width: $v-unit-size/2 - 4px;
   $label-top-margin: $v-unit-size / 4;
-  .v-grid-select-all-checkbox,
-  .v-grid-selection-checkbox {
+  .v-grid-select-all-checkbox, .v-grid-selection-checkbox {
     width: $label-width;
     position: relative;
     margin: $label-width auto;
@@ -162,6 +165,7 @@ body.v-gecko .v-grid-scroller.v-grid-scroller-horizontal > div {
       border-radius: $v-border-radius;
       border: 2px solid valo-font-color($v-background-color, 0.65);
       transition: background 0.1s ease, border 0.1s ease;
+      color: transparent !important;
       &:after {
         content: '';
         width: $v-unit-size * 0.175;
@@ -192,7 +196,6 @@ body.v-gecko .v-grid-scroller.v-grid-scroller-horizontal > div {
   .v-grid-scroller, .v-grid-horizontal-scrollbar-deco {
     background: transparent !important;
   }
-
   :not(.v-grid-header) > .v-grid-row:last-child {
     border-bottom: 1px solid $v-table-border-color;
   }
