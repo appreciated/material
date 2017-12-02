@@ -9,5 +9,19 @@
     height: $v-unit-size + 2px;
     transition: height 0.3s ease;
     overflow: hidden;
+    outline: none;
+  }
+  .v-accordion-item-caption > .v-caption {
+    padding: 0px 0 0 15px;
+    line-height: 44px;
+    .v-icon {
+      font-size: 17px;
+    }
+    .v-captiontext {
+      font-size: 23px;
+    }
+  }
+  .v-accordion-item-content > .v-margin-top {
+    padding-top: 0px;
   }
 }
