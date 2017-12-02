@@ -208,8 +208,8 @@ body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
     color: $mat-custom-color;
   }
   .v-button.floating-action {
-    width: 56px;
-    height: 56px;
+    width: $v-unit-size * 1.25;
+    height: $v-unit-size * 1.25;
     padding: 0px;
     border-radius: 100%;
     background: $v-selection-color;
@@ -222,8 +222,8 @@ body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
     box-shadow: $z-depth-0;
   }
   .v-button.floating-action .v-icon {
-    line-height: 56px;
-    width: 56px;
+    line-height: $v-unit-size * 1.25;
+    width: $v-unit-size * 1.25;
     text-align: center;
   }
   .v-button.floating-action.friendly {
