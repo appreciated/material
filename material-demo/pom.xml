@@ -5,7 +5,7 @@
     <groupId>com.github.appreciated</groupId>
     <artifactId>material-demo</artifactId>
     <packaging>war</packaging>
-    <version>1.1.6</version>
+    <version>1.1.7</version>
     <name>Material Demo</name>
 
     <organization>
@@ -82,7 +82,7 @@
         <dependency>
             <groupId>com.github.appreciated</groupId>
             <artifactId>material</artifactId>
-            <version>1.1.6</version>
+            <version>1.1.7</version>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
