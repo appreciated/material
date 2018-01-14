@@ -129,6 +129,14 @@ body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
     height: 110%;
     vertical-align: middle;
   }
+
+  :not(.v-upload) > * > .v-button.floating-action:not(.icon-align-top):before {
+    height: 100%;
+  }
+  :not(.v-upload) > * > .v-button.floating-action .v-icon {
+    width: unset;
+  }
+
   .v-button.icon-align-top {
     height: auto;
     padding-top: 5px;
