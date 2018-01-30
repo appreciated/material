@@ -96,17 +96,17 @@ public class CheckBoxes extends VerticalLayout implements View {
         addComponent(row);
 
         check = new CheckBox("Switch", true);
-        check.addStyleName(MaterialTheme.SWITCH);
+        check.addStyleName(MaterialTheme.CHECKBOX_SWITCH);
         check.setIcon(testIcon.get());
         row.addComponent(check);
 
         check = new CheckBox("Disabled Switch", true);
-        check.addStyleName(MaterialTheme.SWITCH);
+        check.addStyleName(MaterialTheme.CHECKBOX_SWITCH);
         check.setEnabled(false);
         row.addComponent(check);
 
         check = new CheckBox("Readonly Switch", false);
-        check.addStyleName(MaterialTheme.SWITCH);
+        check.addStyleName(MaterialTheme.CHECKBOX_SWITCH);
         check.setReadOnly(true);
         row.addComponent(check);
 

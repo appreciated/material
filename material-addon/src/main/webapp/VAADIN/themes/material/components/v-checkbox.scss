@@ -60,7 +60,7 @@
       padding: 0 0 0 0;
       border: none !important;
       border-radius: 100%;
-      box-shadow: 0 0 3px 3px rgba(valo-font-color($v-background-color, .7), .25) !important;
+      box-shadow: $mat-switch-shadow !important;
     }
 
     > input:not(:checked) ~ label:before {
@@ -79,7 +79,7 @@
       pointer-events: none;
       input:checked ~ label:before {
         background-color: lighten($v-focus-color, 20%) !important;
-        box-shadow: 0 0 2px 2px rgba(valo-font-color($v-background-color, .7), .25) !important;
+        box-shadow: $mat-switch-shadow-disabled !important;
       }
       input:checked ~ label:after {
         background: lighten($v-focus-color, 30%);
