@@ -17,6 +17,7 @@
  */
 package com.vaadin.uitest;
 
+import com.github.appreciated.material.MaterialTheme;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.ui.*;
@@ -84,6 +85,29 @@ public class CheckBoxes extends VerticalLayout implements View {
         check = new CheckBox("Readonly", true);
         check.setReadOnly(true);
         check.setIcon(testIcon.get());
+        row.addComponent(check);
+
+        h1 = new Label("Switches");
+        h1.addStyleName(ValoTheme.LABEL_H1);
+        addComponent(h1);
+
+        row = new HorizontalLayout();
+        row.addStyleName(ValoTheme.LAYOUT_HORIZONTAL_WRAPPING);
+        addComponent(row);
+
+        check = new CheckBox("Switch", true);
+        check.addStyleName(MaterialTheme.SWITCH);
+        check.setIcon(testIcon.get());
+        row.addComponent(check);
+
+        check = new CheckBox("Disabled Switch", true);
+        check.addStyleName(MaterialTheme.SWITCH);
+        check.setEnabled(false);
+        row.addComponent(check);
+
+        check = new CheckBox("Readonly Switch", false);
+        check.addStyleName(MaterialTheme.SWITCH);
+        check.setReadOnly(true);
         row.addComponent(check);
 
         h1 = new Label("Option Groups");

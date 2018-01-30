@@ -26,4 +26,64 @@
   .v-checkbox > input ~ label:after {
     transition: all 0.1s ease !important;
   }
+  .v-checkbox.switch {
+    padding-left: 0;
+    padding-right: ($mat-switch-width + $v-font-size);
+
+    > input ~ label:after {
+      content: "";
+      left: auto;
+      right: 0 !important;
+      z-index: 1;
+      border-radius: $mat-switch-height;
+      width: $mat-switch-width;
+      height: $mat-switch-height;
+      border: 0 solid;
+      background-color: darken($mat-background-color, 10%);
+      opacity: 1;
+      transition: background-color 0.3s;
+    }
+
+    > input:checked ~ label:after {
+      background: lighten($v-focus-color, 20%);
+      transition: background-color 0.3s;
+    }
+
+    > input ~ label:before {
+      position: absolute;
+      z-index: 2;
+      left: auto;
+      top: -($mat-switch-scale / 2);
+      width: $mat-switch-thumb-width;
+      height: $mat-switch-thumb-width;
+      display: block;
+      padding: 0 0 0 0;
+      border: none !important;
+      border-radius: 100%;
+      box-shadow: 0 0 3px 3px rgba(valo-font-color($v-background-color, .7), .25) !important;
+    }
+
+    > input:not(:checked) ~ label:before {
+      background-color: $mat-card-color !important;
+      right: ($mat-switch-width / 2);
+      transition: right 0.3s, background 0.3s;
+    }
+
+    > input:checked ~ label:before {
+      background-color: lighten($v-focus-color, 5%) !important;
+      right: -$mat-switch-scale;
+      transition: right 0.3s, background 0.3s;;
+    }
+
+    &.v-readonly, &.v-checkbox-disabled {
+      pointer-events: none;
+      input:checked ~ label:before {
+        background-color: lighten($v-focus-color, 20%) !important;
+        box-shadow: 0 0 2px 2px rgba(valo-font-color($v-background-color, .7), .25) !important;
+      }
+      input:checked ~ label:after {
+        background: lighten($v-focus-color, 30%);
+      }
+    }
+  }
 }

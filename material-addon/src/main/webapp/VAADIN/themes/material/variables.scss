@@ -18,6 +18,7 @@ $mat-button-borderless-opacity: 0.2 !default;
 $v-button-round-border-radius: 30px !default;
 
 // valo
+$v-font-size: 16px !default;
 $v-font-family: "Source Sans Pro", sans-serif !default;
 $v-font-weight: 400 !default;
 $v-unit-size: 45px !default;
@@ -60,6 +61,12 @@ $h6-fontsize: 1rem !default;
 $mat-loading-animation-speed: 750ms !default;
 $mat-loading-animation-size: 3em !default;
 $mat-loading-animation-thickness: 3px !default;
+
+// switch checkbox parameters
+$mat-switch-scale: 4px !default;
+$mat-switch-width: ($v-font-size * 2) !default;
+$mat-switch-height: ($mat-switch-width / 2) !default;
+$mat-switch-thumb-width: ($mat-switch-height + $mat-switch-scale) !default;
 
 // v-grid and v-table
 $v-table-border-color: valo-font-color($mat-card-color, 0.15) !default;
