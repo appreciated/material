@@ -67,6 +67,20 @@ public class GridView extends VerticalLayout implements View {
         grid.getEditor().setEnabled(true);
         addComponent(grid);
 
+        grid = getHidableGrid(true);
+        grid.setCaption("Hidable");
+        grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.SINGLE);
+        grid.getEditor().setEnabled(true);
+        grid.setColumnReorderingAllowed(true);
+        addComponent(grid);
+
+        grid = getHidableGrid(false);
+        grid.setCaption("Hidable without Header");
+        grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.SINGLE);
+        grid.getEditor().setEnabled(true);
+        grid.setColumnReorderingAllowed(true);
+        addComponent(grid);
+
         grid = getGrid();
         grid.setCaption("None");
         grid.setSelectionMode(com.vaadin.ui.Grid.SelectionMode.NONE);
@@ -116,6 +130,28 @@ public class GridView extends VerticalLayout implements View {
         return grid;
     }
 
+    private com.vaadin.ui.Grid<Person> getHidableGrid(boolean withHeader) {
+        return getHidableGrid(withHeader, people.size());
+    }
+
+    private com.vaadin.ui.Grid<Person> getHidableGrid(boolean withHeader, int size) {
+        com.vaadin.ui.Grid<Person> grid = new com.vaadin.ui.Grid<>();
+        grid.setItems(people.subList(0, size));
+        grid.addColumn(Person::getName).setCaption("Name 1").setHidable(true).setSortable(true);
+        grid.addColumn(Person::getName).setCaption("Name 2").setHidable(true).setSortable(true);
+        grid.addColumn(Person::getName).setCaption("Name 3").setHidable(true).setSortable(true);
+        grid.addColumn(Person::getName).setCaption("Name 4").setHidable(true).setSortable(true);
+        grid.addColumn(Person::getBirthYear).setCaption("Year of birth 1").setHidable(true).setSortable(true);
+        grid.addColumn(Person::getBirthYear).setCaption("Year of birth 2").setHidable(true).setSortable(true);
+        grid.addColumn(Person::getBirthYear).setCaption("Year of birth 3").setHidable(true).setSortable(true);
+        grid.addColumn(Person::getBirthYear).setCaption("Year of birth 4").setHidable(true).setSortable(true);
+        grid.addColumn(Person::getBirthYear).setCaption("Year of birth 5").setHidable(true).setSortable(true);
+        grid.addColumn(Person::getBirthYear).setCaption("Year of birth 6").setHidable(true).setSortable(true);
+        grid.addColumn(Person::getID).setCaption("ID");
+        grid.addColumn(Person::getName).setCaption("Name 5");
+        grid.setHeaderVisible(withHeader);
+        return grid;
+    }
 
     @Override
     public void enter(ViewChangeEvent event) {

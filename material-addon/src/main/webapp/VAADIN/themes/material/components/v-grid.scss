@@ -36,6 +36,9 @@ body.v-gecko .v-grid-scroller.v-grid-scroller-horizontal > div {
   .v-grid.borderless {
     overflow: hidden;
   }
+  .v-grid-sidebar.v-contextmenu {
+    z-index: 10;
+  }
   .v-grid-row-selected > .v-grid-cell {
     color: inherit;
     border-top: 1px solid $v-table-border-color;
