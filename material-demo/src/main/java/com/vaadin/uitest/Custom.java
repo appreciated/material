@@ -11,6 +11,7 @@ import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
 import java.util.Arrays;
+import java.util.function.Consumer;
 
 /**
  * Created by Johannes on 17.06.2017.
@@ -57,17 +58,27 @@ public class Custom extends VerticalLayout implements View {
         addComponent(getIconUploadsButtonsWithStyle(MaterialTheme.UPLOAD_BORDER, MaterialTheme.BUTTON_FLAT));
         addComponent(getIconUploadsButtonsWithStyle(MaterialTheme.UPLOAD_BORDERLESS, MaterialTheme.BUTTON_FLAT));
         setSpacing(true);
-    }
 
-    public HorizontalLayout getIconUploadsButtonsWithStyle(String... styles) {
-        return getUploadsButtonsWithStyle(styles, true);
+        h1 = new Label("Non-immediate Uploads Flat with Icon");
+        h1.addStyleName(ValoTheme.LABEL_H1);
+        addComponent(h1);
+        addComponent(getUploadsButtonsWithStyle(upload -> upload.setImmediateMode(false), false, MaterialTheme.UPLOAD_FLAT));
+        setSpacing(true);
     }
 
     public HorizontalLayout getUploadsButtonsWithStyle(String... styles) {
         return getUploadsButtonsWithStyle(styles, false);
     }
 
+    public HorizontalLayout getIconUploadsButtonsWithStyle(String... styles) {
+        return getUploadsButtonsWithStyle(styles, true);
+    }
+
     public HorizontalLayout getUploadsButtonsWithStyle(String[] styles, boolean withIcon) {
+        return getUploadsButtonsWithStyle(null, withIcon, styles);
+    }
+
+    public HorizontalLayout getUploadsButtonsWithStyle(Consumer<Upload> supplier, boolean withIcon, String... styles) {
         String style = Arrays.stream(styles).reduce((s, s2) -> s + " " + s2).orElse("");
         HorizontalLayout layout = new HorizontalLayout();
         Arrays.asList("", ValoTheme.BUTTON_PRIMARY, ValoTheme.BUTTON_FRIENDLY, ValoTheme.BUTTON_DANGER, MaterialTheme.BUTTON_CUSTOM)
@@ -81,6 +92,9 @@ public class Custom extends VerticalLayout implements View {
                         upload.addStyleName(MaterialTheme.UPLOAD_INLINE_ICON);
                     }
                     upload.addStyleName(style + " " + s);
+                    if (supplier != null) {
+                        supplier.accept(upload);
+                    }
                     layout.addComponent(upload);
                 });
         Upload upload = new Upload(style.contains(MaterialTheme.BUTTON_FLOATING_ACTION) ? "" : "Click Me!", (Upload.Receiver) (s12, s1) -> null);

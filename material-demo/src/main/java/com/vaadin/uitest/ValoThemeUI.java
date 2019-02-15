@@ -193,7 +193,6 @@ public class ValoThemeUI extends UI {
         navigator.addView("menubars", MenuBars.class);
         navigator.addView("panels-no-caption", PanelsNoCaptionTest.class);
         navigator.addView("panels", Panels.class);
-        navigator.addView("tables", Tables.class);
         navigator.addView("splitpanels", SplitPanels.class);
         navigator.addView("tabs", Tabsheets.class);
         navigator.addView("grids", GridView.class);
@@ -202,7 +201,6 @@ public class ValoThemeUI extends UI {
         navigator.addView("accordions", Accordions.class);
         navigator.addView("colorpickers", ColorPickers.class);
         navigator.addView("selects", NativeSelects.class);
-        navigator.addView("calendar", CalendarTest.class);
         navigator.addView("forms", Forms.class);
         navigator.addView("popupviews", PopupViews.class);
         navigator.addView("dragging", Dragging.class);
@@ -302,7 +300,6 @@ public class ValoThemeUI extends UI {
         menuItems.put("colorpickers", "Color Pickers");
         menuItems.put("menubars", "Menu Bars");
         menuItems.put("trees", "Trees");
-        menuItems.put("tables", "Tables");
         menuItems.put("grids", "Grids");
         menuItems.put("test-grid", "Grid-Test");
         menuItems.put("dragging", "Drag and Drop");
@@ -312,7 +309,6 @@ public class ValoThemeUI extends UI {
         menuItems.put("tabs", "Tabs");
         menuItems.put("accordions", "Accordions");
         menuItems.put("popupviews", "Popup Views");
-        menuItems.put("calendar", "Calendar");
         menuItems.put("forms", "Forms");
         menuItems.put("uploads", "Uploads");
 

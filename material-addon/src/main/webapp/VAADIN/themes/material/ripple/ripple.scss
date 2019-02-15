@@ -31,7 +31,7 @@
   :not(.v-upload) > * > .v-button:not(.v-disabled):not(.valo-menu-toggle),
   .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
   .ripple,
-  .v-upload:not(.v-disabled),
+  .v-upload-immediate:not(.v-disabled),
   .valo-menu-item:not(.v-disabled),
   .v-menubar-menuitem:not(.v-menubar-menuitem-disabled),
   .v-accordion-item-caption:not(.v-disabled) {
@@ -39,7 +39,7 @@
     transform: translate3d(0, 0, 0);
   }
   :not(.v-upload) > * > .v-button:not(.v-disabled):after,
-  .v-upload:not(.v-disabled):after,
+  .v-upload-immediate:not(.v-disabled):after,
   .valo-menu-item:after,
   .ripple:after,
   .v-tabsheet-tabitem:after,
@@ -63,7 +63,7 @@
     transition: background .5s, opacity 1s; // use background-size instead of scale
   }
   :not(.v-upload) > * > .v-button:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action):after,
-  .v-upload:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action-upload):after,
+  .v-upload-immediate:not(.v-disabled):not(.borderless):not(.borderless-colored):not(.border):not(.primary):not(.friendly):not(.danger):not(.custom):not(.floating-action-upload):after,
   .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):after,
   .valo-menu-item:not(.v-disabled):after,
   .v-datefield [class*="button"]:after,
@@ -74,23 +74,23 @@
     @include ripple-background($mat-card-color);
   }
   .v-button.borderless:not(.primary):not(.friendly):not(.danger):not(.custom):after,
-  .v-upload.borderless:not(.primary):not(.friendly):not(.danger):not(.custom):after,
+  .v-upload-immediate.borderless:not(.primary):not(.friendly):not(.danger):not(.custom):after,
   .v-filterselect .v-filterselect-button:after {
     @include ripple-background($mat-background-color);
   }
   .v-button.border:not(.primary):not(.friendly):not(.danger):not(.custom):after,
-  .v-upload.border:not(.primary):not(.friendly):not(.danger):not(.custom):after {
+  .v-upload-immediate .border:not(.primary):not(.friendly):not(.danger):not(.custom):after {
     @include ripple-background(valo-font-color($mat-background-color, 1));
   }
   .v-button.primary:not(.borderless):after,
   .v-button.floating-action:after,
-  .v-upload.floating-action-upload:after,
-  .v-upload.primary:after {
+  .v-upload-immediate .floating-action-upload:after,
+  .v-upload-immediate .primary:after {
     @include ripple-background($v-focus-color);
   }
 
   :not(.v-component-group) > .v-button:not(.no-border-radius):not(.floating-action):not(.round):after,
-  .v-upload:not(.no-border-radius):not(.floating-action-upload):not(.round):after {
+  .v-upload-immediate :not(.no-border-radius):not(.floating-action-upload):not(.round):after {
     border-radius: $v-border-radius;
   }
 
@@ -101,48 +101,48 @@
   }
 
   .v-button:not(.no-border-radius).floating-action:after,
-  .v-upload:not(.no-border-radius).floating-action-upload:after {
+  .v-upload-immediate :not(.no-border-radius).floating-action-upload:after {
     border-radius: 100%;
   }
 
   .v-button.friendly:not(.borderless):after,
-  .v-upload.friendly:not(.borderless):after {
+  .v-upload-immediate .friendly:not(.borderless):after {
     @include ripple-background($v-friendly-color);
   }
 
   .v-button.danger:not(.borderless):after,
-  .v-upload.danger:not(.borderless):after {
+  .v-upload-immediate .danger:not(.borderless):after {
     @include ripple-background($v-error-indicator-color);
   }
 
   .v-button.custom:not(.borderless):after,
-  .v-upload.custom:not(.borderless):after {
+  .v-upload-immediate .custom:not(.borderless):after {
     @include ripple-background($mat-custom-color);
   }
 
   .v-button.friendly.borderless:after,
-  .v-upload.friendly.borderless:after {
+  .v-upload-immediate .friendly.borderless:after {
     @include ripple-background(rgba($v-friendly-color, $mat-button-borderless-opacity));
   }
 
   .v-button.danger.borderless:after,
-  .v-upload.danger.borderless:after {
+  .v-upload-immediate .danger.borderless:after {
     @include ripple-background(rgba($v-error-indicator-color, $mat-button-borderless-opacity));
   }
 
   .v-button.custom.borderless:after,
-  .v-upload.custom.borderless:after {
+  .v-upload-immediate .custom.borderless:after {
     @include ripple-background(rgba($mat-custom-color, $mat-button-borderless-opacity));
   }
 
   .v-button.round:after,
-  .v-upload.round:after {
+  .v-upload-immediate .round:after {
     border-radius: $v-button-round-border-radius;
   }
   .v-button:not(.v-disabled):active:after,
   .ripple:active:after,
   .v-datefield [class*="button"]:active:after,
-  .v-upload:not(.v-disabled):active:after,
+  .v-upload-immediate :not(.v-disabled):active:after,
   .v-tabsheet-tabitem:active:after,
   .v-tabsheet-tabitem-focus:active:after,
   .v-filterselect .v-filterselect-button:active:after,
