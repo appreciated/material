@@ -42,7 +42,9 @@ $v-included-components: remove($v-included-components, panel);
   @include functions;
   @include globals;
   @include cards;
-  @include ripple;
+  @if ($mat-ripple-enabled) {
+    @include ripple;
+  }
   @include v-button;
   @include v-textfield;
   @include v-filterselect;
