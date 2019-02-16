@@ -44,5 +44,6 @@ public class MaterialTheme extends ValoTheme {
     public static final String RIPPLE = "ripple";
     public static final String BUTTON_NO_BORDER_RADIUS = "no-border-radius";
     public static final String PROGRESSBAR_INDETERMINATE = "indeterminate";
+    public static final String CHECKBOX_SWITCH = "switch";
 }
 
