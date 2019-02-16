@@ -36,6 +36,11 @@ body.v-gecko .v-grid-scroller.v-grid-scroller-horizontal > div {
   .v-grid.borderless {
     overflow: hidden;
   }
+  .v-grid-sidebar-content {
+    @extend .z-depth-1;
+    border-radius: $v-border-radius;
+    padding: 4px 0 !important;
+  }
   .v-grid-sidebar.v-contextmenu {
     z-index: 10;
   }
@@ -158,6 +163,7 @@ body.v-gecko .v-grid-scroller.v-grid-scroller-horizontal > div {
     width: $label-width;
     position: relative;
     margin: $label-width auto;
+
     label {
       width: $label-width;
       height: $label-width;
@@ -169,6 +175,7 @@ body.v-gecko .v-grid-scroller.v-grid-scroller-horizontal > div {
       border: 2px solid valo-font-color($v-background-color, 0.65);
       transition: background 0.1s ease, border 0.1s ease;
       color: transparent !important;
+
       &:after {
         content: '';
         width: $v-unit-size * 0.175;
@@ -184,12 +191,15 @@ body.v-gecko .v-grid-scroller.v-grid-scroller-horizontal > div {
         transform: rotate(-45deg);
       }
     }
+
     input[type="checkbox"] {
       opacity: 0;
       width: $label-width;
+
       &:checked + label:after {
         opacity: 1;
       }
+
       &:checked + label {
         background: $v-selection-color;
         border-color: $v-selection-color;
