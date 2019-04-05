@@ -1,6 +1,6 @@
 # Material
 
-This is a Theme for the Vaadin Framework 7.3+ based on the Google Material Design.
+This is a Theme for the Vaadin Framework 7.3+ and 8.0+ based on the Google Material Design.
 
 ## Download release
 
